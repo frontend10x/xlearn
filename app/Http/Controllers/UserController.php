@@ -10,6 +10,17 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
+/**
+* @OA\Info(title="API Usuarios", version="1.0")
+*
+* @OA\Server(url="http://127.0.0.1:8000")
+*
+* @OAS\SecurityScheme(
+*      securityScheme="bearer_token",
+*      type="http",
+*      scheme="bearer"
+* )
+*/
 class UserController extends Controller
 {
 
@@ -35,7 +46,7 @@ class UserController extends Controller
                 throw new Exception("El usuario ya se encuentra registrado");
             }
             $dataInsert = [
-                "link_facebook" => $request->input("link_facebook"), "link_google" => $request->input("link_google"), "link_linkedin" => $request->input("link_linkedin"), "link_instagram" => $request->input("link_instagram"), "name" => $request->input("name"), "surname" => $request->input("surname"), "phone" => $request->input("phone"), "email" => $request->input("email"), "state" => $request->input("state"), "password" => Hash::make($request->input("password"))
+                "rol_id" => $request->input("rol_id"), "link_facebook" => $request->input("link_facebook"), "link_google" => $request->input("link_google"), "link_linkedin" => $request->input("link_linkedin"), "link_instagram" => $request->input("link_instagram"), "name" => $request->input("name"), "surname" => $request->input("surname"), "phone" => $request->input("phone"), "email" => $request->input("email"), "state" => $request->input("state"), "password" => Hash::make($request->input("password"))
             ];
             if (!empty($request->input("subcompanies_id"))) {
                 $dataInsert['subcompanies_id'] = $request->input("subcompanies_id");
@@ -69,13 +80,29 @@ class UserController extends Controller
             return response()->json(["message" => $e->getMessage()], 500);
         }
     }
+
+    /**
+    * @OA\Get(
+    *     path="/api/user/list",
+    *     summary="Mostrar usuarios",
+    *     security={{"bearer_token":{}}},
+    *     @OA\Response(
+    *         response=200,
+    *         description="Mostrar todos los usuarios."
+    *     ),
+    *     @OA\Response(
+    *         response="default",
+    *         description="Ha ocurrido un error."
+    *     )
+    * )
+    */
     public function index(Request $request)
     {
         try {
             if (!empty(Auth::user()->subcompanies_id)) {
                 $user = User::where("subcompanies_id", Auth::user()->subcompanies_id)->get();
             } else {
-                $user = User::all();
+                $user = User::with('roles')->get();
             }
             return response()->json(["user" => $user], 200);
         } catch (Exception $e) {
@@ -145,7 +172,7 @@ class UserController extends Controller
                 return response()->json(["message" => "Curso favorito almacenado con éxito"], 200);
             }       else{
                 return response()->json(["message" => "Curso ya se encuentra registrado como favorito"], 200);
-            }     
+            }
 
         } catch (Exception $e) {
             return response()->json(["message" => $e->getMessage()], 500);
