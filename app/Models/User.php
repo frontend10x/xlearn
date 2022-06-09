@@ -42,4 +42,8 @@ class User extends Authenticatable
         return $this->belongsToMany(Course::class,"user_course_favorite","user_id","course_id");
     }
 
+    public function roles(){
+        return $this->belongsto('App\Models\Roles', 'rol_id');
+    }
+
 }
