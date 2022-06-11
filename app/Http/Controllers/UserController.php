@@ -10,17 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
-/**
-* @OA\Info(title="API Usuarios", version="1.0")
-*
-* @OA\Server(url="http://127.0.0.1:8000")
-*
-* @OAS\SecurityScheme(
-*      securityScheme="bearer_token",
-*      type="http",
-*      scheme="bearer"
-* )
-*/
+
 class UserController extends Controller
 {
 
@@ -38,6 +28,32 @@ class UserController extends Controller
         }
     }
 
+    /**
+    * @OA\Post(
+    *     path="/api/v1/user/store",
+    *     tags={"Users"},
+    *     summary="Crear usuarios",
+    *     security={{"bearer_token":{}}},
+    *     @OA\Parameter(name="email", in="query"),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Success.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Registro almacenado con éxito.",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response="default",
+    *         description="Ha ocurrido un error."
+    *     )
+    * )
+    */
     public function store(Request $request)
     {
         try {
@@ -83,8 +99,9 @@ class UserController extends Controller
 
     /**
     * @OA\Get(
-    *     path="/api/user/list",
+    *     path="/api/v1/user/list",
     *     summary="Mostrar usuarios",
+    *     tags={"Users"},
     *     security={{"bearer_token":{}}},
     *     @OA\Response(
     *         response=200,

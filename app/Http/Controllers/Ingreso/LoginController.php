@@ -8,8 +8,49 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
+
+/**
+* @OA\Info(title="API's Xlearn", version="1.0")
+*
+* @OA\Server(url="http://127.0.0.1:8000")
+*
+* @OAS\SecurityScheme(
+*      securityScheme="bearer_token",
+*      type="http",
+*      scheme="bearer"
+* )
+*/
 class LoginController extends Controller
 {
+    /**
+    * @OA\Post(
+    *     path="/api/v1/login",
+    *     tags={"Auth"},
+    *     summary="Ingreso de usuarios",
+    *     security={{"bearer_token":{}}},
+    *     @OA\Parameter(name="email", in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="password", in="query", @OA\Schema(type="password")),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Success.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Acceso correcto",
+    *                       "token":"",
+    *                       "datosUsuario":{
+    *                           "name":"",
+    *                           "email":"",
+    *                           "phone":"",
+    *                        }
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
     public function ingreso(Request $request)
     {
 
