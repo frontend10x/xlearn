@@ -12,6 +12,7 @@ use App\Http\Controllers\PlanController;
 use App\Http\Controllers\SubcompaniesController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CountryController;
+use App\Http\Controllers\RegisterRequestController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -30,8 +31,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/login',[LoginController::class, 'ingreso']);
-Route::post('/contact_us/store',[Contact_usController::class, 'store']);
+Route::post(env('API_VERSION') . '/login',[LoginController::class, 'ingreso']);
+Route::post(env('API_VERSION') . '/contact_us/store',[Contact_usController::class, 'store']);
 
 Route::group(['middleware'=>'auth:api' ],function(){
 
@@ -145,6 +146,15 @@ Route::group(['middleware'=>'auth:api' ],function(){
     // Countrys
     // ---------------------------------------------------------------------    
     Route::get($API_VERSION . '/countries',[CountryController::class, 'index']);
+
+    // ---------------------------------------------------------------------
+    // Register Request
+    // ---------------------------------------------------------------------
+    
+    Route::get($API_VERSION . '/register_requests/list',[RegisterRequestController::class, 'index']);
+    Route::post($API_VERSION . '/register_requests/store',[RegisterRequestController::class, 'store']);
+    Route::put($API_VERSION . '/register_requests/edit/{id}',[RegisterRequestController::class, 'edit']);
+    
 
 });
 

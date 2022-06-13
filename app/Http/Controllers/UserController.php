@@ -49,8 +49,17 @@ class UserController extends Controller
     *         ),
     *     ),
     *     @OA\Response(
-    *         response="default",
-    *         description="Ha ocurrido un error."
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
     *     )
     * )
     */
@@ -103,13 +112,65 @@ class UserController extends Controller
     *     summary="Mostrar usuarios",
     *     tags={"Users"},
     *     security={{"bearer_token":{}}},
+    *     @OA\Parameter(name="offset", in="query", @OA\Schema(type="number")),
+    *     @OA\Parameter(name="limit", in="query", @OA\Schema(type="number")),
     *     @OA\Response(
     *         response=200,
-    *         description="Mostrar todos los usuarios."
+    *         description="Mostrar todos los usuarios.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                       "response": {
+    *                           "hc:length": 0,
+    *                           "hc:total": 0,
+    *                           "hc:offset": 0,
+    *                           "hc:limit": 0,
+    *                           "hc:next": "next page end-point ",
+    *                           "hc:previous": "previous page end-point ",
+    *                           "_rel": "users",
+    *                           "_embedded": {
+    *                               "users": {
+    *                                   {
+    *                                   "id": 0,
+    *                                   "name": "",
+    *                                   "lastname": "",
+    *                                   "company": "",
+    *                                   "email": "",
+    *                                   "website": "",
+    *                                   "size": 0,
+    *                                   "country_id": 0,
+    *                                   "content": "",
+    *                                   "plan_id": 0,
+    *                                   "quotas": 0,
+    *                                   "observation": "",
+    *                                   "created_at": "2022-06-11T23:21:42.000000Z",
+    *                                   "updated_at": "2022-06-12T00:46:06.000000Z",
+    *                                   "countries": {
+    *                                       "id": 0,
+    *                                       "name": ""
+    *                                       }
+    *                                   }
+    *                               }
+    *                           }
+    *                       }
+    *                 },
+    *             ),
+    * 
+    *         ),
     *     ),
     *     @OA\Response(
-    *         response="default",
-    *         description="Ha ocurrido un error."
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
     *     )
     * )
     */
@@ -117,11 +178,38 @@ class UserController extends Controller
     {
         try {
             if (!empty(Auth::user()->subcompanies_id)) {
-                $user = User::where("subcompanies_id", Auth::user()->subcompanies_id)->get();
+                $consult = User::where("subcompanies_id", Auth::user()->subcompanies_id)->get();
             } else {
-                $user = User::with('roles')->get();
+
+                //TODO debe sacarse del request, por defecto el valor es uno
+                $offset = $request->has('offset') ? intval($request->get('offset')) : 1;
+
+                //TODO debe sacarse del request, por defecto el valor es 10.
+                $limit = $request->has('limit') ? intval($request->get('limit')) : 10;
+
+                $consult = User::with('roles')->limit($limit)->offset(($offset - 1) * $limit)->get()->toArray();
+
+                $nexOffset = $offset + 1;
+                $previousOffset = ($offset > 1) ? $offset - 1 : 1;
             }
-            return response()->json(["user" => $user], 200);
+
+            $users = array(
+                "hc:length" => count($consult), //Es la longitud del array a devolver
+                "hc:total"  => User::count(), //Es la longitud total de los registros disponibles en el query original,
+                "hc:offset" => $offset,
+                "hc:limit"  => $limit,
+                "hc:next"   => server_path() . '?limit=' . $limit . '&offset=' . $nexOffset,
+                "hc:previous"   => server_path() . '?limit=' . $limit . '&offset=' . $previousOffset,
+                "_rel"		=> "users",
+                "_embedded" => array(
+                    "users" => $consult
+                )
+            );
+
+            if(empty($consult))
+                throw new Exception("No se encontraron usuarios");
+
+            return response()->json(["response" => $users], 200);
         } catch (Exception $e) {
             return response()->json(["message" => $e->getMessage()], 500);
         }
