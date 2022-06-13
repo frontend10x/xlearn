@@ -1,7 +1,7 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "API Usuarios",
+        "title": "API's Xlearn",
         "version": "1.0"
     },
     "servers": [
@@ -10,10 +10,119 @@
         }
     ],
     "paths": {
-        "/api/user/list": {
+        "/api/v1/countries": {
             "get": {
+                "tags": [
+                    "Countries"
+                ],
+                "summary": "Mostrar Paises",
+                "operationId": "6c92b3465f1bd90ec648c57e85c6ac53",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los paises."
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/login": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Ingreso de usuarios",
+                "operationId": "eabe0c74bd6109f926162392ae2fdd03",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "schema": {
+                            "type": "password"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Acceso correcto",
+                                        "token": "",
+                                        "datosUsuario": {
+                                            "name": "",
+                                            "email": "",
+                                            "phone": ""
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/user/store": {
+            "post": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Crear usuarios",
+                "operationId": "3a8979d7a0af6bed1d61687f1788c6b5",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Registro almacenado con éxito."
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Ha ocurrido un error."
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/user/list": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
                 "summary": "Mostrar usuarios",
-                "operationId": "75be91004f8b3fd250a7e0640d72458b",
+                "operationId": "564a4398f7da5993c9e7719e6cd39305",
                 "responses": {
                     "200": {
                         "description": "Mostrar todos los usuarios."
