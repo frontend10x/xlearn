@@ -2,17 +2,21 @@
 
 namespace App\Http\Controllers\Ingreso;
 
+use Mail;
+
 use App\Http\Controllers\Controller;
+
 use App\Models\User;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-
 
 /**
 * @OA\Info(title="API's Xlearn", version="1.0")
 *
 * @OA\Server(url="http://127.0.0.1:8000")
+* @OA\Server(url="https://servicios.asstiseguridadsocial.com")
 *
 * @OAS\SecurityScheme(
 *      securityScheme="bearer_token",
@@ -81,6 +85,7 @@ class LoginController extends Controller
                 $tokenCelular = $request->input('token');
                 //  $this->updateToken($tokenCelular, $user->id);
             }
+            
             return response()->json(
                 [
                     'message' => "Acceso correcto", "token" => $token, "datosUsuario" => [

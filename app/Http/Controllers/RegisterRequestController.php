@@ -2,9 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\RegistrationRequest;
-use Illuminate\Http\Request;
 use Exception;
+use Mail;
+
+use App\Models\RegistrationRequest;
+
+use Illuminate\Http\Request;
+
+use App\Mail\ConfirmationRegisterRequest;
 
 class RegisterRequestController extends Controller
 {
@@ -40,6 +45,8 @@ class RegisterRequestController extends Controller
     {
         try {
             
+            Mail::to('jairzeapaez@gmail.com')->send(new ConfirmationRegisterRequest());
+
             //TODO debe sacarse del request, por defecto el valor es uno
             $offset = $request->has('offset') ? intval($request->get('offset')) : 1;
 
