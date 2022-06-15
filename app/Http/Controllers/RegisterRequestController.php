@@ -4,12 +4,11 @@ namespace App\Http\Controllers;
 
 use Exception;
 use Mail;
-
+use App\Http\Controllers\UserController;
 use App\Models\RegistrationRequest;
-
 use Illuminate\Http\Request;
-
 use App\Mail\ConfirmationRegisterRequest;
+use Illuminate\Support\Facades\Crypt;
 
 class RegisterRequestController extends Controller
 {
@@ -45,8 +44,6 @@ class RegisterRequestController extends Controller
     {
         try {
             
-            Mail::to('jairzeapaez@gmail.com')->send(new ConfirmationRegisterRequest());
-
             //TODO debe sacarse del request, por defecto el valor es uno
             $offset = $request->has('offset') ? intval($request->get('offset')) : 1;
 
@@ -98,6 +95,7 @@ class RegisterRequestController extends Controller
     *     @OA\Parameter(name="plan_id", required=true, in="query", @OA\Schema(type="number")),
     *     @OA\Parameter(name="quotas", required=true, in="query", @OA\Schema(type="number")),
     *     @OA\Parameter(name="observation", in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="password", in="query", @OA\Schema(type="password")),
     *     @OA\Response(
     *         response=200,
     *         description="Success.",
@@ -159,11 +157,34 @@ class RegisterRequestController extends Controller
                 "country_id" => $request->input("country"), 
                 "content" => $request->input("content"), 
                 "plan_id" => $request->input("plan_id"), 
-                "quotas" => $request->input("quotas"), 
+                "quotas" => $request->input("quotas"),
                 "observation" => $request->input("observation")
             ];
 
-            RegistrationRequest::create($dataInsert);
+            $register = RegistrationRequest::create($dataInsert);
+
+            $dataInsert["password"] = $request->input("password");
+            $dataInsert["rol_id"] = 3;
+            $dataInsert["state"] = 0;
+            $dataInsert["link_facebook"] = '';
+            $dataInsert["link_google"] = '';
+            $dataInsert["link_linkedin"] = '';
+            $dataInsert["link_instagram"] = '';
+            $dataInsert["surname"] = '';
+            $dataInsert["phone"] = '';
+
+            if(!empty($register)){
+
+                $userCreated = UserController::store($dataInsert);
+                $userId = json_decode($userCreated, true);
+
+                //Encriptamos el email del usuario
+                $encryptedId = Crypt::encryptString($userId['id']);
+
+                Mail::to($request->input("email"))->send(new ConfirmationRegisterRequest($encryptedId));
+
+            }
+
             return response()->json(["message" => "Registro almacenado con éxito"], 200);
 
         } catch (Exception $e) {

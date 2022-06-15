@@ -70,7 +70,7 @@ Route::group(['middleware'=>'auth:api' ],function(){
     Route::get($API_VERSION . '/user/list',[UserController::class, 'index']);
     Route::put($API_VERSION . '/user/edit/{id}',[UserController::class, 'edit']);
     Route::post($API_VERSION . '/user/store',[UserController::class, 'store']);
-    Route::put($API_VERSION . '/user/changestate/{id}',[UserController::class, 'changestate']);
+    Route::get($API_VERSION . '/user/changestate/{id}',[UserController::class, 'changestate']);
     Route::put($API_VERSION . '/user/forgotpassword/{id}',[UserController::class, 'forgotpassword']);
     Route::put($API_VERSION . '/user/changepassword',[UserController::class, 'changepassword']);
     Route::post($API_VERSION . '/user/coursesfavorites',[UserController::class, 'coursesFavorites']);

@@ -11,14 +11,16 @@ class ConfirmationRegisterRequest extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $id;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($id)
     {
-        //
+        $this->id = $id;
     }
 
     /**
@@ -28,6 +30,10 @@ class ConfirmationRegisterRequest extends Mailable
      */
     public function build()
     {
-        return $this->view('mails.confirmation_register');
+        $API_VERSION = env('API_VERSION');
+        $URL_BASE = ( env('AMBIENT') === 'DEV' ) ? env('URL_BASE_LOCAL') : env('URL_BASE_PRODUCTION');
+
+        $urlConfimation = $URL_BASE . '/api/' . $API_VERSION . '/user/changestate/' . $this->id;
+        return $this->view('mails.confirmation_register')->with('urlConfimation', $urlConfimation);
     }
 }

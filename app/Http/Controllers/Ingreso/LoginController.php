@@ -77,7 +77,7 @@ class LoginController extends Controller
         //     ]
         // );
 
-        if (Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password')])) {
+        if (Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password'), 'state' => 1])) {
             $user = User::where('email', $request->input('email'))->first();
             $token = $user->createToken('token_jobs' . Auth::user()->id)->accessToken;
 
@@ -94,7 +94,7 @@ class LoginController extends Controller
                 ] 
             ,200);
         } else {
-            return response()->json(["message" => "Datos incorrectos"],500);
+            return response()->json(["message" => "Datos incorrectos o usuario inactivo"],500);
         }
     }
 

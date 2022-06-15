@@ -9,6 +9,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Crypt;
+
 
 
 class UserController extends Controller
@@ -63,23 +65,32 @@ class UserController extends Controller
     *     )
     * )
     */
-    public function store(Request $request)
+    public static function store($data)
     {
         try {
-            $consult = User::where("email", $request->input("email"))->first();
+
+            $consult = User::where("email", $data["email"])->first();
+
             if (!empty($consult)) {
                 throw new Exception("El usuario ya se encuentra registrado");
             }
+
             $dataInsert = [
-                "rol_id" => $request->input("rol_id"), "link_facebook" => $request->input("link_facebook"), "link_google" => $request->input("link_google"), "link_linkedin" => $request->input("link_linkedin"), "link_instagram" => $request->input("link_instagram"), "name" => $request->input("name"), "surname" => $request->input("surname"), "phone" => $request->input("phone"), "email" => $request->input("email"), "state" => $request->input("state"), "password" => Hash::make($request->input("password"))
+                "rol_id" => $data["rol_id"], "link_facebook" => $data["link_facebook"], "link_google" => $data["link_google"], "link_linkedin" => $data["link_linkedin"], "link_instagram" => $data["link_instagram"], "name" => $data["name"], "surname" => $data["surname"], "phone" => $data["phone"], "email" => $data["email"], "state" => $data["state"], "password" => Hash::make($data["password"])
             ];
-            if (!empty($request->input("subcompanies_id"))) {
-                $dataInsert['subcompanies_id'] = $request->input("subcompanies_id");
+
+            if (!empty($data["subcompanies_id"])) {
+                $dataInsert['subcompanies_id'] = $data["subcompanies_id"];
             }
-            User::create($dataInsert);
-            return response()->json(["message" => "Registro almacenado con éxito"], 200);
+
+            $userCreated = User::create($dataInsert);
+            return json_encode(["message" => "Registro almacenado con éxito", "id" => $userCreated['id']]);
+
         } catch (Exception $e) {
+
             return response()->json(["message" => $e->getMessage()], 500);
+            \Log::debug('message ' . $e->getMessage());
+
         }
     }
     public function edit(Request $request, $id)
@@ -218,7 +229,10 @@ class UserController extends Controller
     public function changestate(Request $request, $id)
     {
         try {
-            $buscaActualiza = User::find($id);
+
+            $desencryptedId = Crypt::decryptString($id);
+
+            $buscaActualiza = User::find($desencryptedId);
             if (empty($buscaActualiza)) {
                 throw new Exception("No existe el Id:" . $id . " para el cambio de estado");
             }
