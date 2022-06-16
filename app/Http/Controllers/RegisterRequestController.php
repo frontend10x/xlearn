@@ -165,6 +165,7 @@ class RegisterRequestController extends Controller
 
             $dataInsert["password"] = $request->input("password");
             $dataInsert["rol_id"] = 3;
+            $dataInsert["type_id"] = 2;
             $dataInsert["state"] = 0;
             $dataInsert["link_facebook"] = '';
             $dataInsert["link_google"] = '';

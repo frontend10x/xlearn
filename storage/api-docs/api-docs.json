@@ -6,6 +6,9 @@
     },
     "servers": [
         {
+            "url": "http://127.0.0.1:8000"
+        },
+        {
             "url": "https://servicios.asstiseguridadsocial.com"
         }
     ],
@@ -231,6 +234,13 @@
                         "in": "query",
                         "schema": {
                             "type": "string"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "schema": {
+                            "type": "password"
                         }
                     }
                 ],

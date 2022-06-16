@@ -76,7 +76,7 @@ class UserController extends Controller
             }
 
             $dataInsert = [
-                "rol_id" => $data["rol_id"], "link_facebook" => $data["link_facebook"], "link_google" => $data["link_google"], "link_linkedin" => $data["link_linkedin"], "link_instagram" => $data["link_instagram"], "name" => $data["name"], "surname" => $data["surname"], "phone" => $data["phone"], "email" => $data["email"], "state" => $data["state"], "password" => Hash::make($data["password"])
+                "type_id" => $data["type_id"], "rol_id" => $data["rol_id"], "link_facebook" => $data["link_facebook"], "link_google" => $data["link_google"], "link_linkedin" => $data["link_linkedin"], "link_instagram" => $data["link_instagram"], "name" => $data["name"], "surname" => $data["surname"], "phone" => $data["phone"], "email" => $data["email"], "state" => $data["state"], "password" => Hash::make($data["password"])
             ];
 
             if (!empty($data["subcompanies_id"])) {
