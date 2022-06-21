@@ -13,16 +13,30 @@
         }
     ],
     "paths": {
-        "/api/v1/countries": {
+        "/api/v1/countries/list": {
             "get": {
                 "tags": [
                     "Countries"
                 ],
                 "summary": "Mostrar Paises",
-                "operationId": "6c92b3465f1bd90ec648c57e85c6ac53",
+                "operationId": "3c15a70369eb61421ed10bb25594ec6c",
                 "responses": {
                     "200": {
-                        "description": "Mostrar todos los paises."
+                        "description": "Mostrar todos los paises.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "countries": [
+                                            {
+                                                "id": 0,
+                                                "name": ""
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
                     }
                 },
                 "security": [

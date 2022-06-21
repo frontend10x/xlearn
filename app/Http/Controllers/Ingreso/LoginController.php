@@ -88,8 +88,15 @@ class LoginController extends Controller
             
             return response()->json(
                 [
-                    'message' => "Acceso correcto", "token" => $token, "datosUsuario" => [
-                        "name" => $user->name, "email" => $user->email, "phone" => $user->phone
+                    'message' => "Acceso correcto", 
+                    "token" => $token, 
+                    "datosUsuario" => [
+                        "name" => $user->name, 
+                        "email" => $user->email, 
+                        "phone" => $user->phone,
+                        "rol_id" => $user->rol_id,
+                        "type_id" => $user->type_id,
+                        "subcompanies_id" => $user->subcompanies_id
                     ]
                 ] 
             ,200);

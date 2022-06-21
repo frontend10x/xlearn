@@ -34,6 +34,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post(env('API_VERSION') . '/login',[LoginController::class, 'ingreso']);
 Route::post(env('API_VERSION') . '/contact_us/store',[Contact_usController::class, 'store']);
 
+// ---------------------------------------------------------------------
+// Countrys
+// ---------------------------------------------------------------------    
+Route::get(env('API_VERSION') . '/countries/list',[CountryController::class, 'index']);
+
 Route::group(['middleware'=>'auth:api' ],function(){
 
     $API_VERSION = env('API_VERSION');
@@ -141,11 +146,6 @@ Route::group(['middleware'=>'auth:api' ],function(){
     Route::put($API_VERSION . '/lesson/changestate/{id}',[LessonController::class, 'changestate']);
     Route::post($API_VERSION . '/lesson/addcommentuser/{id}',[LessonController::class, 'addComment']);
     Route::get($API_VERSION . '/lesson/listComment/{id}',[LessonController::class, 'listComment']);
-
-    // ---------------------------------------------------------------------
-    // Countrys
-    // ---------------------------------------------------------------------    
-    Route::get($API_VERSION . '/countries',[CountryController::class, 'index']);
 
     // ---------------------------------------------------------------------
     // Register Request
