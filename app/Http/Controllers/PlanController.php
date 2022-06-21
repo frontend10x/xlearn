@@ -62,10 +62,41 @@ class PlanController extends Controller
             return response()->json(["message" => $e->getMessage()], 500);
         }
     }
+
+    /**
+    * @OA\Get(
+    *     path="/api/v1/plan/list",
+    *     summary="Mostrar Planes",
+    *     tags={"Plans"},
+    *     security={{"bearer_token":{}}},
+    *     @OA\Response(
+    *         response=200,
+    *         description="Mostrar todos los planes.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                       "plans": {
+    *                           {
+    *                               "id": 0,
+    *                               "name": "",
+    *                               "description": "",
+    *                               "price": "",
+    *                               "amount_people": "",
+    *                               "color_title": "",
+    *                               "color_border": ""
+    *                           },
+    *                         }
+    *                   }
+    *             )
+    *         )
+    *     )
+    * )
+    */
     public function index()
     {
         try {
-            return response()->json(["plan" => Plan::all()], 200);
+            return response()->json(["plans" => Plan::all('id', 'name', 'description', 'price', 'amount_people', 'color_title', 'color_border')], 200);
         } catch (Exception $e) {
             return response()->json(["message" => $e->getMessage()], 500);
         }

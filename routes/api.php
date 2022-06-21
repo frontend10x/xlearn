@@ -39,6 +39,19 @@ Route::post(env('API_VERSION') . '/contact_us/store',[Contact_usController::clas
 // ---------------------------------------------------------------------    
 Route::get(env('API_VERSION') . '/countries/list',[CountryController::class, 'index']);
 
+
+// ---------------------------------------------------------------------
+// Register Request
+// ---------------------------------------------------------------------
+
+Route::post(env('API_VERSION') . '/register_requests/store',[RegisterRequestController::class, 'store']);
+
+// ---------------------------------------------------------------------
+// Plan
+// ---------------------------------------------------------------------    
+
+Route::get(env('API_VERSION') . '/plan/list',[PlanController::class, 'index']);
+
 Route::group(['middleware'=>'auth:api' ],function(){
 
     $API_VERSION = env('API_VERSION');
@@ -103,7 +116,6 @@ Route::group(['middleware'=>'auth:api' ],function(){
     // Plan
     // ---------------------------------------------------------------------    
 
-    Route::get($API_VERSION . '/plan/list',[PlanController::class, 'index']);
     Route::put($API_VERSION . '/plan/edit/{id}',[PlanController::class, 'edit']);
     Route::post($API_VERSION . '/plan/store',[PlanController::class, 'store']);
     Route::put($API_VERSION . '/plan/changestate/{id}',[PlanController::class, 'changestate']);
@@ -152,7 +164,6 @@ Route::group(['middleware'=>'auth:api' ],function(){
     // ---------------------------------------------------------------------
     
     Route::get($API_VERSION . '/register_requests/list',[RegisterRequestController::class, 'index']);
-    Route::post($API_VERSION . '/register_requests/store',[RegisterRequestController::class, 'store']);
     Route::put($API_VERSION . '/register_requests/edit/{id}',[RegisterRequestController::class, 'edit']);
     
 

@@ -6,6 +6,9 @@
     },
     "servers": [
         {
+            "url": "http://servicios.10xconsultores.org"
+        },
+        {
             "url": "http://127.0.0.1:8000"
         },
         {
@@ -95,6 +98,44 @@
                                 "schema": {
                                     "example": {
                                         "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/plan/list": {
+            "get": {
+                "tags": [
+                    "Plans"
+                ],
+                "summary": "Mostrar Planes",
+                "operationId": "ec79c94ffd1a354b936624da8849b002",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los planes.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "plans": [
+                                            {
+                                                "id": 0,
+                                                "name": "",
+                                                "description": "",
+                                                "price": "",
+                                                "amount_people": "",
+                                                "color_title": "",
+                                                "color_border": ""
+                                            }
+                                        ]
                                     }
                                 }
                             }
