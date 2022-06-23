@@ -5,11 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\Course;
 use App\Models\User;
 use Exception;
+use Mail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Crypt;
+use App\Mail\ConfirmationRegisterRequest;
 
 
 
@@ -36,7 +38,18 @@ class UserController extends Controller
     *     tags={"Users"},
     *     summary="Crear usuarios",
     *     security={{"bearer_token":{}}},
-    *     @OA\Parameter(name="email", in="query"),
+    *     @OA\Parameter(name="type_id", required=true, in="query", @OA\Schema(type="number")),
+    *     @OA\Parameter(name="rol_id", required=true, in="query", @OA\Schema(type="number")),
+    *     @OA\Parameter(name="link_facebook", in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="link_google", in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="link_linkedin", in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="link_instagram", in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="name", required=true, in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="surname", in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="phone", required=true, in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="email", required=true, in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="subcompanies_id", in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="password", in="query", @OA\Schema(type="password")),
     *     @OA\Response(
     *         response=200,
     *         description="Success.",
@@ -45,6 +58,7 @@ class UserController extends Controller
     *             @OA\Schema(
     *                  example={
     *                      "message":"Registro almacenado con éxito.",
+    *                      "id":0,
     *                 },
     *             ),
     * 
@@ -65,25 +79,38 @@ class UserController extends Controller
     *     )
     * )
     */
-    public static function store($data)
+    public static function store(Request $request)
     {
+
         try {
 
-            $consult = User::where("email", $data["email"])->first();
+            $consult = User::where("email", $request->input("email"))->first();
 
             if (!empty($consult)) {
                 throw new Exception("El usuario ya se encuentra registrado");
             }
 
+            // Validamos los datos enviados
+            $validated = $request->validate([
+                'type_id' => 'required|integer',
+                'rol_id' => 'required|integer',
+                'password' => 'required',
+                'email' => 'required'
+            ]);
+
             $dataInsert = [
-                "type_id" => $data["type_id"], "rol_id" => $data["rol_id"], "link_facebook" => $data["link_facebook"], "link_google" => $data["link_google"], "link_linkedin" => $data["link_linkedin"], "link_instagram" => $data["link_instagram"], "name" => $data["name"], "surname" => $data["surname"], "phone" => $data["phone"], "email" => $data["email"], "state" => $data["state"], "password" => Hash::make($data["password"])
+                "type_id" => $request->input("type_id"), "rol_id" => $request->input("rol_id"), "link_facebook" => $request->input("link_facebook"), "link_google" => $request->input("link_google"), "link_linkedin" => $request->input("link_linkedin"), "link_instagram" => $request->input("link_instagram"), "name" => $request->input("name"), "surname" => $request->input("surname"), "phone" => $request->input("phone"), "email" => $request->input("email"), "state" => $request->input("state"), "password" => Hash::make($request->input("password"))
             ];
 
-            if (!empty($data["subcompanies_id"])) {
-                $dataInsert['subcompanies_id'] = $data["subcompanies_id"];
+            if (!empty($request->input("subcompanies_id"))) {
+                $dataInsert['subcompanies_id'] = $request->input("subcompanies_id");
             }
 
             $userCreated = User::create($dataInsert);
+            $encryptedId = Crypt::encryptString($userCreated['id']);
+
+            Mail::to($request->input("email"))->send(new ConfirmationRegisterRequest($encryptedId));
+
             return json_encode(["message" => "Registro almacenado con éxito", "id" => $userCreated['id']]);
 
         } catch (Exception $e) {
@@ -93,12 +120,60 @@ class UserController extends Controller
 
         }
     }
+
+        /**
+    * @OA\Put(
+    *     path="/api/v1/user/edit/{id}",
+    *     tags={"Users"},
+    *     summary="Editar usuarios",
+    *     security={{"bearer_token":{}}},
+    *     @OA\Parameter(name="type_id", required=true, in="query", @OA\Schema(type="number")),
+    *     @OA\Parameter(name="rol_id", required=true, in="query", @OA\Schema(type="number")),
+    *     @OA\Parameter(name="link_facebook", in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="link_google", in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="link_linkedin", in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="link_instagram", in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="name", required=true, in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="surname", in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="phone", required=true, in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="email", required=true, in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="subcompanies_id", in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="password", in="query", @OA\Schema(type="password")),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Success.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Usuario actualizado con éxto.",
+    *                      "id":0,
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
     public function edit(Request $request, $id)
     {
         try {
             $buscaActualiza = User::find($id);
             $dataUpdate = [
-                "link_facebook" => $request->input("link_facebook"), "link_google" => $request->input("link_google"), "link_linkedin" => $request->input("link_linkedin"), "link_instagram" => $request->input("link_instagram"), "name" => $request->input("name"), "surname" => $request->input("surname"), "phone" => $request->input("phone"), "email" => $request->input("email"), "state" => $request->input("state")
+                "type_id" => $request->input("type_id"), "rol_id" => $request->input("rol_id"), "link_facebook" => $request->input("link_facebook"), "link_google" => $request->input("link_google"), "link_linkedin" => $request->input("link_linkedin"), "link_instagram" => $request->input("link_instagram"), "name" => $request->input("name"), "surname" => $request->input("surname"), "phone" => $request->input("phone"), "email" => $request->input("email"), "state" => $request->input("state")
             ];
             // echo $request->input("subcompanies_id");die;
             $dataUpdate['subcompanies_id'] = !empty($request->input("subcompanies_id")) ? $request->input("subcompanies_id") : null;
@@ -109,7 +184,7 @@ class UserController extends Controller
                 throw new Exception("No existe el id: " . $id . " para ser actualizado");
             } else {
                 $buscaActualiza->update($dataUpdate);
-                $message = "usuario actualizado con éxto";
+                $message = "Usuario actualizado con éxto";
             }
             return response()->json(["message" => $message], 200);
         } catch (Exception $e) {

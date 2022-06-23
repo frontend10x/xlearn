@@ -176,7 +176,9 @@ class RegisterRequestController extends Controller
 
             if(!empty($register)){
 
-                $userCreated = UserController::store($dataInsert);
+                $request->request->add(array_merge($dataInsert, $request->all()));
+
+                $userCreated = UserController::store($request);
                 $userId = json_decode($userCreated, true);
 
                 //Encriptamos el email del usuario

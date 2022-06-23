@@ -121,7 +121,7 @@ Route::group(['middleware'=>'auth:api' ],function(){
     Route::put($API_VERSION . '/plan/changestate/{id}',[PlanController::class, 'changestate']);
 
     // ---------------------------------------------------------------------
-    // Plan
+    // Cursos
     // ---------------------------------------------------------------------    
     
     Route::get($API_VERSION . '/course/list',[CourseController::class, 'index']);
