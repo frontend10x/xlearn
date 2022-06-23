@@ -13,6 +13,8 @@ use App\Http\Controllers\SubcompaniesController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\RegisterRequestController;
+use App\Http\Controllers\TypeUserController;
+use App\Http\Controllers\RolesController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -165,6 +167,18 @@ Route::group(['middleware'=>'auth:api' ],function(){
     
     Route::get($API_VERSION . '/register_requests/list',[RegisterRequestController::class, 'index']);
     Route::put($API_VERSION . '/register_requests/edit/{id}',[RegisterRequestController::class, 'edit']);
+
+    // ---------------------------------------------------------------------
+    // Tipos de usuarios
+    // ---------------------------------------------------------------------
+    
+    Route::get($API_VERSION . '/types_users/list',[TypeUserController::class, 'index']);
+
+    // ---------------------------------------------------------------------
+    // Roles de usuarios
+    // ---------------------------------------------------------------------
+    
+    Route::get($API_VERSION . '/roles/list',[RolesController::class, 'index']);
     
 
 });

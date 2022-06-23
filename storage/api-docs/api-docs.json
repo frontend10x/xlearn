@@ -461,6 +461,72 @@
                 ]
             }
         },
+        "/api/v1/roles/list": {
+            "get": {
+                "tags": [
+                    "Roles"
+                ],
+                "summary": "Mostrar Roles de Usuarios",
+                "operationId": "ea7fe64e1ebfa9569d8565cbdee34b9b",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los roles de usuarios.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "roles": [
+                                            {
+                                                "id": 0,
+                                                "name": ""
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/types_users/list": {
+            "get": {
+                "tags": [
+                    "Type Users"
+                ],
+                "summary": "Mostrar Tipos de Usuarios",
+                "operationId": "fbe9eb12d5f6cf769ace80c65d4d571d",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los tipos de usuarios.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "types_users": [
+                                            {
+                                                "id": 0,
+                                                "name": ""
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
         "/api/v1/user/store": {
             "post": {
                 "tags": [
