@@ -16,6 +16,39 @@
         }
     ],
     "paths": {
+        "/api/v1/content/list": {
+            "get": {
+                "tags": [
+                    "Content"
+                ],
+                "summary": "Mostrar Los tipos de contenidos",
+                "operationId": "5ddc247b95c8fd437171e96c7eefca74",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los tipos de contenidos.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "roles": [
+                                            {
+                                                "id": 0,
+                                                "name": ""
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
         "/api/v1/countries/list": {
             "get": {
                 "tags": [
@@ -479,6 +512,40 @@
                                             {
                                                 "id": 0,
                                                 "name": ""
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/size/list": {
+            "get": {
+                "tags": [
+                    "Company Size"
+                ],
+                "summary": "Mostrar Los Tamaños de empresas",
+                "operationId": "0b62aecdd49e5837d74d02ac86a9a0df",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los tamaños de empresas.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "roles": [
+                                            {
+                                                "id": 0,
+                                                "range": "",
+                                                "tag": ""
                                             }
                                         ]
                                     }

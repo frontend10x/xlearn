@@ -15,6 +15,8 @@ use App\Http\Controllers\CountryController;
 use App\Http\Controllers\RegisterRequestController;
 use App\Http\Controllers\TypeUserController;
 use App\Http\Controllers\RolesController;
+use App\Http\Controllers\SizeController;
+use App\Http\Controllers\ContentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -53,6 +55,18 @@ Route::post(env('API_VERSION') . '/register_requests/store',[RegisterRequestCont
 // ---------------------------------------------------------------------    
 
 Route::get(env('API_VERSION') . '/plan/list',[PlanController::class, 'index']);
+
+// ---------------------------------------------------------------------
+// Tamaños de empresas
+// ---------------------------------------------------------------------
+
+Route::get(env('API_VERSION') . '/size/list',[SizeController::class, 'index']);
+
+// ---------------------------------------------------------------------
+// Contenido
+// ---------------------------------------------------------------------
+
+Route::get(env('API_VERSION') . '/content/list',[ContentController::class, 'index']);
 
 Route::group(['middleware'=>'auth:api' ],function(){
 
