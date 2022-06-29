@@ -298,7 +298,7 @@
                         "in": "query",
                         "required": true,
                         "schema": {
-                            "type": "string"
+                            "type": "number"
                         }
                     },
                     {
@@ -326,6 +326,13 @@
                     },
                     {
                         "name": "password",
+                        "in": "query",
+                        "schema": {
+                            "type": "password"
+                        }
+                    },
+                    {
+                        "name": "password_confirmation",
                         "in": "query",
                         "schema": {
                             "type": "password"
@@ -686,6 +693,13 @@
                     },
                     {
                         "name": "password",
+                        "in": "query",
+                        "schema": {
+                            "type": "password"
+                        }
+                    },
+                    {
+                        "name": "password_confirmation",
                         "in": "query",
                         "schema": {
                             "type": "password"

@@ -50,6 +50,7 @@ class UserController extends Controller
     *     @OA\Parameter(name="email", required=true, in="query", @OA\Schema(type="string")),
     *     @OA\Parameter(name="subcompanies_id", in="query", @OA\Schema(type="string")),
     *     @OA\Parameter(name="password", in="query", @OA\Schema(type="password")),
+    *     @OA\Parameter(name="password_confirmation", in="query", @OA\Schema(type="password")),
     *     @OA\Response(
     *         response=200,
     *         description="Success.",
@@ -90,11 +91,16 @@ class UserController extends Controller
                 throw new Exception("El usuario ya se encuentra registrado");
             }
 
+            if ( $request->input("password") != $request->input("password_confirmation")) {
+                throw new Exception("Las contraseñas no coinciden");
+            }
+
             // Validamos los datos enviados
             $validated = $request->validate([
                 'type_id' => 'required|integer',
                 'rol_id' => 'required|integer',
                 'password' => 'required',
+                'password_confirmation' => 'required',
                 'email' => 'required'
             ]);
 
@@ -115,7 +121,7 @@ class UserController extends Controller
 
         } catch (Exception $e) {
 
-            return response()->json(["message" => $e->getMessage()], 500);
+            return response()->json(["message" => $e->getMessage(), "line" => $e->getLine()], 500);
             \Log::debug('message ' . $e->getMessage());
 
         }

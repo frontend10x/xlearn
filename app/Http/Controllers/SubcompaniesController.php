@@ -32,7 +32,7 @@ class SubcompaniesController extends Controller
             }
             $subCompanyNit = Sub_companies::where("name",$request->input("name"))->first();
             if(!empty($subCompanyNit)){
-                throw new Exception("La nit de la compañia ya se encuentra registrado");
+                throw new Exception("El nit de la compañia ya se encuentra registrado");
             }
             $datosSubEmpresa = [
                 "name" => $request->input("name"), "address" => $request->input("address"), "phone" => $request->input("phone")

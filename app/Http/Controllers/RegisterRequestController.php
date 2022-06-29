@@ -91,11 +91,12 @@ class RegisterRequestController extends Controller
     *     @OA\Parameter(name="website", required=true, in="query", @OA\Schema(type="string")),
     *     @OA\Parameter(name="size", required=true, in="query", @OA\Schema(type="string")),
     *     @OA\Parameter(name="country", required=true, in="query", @OA\Schema(type="number")),
-    *     @OA\Parameter(name="content", required=true, in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="content", required=true, in="query", @OA\Schema(type="number")),
     *     @OA\Parameter(name="plan_id", required=true, in="query", @OA\Schema(type="number")),
     *     @OA\Parameter(name="quotas", required=true, in="query", @OA\Schema(type="number")),
     *     @OA\Parameter(name="observation", in="query", @OA\Schema(type="string")),
     *     @OA\Parameter(name="password", in="query", @OA\Schema(type="password")),
+    *     @OA\Parameter(name="password_confirmation", in="query", @OA\Schema(type="password")),
     *     @OA\Response(
     *         response=200,
     *         description="Success.",
@@ -128,8 +129,13 @@ class RegisterRequestController extends Controller
     {
         try {
             $consult = RegistrationRequest::where("email", $request->input("email"))->first();
+            
             if (!empty($consult)) {
                 throw new Exception("El usuario ya tiene una solicitud activa");
+            }
+
+            if ( $request->input("password") != $request->input("password_confirmation")) {
+                throw new Exception("Las contraseñas no coinciden");
             }
 
             // Validamos los datos enviados
@@ -164,6 +170,7 @@ class RegisterRequestController extends Controller
             $register = RegistrationRequest::create($dataInsert);
 
             $dataInsert["password"] = $request->input("password");
+            $dataInsert["password_confirmation"] = $request->input("password_confirmation");
             $dataInsert["rol_id"] = 3;
             $dataInsert["type_id"] = 2;
             $dataInsert["state"] = 0;
@@ -179,19 +186,19 @@ class RegisterRequestController extends Controller
                 $request->request->add(array_merge($dataInsert, $request->all()));
 
                 $userCreated = UserController::store($request);
-                $userId = json_decode($userCreated, true);
+                //$userId = json_decode($userCreated, true);
 
                 //Encriptamos el email del usuario
-                $encryptedId = Crypt::encryptString($userId['id']);
+                //$encryptedId = Crypt::encryptString($userId['id']);
 
-                Mail::to($request->input("email"))->send(new ConfirmationRegisterRequest($encryptedId));
+                //Mail::to($request->input("email"))->send(new ConfirmationRegisterRequest($encryptedId));
 
             }
 
             return response()->json(["message" => "Registro almacenado con éxito"], 200);
 
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return response()->json(["message" => $e->getMessage(), "line" => $e->getLine()], 500);
         }
     }
 
