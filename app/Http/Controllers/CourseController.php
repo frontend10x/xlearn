@@ -61,14 +61,227 @@ class CourseController extends Controller
             return response()->json(["message" => $e->getMessage()], 500);
         }
     }
+
+    /**
+    * @OA\Get(
+    *     path="/api/v1/course/list",
+    *     summary="Mostrar cursos",
+    *     tags={"Courses"},
+    *     security={{"bearer_token":{}}},
+    *     @OA\Parameter(name="offset", in="query", @OA\Schema(type="number")),
+    *     @OA\Parameter(name="limit", in="query", @OA\Schema(type="number")),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Mostrar todos los cursos.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                       "response": {
+    *                           "hc:length": 0,
+    *                           "hc:total": 0,
+    *                           "hc:offset": 0,
+    *                           "hc:limit": 0,
+    *                           "hc:next": "next page end-point ",
+    *                           "hc:previous": "previous page end-point ",
+    *                           "_rel": "course",
+    *                           "_embedded": {
+    *                               "course": {
+    *                                   {
+    *                                   "id": 0,
+    *                                   "name": "",
+    *                                   "description": "",
+    *                                   "state": 0,
+    *                                   "free_video": "",
+    *                                   "file_path": "",
+    *                                   "video_path": "",
+    *                                   "area_id": 0,
+    *                                   "programs_id": 0,
+    *                                   "created_at": "2022-06-11T23:21:42.000000Z",
+    *                                   "updated_at": "2022-06-12T00:46:06.000000Z",
+    *                                   "areas": {
+    *                                       "id": 0,
+    *                                       "name": "",
+    *                                       "description": "",
+    *                                       "file_path": "",
+    *                                       "state": 0,
+    *                                       "created_at": "2022-06-11T23:21:42.000000Z",
+    *                                       "updated_at": "2022-06-12T00:46:06.000000Z"
+    *                                       }
+    *                                   }
+    *                               }
+    *                           }
+    *                       }
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
     public function index(Request $request)
     {
         try {
-            return response()->json(["cursos" => Course::all()], 200);
+
+            //TODO debe sacarse del request, por defecto el valor es uno
+            $offset = $request->has('offset') ? intval($request->get('offset')) : 1;
+
+            //TODO debe sacarse del request, por defecto el valor es 10.
+            $limit = $request->has('limit') ? intval($request->get('limit')) : 10;
+
+            $consult = Course::where('state', 1)->with('areas')->limit($limit)->offset(($offset - 1) * $limit)->get()->toArray();
+
+            $nexOffset = $offset + 1;
+            $previousOffset = ($offset > 1) ? $offset - 1 : 1;
+
+            $course = array(
+                "hc:length" => count($consult), //Es la longitud del array a devolver
+                "hc:total"  => Course::count('state', 1), //Es la longitud total de los registros disponibles en el query original,
+                "hc:offset" => $offset,
+                "hc:limit"  => $limit,
+                "hc:next"   => server_path() . '?limit=' . $limit . '&offset=' . $nexOffset,
+                "hc:previous"   => server_path() . '?limit=' . $limit . '&offset=' . $previousOffset,
+                "_rel"		=> "courses",
+                "_embedded" => array(
+                    "courses" => $consult
+                )
+            );
+
+            if(empty($consult))
+                throw new Exception("No se encontraron registros");
+
+            return response()->json(["response" => $course], 200);
+            
+            //return response()->json(["cursos" => Course::all()], 200);
+
         } catch (Exception $e) {
             return response()->json(["message" => $e->getMessage()], 500);
         }
     }
+
+    /**
+    * @OA\Get(
+    *     path="/api/v1/course/show_area/{areaId}",
+    *     summary="Mostrar curso por areas",
+    *     tags={"Courses"},
+    *     security={{"bearer_token":{}}},
+    *     @OA\Parameter(name="offset", in="query", @OA\Schema(type="number")),
+    *     @OA\Parameter(name="limit", in="query", @OA\Schema(type="number")),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Mostrar todos los cursos del area.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                       "response": {
+    *                           "hc:length": 0,
+    *                           "hc:total": 0,
+    *                           "hc:offset": 0,
+    *                           "hc:limit": 0,
+    *                           "hc:next": "next page end-point ",
+    *                           "hc:previous": "previous page end-point ",
+    *                           "_rel": "course",
+    *                           "_embedded": {
+    *                               "course": {
+    *                                   {
+    *                                   "id": 0,
+    *                                   "name": "",
+    *                                   "description": "",
+    *                                   "state": 0,
+    *                                   "free_video": "",
+    *                                   "file_path": "",
+    *                                   "video_path": "",
+    *                                   "area_id": 0,
+    *                                   "programs_id": 0,
+    *                                   "created_at": "2022-06-11T23:21:42.000000Z",
+    *                                   "updated_at": "2022-06-12T00:46:06.000000Z",
+    *                                   "areas": {
+    *                                       "id": 0,
+    *                                       "name": "",
+    *                                       "description": "",
+    *                                       "file_path": "",
+    *                                       "state": 0,
+    *                                       "created_at": "2022-06-11T23:21:42.000000Z",
+    *                                       "updated_at": "2022-06-11T23:21:42.000000Z"
+    *                                       }
+    *                                   }
+    *                               }
+    *                           }
+    *                       }
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
+    public function show(Request $request, $areaId)
+    {
+        try {
+
+            //TODO debe sacarse del request, por defecto el valor es uno
+            $offset = $request->has('offset') ? intval($request->get('offset')) : 1;
+
+            //TODO debe sacarse del request, por defecto el valor es 10.
+            $limit = $request->has('limit') ? intval($request->get('limit')) : 10;
+
+            $consult = Course::where('area_id', $areaId)->with('areas')->limit($limit)->offset(($offset - 1) * $limit)->get()->toArray();
+
+            $nexOffset = $offset + 1;
+            $previousOffset = ($offset > 1) ? $offset - 1 : 1;
+
+            $course = array(
+                "hc:length" => count($consult), //Es la longitud del array a devolver
+                "hc:total"  => Course::count('area_id', $areaId), //Es la longitud total de los registros disponibles en el query original,
+                "hc:offset" => $offset,
+                "hc:limit"  => $limit,
+                "hc:next"   => server_path() . '?limit=' . $limit . '&offset=' . $nexOffset,
+                "hc:previous"   => server_path() . '?limit=' . $limit . '&offset=' . $previousOffset,
+                "_rel"		=> "courses",
+                "_embedded" => array(
+                    "courses" => $consult
+                )
+            );
+
+            if(empty($consult))
+                throw new Exception("No se encontraron registros");
+
+            return response()->json(["response" => $course], 200);
+            
+            //return response()->json(["cursos" => Course::all()], 200);
+
+        } catch (Exception $e) {
+            return response()->json(["message" => $e->getMessage()], 500);
+        }
+    }
+
     public function changestate(Request $request, $id)
     {
         try {

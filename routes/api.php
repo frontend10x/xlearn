@@ -141,10 +141,10 @@ Route::group(['middleware'=>'auth:api' ],function(){
     // ---------------------------------------------------------------------    
     
     Route::get($API_VERSION . '/course/list',[CourseController::class, 'index']);
+    Route::get($API_VERSION . '/course/show_area/{areaId}',[CourseController::class, 'show']);
     Route::put($API_VERSION . '/course/edit/{id}',[CourseController::class, 'edit']);
     Route::post($API_VERSION . '/course/store',[CourseController::class, 'store']);
     Route::put($API_VERSION . '/course/changestate/{id}',[CourseController::class, 'changestate']);
-
     Route::put($API_VERSION . '/course/userrating/{id_curso}',[CourseController::class, 'userrating']);
     
     // ---------------------------------------------------------------------
