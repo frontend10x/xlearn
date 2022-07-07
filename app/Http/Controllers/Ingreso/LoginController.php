@@ -48,6 +48,15 @@ class LoginController extends Controller
     *                           "name":"",
     *                           "email":"",
     *                           "phone":"",
+    *                           "typeUser":{
+    *                               "id": 0,
+    *                               "name": ""
+    *                           },
+    *                           "roles":{
+    *                               "id": 0,
+    *                               "name": ""
+    *                           },
+    *                           "subcompanies_id":"",
     *                        }
     *                 },
     *             ),
@@ -79,7 +88,11 @@ class LoginController extends Controller
         // );
 
         if (Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password'), 'state' => 1])) {
-            $user = User::where('email', $request->input('email'))->first();
+            
+            //$consult = Course::where('area_id', $areaId)->with('areas')->limit($limit)->offset(($offset - 1) * $limit)->get()->toArray();
+
+            $user = User::where('email', $request->input('email'))->with('roles', 'typeUser')->first();
+            
             $token = $user->createToken('token_jobs' . Auth::user()->id)->accessToken;
 
             if (!empty($request->input('token'))) {
@@ -95,8 +108,14 @@ class LoginController extends Controller
                         "name" => $user->name, 
                         "email" => $user->email, 
                         "phone" => $user->phone,
-                        "rol_id" => $user->rol_id,
-                        "type_id" => $user->type_id,
+                        "typeUser" => [
+                            "id" => $user->typeUser->id,
+                            "name" => $user->typeUser->name
+                        ],
+                        "roles" => [
+                            "id" => $user->roles->id,
+                            "name" => $user->roles->rol_name
+                        ],
                         "subcompanies_id" => $user->subcompanies_id
                     ]
                 ] 

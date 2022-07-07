@@ -374,7 +374,16 @@
                                         "datosUsuario": {
                                             "name": "",
                                             "email": "",
-                                            "phone": ""
+                                            "phone": "",
+                                            "typeUser": {
+                                                "id": 0,
+                                                "name": ""
+                                            },
+                                            "roles": {
+                                                "id": 0,
+                                                "name": ""
+                                            },
+                                            "subcompanies_id": ""
                                         }
                                     }
                                 }

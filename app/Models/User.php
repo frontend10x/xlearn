@@ -46,4 +46,8 @@ class User extends Authenticatable
         return $this->belongsto('App\Models\Roles', 'rol_id');
     }
 
+    public function typeUser(){
+        return $this->belongsto('App\Models\TypesUsers', 'type_id');
+    }
+
 }
