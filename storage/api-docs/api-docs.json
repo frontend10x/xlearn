@@ -448,6 +448,85 @@
                 ]
             }
         },
+        "/api/v1/questions/list": {
+            "get": {
+                "tags": [
+                    "Questions"
+                ],
+                "summary": "Mostrar preguntas para diagnostico",
+                "operationId": "2c72c25c32967bd45880053685fd1aac",
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos las preguntas.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "response": {
+                                            "hc:length": 0,
+                                            "hc:total": 0,
+                                            "hc:offset": 0,
+                                            "hc:limit": 0,
+                                            "hc:next": "next page end-point ",
+                                            "hc:previous": "previous page end-point ",
+                                            "_rel": "questions",
+                                            "_embedded": {
+                                                "questions": [
+                                                    {
+                                                        "id": 0,
+                                                        "question": "",
+                                                        "required": true,
+                                                        "created_at": "2022-06-11T23:21:42.000000Z",
+                                                        "updated_at": "2022-06-12T00:46:06.000000Z",
+                                                        "options": {
+                                                            "id": 0,
+                                                            "response": ""
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
         "/api/v1/register_requests/list": {
             "get": {
                 "tags": [
