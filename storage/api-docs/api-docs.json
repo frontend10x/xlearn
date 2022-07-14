@@ -339,6 +339,78 @@
                 ]
             }
         },
+        "/api/v1/diagnostic/store": {
+            "post": {
+                "tags": [
+                    "Diagnostic"
+                ],
+                "summary": "Almacenar diagnostico del lider",
+                "operationId": "c624d5dc0cdfedb7d92f4cc386caa5b5",
+                "parameters": [
+                    {
+                        "name": "target",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "_rel",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "answers",
+                        "in": "query",
+                        "schema": {
+                            "type": "[]"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Registro almacenado con éxito."
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
         "/api/v1/login": {
             "post": {
                 "tags": [
@@ -492,8 +564,6 @@
                                                         "id": 0,
                                                         "question": "",
                                                         "required": true,
-                                                        "created_at": "2022-06-11T23:21:42.000000Z",
-                                                        "updated_at": "2022-06-12T00:46:06.000000Z",
                                                         "options": {
                                                             "id": 0,
                                                             "response": ""

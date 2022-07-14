@@ -127,7 +127,7 @@ class UserController extends Controller
         }
     }
 
-        /**
+    /**
     * @OA\Put(
     *     path="/api/v1/user/edit/{id}",
     *     tags={"Users"},

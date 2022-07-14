@@ -18,6 +18,7 @@ use App\Http\Controllers\RolesController;
 use App\Http\Controllers\SizeController;
 use App\Http\Controllers\ContentController;
 use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\DiagnosticController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -200,6 +201,12 @@ Route::group(['middleware'=>'auth:api' ],function(){
     // ---------------------------------------------------------------------
     
     Route::get($API_VERSION . '/questions/list',[QuestionController::class, 'index']);
+
+    // ---------------------------------------------------------------------
+    // Diagnostico
+    // ---------------------------------------------------------------------
+    
+    Route::post($API_VERSION . '/diagnostic/store',[DiagnosticController::class, 'store']);
     
 
 });
