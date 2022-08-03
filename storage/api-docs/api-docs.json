@@ -366,6 +366,7 @@
                     {
                         "name": "_rel",
                         "in": "query",
+                        "required": true,
                         "schema": {
                             "type": "string"
                         }
@@ -373,6 +374,7 @@
                     {
                         "name": "answers",
                         "in": "query",
+                        "required": true,
                         "schema": {
                             "type": "[]"
                         }
@@ -444,6 +446,7 @@
                                         "message": "Acceso correcto",
                                         "token": "",
                                         "datosUsuario": {
+                                            "id": 0,
                                             "name": "",
                                             "email": "",
                                             "phone": "",
@@ -456,6 +459,70 @@
                                                 "name": ""
                                             },
                                             "subcompanies_id": ""
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/payment/requests": {
+            "post": {
+                "tags": [
+                    "Payments"
+                ],
+                "summary": "Obtener detalles de pago",
+                "operationId": "c57fe89f203dcbfa1346855d6c34a985",
+                "parameters": [
+                    {
+                        "name": "reference",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "amount",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "payment_details": {
+                                            "amount": "",
+                                            "reference": "",
+                                            "currency": "",
+                                            "public_key": "",
+                                            "signature": ""
                                         }
                                     }
                                 }
@@ -1374,9 +1441,241 @@
                     }
                 ]
             }
+        },
+        "/api/v1/group/store": {
+            "post": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "Crear grupo",
+                "operationId": "a48a3d0c9085c6f087c67631801078e3",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "description",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "file_path",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "subcompanies_id",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Registro almacenado con éxito."
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/group/list": {
+            "get": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "Mostrar grupos de usuarios",
+                "operationId": "cc898cf90320d46d7b543fd1c9e2da2b",
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los grupos de usuarios.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "response": {
+                                            "hc:length": 0,
+                                            "hc:total": 0,
+                                            "hc:offset": 0,
+                                            "hc:limit": 0,
+                                            "hc:next": "next page end-point ",
+                                            "hc:previous": "previous page end-point ",
+                                            "_rel": "users",
+                                            "_embedded": {
+                                                "groups": [
+                                                    {
+                                                        "id": 0,
+                                                        "name": "",
+                                                        "description": "",
+                                                        "subcompanies_id": ""
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/groupuser/assignment/{group_id}": {
+            "post": {
+                "tags": [
+                    "User groups"
+                ],
+                "summary": "Asignación de usuarios a grupo",
+                "operationId": "7f9cc603c3feae373c02ad1c0eb7840f",
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "[]"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Usuarios asignados a grupo con éxito."
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
         }
     },
     "components": {
+        "responses": {
+            "200": {
+                "description": "Success.",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "example": {
+                                "message": "Usuario removido de grupo con éxito."
+                            }
+                        }
+                    }
+                }
+            },
+            "500": {
+                "description": "Failed",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "example": {
+                                "message": "Mensaje de error"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "parameters": {
+            "user": {
+                "name": "user",
+                "in": "query",
+                "required": true,
+                "schema": {
+                    "type": "number"
+                }
+            }
+        },
         "securitySchemes": {
             "bearer_token": {
                 "type": "apiKey",

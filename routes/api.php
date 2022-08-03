@@ -19,6 +19,7 @@ use App\Http\Controllers\SizeController;
 use App\Http\Controllers\ContentController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\DiagnosticController;
+use App\Http\Controllers\PaymentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -207,7 +208,12 @@ Route::group(['middleware'=>'auth:api' ],function(){
     // ---------------------------------------------------------------------
     
     Route::post($API_VERSION . '/diagnostic/store',[DiagnosticController::class, 'store']);
+
+    // ---------------------------------------------------------------------
+    // Pagos
+    // ---------------------------------------------------------------------
     
+    Route::post($API_VERSION . '/payment/requests',[PaymentController::class, 'paymentRequests']);
 
 });
 

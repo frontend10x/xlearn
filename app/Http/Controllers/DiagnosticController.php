@@ -15,8 +15,8 @@ class DiagnosticController extends Controller
     *     security={{"bearer_token":{}}},
     *     @OA\Parameter(name="target", required=true, in="query", @OA\Schema(type="string")),
     *     @OA\Parameter(name="user_id", required=true, in="query", @OA\Schema(type="number")),
-    *     @OA\Parameter(name="_rel", in="query", @OA\Schema(type="string")),
-    *     @OA\Parameter(name="answers", in="query", @OA\Schema(type="[]")),
+    *     @OA\Parameter(name="_rel", required=true, in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="answers", required=true, in="query", @OA\Schema(type="[]")),
     *     @OA\Response(
     *         response=200,
     *         description="Success.",
@@ -62,7 +62,7 @@ class DiagnosticController extends Controller
                 "target" => $request->input("target"), 
                 "user_id" => $request->input("user_id"), 
                 "rel" => $request->input("_rel"), 
-                "answers" => $request->input("answers")
+                "answers" => json_encode($request->input("answers"))
             ];
 
             $toCreate = Diagnostic::create($dataInsert);

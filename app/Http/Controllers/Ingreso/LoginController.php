@@ -45,6 +45,7 @@ class LoginController extends Controller
     *                      "message":"Acceso correcto",
     *                       "token":"",
     *                       "datosUsuario":{
+    *                           "id":0,
     *                           "name":"",
     *                           "email":"",
     *                           "phone":"",
@@ -105,6 +106,7 @@ class LoginController extends Controller
                     'message' => "Acceso correcto", 
                     "token" => $token, 
                     "datosUsuario" => [
+                        "id" => $user->id,
                         "name" => $user->name, 
                         "email" => $user->email, 
                         "phone" => $user->phone,

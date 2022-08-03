@@ -10,6 +10,45 @@ use Illuminate\Support\Facades\Auth;
 
 class GroupController extends Controller
 {
+
+    /**
+    * @OA\Post(
+    *     path="/api/v1/group/store",
+    *     tags={"Groups"},
+    *     summary="Crear grupo",
+    *     security={{"bearer_token":{}}},
+    *     @OA\Parameter(name="name", required=true, in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="description", required=true, in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="file_path", in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="subcompanies_id", in="query", @OA\Schema(type="number")),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Success.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Registro almacenado con éxito."
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
     public function store(Request $request)
     {
         try {
@@ -17,6 +56,13 @@ class GroupController extends Controller
             if (!empty($subCompany)) {
                 throw new Exception("Ya existe el grupo con el nombre " . $request->input("name"));
             }
+
+            // Validamos los datos enviados
+            $validated = $request->validate([
+                'name' => 'required|string',
+                'description' => 'required|string'
+            ]);
+
             $datosSubEmpresa = [
                 "name" => $request->input("name"), "description" => $request->input("description"), "state" => $request->input("state")
             ];
@@ -64,15 +110,94 @@ class GroupController extends Controller
             return response()->json(["message" => $e->getMessage()], 500);
         }
     }
+
+    /**
+    * @OA\Get(
+    *     path="/api/v1/group/list",
+    *     summary="Mostrar grupos de usuarios",
+    *     tags={"Groups"},
+    *     security={{"bearer_token":{}}},
+    *     @OA\Parameter(name="offset", in="query", @OA\Schema(type="number")),
+    *     @OA\Parameter(name="limit", in="query", @OA\Schema(type="number")),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Mostrar todos los grupos de usuarios.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                       "response": {
+    *                           "hc:length": 0,
+    *                           "hc:total": 0,
+    *                           "hc:offset": 0,
+    *                           "hc:limit": 0,
+    *                           "hc:next": "next page end-point ",
+    *                           "hc:previous": "previous page end-point ",
+    *                           "_rel": "users",
+    *                           "_embedded": {
+    *                               "groups": {
+    *                                   {
+    *                                   "id": 0,
+    *                                   "name": "",
+    *                                   "description": "",
+    *                                   "subcompanies_id": ""
+    *                                   }
+    *                               }
+    *                           }
+    *                       }
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
     public function index(Request $request)
     {
         try {
             if (!empty(Auth::user()->subcompanies_id)) {
                 $grupos = Group::where("subcompanies_id", Auth::user()->subcompanies_id)->get();
             } else {
-                $grupos = Group::all();
+
+                //TODO debe sacarse del request, por defecto el valor es uno
+                $offset = $request->has('offset') ? intval($request->get('offset')) : 1;
+
+                //TODO debe sacarse del request, por defecto el valor es 10.
+                $limit = $request->has('limit') ? intval($request->get('limit')) : 10;
+
+                $consult = Group::select('id', 'name', 'description', 'subcompanies_id')->limit($limit)->offset(($offset - 1) * $limit)->get()->toArray();
+
+                $nexOffset = $offset + 1;
+                $previousOffset = ($offset > 1) ? $offset - 1 : 1;
+
             }
-            return response()->json(["groups" => $grupos], 200);
+
+            $groups = array(
+                "hc:length" => count($consult), //Es la longitud del array a devolver
+                "hc:total"  => Group::count(), //Es la longitud total de los registros disponibles en el query original,
+                "hc:offset" => $offset,
+                "hc:limit"  => $limit,
+                "hc:next"   => server_path() . '?limit=' . $limit . '&offset=' . $nexOffset,
+                "hc:previous"   => server_path() . '?limit=' . $limit . '&offset=' . $previousOffset,
+                "_rel"		=> "groups",
+                "_embedded" => array(
+                    "groups" => $consult
+                )
+            );
+            return response()->json(["groups" => $groups], 200);
         } catch (Exception $e) {
             return response()->json(["message" => $e->getMessage()], 500);
         }
@@ -91,16 +216,88 @@ class GroupController extends Controller
         }
     }
 
+    /**
+    * @OA\Post(
+    *     path="/api/v1/groupuser/assignment/{group_id}",
+    *     tags={"User groups"},
+    *     summary="Asignación de usuarios a grupo",
+    *     security={{"bearer_token":{}}},
+    *     @OA\Parameter(name="user", required=true, in="query", @OA\Schema(type="[]")),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Success.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Usuarios asignados a grupo con éxito."
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
     public function assignment(Request $request, $group_id)
     {
         try {
             $group = Group::find($group_id);
             $group->users()->sync($request->user);
-            return response()->json(["users" => $group->users], 200);
+            return json_encode(["message" => "Usuarios asignados a grupo con éxito"], 200);
+            //return response()->json(["users" => $group->users], 200);
         } catch (Exception $e) {
             return response()->json(["message" => $e->getMessage()], 500);
         }
     }
+
+    /**
+    * @OA\Deleted(
+    *     path="/api/v1/groupuser/removefromgroup/{group_id}",
+    *     tags={"User groups"},
+    *     summary="Remover usuario de grupo",
+    *     security={{"bearer_token":{}}},
+    *     @OA\Parameter(name="user", required=true, in="query", @OA\Schema(type="number")),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Success.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Usuario removido de grupo con éxito."
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
     public function removefromgroup(Request $request, $group_id)
     {
         try {
