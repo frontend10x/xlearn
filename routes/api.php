@@ -23,6 +23,8 @@ use App\Http\Controllers\PaymentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+define("API_VERSION", env('API_VERSION'));
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -38,7 +40,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post(env('API_VERSION') . '/login',[LoginController::class, 'ingreso']);
+Route::post(API_VERSION. '/login',[LoginController::class, 'ingreso']);
 Route::post(env('API_VERSION') . '/contact_us/store',[Contact_usController::class, 'store']);
 
 // ---------------------------------------------------------------------
@@ -70,6 +72,12 @@ Route::get(env('API_VERSION') . '/size/list',[SizeController::class, 'index']);
 // ---------------------------------------------------------------------
 
 Route::get(env('API_VERSION') . '/content/list',[ContentController::class, 'index']);
+
+// ---------------------------------------------------------------------
+// Cursos
+// ---------------------------------------------------------------------    
+
+Route::get(env('API_VERSION') . '/course/list',[CourseController::class, 'index']);
 
 Route::group(['middleware'=>'auth:api' ],function(){
 
@@ -208,6 +216,7 @@ Route::group(['middleware'=>'auth:api' ],function(){
     // ---------------------------------------------------------------------
     
     Route::post($API_VERSION . '/diagnostic/store',[DiagnosticController::class, 'store']);
+    Route::patch($API_VERSION . '/diagnostic/confirm_route/{diagnostic_id}',[DiagnosticController::class, 'confirm_route']);
 
     // ---------------------------------------------------------------------
     // Pagos

@@ -387,7 +387,48 @@
                             "application/json": {
                                 "schema": {
                                     "example": {
-                                        "message": "Registro almacenado con éxito."
+                                        "message": "Registro almacenado con éxito.",
+                                        "course_route": "[]"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/diagnostic/confirm_route/{diagnostic_id}": {
+            "patch": {
+                "tags": [
+                    "Diagnostic"
+                ],
+                "summary": "Confirmar diagnostico",
+                "operationId": "1a573a8890a77720c6eca49c03eabc0d",
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Ruta confirmada correctamente"
                                     }
                                 }
                             }
