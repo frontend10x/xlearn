@@ -20,6 +20,7 @@ use App\Http\Controllers\ContentController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\DiagnosticController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\ExportController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -46,7 +47,7 @@ Route::post(env('API_VERSION') . '/contact_us/store',[Contact_usController::clas
 // ---------------------------------------------------------------------
 // Countrys
 // ---------------------------------------------------------------------    
-Route::get(env('API_VERSION') . '/countries/list',[CountryController::class, 'index']);
+Route::get(API_VERSION . '/countries/list',[CountryController::class, 'index']);
 
 
 // ---------------------------------------------------------------------
@@ -222,6 +223,12 @@ Route::group(['middleware'=>'auth:api' ],function(){
     // ---------------------------------------------------------------------
     
     Route::post($API_VERSION . '/payment/requests',[PaymentController::class, 'paymentRequests']);
+
+
+    // ---------------------------------------------------------------------
+    // Export
+    // ---------------------------------------------------------------------    
+    Route::get(API_VERSION . '/export/sample_file',[ExportController::class, 'exportSampleFile']);
 
 });
 
