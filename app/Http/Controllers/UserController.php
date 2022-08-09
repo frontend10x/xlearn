@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Crypt;
 use App\Mail\ConfirmationRegisterRequest;
 
 
-
 class UserController extends Controller
 {
 
