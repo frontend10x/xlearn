@@ -491,9 +491,8 @@
                                             "name": "",
                                             "email": "",
                                             "phone": "",
-                                            "typeUser": {
-                                                "id": 0,
-                                                "name": ""
+                                            "diagnostic": {
+                                                "status": false
                                             },
                                             "roles": {
                                                 "id": 0,

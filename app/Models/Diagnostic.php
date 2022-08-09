@@ -15,4 +15,5 @@ class Diagnostic extends Model
      * @var array<int, string>
      */
     protected $guarded = [];
+
 }

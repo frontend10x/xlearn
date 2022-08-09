@@ -49,5 +49,8 @@ class User extends Authenticatable
     public function typeUser(){
         return $this->belongsto('App\Models\TypesUsers', 'type_id');
     }
-
+    
+    public function diagnostic(){
+        return $this->hasMany('App\Models\Diagnostic', 'user_id');
+    }
 }

@@ -186,16 +186,16 @@ class RegisterRequestController extends Controller
                 $request->request->add(array_merge($dataInsert, $request->all()));
 
                 $userCreated = UserController::store($request);
-                //$userId = json_decode($userCreated, true);
+                $userId = json_decode($userCreated, true);
 
                 //Encriptamos el email del usuario
-                //$encryptedId = Crypt::encryptString($userId['id']);
+                $encryptedId = Crypt::encryptString($userId['id']);
 
-                //Mail::to($request->input("email"))->send(new ConfirmationRegisterRequest($encryptedId));
+                Mail::to($request->input("email"))->send(new ConfirmationRegisterRequest($encryptedId));
 
             }
 
-            return response()->json(["message" => "Registro almacenado con éxito"], 200);
+            return response()->json(["message" => "Registro almacenado con éxito" . $userCreated], 200);
 
         } catch (Exception $e) {
             return response()->json(["message" => $e->getMessage(), "line" => $e->getLine()], 500);

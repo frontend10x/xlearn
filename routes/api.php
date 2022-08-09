@@ -151,7 +151,6 @@ Route::group(['middleware'=>'auth:api' ],function(){
     // Cursos
     // ---------------------------------------------------------------------    
     
-    Route::get($API_VERSION . '/course/list',[CourseController::class, 'index']);
     Route::get($API_VERSION . '/course/show_area/{areaId}',[CourseController::class, 'show']);
     Route::put($API_VERSION . '/course/edit/{id}',[CourseController::class, 'edit']);
     Route::post($API_VERSION . '/course/store',[CourseController::class, 'store']);

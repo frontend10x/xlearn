@@ -136,7 +136,7 @@ class DiagnosticController extends Controller
 
             $search = Diagnostic::find($diagnostic_id);
             $search->update(['confirmed' => 1]);
-
+            
             return response()->json(["message" => 'Ruta confirmada correctamente'], 200);
 
 

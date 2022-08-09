@@ -49,9 +49,8 @@ class LoginController extends Controller
     *                           "name":"",
     *                           "email":"",
     *                           "phone":"",
-    *                           "typeUser":{
-    *                               "id": 0,
-    *                               "name": ""
+    *                           "diagnostic":{
+    *                               "status": false,
     *                           },
     *                           "roles":{
     *                               "id": 0,
@@ -89,10 +88,8 @@ class LoginController extends Controller
         // );
 
         if (Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password'), 'state' => 1])) {
-            
-            //$consult = Course::where('area_id', $areaId)->with('areas')->limit($limit)->offset(($offset - 1) * $limit)->get()->toArray();
 
-            $user = User::where('email', $request->input('email'))->with('roles', 'typeUser')->first();
+            $user = User::where('email', $request->input('email'))->with('roles', 'typeUser', 'diagnostic')->first();
             
             $token = $user->createToken('token_jobs' . Auth::user()->id)->accessToken;
 
@@ -100,6 +97,11 @@ class LoginController extends Controller
                 $tokenCelular = $request->input('token');
                 //  $this->updateToken($tokenCelular, $user->id);
             }
+
+            if($user->roles->rol_name === 'Lider' && $user->diagnostic[0]->confirmed === 1)
+               $diagnosticStatus = true;
+            else
+                $diagnosticStatus = false;
             
             return response()->json(
                 [
@@ -110,13 +112,16 @@ class LoginController extends Controller
                         "name" => $user->name, 
                         "email" => $user->email, 
                         "phone" => $user->phone,
-                        "typeUser" => [
+                        /*"typeUser" => [
                             "id" => $user->typeUser->id,
                             "name" => $user->typeUser->name
-                        ],
+                        ],*/
                         "roles" => [
                             "id" => $user->roles->id,
                             "name" => $user->roles->rol_name
+                        ],
+                        "diagnostic" => [
+                            'status' => $diagnosticStatus
                         ],
                         "subcompanies_id" => $user->subcompanies_id
                     ]
