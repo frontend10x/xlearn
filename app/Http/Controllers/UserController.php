@@ -380,18 +380,54 @@ class UserController extends Controller
         }
     }
 
+    /**
+    * @OA\Post(
+    *     path="/api/v1/user/bulk_upload_users",
+    *     tags={"Users"},
+    *     summary="Carga masiva de usuarios",
+    *     security={{"bearer_token":{}}},
+    *     @OA\Parameter(name="file", required=true, in="query", @OA\Schema(type="file")),
+    *     @OA\Parameter(name="subcompanies_id", required=true, in="query", @OA\Schema(type="number")),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Success.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Usuarios cargados correctamente"
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
     public function bulkUploadUsers(Request $request)
     {
 
         try {
             
-            Excel::import(new UsersImport(), $request->file);
+            Excel::import(new UsersImport($request->subcompanies_id), $request->file);
 
             return response()->json(["message" => "Usuarios cargados correctamente"], 200);
 
         } catch (Exception $e) {
             
-            return response()->json(["message" => $e->getMessage()], 500);
+            return response()->json(["message" => $e->getMessage(), "line" => $e->getLine()], 500);
 
         }
          

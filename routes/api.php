@@ -49,7 +49,7 @@ Route::post(env('API_VERSION') . '/contact_us/store',[Contact_usController::clas
 // ---------------------------------------------------------------------    
 Route::get(API_VERSION . '/countries/list',[CountryController::class, 'index']);
 
-
+    
 // ---------------------------------------------------------------------
 // Register Request
 // ---------------------------------------------------------------------
@@ -225,10 +225,10 @@ Route::group(['middleware'=>'auth:api' ],function(){
     
     Route::post($API_VERSION . '/payment/requests',[PaymentController::class, 'paymentRequests']);
 
-
     // ---------------------------------------------------------------------
     // Export
-    // ---------------------------------------------------------------------    
+    // --------------------------------------------------------------------- 
+      
     Route::get(API_VERSION . '/export/sample_file',[ExportController::class, 'exportSampleFile']);
     
 

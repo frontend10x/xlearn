@@ -14,23 +14,11 @@ class SampleFile implements FromArray
     public function array(): array
     {
         return [[
-            'name', 
+            'nombre',
+            'apellido', 
+            'telefono',
             'email', 
-            'email_verified_at', 
             'password',
-            'remember_token',
-            'created_at',
-            'updated_at',
-            'surname',
-            'phone',
-            'state',
-            'rol_id',
-            'type_id',
-            'subcompanies_id',
-            'link_facebook',
-            'link_google',
-            'link_linkedin',
-            'link_instagram'
         ]];
     }
 
