@@ -120,6 +120,7 @@ Route::group(['middleware'=>'auth:api' ],function(){
     Route::put($API_VERSION . '/user/forgotpassword/{id}',[UserController::class, 'forgotpassword']);
     Route::put($API_VERSION . '/user/changepassword',[UserController::class, 'changepassword']);
     Route::post($API_VERSION . '/user/coursesfavorites',[UserController::class, 'coursesFavorites']);
+    Route::post($API_VERSION . '/user/bulk_upload_users',[UserController::class, 'bulkUploadUsers']);
     
     // ---------------------------------------------------------------------
     // Grupos usuarios
@@ -229,6 +230,7 @@ Route::group(['middleware'=>'auth:api' ],function(){
     // Export
     // ---------------------------------------------------------------------    
     Route::get(API_VERSION . '/export/sample_file',[ExportController::class, 'exportSampleFile']);
+    
 
 });
 

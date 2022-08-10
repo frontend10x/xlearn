@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Crypt;
 use App\Mail\ConfirmationRegisterRequest;
+use App\Imports\UsersImport;
+use Maatwebsite\Excel\Facades\Excel;
 
 
 class UserController extends Controller
@@ -376,5 +378,22 @@ class UserController extends Controller
         } catch (Exception $e) {
             return response()->json(["message" => $e->getMessage()], 500);
         }
+    }
+
+    public function bulkUploadUsers(Request $request)
+    {
+
+        try {
+            
+            Excel::import(new UsersImport(), $request->file);
+
+            return response()->json(["message" => "Usuarios cargados correctamente"], 200);
+
+        } catch (Exception $e) {
+            
+            return response()->json(["message" => $e->getMessage()], 500);
+
+        }
+         
     }
 }

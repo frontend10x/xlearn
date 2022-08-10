@@ -14,7 +14,6 @@ class SampleFile implements FromArray
     public function array(): array
     {
         return [[
-            'id', 
             'name', 
             'email', 
             'email_verified_at', 
