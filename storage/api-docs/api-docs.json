@@ -565,7 +565,7 @@
                 "operationId": "c57fe89f203dcbfa1346855d6c34a985",
                 "parameters": [
                     {
-                        "name": "reference",
+                        "name": "name",
                         "in": "query",
                         "required": true,
                         "schema": {
@@ -573,11 +573,42 @@
                         }
                     },
                     {
-                        "name": "amount",
+                        "name": "email",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "amount_user",
                         "in": "query",
                         "required": true,
                         "schema": {
                             "type": "number"
+                        }
+                    },
+                    {
+                        "name": "amount_time",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "subcompanie_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "coupon",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
                         }
                     }
                 ],
@@ -593,7 +624,9 @@
                                             "reference": "",
                                             "currency": "",
                                             "public_key": "",
-                                            "signature": ""
+                                            "signature": "",
+                                            "coupon_status": "",
+                                            "plan": "{}"
                                         }
                                     }
                                 }

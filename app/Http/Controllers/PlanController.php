@@ -19,7 +19,8 @@ class PlanController extends Controller
                 "name" => $request->input("name")
                 , "description" => $request->input("description")
                 , "price" => $request->input("price")
-                , "amount_people" => $request->input("amount_people")
+                , "amount_user" => $request->input("amount_user")
+                , "amount_time" => $request->input("amount_time")
                 , "state" => $request->input("state")
                 , "color_title" => $request->input("color_title")
                 , "color_border" => $request->input("color_border")
@@ -42,7 +43,8 @@ class PlanController extends Controller
                 "name" => $request->input("name")
                 , "description" => $request->input("description")
                 , "price" => $request->input("price")
-                , "amount_people" => $request->input("amount_people")
+                , "amount_user" => $request->input("amount_user")
+                , "amount_time" => $request->input("amount_time")
                 , "state" => $request->input("state")
                 , "color_title" => $request->input("color_title")
                 , "color_border" => $request->input("color_border")
@@ -82,7 +84,8 @@ class PlanController extends Controller
     *                               "name": "",
     *                               "description": "",
     *                               "price": "",
-    *                               "amount_people": "",
+    *                               "amount_user": "",
+    *                               "amount_time": "",
     *                               "color_title": "",
     *                               "color_border": ""
     *                           },
@@ -96,11 +99,12 @@ class PlanController extends Controller
     public function index()
     {
         try {
-            return response()->json(["plans" => Plan::all('id', 'name', 'description', 'price', 'amount_people', 'color_title', 'color_border')], 200);
+            return response()->json(["plans" => Plan::all('id', 'name', 'description', 'price', 'amount_user', 'amount_time', 'color_title', 'color_border')], 200);
         } catch (Exception $e) {
             return response()->json(["message" => $e->getMessage()], 500);
         }
     }
+
     public function changestate(Request $request, $id)
     {
         try {
