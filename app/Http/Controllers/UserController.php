@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Crypt;
-use App\Mail\ConfirmationRegisterRequest;
+use App\Mail\EmailNotification;
 use App\Imports\UsersImport;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -114,9 +114,9 @@ class UserController extends Controller
             }
 
             $userCreated = User::create($dataInsert);
-            $encryptedId = Crypt::encryptString($userCreated['id']);
+            /*$encryptedId = Crypt::encryptString($userCreated['id']);
 
-            Mail::to($request->input("email"))->send(new ConfirmationRegisterRequest($encryptedId));
+            Mail::to($request->input("email"))->send(new EmailNotification($encryptedId));*/
 
             return json_encode(["message" => "Registro almacenado con éxito", "id" => $userCreated['id']]);
 

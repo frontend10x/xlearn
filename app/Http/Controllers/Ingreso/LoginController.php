@@ -7,6 +7,7 @@ use Mail;
 use App\Http\Controllers\Controller;
 
 use App\Models\User;
+use App\Http\Controllers\companies\group\GroupController;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -81,12 +82,6 @@ class LoginController extends Controller
     public function ingreso(Request $request)
     {
 
-        // return response()->json(
-        //     [
-        //         'code' => Hash::make('12')
-        //     ]
-        // );
-
         if (Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password'), 'state' => 1])) {
 
             $user = User::where('email', $request->input('email'))->with('roles', 'typeUser', 'diagnostic')->first();
@@ -103,6 +98,9 @@ class LoginController extends Controller
             else
                 $diagnosticStatus = false;
             
+            //Consultamos los grupos al que pertenece el usuario
+            $user_groups = GroupController::listUserGroups($user->id);
+            
             return response()->json(
                 [
                     'message' => "Acceso correcto", 
@@ -112,10 +110,7 @@ class LoginController extends Controller
                         "name" => $user->name, 
                         "email" => $user->email, 
                         "phone" => $user->phone,
-                        /*"typeUser" => [
-                            "id" => $user->typeUser->id,
-                            "name" => $user->typeUser->name
-                        ],*/
+                        "groups" => $user_groups->original[0],
                         "roles" => [
                             "id" => $user->roles->id,
                             "name" => $user->roles->rol_name

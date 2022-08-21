@@ -7,7 +7,7 @@ use Mail;
 use App\Http\Controllers\UserController;
 use App\Models\RegistrationRequest;
 use Illuminate\Http\Request;
-use App\Mail\ConfirmationRegisterRequest;
+use App\Mail\EmailNotification;
 use Illuminate\Support\Facades\Crypt;
 
 class RegisterRequestController extends Controller
@@ -191,14 +191,14 @@ class RegisterRequestController extends Controller
                 //Encriptamos el email del usuario
                 $encryptedId = Crypt::encryptString($userId['id']);
 
-                Mail::to($request->input("email"))->send(new ConfirmationRegisterRequest($encryptedId));
+                Mail::to($request->input("email"))->send(new EmailNotification($encryptedId, 'confirmation_register'));
 
             }
 
             return response()->json(["message" => "Registro almacenado con éxito" . $userCreated], 200);
 
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage(), "line" => $e->getLine()], 500);
+            return response()->json(["message" => $e->getMessage(), "line" => $e->getLine(), "file" => $e->getFile()], 500);
         }
     }
 

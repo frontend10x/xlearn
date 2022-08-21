@@ -53,4 +53,8 @@ class User extends Authenticatable
     public function diagnostic(){
         return $this->hasMany('App\Models\Diagnostic', 'user_id');
     }
+
+    public function courses(){
+        return $this->belongsToMany(Course::class,"user_course","user_id","course_id");
+    }
 }

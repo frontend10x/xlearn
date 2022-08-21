@@ -18,6 +18,7 @@ class DiagnosticController extends Controller
     *     @OA\Parameter(name="user_id", required=true, in="query", @OA\Schema(type="number")),
     *     @OA\Parameter(name="_rel", required=true, in="query", @OA\Schema(type="string")),
     *     @OA\Parameter(name="answers", required=true, in="query", @OA\Schema(type="[]")),
+    *     @OA\Parameter(name="group_id", required=true, in="query", @OA\Schema(type="number")),
     *     @OA\Response(
     *         response=200,
     *         description="Success.",
@@ -56,6 +57,7 @@ class DiagnosticController extends Controller
             $validated = $request->validate([
                 'target' => 'required',
                 'user_id' => 'required|integer',
+                'group_id' => 'required|integer',
                 '_rel' => 'required',
                 'answers' => 'required'
             ]);
@@ -63,21 +65,13 @@ class DiagnosticController extends Controller
             $dataInsert = [
                 "target" => $request->input("target"), 
                 "user_id" => $request->input("user_id"), 
+                "group_id" => $request->input("group_id"), 
                 "rel" => $request->input("_rel"), 
                 "answers" => json_encode($request->input("answers"))
             ];
 
-            $courses_to_consult = [];
-            
-            foreach ($request->input("answers") as $key => $value) {
-                array_push($courses_to_consult, $value['course']);
-            }
-
-
             $toCreate = Diagnostic::create($dataInsert);
-            $courses = Course::where('state', 1)->whereIn('id', $courses_to_consult)->get();
-
-            //Mail::to($request->input("email"))->send(new ConfirmationRegisterRequest($encryptedId));
+            $courses = Course::where('state', 1)->whereIn('id', get_ids($request->input("answers"), 'course'))->get();
 
             return json_encode([
                 "message" => "Registro almacenado con éxito", 
@@ -99,6 +93,7 @@ class DiagnosticController extends Controller
     *     tags={"Diagnostic"},
     *     summary="Confirmar diagnostico",
     *     security={{"bearer_token":{}}},
+    *     @OA\Parameter(name="diagnostic_id", in="path", @OA\Schema(type="number")),
     *     @OA\Response(
     *         response=200,
     *         description="Success.",
@@ -136,8 +131,11 @@ class DiagnosticController extends Controller
 
             $search = Diagnostic::find($diagnostic_id);
             $search->update(['confirmed' => 1]);
+
+            //Asignación de cursos a usuarios
+            $assignment = UserCoursesController::course_assignment($diagnostic_id);        
             
-            return response()->json(["message" => 'Ruta confirmada correctamente'], 200);
+            return response()->json(["message" => 'Ruta confirmada correctamente', "assignments_status" => $assignment->original], 200);
 
 
         } catch (Exception $e) {

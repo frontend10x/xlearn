@@ -153,7 +153,8 @@ Route::group(['middleware'=>'auth:api' ],function(){
     // Cursos
     // ---------------------------------------------------------------------    
     
-    Route::get($API_VERSION . '/course/show_area/{areaId}',[CourseController::class, 'show']);
+    Route::get($API_VERSION . '/course/show_area/{areaId}',[CourseController::class, 'show_area']);
+    Route::get($API_VERSION . '/course/show_user/{userId}',[CourseController::class, 'show_user']);
     Route::put($API_VERSION . '/course/edit/{id}',[CourseController::class, 'edit']);
     Route::post($API_VERSION . '/course/store',[CourseController::class, 'store']);
     Route::put($API_VERSION . '/course/changestate/{id}',[CourseController::class, 'changestate']);
@@ -165,7 +166,8 @@ Route::group(['middleware'=>'auth:api' ],function(){
 
     Route::post($API_VERSION . '/groupuser/assignment/{group_id}',[GroupController::class, 'assignment']);
     Route::delete($API_VERSION . '/groupuser/removefromgroup/{group_id}',[GroupController::class, 'removefromgroup']);
-    Route::get($API_VERSION . '/groupuser/listUserGroup/{idgroup}',[GroupController::class, 'listUserGroup']);
+    Route::get($API_VERSION . '/groupuser/list_user_groups/{userId}',[GroupController::class, 'listUserGroups']);
+    Route::get($API_VERSION . '/groupuser/list_group_users/{groupId}',[GroupController::class, 'listGroupUsers']);
     
     // ---------------------------------------------------------------------
     // Categorias

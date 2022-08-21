@@ -255,7 +255,7 @@
                     "Courses"
                 ],
                 "summary": "Mostrar curso por areas",
-                "operationId": "47bb54f153b3f91eca1fa5f2e7673ce8",
+                "operationId": "bef255018c2e979d2db5045f9915def8",
                 "parameters": [
                     {
                         "name": "offset",
@@ -267,6 +267,13 @@
                     {
                         "name": "limit",
                         "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "areaId",
+                        "in": "path",
                         "schema": {
                             "type": "number"
                         }
@@ -339,6 +346,94 @@
                 ]
             }
         },
+        "/api/v1/course/show_user/{userId}": {
+            "get": {
+                "tags": [
+                    "Courses"
+                ],
+                "summary": "Mostrar curso por usuario",
+                "operationId": "fc67351613a36af84c2bbf2c54274ba6",
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "userId",
+                        "in": "path",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los cursos del usuario.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "response": {
+                                            "hc:length": 0,
+                                            "hc:total": 0,
+                                            "hc:offset": 0,
+                                            "hc:limit": 0,
+                                            "hc:next": "next page end-point ",
+                                            "hc:previous": "previous page end-point ",
+                                            "_rel": "courses",
+                                            "_embedded": {
+                                                "courses": [
+                                                    {
+                                                        "id": 0,
+                                                        "name": "",
+                                                        "description": "",
+                                                        "state": 0,
+                                                        "free_video": "",
+                                                        "file_path": "",
+                                                        "video_path": "",
+                                                        "area_id": 0,
+                                                        "programs_id": 0,
+                                                        "created_at": "2022-06-11T23:21:42.000000Z",
+                                                        "updated_at": "2022-06-12T00:46:06.000000Z"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
         "/api/v1/diagnostic/store": {
             "post": {
                 "tags": [
@@ -377,6 +472,14 @@
                         "required": true,
                         "schema": {
                             "type": "[]"
+                        }
+                    },
+                    {
+                        "name": "group_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
                         }
                     }
                 ],
@@ -421,6 +524,15 @@
                 ],
                 "summary": "Confirmar diagnostico",
                 "operationId": "1a573a8890a77720c6eca49c03eabc0d",
+                "parameters": [
+                    {
+                        "name": "diagnostic_id",
+                        "in": "path",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "Success.",
@@ -673,7 +785,8 @@
                                                 "name": "",
                                                 "description": "",
                                                 "price": "",
-                                                "amount_people": "",
+                                                "amount_user": "",
+                                                "amount_time": "",
                                                 "color_title": "",
                                                 "color_border": ""
                                             }

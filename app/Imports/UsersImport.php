@@ -3,7 +3,7 @@
 namespace App\Imports;
 use Illuminate\Support\Facades\Hash;
 use Mail;
-use App\Mail\ConfirmationRegisterRequest;
+use App\Mail\EmailNotification;
 use Illuminate\Support\Facades\Crypt;
 
 use App\Models\User;
@@ -39,7 +39,7 @@ class UsersImport implements ToModel, WithHeadingRow
         ]);
 
         $encryptedId = Crypt::encryptString($createUser->id);
-        Mail::to($row['email'])->send(new ConfirmationRegisterRequest($encryptedId));
+        Mail::to($row['email'])->send(new EmailNotification($encryptedId, 'confirmation_register'));
 
         return $create;
     }

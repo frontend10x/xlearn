@@ -4,6 +4,7 @@ namespace App\Http\Controllers\companies\group;
 
 use App\Http\Controllers\Controller;
 use App\Models\companies\group\Group;
+use Illuminate\Support\Facades\DB;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -257,7 +258,6 @@ class GroupController extends Controller
             $group = Group::find($group_id);
             $group->users()->sync($request->user);
             return json_encode(["message" => "Usuarios asignados a grupo con éxito"], 200);
-            //return response()->json(["users" => $group->users], 200);
         } catch (Exception $e) {
             return response()->json(["message" => $e->getMessage()], 500);
         }
@@ -308,11 +308,28 @@ class GroupController extends Controller
             return response()->json(["message" => $e->getMessage()], 500);
         }
     }
-    public function listUserGroup($group_id)
+
+    public function listGroupUsers($group_id)
     {
         try {
             $group = Group::find($group_id);
             return response()->json(["users" => $group->users], 200);
+        } catch (Exception $e) {
+            return response()->json(["message" => $e->getMessage()], 500);
+        }
+    }
+
+    public static function listUserGroups($user_id)
+    {
+        try {
+
+            $group = DB::table('user_group')
+                        ->join('groups', 'groups.id', 'user_group.group_id')
+                        ->select('group_id', 'groups.name', 'groups.description')
+                        ->where('user_group.user_id', $user_id)
+                        ->get();
+
+            return response()->json([$group], 200);
         } catch (Exception $e) {
             return response()->json(["message" => $e->getMessage()], 500);
         }
