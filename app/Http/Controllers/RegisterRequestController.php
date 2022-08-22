@@ -183,19 +183,23 @@ class RegisterRequestController extends Controller
 
             if(!empty($register)){
 
+                $companyCreated = SubcompaniesController::store($request);
+
+                $dataInsert["subcompanies_id"] = json_decode($companyCreated, true)['id'];
+
                 $request->request->add(array_merge($dataInsert, $request->all()));
 
                 $userCreated = UserController::store($request);
                 $userId = json_decode($userCreated, true);
 
-                //Encriptamos el email del usuario
+                //Encriptamos el id del usuario
                 $encryptedId = Crypt::encryptString($userId['id']);
 
                 Mail::to($request->input("email"))->send(new EmailNotification($encryptedId, 'confirmation_register'));
 
             }
 
-            return response()->json(["message" => "Registro almacenado con éxito" . $userCreated], 200);
+            return response()->json(["message" => "Registro almacenado con éxito"], 200);
 
         } catch (Exception $e) {
             return response()->json(["message" => $e->getMessage(), "line" => $e->getLine(), "file" => $e->getFile()], 500);

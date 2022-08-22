@@ -3,7 +3,7 @@
 use App\Http\Controllers\AreaController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\companies\group\GroupController;
-use App\Http\Controllers\companyController;
+use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\Contact_usController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\Ingreso\LoginController;
@@ -131,6 +131,7 @@ Route::group(['middleware'=>'auth:api' ],function(){
     Route::post($API_VERSION . '/group/store',[GroupController::class, 'store']);
     Route::put($API_VERSION . '/group/changestate/{id}',[GroupController::class, 'changestate']);
     Route::delete($API_VERSION . '/group/delete/{id}',[GroupController::class, 'delete']);
+    Route::get($API_VERSION . '/group/list_company_group/{subcompanie_id}',[GroupController::class, 'listCompanyGroups']);
 
     // ---------------------------------------------------------------------
     // Areas

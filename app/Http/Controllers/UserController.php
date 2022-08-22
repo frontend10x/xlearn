@@ -98,7 +98,6 @@ class UserController extends Controller
 
             // Validamos los datos enviados
             $validated = $request->validate([
-                'type_id' => 'required|integer',
                 'rol_id' => 'required|integer',
                 'password' => 'required',
                 'password_confirmation' => 'required',
@@ -106,7 +105,7 @@ class UserController extends Controller
             ]);
 
             $dataInsert = [
-                "type_id" => $request->input("type_id"), "rol_id" => $request->input("rol_id"), "link_facebook" => $request->input("link_facebook"), "link_google" => $request->input("link_google"), "link_linkedin" => $request->input("link_linkedin"), "link_instagram" => $request->input("link_instagram"), "name" => $request->input("name"), "surname" => $request->input("surname"), "phone" => $request->input("phone"), "email" => $request->input("email"), "state" => $request->input("state"), "password" => Hash::make($request->input("password"))
+                "rol_id" => $request->input("rol_id"), "link_facebook" => $request->input("link_facebook"), "link_google" => $request->input("link_google"), "link_linkedin" => $request->input("link_linkedin"), "link_instagram" => $request->input("link_instagram"), "name" => $request->input("name"), "surname" => $request->input("surname"), "phone" => $request->input("phone"), "email" => $request->input("email"), "state" => $request->input("state"), "password" => Hash::make($request->input("password"))
             ];
 
             if (!empty($request->input("subcompanies_id"))) {

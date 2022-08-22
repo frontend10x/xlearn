@@ -1912,6 +1912,80 @@
                     }
                 ]
             }
+        },
+        "/api/v1/group/list_company_group/{subcompanie_id}": {
+            "get": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "Mostrar los grupos de la empresa",
+                "operationId": "cb4d0cd5a10883db0505011faad8a0ac",
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los grupos de la empresa.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "response": {
+                                            "hc:length": 0,
+                                            "hc:total": 0,
+                                            "hc:offset": 0,
+                                            "hc:limit": 0,
+                                            "hc:next": "next page end-point ",
+                                            "hc:previous": "previous page end-point ",
+                                            "_rel": "users",
+                                            "_embedded": {
+                                                "groups": [
+                                                    {
+                                                        "id": 0,
+                                                        "name": "",
+                                                        "description": "",
+                                                        "subcompanies_id": ""
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
         }
     },
     "components": {

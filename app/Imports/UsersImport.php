@@ -34,7 +34,6 @@ class UsersImport implements ToModel, WithHeadingRow
             'phone' => $row['telefono'],
             'state' => 0,
             'rol_id' => 4,
-            'type_id' => 2,
             'subcompanies_id' => $this->subcompanies_id
         ]);
 

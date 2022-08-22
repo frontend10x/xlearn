@@ -24,18 +24,20 @@ class SubcompaniesController extends Controller
         }
     }
 
-    public function store(Request $request){
+    public static function store(Request $request){
         try {
-            $subCompany = Sub_companies::where("name",$request->input("name"))->first();
+            $subCompany = Sub_companies::where("name",$request->input("company"))->first();
             if(!empty($subCompany)){
                 throw new Exception("La compañia ya se encuentra registrada");
             }
-            $subCompanyNit = Sub_companies::where("name",$request->input("name"))->first();
+            $subCompanyNit = Sub_companies::where("name",$request->input("company"))->first();
             if(!empty($subCompanyNit)){
                 throw new Exception("El nit de la compañia ya se encuentra registrado");
             }
             $datosSubEmpresa = [
-                "name" => $request->input("name"), "address" => $request->input("address"), "phone" => $request->input("phone")
+                "name" => $request->input("company"), 
+                "address" => $request->input("address"), 
+                "phone" => $request->input("phone")
                 , "representative" => $request->input("representative")
                 , "position" => $request->input("position")
                 , "representative_cell" => $request->input("representative_cell")
@@ -50,8 +52,8 @@ class SubcompaniesController extends Controller
                 , "website" => $request->input("website")
                 , "nit" => $request->input("nit")
             ];
-            Sub_companies::create($datosSubEmpresa);
-            return response()->json(["message" => "Registro almacenado con éxito"], 200);
+            $created = Sub_companies::create($datosSubEmpresa);
+            return json_encode(["message" => "Registro almacenado con éxito ", "id" => $created['id']]);
         } catch (Exception $e) {
             return response()->json(["message" => $e->getMessage()], 500);
         }

@@ -79,7 +79,6 @@ class QuestionController extends Controller
             $nexOffset = $offset + 1;
             $previousOffset = ($offset > 1) ? $offset - 1 : 1;
             
-
             $response = array(
                 "hc:length" => count($consult), //Es la longitud del array a devolver
                 "hc:total"  => Question::count(), //Es la longitud total de los registros disponibles en el query original,
@@ -93,16 +92,6 @@ class QuestionController extends Controller
                     
                 )
             );
-
-            /*[
-                "id" => $consult, 
-                "question" => $consult->question, 
-                "required" => $consult->required,
-                "options" => [
-                    "id" => $consult->options->id,
-                    "response" => $consult->options->response
-                ],
-            ]*/
 
             if(empty($consult))
                 throw new Exception("No se encontraron usuarios");
