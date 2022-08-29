@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers\Ingreso;
+//require '{path_to_root_folder}/autoload.php';
 
+use Vimeo\Vimeo;
 use Mail;
 
 use App\Http\Controllers\Controller;
@@ -12,6 +14,10 @@ use App\Http\Controllers\companies\group\GroupController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+
+define("CLIENT_ID", env("CLIENT_ID_VIMEO"));
+define("CLIENT_SECRET", env("CLIENT_SECRET_VIMEO"));
+define("ACCESS_TOKEN", env("ACCESS_TOKEN_VIMEO"));
 
 /**
 * @OA\Info(title="API's Xlearn", version="1.0")
@@ -81,6 +87,71 @@ class LoginController extends Controller
     */
     public function ingreso(Request $request)
     {
+
+        // Validamos los datos enviados
+       /*  $validated = $request->validate([
+            'file' => 'required|mimes:mp4|max:8048',
+        ]); */
+        //$request->file->store('public/videos');
+ 
+        //$request->file->store('public');
+
+        //$client = new Vimeo(CLIENT_ID, CLIENT_SECRET, ACCESS_TOKEN);
+
+            /*$file_name = '/Users/jairzeapaez/Downloads/test.mp4';
+            $uri = $client->upload($file_name, array(
+              "name" => "Test upload video",
+              "description" => "The description goes here."
+            ));
+            "videos": {
+                                "uri": "/users/177726805/videos",
+                                "options": [
+            echo "Your video URI is: " . $uri; */
+    
+      
+       /* $response = $client->request('/me/projects', array(), 'GET');
+
+        $arrayData = $response['body']['data'];
+
+        $projects = [];
+        $val = [];
+
+        foreach ($arrayData as $key => $value) {
+
+            $uri_video = $value['metadata']['connections']['videos']['uri'];
+            $total_videos = $value['metadata']['connections']['videos']['total'];
+
+            $project_name = $value['name'];
+
+            $videos = $client->request($uri_video, array(), 'GET');
+            $video_information = [];
+            $val_video_information = [];
+
+            $data_videos = $videos['body']['data'];
+
+            $projects['name'] = $project_name;
+            $projects['total_videos'] = $total_videos;
+            
+            foreach ($data_videos as $k => $item) {
+
+                $video_information['player_embed_url'] = $item['player_embed_url'];
+                $video_information['name'] = $item['name'];
+                $video_information['description'] = $item['description'];
+                $video_information['type'] = $item['type'];
+                $video_information['duration'] = $item['duration'];
+                $video_information['width'] = $item['width'];
+                $video_information['pictures'] = $item['pictures']['base_link'];
+
+                array_push($val_video_information, $video_information);
+
+            }
+
+            $projects['videos'] = $val_video_information;
+           
+            array_push($val, $projects);
+        }
+
+        return response()->json($val);*/
 
         if (Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password'), 'state' => 1])) {
 

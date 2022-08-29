@@ -1934,6 +1934,13 @@
                         "schema": {
                             "type": "number"
                         }
+                    },
+                    {
+                        "name": "subcompanie_id",
+                        "in": "path",
+                        "schema": {
+                            "type": "number"
+                        }
                     }
                 ],
                 "responses": {

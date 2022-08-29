@@ -345,6 +345,7 @@ class GroupController extends Controller
     *     security={{"bearer_token":{}}},
     *     @OA\Parameter(name="offset", in="query", @OA\Schema(type="number")),
     *     @OA\Parameter(name="limit", in="query", @OA\Schema(type="number")),
+    *     @OA\Parameter(name="subcompanie_id", in="path", @OA\Schema(type="number")),
     *     @OA\Response(
     *         response=200,
     *         description="Mostrar todos los grupos de la empresa.",
