@@ -668,6 +668,103 @@
                 ]
             }
         },
+        "/api/v1/lesson/show_course/{courseId}": {
+            "get": {
+                "tags": [
+                    "Lesson"
+                ],
+                "summary": "Mostrar lecciones por cursos",
+                "operationId": "1616449066a30c7221b0b9145d2325cb",
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "courseId",
+                        "in": "path",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos las lecciones del curso.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "response": {
+                                            "hc:length": 0,
+                                            "hc:total": 0,
+                                            "hc:offset": 0,
+                                            "hc:limit": 0,
+                                            "hc:next": "next page end-point ",
+                                            "hc:previous": "previous page end-point ",
+                                            "_rel": "course",
+                                            "_embedded": {
+                                                "course": [
+                                                    {
+                                                        "id": 0,
+                                                        "name": "",
+                                                        "description": "",
+                                                        "state": 0,
+                                                        "free_video": "",
+                                                        "file_path": "",
+                                                        "video_path": "",
+                                                        "area_id": 0,
+                                                        "programs_id": 0,
+                                                        "created_at": "2022-06-11T23:21:42.000000Z",
+                                                        "updated_at": "2022-06-12T00:46:06.000000Z",
+                                                        "areas": {
+                                                            "id": 0,
+                                                            "name": "",
+                                                            "description": "",
+                                                            "file_path": "",
+                                                            "state": 0,
+                                                            "created_at": "2022-06-11T23:21:42.000000Z",
+                                                            "updated_at": "2022-06-11T23:21:42.000000Z"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
         "/api/v1/payment/requests": {
             "post": {
                 "tags": [

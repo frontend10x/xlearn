@@ -21,6 +21,7 @@ use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\DiagnosticController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ExportController;
+use App\Http\Controllers\VimeoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -189,6 +190,7 @@ Route::group(['middleware'=>'auth:api' ],function(){
     Route::put($API_VERSION . '/lesson/changestate/{id}',[LessonController::class, 'changestate']);
     Route::post($API_VERSION . '/lesson/addcommentuser/{id}',[LessonController::class, 'addComment']);
     Route::get($API_VERSION . '/lesson/listComment/{id}',[LessonController::class, 'listComment']);
+    Route::get($API_VERSION . '/lesson/show_course/{courseId}',[LessonController::class, 'show_course']);
 
     // ---------------------------------------------------------------------
     // Register Request
@@ -233,6 +235,12 @@ Route::group(['middleware'=>'auth:api' ],function(){
     // --------------------------------------------------------------------- 
       
     Route::get(API_VERSION . '/export/sample_file',[ExportController::class, 'exportSampleFile']);
+
+    // ---------------------------------------------------------------------
+    // Vimeo
+    // --------------------------------------------------------------------- 
+      
+    Route::patch(API_VERSION . '/vimeo/sync_course_structure',[VimeoController::class, 'syncCourseStructure']);
     
 
 });

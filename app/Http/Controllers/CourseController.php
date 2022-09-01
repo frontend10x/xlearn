@@ -9,26 +9,27 @@ use Illuminate\Http\Request;
 
 class CourseController extends Controller
 {
-    public function store(Request $request)
+    public static function store(Request $request)
     {
         try {
             $courses = Course::where("name", $request->input("name"))->first();
             if (!empty($courses)) {
                 throw new Exception("Ya existe un cursor con el nombre " . $request->input("name"));
             }
-            $datosSubEmpresa = [
-                "name" => $request->input("name")
-                , "description" => $request->input("description")
-                , "state" => $request->input("state")
-                , "free_video" => $request->input("free_video")
-                , "video_path" => $request->input("video_path")
+            $dataInsert = [
+                "name" => $request->input("name"), 
+                "description" => $request->input("description"),
+                "state" => $request->input("state"), 
+                "free_video" => $request->input("free_video"), 
+                "video_path" => $request->input("video_path"),
+                "vimeo_id" => $request->input("vimeo_id")
             ];
             if (!empty($request->input("file_path"))) {
-                $datosSubEmpresa['file_path'] = $request->input("file_path");
+                $dataInsert['file_path'] = $request->input("file_path");
             }
 
-            Course::create($datosSubEmpresa);
-            return response()->json(["message" => "Curso creado con éxito"], 200);
+            $create_course = Course::create($dataInsert);
+            return json_encode(["message" => "Curso creado con éxito", "id" => $create_course['id']]);
         } catch (Exception $e) {
             return response()->json(["message" => $e->getMessage()], 500);
         }
