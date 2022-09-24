@@ -43,7 +43,8 @@ class TransactionController extends Controller
                 $dataInsert = [
                     "payment_gateway" => 'wompi', 
                     "payment_gateway_transaction_id" => $data['transaction']['id'], 
-                    "status" => $data['transaction']['status'], 
+                    "status" => $data['transaction']['status'],
+                    "reference" => $data['transaction']['reference'], 
                     "amount" => $data['transaction']['amount_in_cents'], 
                     "monetary_fraction" => 'cents', 
                     "currency" => $data['transaction']['currency'], 

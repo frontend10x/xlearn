@@ -159,21 +159,29 @@ class PaymentController extends Controller
 
     public static function update_payment_status($id, $status, $transaction_id)
     {
-        $buscaActualiza = Payment::find($id);
+        try {
+            
+            $buscaActualiza = Payment::find($id);
 
-        if (empty($buscaActualiza)) {
-            throw new Exception("Ocurrio un error");
+            if (empty($buscaActualiza)) {
+                throw new Exception("Ocurrio un error");
+            }
+
+            $dataUpdate = [
+                'status' => $status,
+                'transaction_id' => $transaction_id
+            ];
+
+            $update = $buscaActualiza->update($dataUpdate);
+
+            return $update;
+
+
+        } catch (Exception $e) {
+            
+            return return_exceptions($e);
+
         }
-
-        $dataUpdate = [
-            'status' => $status,
-            'transaction_id' => $transaction_id
-        ];
-
-        $update = $buscaActualiza->update($dataUpdate);
-
-        return $update;
-
-
+    
     }
 }
