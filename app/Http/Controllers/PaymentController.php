@@ -113,7 +113,7 @@ class PaymentController extends Controller
                 "reference" => $reference, 
                 "name" => $request->input("name"), 
                 "email" => $request->input("email"), 
-                "amount" => $amount_to_paid, 
+                "amount" => number_format($amount_to_paid, 2), 
                 "plan_id" => $plan->id, 
                 "amount_time" => $amount_time, 
                 "amount_user" => $amount_user, 
@@ -155,5 +155,25 @@ class PaymentController extends Controller
         } catch (Exception $e) {
             return response()->json(["message" => $e->getMessage(), "line" => $e->getLine()], 500);
         }
+    }
+
+    public static function update_payment_status($id, $status, $transaction_id)
+    {
+        $buscaActualiza = Payment::find($id);
+
+        if (empty($buscaActualiza)) {
+            throw new Exception("Ocurrio un error");
+        }
+
+        $dataUpdate = [
+            'status' => $status,
+            'transaction_id' => $transaction_id
+        ];
+
+        $update = $buscaActualiza->update($dataUpdate);
+
+        return $update;
+
+
     }
 }

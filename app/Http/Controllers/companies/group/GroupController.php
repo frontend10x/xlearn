@@ -399,8 +399,8 @@ class GroupController extends Controller
 
         try {
             if (!empty(Auth::user()->subcompanies_id)) {
-                $grupos = Group::where("subcompanies_id", Auth::user()->subcompanies_id)->get();
-            } else {
+                $consult = Group::where("subcompanies_id", Auth::user()->subcompanies_id)->get();
+            } 
 
                 //TODO debe sacarse del request, por defecto el valor es uno
                 $offset = $request->has('offset') ? intval($request->get('offset')) : 1;
@@ -421,7 +421,7 @@ class GroupController extends Controller
                 $nexOffset = $offset + 1;
                 $previousOffset = ($offset > 1) ? $offset - 1 : 1;
 
-            }
+            
 
             $groups = array(
                 "hc:length" => count($consult), //Es la longitud del array a devolver

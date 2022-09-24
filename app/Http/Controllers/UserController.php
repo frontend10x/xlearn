@@ -105,7 +105,7 @@ class UserController extends Controller
             ]);
 
             $dataInsert = [
-                "rol_id" => $request->input("rol_id"), "link_facebook" => $request->input("link_facebook"), "link_google" => $request->input("link_google"), "link_linkedin" => $request->input("link_linkedin"), "link_instagram" => $request->input("link_instagram"), "name" => $request->input("name"), "surname" => $request->input("surname"), "phone" => $request->input("phone"), "email" => $request->input("email"), "state" => $request->input("state"), "password" => Hash::make($request->input("password"))
+                "rol_id" => $request->input("rol_id"), "link_facebook" => $request->input("link_facebook"), "link_google" => $request->input("link_google"), "link_linkedin" => $request->input("link_linkedin"), "link_instagram" => $request->input("link_instagram"), "name" => $request->input("name"), "surname" => $request->input("surname"), "phone" => $request->input("phone"), "email" => $request->input("email"), "state" => 1, "password" => Hash::make($request->input("password"))
             ];
 
             if (!empty($request->input("subcompanies_id"))) {
@@ -271,19 +271,19 @@ class UserController extends Controller
         try {
             if (!empty(Auth::user()->subcompanies_id)) {
                 $consult = User::where("subcompanies_id", Auth::user()->subcompanies_id)->get();
-            } else {
+            } 
 
-                //TODO debe sacarse del request, por defecto el valor es uno
-                $offset = $request->has('offset') ? intval($request->get('offset')) : 1;
+            //TODO debe sacarse del request, por defecto el valor es uno
+            $offset = $request->has('offset') ? intval($request->get('offset')) : 1;
 
-                //TODO debe sacarse del request, por defecto el valor es 10.
-                $limit = $request->has('limit') ? intval($request->get('limit')) : 10;
+            //TODO debe sacarse del request, por defecto el valor es 10.
+            $limit = $request->has('limit') ? intval($request->get('limit')) : 10;
 
-                $consult = User::with('roles')->limit($limit)->offset(($offset - 1) * $limit)->get()->toArray();
+            $consult = User::with('roles')->limit($limit)->offset(($offset - 1) * $limit)->get()->toArray();
 
-                $nexOffset = $offset + 1;
-                $previousOffset = ($offset > 1) ? $offset - 1 : 1;
-            }
+            $nexOffset = $offset + 1;
+            $previousOffset = ($offset > 1) ? $offset - 1 : 1;
+            
 
             $users = array(
                 "hc:length" => count($consult), //Es la longitud del array a devolver
@@ -303,7 +303,7 @@ class UserController extends Controller
 
             return response()->json(["response" => $users], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 
@@ -315,10 +315,12 @@ class UserController extends Controller
 
             $buscaActualiza = User::find($desencryptedId);
             if (empty($buscaActualiza)) {
-                throw new Exception("No existe el Id:" . $id . " para el cambio de estado");
+                throw new Exception("Ocurrio un error");
             }
-            $buscaActualiza->update(["state" => $request->input("state")]);
-            return response()->json(["message" => "Cambio de estado correctamente"], 200);
+            $buscaActualiza->update(["state" => 1]);
+            header("Location: http://10xconsultores.org/login", TRUE, 301);
+            exit();
+            
         } catch (Exception $e) {
             return response()->json(["message" => $e->getMessage()], 500);
         }

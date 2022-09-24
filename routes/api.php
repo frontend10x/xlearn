@@ -22,6 +22,7 @@ use App\Http\Controllers\DiagnosticController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ExportController;
 use App\Http\Controllers\VimeoController;
+use App\Http\Controllers\TransactionController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -81,6 +82,19 @@ Route::get(env('API_VERSION') . '/content/list',[ContentController::class, 'inde
 
 Route::get(env('API_VERSION') . '/course/list',[CourseController::class, 'index']);
 
+// ---------------------------------------------------------------------
+// Usuarios
+// --------------------------------------------------------------------- 
+
+Route::get(API_VERSION . '/user/changestate/{id}',[UserController::class, 'changestate']);
+
+// ---------------------------------------------------------------------
+// Transacciones
+// --------------------------------------------------------------------- 
+
+Route::post(API_VERSION . '/transactions/store',[TransactionController::class, 'store']);
+
+
 Route::group(['middleware'=>'auth:api' ],function(){
 
     $API_VERSION = env('API_VERSION');
@@ -117,7 +131,6 @@ Route::group(['middleware'=>'auth:api' ],function(){
     Route::get($API_VERSION . '/user/list',[UserController::class, 'index']);
     Route::put($API_VERSION . '/user/edit/{id}',[UserController::class, 'edit']);
     Route::post($API_VERSION . '/user/store',[UserController::class, 'store']);
-    Route::get($API_VERSION . '/user/changestate/{id}',[UserController::class, 'changestate']);
     Route::put($API_VERSION . '/user/forgotpassword/{id}',[UserController::class, 'forgotpassword']);
     Route::put($API_VERSION . '/user/changepassword',[UserController::class, 'changepassword']);
     Route::post($API_VERSION . '/user/coursesfavorites',[UserController::class, 'coursesFavorites']);

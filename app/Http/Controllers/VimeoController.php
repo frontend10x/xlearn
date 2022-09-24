@@ -36,7 +36,8 @@ class VimeoController extends Controller
                     'name' => $value['name'],
                     'vimeo_id' => $id[4],
                     'state' => 1,
-                    'free_video' => 0
+                    'free_video' => 0,
+                    'file_path' => $value['user']['pictures']['base_link']
                 );
 
                 $request->request->add($dataInsert);
@@ -62,7 +63,7 @@ class VimeoController extends Controller
             }
 
             if (empty($val))
-                throw new Exception("No hubo inserción de cursos, verifique si ya se existen en la base de datos");
+                throw new Exception("No hubo inserción de cursos, verifique si ya existen en la base de datos");
             
 
             return response()->json(['message' => 'cursos y lecciones creadas', 'data' => $val]);

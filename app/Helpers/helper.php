@@ -35,3 +35,25 @@ if (! function_exists('return_exceptions')) {
         ], 500);
     }
 }
+
+if(!function_exists('validate_signature')) {
+    function validate_signature($data, $signatue, $div, $timestamp)
+    {   
+        $properties = '';
+        $isValid = false;
+
+        foreach($signatue['properties'] as $value){
+            
+            $prop = explode($div, $value);
+            
+            $properties .= $data[$prop[0]][$prop[1]];
+        
+        }
+
+        $calculated_signature = hash( "sha256", $properties . $timestamp . env('SECRET_EVENTS_WOMPY') );
+
+        if($calculated_signature === $signatue['checksum']) $isValid = true;
+
+        return $isValid;
+    }
+}
