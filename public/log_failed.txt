@@ -1,0 +1,21 @@
+
+
+25/09/2022 06:04:48
+message => Firma no autorizada
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/TransactionController.php
+line => 39
+
+25/09/2022 22:38:46
+message => Undefined variable $percentaje
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Helpers/helper.php
+line => 98
+
+25/09/2022 22:39:45
+message => Undefined variable $percentaje
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/PaymentController.php
+line => 108
+
+25/09/2022 22:40:50
+message => Undefined variable $percentage
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/PaymentController.php
+line => 108

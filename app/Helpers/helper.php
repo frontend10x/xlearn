@@ -27,7 +27,19 @@ if (! function_exists('get_ids')) {
 
 if (! function_exists('return_exceptions')) {
     function return_exceptions($e)
-    {   
+    { 
+        $logFile = fopen("log_failed.txt", 'a') or die("Error creando archivo");
+
+        fwrite(
+            $logFile, 
+            "\n\n" . date("d/m/Y H:i:s") . 
+            "\n"   . "message => " . $e->getMessage() .
+            "\n"   . "file => " . $e->getFile() .
+            "\n"   . "line => " . $e->getLine() 
+        ) or die("Error escribiendo en el archivo");
+        
+        fclose($logFile);
+
         return response()->json([
             "message" => $e->getMessage(), 
             "line" => $e->getLine(), 
@@ -50,10 +62,41 @@ if(!function_exists('validate_signature')) {
         
         }
 
-        $calculated_signature = hash( "sha256", $properties . $timestamp . env('SECRET_EVENTS_WOMPY') );
+        $secret = ( env('AMBIENT') === 'DEV' ) ? env('SECRET_TEST_EVENTS_WOMPY') : env('SECRET_PROD_EVENTS_WOMPY');
+
+        $calculated_signature = hash( "sha256", $properties . $timestamp . $secret );
 
         if($calculated_signature === $signatue['checksum']) $isValid = true;
 
         return $isValid;
+    }
+}
+
+if(!function_exists('save_file')) {
+    function save_file($data)
+    {
+        $logFile = fopen("log_data.txt", 'a') or die("Error creando archivo");
+
+        fwrite(
+            $logFile, 
+            "\n\n" . date("d/m/Y H:i:s") . 
+            "\n"   . "data => " . $data 
+        ) or die("Error escribiendo en el archivo");
+        
+        fclose($logFile);
+    }
+}
+
+if (!function_exists('calculate_amount_in_cents')) {
+    function calculate_amount_in_cents($amount_to_paid, $coupon_status, $percentage){
+
+        //(convertimos el valor a pagar en centavos (x 100))
+        $amount_centies = $amount_to_paid * 1000;
+
+        //Aplicacion de descuento si es efectivo el cupon
+        if($coupon_status)
+            $amount_centies = $amount_centies - $amount_centies * $percentage / 100;
+        
+        return $amount_centies;
     }
 }

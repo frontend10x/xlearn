@@ -73,17 +73,15 @@ class PaymentController extends Controller
             ]);
 
             $coupon_status = false;
+            $percentage = 1;
 
             if (!empty($request->input("coupon"))) {
 
-                $coupon = Coupon::where("code", $request->input("coupon"))
-                                ->where("validity", '>=', date('Y-m-d H:m:s'))
-                                ->first();
+                $validate = self::validate_coupon($request->input("coupon"));
 
-                if (!empty($coupon)){
-                    $coupon_status = true; 
-                    $percentaje = $coupon->percentage;
-                }
+                $coupon_status = $validate['status']; 
+                $percentage = ($validate['status']) ? $validate['percentage'] : $percentage;
+
             }
 
             $amount_user = $request->input("amount_user");
@@ -92,28 +90,33 @@ class PaymentController extends Controller
             //Generamos la referencia de pago
             $reference = $request->input("subcompanie_id") . '-' . strtotime(date('Y-m-d H:m:s'));
 
-            $PUBLIC_KEY = env('PUBLIC_TEST_KEY_WOMPY');
+            $SECRET = env('SECRET_PROD_INTEGRITY_WOMPY');
+            $PUBLIC_KEY = env('PUBLIC_PROD_KEY_WOMPY');
             $CURRENCY = env('CURRENCY');
 
-            //Consultamos el plan acorde a la cantidad de usuario y tiempo
-            $plan = PaymentController::calculate_value_to_pay($amount_user, $amount_time);
+            if (env('AMBIENT') === 'DEV') {
+                $SECRET = env('SECRET_TEST_INTEGRITY_WOMPY');
+                $PUBLIC_KEY = env('PUBLIC_TEST_KEY_WOMPY');
 
-            //Calculamos el valor a pagar
+            }
+
+            //Consultamos el plan acorde a la cantidad de usuario y tiempo
+            $plan = PaymentController::consult_value_to_pay($amount_user, $amount_time);
+
+            //Calculamos el valor a pagar en pesos
             $amount_to_paid = $plan->price * $amount_time * $amount_user;
 
-            //Aplicacion de descuento si es efectivo el cupon
-            if($coupon_status)
-                $amount_to_paid = $amount_to_paid - $amount_to_paid * $percentaje / 100;
-
+            $amount_centies = calculate_amount_in_cents($amount_to_paid, $coupon_status, $percentage);
+            
             //Generamos la firma de integridad para el pago (WOMPY)
-            $connected_string = $reference . $amount_to_paid . $CURRENCY . $PUBLIC_KEY;
+            $connected_string = $reference . $amount_centies . $CURRENCY . $SECRET;
             $integrity_signature = hash("sha256", $connected_string);
 
             $dataInsert = [
                 "reference" => $reference, 
                 "name" => $request->input("name"), 
                 "email" => $request->input("email"), 
-                "amount" => number_format($amount_to_paid, 2), 
+                "amount" => $amount_to_paid, 
                 "plan_id" => $plan->id, 
                 "amount_time" => $amount_time, 
                 "amount_user" => $amount_user, 
@@ -127,23 +130,25 @@ class PaymentController extends Controller
             $created = Payment::create($dataInsert);
 
             $payment_details = [
-                "amount" => $amount_to_paid,
+                "amount" => $amount_centies ,
                 "reference" => $reference,
                 "currency" => $CURRENCY,
                 "public_key" => $PUBLIC_KEY,
                 "signature" => $integrity_signature,
-                "coupon_status" => ($coupon_status) ? 'Cupon aplicado con descuento del ' . $percentaje . '%' : 'Cupon no relacionado o no valido',
+                "coupon_status" => ($coupon_status) ? 'Cupon aplicado con descuento del ' . $percentage . '%' : 'Cupon no relacionado o no valido',
                 "plan" => $plan
             ];
 
             return response()->json(["payment_details" => $payment_details], 200);
 
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage(), "line" => $e->getLine()], 500);
+            
+            return return_exceptions($e);
+
         }
     }
 
-    public static function calculate_value_to_pay($amount_user, $amount_time)
+    public static function consult_value_to_pay($amount_user, $amount_time)
     {
         try {
 
@@ -153,7 +158,35 @@ class PaymentController extends Controller
             return $plan;
 
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage(), "line" => $e->getLine()], 500);
+            
+            return return_exceptions($e);
+
+        }
+    }
+
+    public static function validate_coupon($coupon)
+    {
+        try {
+            
+            $coupon = Coupon::where("code", $coupon)
+                                ->where("validity", '>=', date('Y-m-d H:m:s'))
+                                ->first();
+
+            if (!empty($coupon)){
+
+                return [
+                    "status" => true,
+                    "percentage" => $coupon->percentage
+                ];
+
+            }
+
+            return [ "status" => false ];
+
+        } catch (Exception $e) {
+            
+            return return_exceptions($e);
+
         }
     }
 
