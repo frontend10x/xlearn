@@ -7,6 +7,9 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
+define('URL_BASE', validate_environment()['URL_BASE']);
+define('URL_FRONT', validate_environment()['URL_FRONT']);
+
 class EmailNotification extends Mailable
 {
     use Queueable, SerializesModels;
@@ -32,22 +35,19 @@ class EmailNotification extends Mailable
      */
     public function build()
     {
-        $API_VERSION = env('API_VERSION');
-        $URL_BASE = ( env('AMBIENT') === 'DEV' ) ? env('URL_BASE_LOCAL') : env('URL_BASE_PRODUCTION');
-        $URL_FRONT = env('URL_FRONT');
 
         switch ($this->typeMail) {
 
             case 'confirmation_register':
                 
-                $urlConfimation = $URL_BASE . '/api/' . $API_VERSION . '/user/changestate/' . $this->id;
+                $urlConfimation = URL_BASE . '/api/' . API_VERSION . '/user/changestate/' . $this->id;
                 return $this->view('mails.confirmation_register')->with('urlConfimation', $urlConfimation);
                 
                 break;
             
             case 'assigned_courses':
             
-                $urlConfimation = $URL_FRONT . '/login';
+                $urlConfimation = URL_FRONT . '/login';
                 return $this->view('mails.assigned_courses')->with('urlConfimation', $urlConfimation);
                 
                 break;

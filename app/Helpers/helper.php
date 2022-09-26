@@ -62,13 +62,30 @@ if(!function_exists('validate_signature')) {
         
         }
 
-        $secret = ( env('AMBIENT') === 'DEV' ) ? env('SECRET_TEST_EVENTS_WOMPY') : env('SECRET_PROD_EVENTS_WOMPY');
+        $varEnv = validate_environment();
 
-        $calculated_signature = hash( "sha256", $properties . $timestamp . $secret );
+        $secret = $varEnv['SECRET:EVENTS'];
+        
+        $calculated_signature = calculate_signature([$properties, $timestamp, $secret]);
 
         if($calculated_signature === $signatue['checksum']) $isValid = true;
 
         return $isValid;
+    }
+}
+
+if(!function_exists('calculate_signature')) {
+    function calculate_signature($arrayStr){
+        
+        $concatenatedString = '';
+
+        foreach ($arrayStr as $str) {
+
+            $concatenatedString .= $str;
+
+        }
+
+        return hash( "sha256", $concatenatedString );
     }
 }
 
@@ -98,5 +115,38 @@ if (!function_exists('calculate_amount_in_cents')) {
             $amount_centies = $amount_centies - $amount_centies * $percentage / 100;
         
         return $amount_centies;
+    }
+}
+
+if(!function_exists('validate_environment')){
+    function validate_environment(){
+
+        $CURRENCY = env('CURRENCY');
+
+        $SECRET_INTEGRITY = env('SECRET_PROD_INTEGRITY_WOMPY');
+        $SECRET_EVENTS = env('SECRET_PROD_EVENTS_WOMPY');
+        $PUBLIC_KEY = env('PUBLIC_PROD_KEY_WOMPY');
+        $API_VERSION = env('API_VERSION');
+        $URL_BASE = env('URL_BASE_PRODUCTION');
+        $URL_FRONT = env('URL_FRONT');
+
+        if (env('AMBIENT') === 'DEV') {
+            $SECRET_INTEGRITY = env('SECRET_TEST_INTEGRITY_WOMPY');
+            $SECRET_EVENTS = env('SECRET_TEST_EVENTS_WOMPY');
+            $PUBLIC_KEY = env('PUBLIC_TEST_KEY_WOMPY');
+            $URL_BASE = env('URL_BASE_LOCAL');
+        }
+
+        $variables = [
+            'CURRENCY'          => $CURRENCY,
+            'SECRET:INTEGRITY'  => $SECRET_INTEGRITY,
+            'SECRET:EVENTS'     => $SECRET_EVENTS,
+            'PUBLIC_KEY'        => $PUBLIC_KEY,
+            'API_VERSION'       => $API_VERSION,
+            'URL_BASE'          => $URL_BASE,
+            'URL_FRONT'         => $URL_FRONT
+        ];
+
+        return $variables;
     }
 }

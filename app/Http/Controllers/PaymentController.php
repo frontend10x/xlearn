@@ -8,6 +8,10 @@ use App\Models\Plan;
 use App\Models\Payment;
 use App\Models\Coupon;
 
+define('CURRENCY', validate_environment()['CURRENCY']);
+define('SECRET_INTEGRITY', validate_environment()['SECRET:INTEGRITY']);
+define('PUBLIC_KEY', validate_environment()['PUBLIC_KEY']);
+
 class PaymentController extends Controller
 {
 
@@ -72,6 +76,8 @@ class PaymentController extends Controller
                 'amount_time' => 'required|integer'
             ]);
 
+            $VAR_ENV = validate_environment();
+
             $coupon_status = false;
             $percentage = 1;
 
@@ -90,27 +96,15 @@ class PaymentController extends Controller
             //Generamos la referencia de pago
             $reference = $request->input("subcompanie_id") . '-' . strtotime(date('Y-m-d H:m:s'));
 
-            $SECRET = env('SECRET_PROD_INTEGRITY_WOMPY');
-            $PUBLIC_KEY = env('PUBLIC_PROD_KEY_WOMPY');
-            $CURRENCY = env('CURRENCY');
-
-            if (env('AMBIENT') === 'DEV') {
-                $SECRET = env('SECRET_TEST_INTEGRITY_WOMPY');
-                $PUBLIC_KEY = env('PUBLIC_TEST_KEY_WOMPY');
-
-            }
-
             //Consultamos el plan acorde a la cantidad de usuario y tiempo
             $plan = PaymentController::consult_value_to_pay($amount_user, $amount_time);
 
             //Calculamos el valor a pagar en pesos
             $amount_to_paid = $plan->price * $amount_time * $amount_user;
-
             $amount_centies = calculate_amount_in_cents($amount_to_paid, $coupon_status, $percentage);
             
             //Generamos la firma de integridad para el pago (WOMPY)
-            $connected_string = $reference . $amount_centies . $CURRENCY . $SECRET;
-            $integrity_signature = hash("sha256", $connected_string);
+            $integrity_signature = calculate_signature([$reference, $amount_centies, CURRENCY, SECRET_INTEGRITY]);
 
             $dataInsert = [
                 "reference" => $reference, 
@@ -124,7 +118,7 @@ class PaymentController extends Controller
                 "status" => 'pending',
                 "coupon_id" => (!empty($coupon)) ? $coupon->id : NULL,
                 "signature" => $integrity_signature,
-                "currency" => $CURRENCY
+                "currency" => CURRENCY
             ];
 
             $created = Payment::create($dataInsert);
@@ -132,8 +126,8 @@ class PaymentController extends Controller
             $payment_details = [
                 "amount" => $amount_centies ,
                 "reference" => $reference,
-                "currency" => $CURRENCY,
-                "public_key" => $PUBLIC_KEY,
+                "currency" => CURRENCY,
+                "public_key" => PUBLIC_KEY,
                 "signature" => $integrity_signature,
                 "coupon_status" => ($coupon_status) ? 'Cupon aplicado con descuento del ' . $percentage . '%' : 'Cupon no relacionado o no valido',
                 "plan" => $plan
