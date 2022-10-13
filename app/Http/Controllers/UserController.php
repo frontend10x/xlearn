@@ -318,7 +318,7 @@ class UserController extends Controller
                 throw new Exception("Ocurrio un error");
             }
             $buscaActualiza->update(["state" => 1]);
-            header("Location: http://10xconsultores.org/login", TRUE, 301);
+            header("Location:" . env('URL_FRONT') . "/login ".json_encode($buscaActualiza), TRUE, 301);
             exit();
             
         } catch (Exception $e) {
@@ -432,5 +432,128 @@ class UserController extends Controller
 
         }
          
+    }
+
+    /**
+    * @OA\Get(
+    *     path="/api/v1/user/sub_companies_withou_group",
+    *     summary="Mostrar usuarios de la empresa sin grupo",
+    *     tags={"Users"},
+    *     security={{"bearer_token":{}}},
+    *     @OA\Parameter(name="offset", in="query", @OA\Schema(type="number")),
+    *     @OA\Parameter(name="limit", in="query", @OA\Schema(type="number")),
+    *     @OA\Parameter(name="subcompanies_id", in="query", @OA\Schema(type="number")),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Mostrar todos los usuarios de la empresa sin grupo.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                       "response": {
+    *                           "hc:length": 0,
+    *                           "hc:total": 0,
+    *                           "hc:offset": 0,
+    *                           "hc:limit": 0,
+    *                           "hc:next": "next page end-point ",
+    *                           "hc:previous": "previous page end-point ",
+    *                           "_rel": "users",
+    *                           "_embedded": {
+    *                               "users": {
+    *                                   {
+    *                                   "id": 0,
+    *                                   "name": "",
+    *                                   "lastname": "",
+    *                                   "company": "",
+    *                                   "email": "",
+    *                                   "website": "",
+    *                                   "size": 0,
+    *                                   "country_id": 0,
+    *                                   "content": "",
+    *                                   "plan_id": 0,
+    *                                   "quotas": 0,
+    *                                   "observation": "",
+    *                                   "created_at": "2022-06-11T23:21:42.000000Z",
+    *                                   "updated_at": "2022-06-12T00:46:06.000000Z",
+    *                                   "sub_companies": {}
+    *                                   }
+    *                               }
+    *                           }
+    *                       }
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
+    public function showUserWithoutGroup(Request $request)
+    {
+        try {
+
+             // Validamos los datos enviados
+             $validated = $request->validate([
+                'subcompanies_id' => 'required|integer'
+            ]);
+
+            if (!empty(Auth::user()->subcompanies_id)) {
+                $consult = User::where("subcompanies_id", Auth::user()->subcompanies_id)->get();
+            }
+
+            //TODO debe sacarse del request, por defecto el valor es uno
+            $offset = $request->has('offset') ? intval($request->get('offset')) : 1;
+
+            //TODO debe sacarse del request, por defecto el valor es 10.
+            $limit = $request->has('limit') ? intval($request->get('limit')) : 'all';
+
+            if($limit != 'all' && $limit > 0)
+                $consult = User::with('subCompanies')
+                                ->where('subcompanies_id', $request->get('subcompanies_id'))
+                                ->where('group_id', NULL)
+                                ->limit($limit)->offset(($offset - 1) * $limit)
+                                ->get()->toArray();
+            else
+                $consult = User::with('subCompanies')
+                                ->where('subcompanies_id', $request->get('subcompanies_id'))
+                                ->where('group_id', NULL)
+                                ->get()->toArray();
+            
+            $nexOffset = $offset + 1;
+            $previousOffset = ($offset > 1) ? $offset - 1 : 1;
+            
+
+            $users = array(
+                "hc:length" => count($consult), //Es la longitud del array a devolver
+                "hc:total"  => User::count(), //Es la longitud total de los registros disponibles en el query original,
+                "hc:offset" => $offset,
+                "hc:limit"  => $limit,
+                "hc:next"   => server_path() . '?limit=' . $limit . '&offset=' . $nexOffset,
+                "hc:previous"   => server_path() . '?limit=' . $limit . '&offset=' . $previousOffset,
+                "_rel"		=> "users",
+                "_embedded" => array(
+                    "users" => $consult
+                )
+            );
+
+            if(empty($consult))
+                throw new Exception("No se encontraron usuarios");
+
+            return response()->json(["response" => $users], 200);
+        } catch (Exception $e) {
+            return return_exceptions($e);
+        }
     }
 }

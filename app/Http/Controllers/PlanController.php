@@ -99,7 +99,9 @@ class PlanController extends Controller
     public function index()
     {
         try {
-            return response()->json(["plans" => Plan::all('id', 'name', 'description', 'price', 'amount_user', 'amount_time', 'color_title', 'color_border')], 200);
+
+            $plans =  Plan::where('state', 1)->get();
+            return response()->json(["plans" =>$plans], 200);
         } catch (Exception $e) {
             return response()->json(["message" => $e->getMessage()], 500);
         }

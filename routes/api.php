@@ -134,6 +134,7 @@ Route::group(['middleware'=>'auth:api' ],function(){
     Route::put(API_VERSION . '/user/changepassword',[UserController::class, 'changepassword']);
     Route::post(API_VERSION . '/user/coursesfavorites',[UserController::class, 'coursesFavorites']);
     Route::post(API_VERSION . '/user/bulk_upload_users',[UserController::class, 'bulkUploadUsers']);
+    Route::get(API_VERSION . '/user/sub_companies_withou_group',[UserController::class, 'showUserWithoutGroup']);
 
     // ---------------------------------------------------------------------
     // Progreso

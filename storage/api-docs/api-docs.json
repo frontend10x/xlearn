@@ -6,10 +6,10 @@
     },
     "servers": [
         {
-            "url": "http://servicios.10xconsultores.org"
+            "url": "https://servicios.10xconsultores.org"
         },
         {
-            "url": "http://127.0.0.1:8000"
+            "url": "https://127.0.0.1:8000"
         },
         {
             "url": "https://servicios.asstiseguridadsocial.com"
@@ -1879,6 +1879,98 @@
                                 "schema": {
                                     "example": {
                                         "message": "Usuarios cargados correctamente"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/user/sub_companies_withou_group": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Mostrar usuarios de la empresa sin grupo",
+                "operationId": "c063012ce21483cf985e4c045df2c529",
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "subcompanies_id",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios de la empresa sin grupo.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "response": {
+                                            "hc:length": 0,
+                                            "hc:total": 0,
+                                            "hc:offset": 0,
+                                            "hc:limit": 0,
+                                            "hc:next": "next page end-point ",
+                                            "hc:previous": "previous page end-point ",
+                                            "_rel": "users",
+                                            "_embedded": {
+                                                "users": [
+                                                    {
+                                                        "id": 0,
+                                                        "name": "",
+                                                        "lastname": "",
+                                                        "company": "",
+                                                        "email": "",
+                                                        "website": "",
+                                                        "size": 0,
+                                                        "country_id": 0,
+                                                        "content": "",
+                                                        "plan_id": 0,
+                                                        "quotas": 0,
+                                                        "observation": "",
+                                                        "created_at": "2022-06-11T23:21:42.000000Z",
+                                                        "updated_at": "2022-06-12T00:46:06.000000Z",
+                                                        "sub_companies": []
+                                                    }
+                                                ]
+                                            }
+                                        }
                                     }
                                 }
                             }

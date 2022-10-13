@@ -6,6 +6,8 @@ use Exception;
 use Mail;
 use App\Http\Controllers\UserController;
 use App\Models\RegistrationRequest;
+use App\Models\Sub_companies;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Mail\EmailNotification;
 use Illuminate\Support\Facades\Crypt;
@@ -136,6 +138,16 @@ class RegisterRequestController extends Controller
 
             if ( $request->input("password") != $request->input("password_confirmation")) {
                 throw new Exception("Las contraseñas no coinciden");
+            }
+
+            $subCompany = Sub_companies::where("name",$request->input("company"))->first();
+            if(!empty($subCompany)){
+                throw new Exception("La compañia ya se encuentra registrada");
+            }
+
+            $user = User::where("email", $request->input("email"))->first();
+            if (!empty($consult)) {
+                throw new Exception("El usuario ya se encuentra registrado");
             }
 
             // Validamos los datos enviados

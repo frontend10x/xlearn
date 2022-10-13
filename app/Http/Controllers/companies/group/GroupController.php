@@ -4,6 +4,7 @@ namespace App\Http\Controllers\companies\group;
 
 use App\Http\Controllers\Controller;
 use App\Models\companies\group\Group;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Exception;
 use Illuminate\Http\Request;
@@ -255,8 +256,14 @@ class GroupController extends Controller
     public function assignment(Request $request, $group_id)
     {
         try {
+            
             $group = Group::find($group_id);
             $group->users()->sync($request->user);
+            
+            foreach ($request->user as $key) {
+                $user = User::find($key);
+                $user->update(['group_id' => $group_id]);
+            }
             return json_encode(["message" => "Usuarios asignados a grupo con éxito"], 200);
         } catch (Exception $e) {
             return response()->json(["message" => $e->getMessage()], 500);

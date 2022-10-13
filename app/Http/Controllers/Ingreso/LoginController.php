@@ -16,8 +16,8 @@ use Illuminate\Support\Facades\Hash;
 /**
 * @OA\Info(title="API's Xlearn", version="1.0")
 *
-* @OA\Server(url="http://servicios.10xconsultores.org")
-* @OA\Server(url="http://127.0.0.1:8000")
+* @OA\Server(url="https://servicios.10xconsultores.org")
+* @OA\Server(url="https://127.0.0.1:8000")
 * @OA\Server(url="https://servicios.asstiseguridadsocial.com")
 *
 * @OAS\SecurityScheme(
