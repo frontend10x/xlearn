@@ -25,7 +25,7 @@ class CategoryController extends Controller
             Category::create($datosCategory);
             return response()->json(["message" => "Categoria creada con éxito"], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
     public function edit(Request $request, $id)
@@ -47,7 +47,7 @@ class CategoryController extends Controller
 
             return response()->json(["message" => $message], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
     public function index(Request $request)
@@ -56,7 +56,7 @@ class CategoryController extends Controller
 
             return response()->json(["categorias" => Category::all()], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
     public function changestate(Request $request, $id)
@@ -69,7 +69,7 @@ class CategoryController extends Controller
             $buscaActualiza->update(["state" => $request->input("state")]);
             return response()->json(["message" => "Cambio de estado correctamente"], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 }

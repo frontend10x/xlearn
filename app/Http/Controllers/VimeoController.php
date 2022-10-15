@@ -37,7 +37,8 @@ class VimeoController extends Controller
                     'vimeo_id' => $id[4],
                     'state' => 1,
                     'free_video' => 0,
-                    'file_path' => $value['user']['pictures']['base_link']
+                    'file_path' => $value['user']['pictures']['base_link'],
+                    'video_uri' => $value['metadata']['connections']['videos']['uri']
                 );
 
                 $request->request->add($dataInsert);
@@ -108,6 +109,8 @@ class VimeoController extends Controller
                 }
 
             }
+
+            save_file($video_information);
 
             return $lessons_created;
 

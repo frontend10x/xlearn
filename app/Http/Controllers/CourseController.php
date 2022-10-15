@@ -22,6 +22,7 @@ class CourseController extends Controller
                 "state" => $request->input("state"), 
                 "free_video" => $request->input("free_video"), 
                 "video_path" => $request->input("video_path"),
+                "video_uri" => $request->input("video_uri"),
                 "vimeo_id" => $request->input("vimeo_id")
             ];
             if (!empty($request->input("file_path"))) {
@@ -31,7 +32,7 @@ class CourseController extends Controller
             $create_course = Course::create($dataInsert);
             return json_encode(["message" => "Curso creado con éxito", "id" => $create_course['id']]);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
     public function edit(Request $request, $id)
@@ -60,7 +61,7 @@ class CourseController extends Controller
 
             return response()->json(["message" => $message], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 
@@ -170,7 +171,7 @@ class CourseController extends Controller
             //return response()->json(["cursos" => Course::all()], 200);
 
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 
@@ -279,7 +280,7 @@ class CourseController extends Controller
             return response()->json(["response" => $course], 200);
             
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 
@@ -353,9 +354,21 @@ class CourseController extends Controller
             $offset = $request->has('offset') ? intval($request->get('offset')) : 1;
 
             //TODO debe sacarse del request, por defecto el valor es 10.
-            $limit = $request->has('limit') ? intval($request->get('limit')) : 10;
+            $limit = $request->has('limit') ? intval($request->get('limit')) : 'all';
+
+            if($limit == 'all'){
+
+                $consult = User::where('id', $userId)->with('courses')->get()->first();
+
+            }else{
+                
+                $consult = User::where('id', $userId)->with('courses')->limit($limit)->offset(($offset - 1) * $limit)->get()->first();
             
-            $consult = User::where('id', $userId)->with('courses')->limit($limit)->offset(($offset - 1) * $limit)->get()->first();
+            }
+            
+            
+            if(empty($consult))
+                throw new Exception("No se encontraron registros");
 
             $total = User::where('id', $userId)->with('courses')->first();
 
@@ -375,9 +388,6 @@ class CourseController extends Controller
                 )
             );
 
-            if(empty($consult))
-                throw new Exception("No se encontraron registros");
-
             return response()->json(["response" => $course], 200);
             
         } catch (Exception $e) {
@@ -395,7 +405,7 @@ class CourseController extends Controller
             $buscaActualiza->update(["state" => $request->input("state")]);
             return response()->json(["message" => "Cambio de estado correctamente"], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
     
@@ -409,7 +419,7 @@ class CourseController extends Controller
             $buscaActualiza->update(["state" => $request->input("state")]);
             return response()->json(["message" => "Cambio de estado correctamente"], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 }

@@ -51,7 +51,7 @@ class User extends Authenticatable
     }
     
     public function diagnostic(){
-        return $this->hasMany('App\Models\Sub_companies', 'user_id');
+        return $this->hasMany('App\Models\Diagnostic', 'user_id');
     }
 
     public function courses(){

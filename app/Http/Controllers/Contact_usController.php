@@ -16,7 +16,7 @@ class Contact_usController extends Controller
             ]);
             return response()->json(["message" => "Datos almacenados con éxito"], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 
@@ -25,7 +25,7 @@ class Contact_usController extends Controller
         try {
             return response()->json(["contact_us" => Contact_us::all()], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 }

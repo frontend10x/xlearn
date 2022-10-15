@@ -42,7 +42,7 @@ class CountryController extends Controller
             $country = Country::all();
             return response()->json(["countries" => $country], 200);
         } catch (Exception $th) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 }

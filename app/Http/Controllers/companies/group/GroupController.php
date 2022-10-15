@@ -81,7 +81,7 @@ class GroupController extends Controller
             Group::create($datosSubEmpresa);
             return response()->json(["message" => "Grupo creado con éxito"], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
     public function edit(Request $request, $id)
@@ -109,7 +109,7 @@ class GroupController extends Controller
 
             return response()->json(["message" => $message], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 
@@ -201,7 +201,7 @@ class GroupController extends Controller
             );
             return response()->json(["groups" => $groups], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
     public function changestate(Request $request, $id)
@@ -214,7 +214,7 @@ class GroupController extends Controller
             $buscaActualiza->update(["state" => $request->input("state")]);
             return response()->json(["message" => "Cambio de estado correctamente"], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 
@@ -266,7 +266,7 @@ class GroupController extends Controller
             }
             return json_encode(["message" => "Usuarios asignados a grupo con éxito"], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 
@@ -312,7 +312,7 @@ class GroupController extends Controller
             $group->users()->detach($request->user);
             return response()->json(["users" => $group->users], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 
@@ -323,7 +323,7 @@ class GroupController extends Controller
             $group = Group::find($group_id);
             return response()->json(["users" => $group->users], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 
@@ -340,7 +340,7 @@ class GroupController extends Controller
 
             return response()->json([$group], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 
@@ -444,7 +444,7 @@ class GroupController extends Controller
             );
             return response()->json(["groups" => $groups], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 
@@ -454,7 +454,7 @@ class GroupController extends Controller
             $group->delete();
             return response()->json(["message" => "Grupo eliminado con éxito"], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 }

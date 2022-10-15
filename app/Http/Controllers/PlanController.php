@@ -32,7 +32,7 @@ class PlanController extends Controller
             Plan::create($datosSubEmpresa);
             return response()->json(["message" => "Plan creado con éxito"], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
     public function edit(Request $request, $id)
@@ -61,7 +61,7 @@ class PlanController extends Controller
 
             return response()->json(["message" => $message], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 
@@ -103,7 +103,7 @@ class PlanController extends Controller
             $plans =  Plan::where('state', 1)->get();
             return response()->json(["plans" =>$plans], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 
@@ -117,7 +117,7 @@ class PlanController extends Controller
             $buscaActualiza->update(["state" => $request->input("state")]);
             return response()->json(["message" => "Cambio de estado correctamente"], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 }

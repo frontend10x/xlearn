@@ -97,7 +97,7 @@ if(!function_exists('save_file')) {
         fwrite(
             $logFile, 
             "\n\n" . date("d/m/Y H:i:s") . 
-            "\n"   . "data => " . $data 
+            "\n"   . "data => " . json_encode($data) 
         ) or die("Error escribiendo en el archivo");
         
         fclose($logFile);

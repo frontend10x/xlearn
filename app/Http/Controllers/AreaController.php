@@ -26,7 +26,7 @@ class AreaController extends Controller
             Areas::create($datosSubEmpresa);
             return response()->json(["message" => "Area creada con éxito"], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
     public function edit(Request $request, $id)
@@ -48,7 +48,7 @@ class AreaController extends Controller
 
             return response()->json(["message" => $message], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 
@@ -143,7 +143,7 @@ class AreaController extends Controller
             return response()->json(["response" => $users], 200);
 
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
     public function changestate(Request $request, $id)
@@ -156,7 +156,7 @@ class AreaController extends Controller
             $buscaActualiza->update(["state" => $request->input("state")]);
             return response()->json(["message" => "Cambio de estado correctamente"], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 }

@@ -74,7 +74,7 @@ class QuestionController extends Controller
             //TODO debe sacarse del request, por defecto el valor es 10.
             $limit = $request->has('limit') ? intval($request->get('limit')) : 10;
 
-            $consult = Question::select('id', 'question', 'required')->with('options')->limit($limit)->offset(($offset - 1) * $limit)->get()->toArray();
+            $consult = Question::select('id', 'question', 'required', 'type', 'response_types', 'answer')->with('options')->limit($limit)->offset(($offset - 1) * $limit)->get()->toArray();
 
             $nexOffset = $offset + 1;
             $previousOffset = ($offset > 1) ? $offset - 1 : 1;
@@ -98,7 +98,7 @@ class QuestionController extends Controller
 
             return response()->json(["response" => $response], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 

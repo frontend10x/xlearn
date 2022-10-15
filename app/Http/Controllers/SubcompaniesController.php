@@ -20,7 +20,7 @@ class SubcompaniesController extends Controller
 
             return response()->json(["sub_company" => $subcompany], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 
@@ -55,7 +55,7 @@ class SubcompaniesController extends Controller
             $created = Sub_companies::create($datosSubEmpresa);
             return json_encode(["message" => "Registro almacenado con éxito ", "id" => $created['id']]);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
     public function edit(Request $request,$id){
@@ -87,14 +87,14 @@ class SubcompaniesController extends Controller
             }
             return response()->json(["message" => $message], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
     public function index(){
         try {
             return response()->json(["sub_companies" => Sub_companies::all()], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
     public function changestate(Request $request, $id)
@@ -107,7 +107,7 @@ class SubcompaniesController extends Controller
             $buscaActualiza->update(["state" => $request->input("state")]);
             return response()->json(["message" => "Cambio de estado correctamente"], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 }

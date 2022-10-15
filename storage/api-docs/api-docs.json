@@ -566,6 +566,60 @@
                 ]
             }
         },
+        "/api/v1/evaluation/course": {
+            "get": {
+                "tags": [
+                    "Evaluations"
+                ],
+                "summary": "Mostrar evaluación del curso",
+                "operationId": "01b927fed6da3c02f558202b852c5baf",
+                "parameters": [
+                    {
+                        "name": "course_id",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Mostrar evaluación del curso.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "response": {
+                                            "_rel": "evaluations",
+                                            "_embedded": {
+                                                "evaluations": []
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
         "/api/v1/export/sample_file": {
             "get": {
                 "tags": [

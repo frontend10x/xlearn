@@ -29,15 +29,12 @@ class LessonController extends Controller
                 "player_embed_url" => $request->input("player_embed_url"),
                 "picture" => $request->input("picture")
             ];
-            if (!empty($request->input("file_path"))) {
-                $datosInsert['file_path'] = $request->input("file_path");
-            }
 
             Lesson::create($datosInsert);
             return response()->json(["message" => "Leccion creada con éxito", "status" => true], 200);
 
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
     public function edit(Request $request, $id)
@@ -59,7 +56,7 @@ class LessonController extends Controller
 
             return response()->json(["message" => $message], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
     public function index(Request $request)
@@ -67,7 +64,7 @@ class LessonController extends Controller
         try {
             return response()->json(["lecciones" => Lesson::all()], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
     public function changestate(Request $request, $id)
@@ -80,7 +77,7 @@ class LessonController extends Controller
             $buscaActualiza->update(["state" => $request->input("state")]);
             return response()->json(["message" => "Cambio de estado correctamente"], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 
@@ -96,7 +93,7 @@ class LessonController extends Controller
             else
                 throw new Exception("Error en la inserción del comentario");
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
     public function listComment($id)
@@ -113,7 +110,7 @@ class LessonController extends Controller
             return response()->json(["comments" => $comments], 200);
 
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 
@@ -225,7 +222,7 @@ class LessonController extends Controller
             return response()->json(["response" => $lesson], 200);
             
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 }

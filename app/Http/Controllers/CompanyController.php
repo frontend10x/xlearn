@@ -22,7 +22,7 @@ class CompanyController extends Controller
             }
             return response()->json(["company" => $dataCompany], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 
@@ -53,7 +53,7 @@ class CompanyController extends Controller
             }
             return response()->json(["message" => $message], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 

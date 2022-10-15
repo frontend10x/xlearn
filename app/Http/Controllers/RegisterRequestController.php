@@ -76,7 +76,7 @@ class RegisterRequestController extends Controller
             return response()->json(["response" => $requests], 200);
 
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 
@@ -305,7 +305,7 @@ class RegisterRequestController extends Controller
             return response()->json(["message" => "Registro actualizado con éxito"], 200);
 
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 }
