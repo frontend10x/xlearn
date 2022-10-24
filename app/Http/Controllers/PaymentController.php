@@ -158,6 +158,76 @@ class PaymentController extends Controller
         }
     }
 
+    /**
+    * @OA\Post(
+    *     path="/api/v1/payment/approved_payment_status",
+    *     tags={"Payments"},
+    *     summary="Verificar cupos de empresa",
+    *     security={{"bearer_token":{}}},
+    *     @OA\Parameter(name="subcompanie_id", in="query", @OA\Schema(type="number")),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Success.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "quotas":0,
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
+    public static function approvedPaymentStatus(Request $request)
+    {
+        try {
+            
+            // Validamos los datos enviados
+            $validated = $request->validate([
+                'subcompanie_id' => 'required|integer|exists:payments'
+            ]);
+
+            $payments = Payment::where('subcompanie_id', $request->subcompanie_id)->where('status', 'APPROVED')->get()->toArray();
+
+            if(!$payments)
+                throw new Exception('La empresa no tiene cupos disponibles');
+
+            $quotas = 0;
+
+            foreach($payments AS $payment){
+                $quotas += $payment['amount_user'];
+            }
+
+            $users = UserController::showUserSubCompanie($request, $request->subcompanie_id);
+            $key = $users->original['response']['_rel'];
+            $amountUsers = count($users->original['response']['_embedded'][$key]);
+
+            $payments['quotas'] = $quotas - $amountUsers;
+
+            return response()->json(["quotas" => $payments['quotas']], 200);
+
+        } catch (Exception $e) {
+            
+            return return_exceptions($e);
+
+        }
+    }
+
     public static function validate_coupon($coupon)
     {
         try {

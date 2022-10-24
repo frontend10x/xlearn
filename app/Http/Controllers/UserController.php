@@ -85,6 +85,7 @@ class UserController extends Controller
     {
 
         try {
+            
 
             $consult = User::where("email", $request->input("email"))->first();
 
@@ -101,18 +102,25 @@ class UserController extends Controller
                 'rol_id' => 'required|integer',
                 'password' => 'required',
                 'password_confirmation' => 'required',
-                'email' => 'required'
+                'email' => 'required',
+                'subcompanies_id' => 'required|integer',
+                'name' => 'required',   
             ]);
 
+            $request->request->add(['subcompanie_id' => $request->subcompanies_id]);
+
+            $quotas = PaymentController::approvedPaymentStatus($request);
+
+            if(!isset($quotas->original['quotas']))
+                throw new Exception('La empresa no tiene cupos para registrar usuarios');
+
             $dataInsert = [
+                "subcompanies_id" => $request->input("subcompanies_id"),
                 "rol_id" => $request->input("rol_id"), "link_facebook" => $request->input("link_facebook"), "link_google" => $request->input("link_google"), "link_linkedin" => $request->input("link_linkedin"), "link_instagram" => $request->input("link_instagram"), "name" => $request->input("name"), "surname" => $request->input("surname"), "phone" => $request->input("phone"), "email" => $request->input("email"), "state" => 1, "password" => Hash::make($request->input("password"))
             ];
 
-            if (!empty($request->input("subcompanies_id"))) {
-                $dataInsert['subcompanies_id'] = $request->input("subcompanies_id");
-            }
-
             $userCreated = User::create($dataInsert);
+
             /*$encryptedId = Crypt::encryptString($userCreated['id']);
 
             Mail::to($request->input("email"))->send(new EmailNotification($encryptedId));*/
@@ -317,8 +325,9 @@ class UserController extends Controller
             if (empty($buscaActualiza)) {
                 throw new Exception("Ocurrio un error");
             }
+            /*.json_encode($buscaActualiza)*/
             $buscaActualiza->update(["state" => 1]);
-            header("Location:" . env('URL_FRONT') . "/login ".json_encode($buscaActualiza), TRUE, 301);
+            header("Location:" . env('URL_FRONT') . "/login ", TRUE, 301);
             exit();
             
         } catch (Exception $e) {
@@ -504,8 +513,8 @@ class UserController extends Controller
     {
         try {
 
-             // Validamos los datos enviados
-             $validated = $request->validate([
+            // Validamos los datos enviados
+            $validated = $request->validate([
                 'subcompanies_id' => 'required|integer'
             ]);
 
@@ -533,7 +542,9 @@ class UserController extends Controller
             
             $nexOffset = $offset + 1;
             $previousOffset = ($offset > 1) ? $offset - 1 : 1;
-            
+
+            if(empty($consult))
+                throw new Exception("No se encontraron usuarios");
 
             $users = array(
                 "hc:length" => count($consult), //Es la longitud del array a devolver
@@ -548,8 +559,121 @@ class UserController extends Controller
                 )
             );
 
+            return response()->json(["response" => $users], 200);
+        } catch (Exception $e) {
+            return return_exceptions($e);
+        }
+    }
+
+    /**
+    * @OA\Get(
+    *     path="/api/v1/sub_companies/users/{id}",
+    *     summary="Mostrar usuarios de la empresa",
+    *     tags={"Sub Companies"},
+    *     security={{"bearer_token":{}}},
+    *     @OA\Parameter(name="offset", in="query", @OA\Schema(type="number")),
+    *     @OA\Parameter(name="limit", in="query", @OA\Schema(type="number")),
+    *     @OA\Parameter(name="id", in="path", @OA\Schema(type="number")),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Mostrar todos los usuarios de la empresa.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                       "response": {
+    *                           "hc:length": 0,
+    *                           "hc:total": 0,
+    *                           "hc:offset": 0,
+    *                           "hc:limit": 0,
+    *                           "hc:next": "next page end-point ",
+    *                           "hc:previous": "previous page end-point ",
+    *                           "_rel": "users",
+    *                           "_embedded": {
+    *                               "users": {
+    *                                   {
+    *                                   "id": 0,
+    *                                   "name": "",
+    *                                   "lastname": "",
+    *                                   "company": "",
+    *                                   "email": "",
+    *                                   "website": "",
+    *                                   "size": 0,
+    *                                   "country_id": 0,
+    *                                   "content": "",
+    *                                   "plan_id": 0,
+    *                                   "quotas": 0,
+    *                                   "observation": "",
+    *                                   "created_at": "2022-06-11T23:21:42.000000Z",
+    *                                   "updated_at": "2022-06-12T00:46:06.000000Z",
+    *                                   "sub_companies": {}
+    *                                   }
+    *                               }
+    *                           }
+    *                       }
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
+    public static function showUserSubCompanie(Request $request, $id)
+    {
+        try {
+
+            
+            if (!empty(Auth::user()->subcompanies_id)) {
+                $consult = User::where("subcompanies_id", Auth::user()->subcompanies_id)->get();
+            }
+
+            //TODO debe sacarse del request, por defecto el valor es uno
+            $offset = $request->has('offset') ? intval($request->get('offset')) : 1;
+
+            //TODO debe sacarse del request, por defecto el valor es 10.
+            $limit = $request->has('limit') ? intval($request->get('limit')) : 'all';
+
+            if($limit != 'all' && $limit > 0)
+                $consult = User::with('subCompanies')
+                                ->where('subcompanies_id', $id)
+                                ->limit($limit)->offset(($offset - 1) * $limit)
+                                ->get()->toArray();
+            else
+                $consult = User::with('subCompanies')
+                                ->where('subcompanies_id', $id)
+                                ->get()->toArray();
+            
+            $nexOffset = $offset + 1;
+            $previousOffset = ($offset > 1) ? $offset - 1 : 1;
+
             if(empty($consult))
                 throw new Exception("No se encontraron usuarios");
+
+            $users = array(
+                "hc:length" => count($consult), //Es la longitud del array a devolver
+                "hc:total"  => User::count(), //Es la longitud total de los registros disponibles en el query original,
+                "hc:offset" => $offset,
+                "hc:limit"  => $limit,
+                "hc:next"   => server_path() . '?limit=' . $limit . '&offset=' . $nexOffset,
+                "hc:previous"   => server_path() . '?limit=' . $limit . '&offset=' . $previousOffset,
+                "_rel"		=> "users",
+                "_embedded" => array(
+                    "users" => $consult
+                )
+            );
 
             return response()->json(["response" => $users], 200);
         } catch (Exception $e) {

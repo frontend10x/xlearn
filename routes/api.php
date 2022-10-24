@@ -137,6 +137,7 @@ Route::group(['middleware'=>'auth:api' ],function(){
     Route::post(API_VERSION . '/user/coursesfavorites',[UserController::class, 'coursesFavorites']);
     Route::post(API_VERSION . '/user/bulk_upload_users',[UserController::class, 'bulkUploadUsers']);
     Route::get(API_VERSION . '/user/sub_companies_withou_group',[UserController::class, 'showUserWithoutGroup']);
+    Route::get(API_VERSION . '/sub_companies/users/{id}',[UserController::class, 'showUserSubCompanie']);
 
     // ---------------------------------------------------------------------
     // Progreso
@@ -189,7 +190,7 @@ Route::group(['middleware'=>'auth:api' ],function(){
     Route::post(API_VERSION . '/groupuser/assignment/{group_id}',[GroupController::class, 'assignment']);
     Route::delete(API_VERSION . '/groupuser/removefromgroup/{group_id}',[GroupController::class, 'removefromgroup']);
     Route::get(API_VERSION . '/groupuser/list_user_groups/{userId}',[GroupController::class, 'listUserGroups']);
-    Route::get(API_VERSION . '/groupuser/list_group_users/{groupId}',[GroupController::class, 'listGroupUsers']);
+    Route::get(API_VERSION . '/groupuser/list_group_users/{group_id}',[GroupController::class, 'listGroupUsers']);
     
     // ---------------------------------------------------------------------
     // Categorias
@@ -255,6 +256,7 @@ Route::group(['middleware'=>'auth:api' ],function(){
     // ---------------------------------------------------------------------
     
     Route::post(API_VERSION . '/payment/requests',[PaymentController::class, 'paymentRequests']);
+    Route::post(API_VERSION . '/payment/approved_payment_status',[PaymentController::class, 'approvedPaymentStatus']);
 
     // ---------------------------------------------------------------------
     // Export

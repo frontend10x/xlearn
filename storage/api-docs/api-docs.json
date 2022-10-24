@@ -916,6 +916,55 @@
                 ]
             }
         },
+        "/api/v1/payment/approved_payment_status": {
+            "post": {
+                "tags": [
+                    "Payments"
+                ],
+                "summary": "Verificar cupos de empresa",
+                "operationId": "9cd8f6468b2eccf9c07ac46629f68b0d",
+                "parameters": [
+                    {
+                        "name": "subcompanie_id",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "quotas": 0
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
         "/api/v1/plan/list": {
             "get": {
                 "tags": [
@@ -2050,6 +2099,98 @@
                 ]
             }
         },
+        "/api/v1/sub_companies/users/{id}": {
+            "get": {
+                "tags": [
+                    "Sub Companies"
+                ],
+                "summary": "Mostrar usuarios de la empresa",
+                "operationId": "3a44bc1ced426bedcdb4e3c86cf97fae",
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios de la empresa.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "response": {
+                                            "hc:length": 0,
+                                            "hc:total": 0,
+                                            "hc:offset": 0,
+                                            "hc:limit": 0,
+                                            "hc:next": "next page end-point ",
+                                            "hc:previous": "previous page end-point ",
+                                            "_rel": "users",
+                                            "_embedded": {
+                                                "users": [
+                                                    {
+                                                        "id": 0,
+                                                        "name": "",
+                                                        "lastname": "",
+                                                        "company": "",
+                                                        "email": "",
+                                                        "website": "",
+                                                        "size": 0,
+                                                        "country_id": 0,
+                                                        "content": "",
+                                                        "plan_id": 0,
+                                                        "quotas": 0,
+                                                        "observation": "",
+                                                        "created_at": "2022-06-11T23:21:42.000000Z",
+                                                        "updated_at": "2022-06-12T00:46:06.000000Z",
+                                                        "sub_companies": []
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
         "/api/v1/group/store": {
             "post": {
                 "tags": [
@@ -2221,6 +2362,56 @@
                                 "schema": {
                                     "example": {
                                         "message": "Usuarios asignados a grupo con éxito."
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/groupuser/list_group_users/{group_id}": {
+            "get": {
+                "tags": [
+                    "User groups"
+                ],
+                "summary": "Listar los usuarios que pertenecen al grupo",
+                "operationId": "7ba11129f519a5d2da2dc11a0caba8f7",
+                "parameters": [
+                    {
+                        "name": "group_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "users": "[]"
                                     }
                                 }
                             }

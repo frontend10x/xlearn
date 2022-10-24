@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers\companies\group;
 
-use App\Http\Controllers\Controller;
-use App\Models\companies\group\Group;
-use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+
+use App\Http\Controllers\Controller;
+use App\Models\companies\group\Group;
+use App\Models\User;
+use App\Models\Roles;
 
 class GroupController extends Controller
 {
@@ -61,8 +63,7 @@ class GroupController extends Controller
 
             // Validamos los datos enviados
             $validated = $request->validate([
-                'name' => 'required|string',
-                'description' => 'required|string'
+                'name' => 'required|string'
             ]);
 
             $datosSubEmpresa = [
@@ -78,8 +79,9 @@ class GroupController extends Controller
                 $datosSubEmpresa['subcompanies_id'] = $request->input("subcompanies_id");
             }
 
-            Group::create($datosSubEmpresa);
-            return response()->json(["message" => "Grupo creado con éxito"], 200);
+            $create = Group::create($datosSubEmpresa);
+            return response()->json(["message" => "Grupo creado con éxito", "id" => $create->id], 200);
+            
         } catch (Exception $e) {
             return return_exceptions($e);
         }
@@ -170,22 +172,21 @@ class GroupController extends Controller
     public function index(Request $request)
     {
         try {
-            if (!empty(Auth::user()->subcompanies_id)) {
-                $grupos = Group::where("subcompanies_id", Auth::user()->subcompanies_id)->get();
-            } else {
+            
 
-                //TODO debe sacarse del request, por defecto el valor es uno
-                $offset = $request->has('offset') ? intval($request->get('offset')) : 1;
+            //TODO debe sacarse del request, por defecto el valor es uno
+            $offset = $request->has('offset') ? intval($request->get('offset')) : 1;
 
-                //TODO debe sacarse del request, por defecto el valor es 10.
-                $limit = $request->has('limit') ? intval($request->get('limit')) : 10;
+            //TODO debe sacarse del request, por defecto el valor es 10.
+            $limit = $request->has('limit') ? intval($request->get('limit')) : 10;
 
-                $consult = Group::select('id', 'name', 'description', 'subcompanies_id')->limit($limit)->offset(($offset - 1) * $limit)->get()->toArray();
+            $consult = Group::select('id', 'name', 'description', 'subcompanies_id')->limit($limit)->offset(($offset - 1) * $limit)->get()->toArray();
 
-                $nexOffset = $offset + 1;
-                $previousOffset = ($offset > 1) ? $offset - 1 : 1;
+            $nexOffset = $offset + 1;
+            $previousOffset = ($offset > 1) ? $offset - 1 : 1;
 
-            }
+            if(empty($consult))
+                throw new Exception("No se encontraron grupos");
 
             $groups = array(
                 "hc:length" => count($consult), //Es la longitud del array a devolver
@@ -264,6 +265,18 @@ class GroupController extends Controller
                 $user = User::find($key);
                 $user->update(['group_id' => $group_id]);
             }
+
+            if($request->leader){
+                
+                $rol = Roles::where('rol_name', 'Lider')->first();
+                $leader = User::find($request->leader);
+
+                if(empty($leader))
+                    throw new Exception("Usuario lider no existe");
+
+                $leader->update(['rol_id' => $rol->id]);
+            }
+
             return json_encode(["message" => "Usuarios asignados a grupo con éxito"], 200);
         } catch (Exception $e) {
             return return_exceptions($e);
@@ -308,7 +321,17 @@ class GroupController extends Controller
     public function removefromgroup(Request $request, $group_id)
     {
         try {
+
+            // Validamos los datos enviados
+            $validated = $request->validate([
+                'group_id' => 'required|integer'
+            ]);
+
             $group = Group::find($group_id);
+
+            if(empty($group))
+                throw new Exception("No se encontraron usuarios");
+
             $group->users()->detach($request->user);
             return response()->json(["users" => $group->users], 200);
         } catch (Exception $e) {
@@ -316,17 +339,57 @@ class GroupController extends Controller
         }
     }
 
+    /**
+    * @OA\Get(
+    *     path="/api/v1/groupuser/list_group_users/{group_id}",
+    *     tags={"User groups"},
+    *     summary="Listar los usuarios que pertenecen al grupo",
+    *     security={{"bearer_token":{}}},
+    *     @OA\Parameter(name="group_id", required=true, in="path", @OA\Schema(type="number")),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Success.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "users":"[]"
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
     //Listar los usuarios que pertenecen al grupo
     public function listGroupUsers($group_id)
     {
         try {
+
             $group = Group::find($group_id);
+
+            if(empty($group))
+                throw new Exception("No se encontraron usuarios");
+
             return response()->json(["users" => $group->users], 200);
         } catch (Exception $e) {
             return return_exceptions($e);
         }
     }
-
+    
     //listar los grupos al que pertenece el usuario
     public static function listUserGroups($user_id)
     {
