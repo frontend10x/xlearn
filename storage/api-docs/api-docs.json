@@ -16,6 +16,80 @@
         }
     ],
     "paths": {
+        "/api/v1/answer/store": {
+            "post": {
+                "tags": [
+                    "Answers"
+                ],
+                "summary": "Crear respuestas de usuario",
+                "operationId": "f0187c7633fe22b5fd552d74015abf47",
+                "parameters": [
+                    {
+                        "name": "evaluation_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "course_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "answer",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "[]"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Respuestas almacenadas con éxito."
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
         "/api/v1/area/list": {
             "get": {
                 "tags": [

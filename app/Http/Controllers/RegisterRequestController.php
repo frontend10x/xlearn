@@ -192,6 +192,7 @@ class RegisterRequestController extends Controller
             $dataInsert["link_instagram"] = '';
             $dataInsert["surname"] = '';
             $dataInsert["phone"] = '';
+            $dataInsert["registerRequest"] = true;
 
             if(!empty($register)){
 
@@ -202,12 +203,10 @@ class RegisterRequestController extends Controller
                 $request->request->add(array_merge($dataInsert, $request->all()));
 
                 $userCreated = UserController::store($request);
-                $userId = json_decode($userCreated, true);
+                // $userId = json_decode($userCreated, true);
 
-                //Encriptamos el id del usuario
-                $encryptedId = Crypt::encryptString($userId['id']);
-
-                Mail::to($request->input("email"))->send(new EmailNotification($encryptedId, 'confirmation_register'));
+                // //Encriptamos el id del usuario
+                // $encryptedId = Crypt::encryptString($userId['id']);
 
             }
 

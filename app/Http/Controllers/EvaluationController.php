@@ -59,7 +59,7 @@ class EvaluationController extends Controller
             ]);
 
             $evaluation = Evaluation::where('course_id', $request->get("course_id"))
-                                    ->select('questions', 'average_score', 'Attempts', 'course_id')
+                                    ->select('id', 'questions', 'average_score', 'Attempts', 'course_id')
                                     ->first();
             
             $id_quest = json_decode($evaluation->questions);
@@ -74,6 +74,7 @@ class EvaluationController extends Controller
                 "_rel"		=> "evaluation",
                 "_embedded" => array(
                     "evaluation" => [
+                        'id' => $evaluation->id,
                         'average_score' => $evaluation->average_score,
                         'Attempts' => $evaluation->Attempts,
                         'questions' => $questions

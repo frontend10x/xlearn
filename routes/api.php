@@ -25,6 +25,9 @@ use App\Http\Controllers\VimeoController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\ProgressController;
 use App\Http\Controllers\EvaluationController;
+use App\Http\Controllers\AnswerController;
+use App\Http\Controllers\CertificateController;
+
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -250,6 +253,18 @@ Route::group(['middleware'=>'auth:api' ],function(){
     // ---------------------------------------------------------------------
     
     Route::get(API_VERSION . '/evaluation/course',[EvaluationController::class, 'showCourse']);
+
+    // ---------------------------------------------------------------------
+    // Respuestas
+    // --------------------------------------------------------------------- 
+      
+    Route::post(API_VERSION . '/answer/store',[AnswerController::class, 'store']);
+
+    // ---------------------------------------------------------------------
+    // Certificados
+    // --------------------------------------------------------------------- 
+      
+    Route::get(API_VERSION . '/certificate',[CertificateController::class, 'show']);
 
     // ---------------------------------------------------------------------
     // Pagos

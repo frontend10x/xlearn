@@ -109,28 +109,32 @@ class UserController extends Controller
 
             $request->request->add(['subcompanie_id' => $request->subcompanies_id]);
 
-            $quotas = PaymentController::approvedPaymentStatus($request);
+            $isRegistersRequest = $request->input("registerRequest");
 
-            if(!isset($quotas->original['quotas']))
-                throw new Exception('La empresa no tiene cupos para registrar usuarios');
+            if(empty($isRegistersRequest)){
+
+                $quotas = PaymentController::approvedPaymentStatus($request);
+
+                if(!isset($quotas->original['quotas']))
+                    throw new Exception('La empresa no tiene cupos para registrar usuarios');
+            }
 
             $dataInsert = [
                 "subcompanies_id" => $request->input("subcompanies_id"),
-                "rol_id" => $request->input("rol_id"), "link_facebook" => $request->input("link_facebook"), "link_google" => $request->input("link_google"), "link_linkedin" => $request->input("link_linkedin"), "link_instagram" => $request->input("link_instagram"), "name" => $request->input("name"), "surname" => $request->input("surname"), "phone" => $request->input("phone"), "email" => $request->input("email"), "state" => 1, "password" => Hash::make($request->input("password"))
+                "rol_id" => $request->input("rol_id"), "link_facebook" => $request->input("link_facebook"), "link_google" => $request->input("link_google"), "link_linkedin" => $request->input("link_linkedin"), "link_instagram" => $request->input("link_instagram"), "name" => $request->input("name"), "surname" => $request->input("surname"), "phone" => $request->input("phone"), "email" => $request->input("email"), "state" => 0, "password" => Hash::make($request->input("password"))
             ];
 
             $userCreated = User::create($dataInsert);
 
-            /*$encryptedId = Crypt::encryptString($userCreated['id']);
+            $encryptedId = Crypt::encryptString($userCreated['id']);
 
-            Mail::to($request->input("email"))->send(new EmailNotification($encryptedId));*/
+            Mail::to($request->input("email"))->send(new EmailNotification($encryptedId, 'confirmation_register'));
 
             return json_encode(["message" => "Registro almacenado con éxito", "id" => $userCreated['id']]);
 
         } catch (Exception $e) {
-
-            return response()->json(["message" => $e->getMessage(), "line" => $e->getLine()], 500);
-            \Log::debug('message ' . $e->getMessage());
+            
+            return return_exceptions($e);
 
         }
     }

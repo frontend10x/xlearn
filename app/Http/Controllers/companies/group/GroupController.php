@@ -472,24 +472,24 @@ class GroupController extends Controller
                 $consult = Group::where("subcompanies_id", Auth::user()->subcompanies_id)->get();
             } 
 
-                //TODO debe sacarse del request, por defecto el valor es uno
-                $offset = $request->has('offset') ? intval($request->get('offset')) : 1;
+            //TODO debe sacarse del request, por defecto el valor es uno
+            $offset = $request->has('offset') ? intval($request->get('offset')) : 1;
 
-                //TODO debe sacarse del request, por defecto el valor es 10.
-                $limit = $request->has('limit') ? intval($request->get('limit')) : 10;
+            //TODO debe sacarse del request, por defecto el valor es 10.
+            $limit = $request->has('limit') ? intval($request->get('limit')) : 10;
 
-                if( !empty($request->has('offset')) &&  !empty($request->has('limit'))){
+            if( !empty($request->has('offset')) &&  !empty($request->has('limit'))){
 
-                    $consult = Group::select('id', 'name', 'description', 'subcompanies_id')->where('subcompanies_id', $subcompanie_id)->limit($limit)->offset(($offset - 1) * $limit)->get()->toArray();
+                $consult = Group::with('users')->select('id', 'name', 'description', 'subcompanies_id')->where('subcompanies_id', $subcompanie_id)->limit($limit)->offset(($offset - 1) * $limit)->get()->toArray();
 
-                }else{
+            }else{
 
-                    $consult = Group::select('id', 'name', 'description', 'subcompanies_id')->where('subcompanies_id', $subcompanie_id)->get()->toArray();
+                $consult = Group::select('id', 'name', 'description', 'subcompanies_id')->where('subcompanies_id', $subcompanie_id)->get()->toArray();
 
-                }
-                
-                $nexOffset = $offset + 1;
-                $previousOffset = ($offset > 1) ? $offset - 1 : 1;
+            }
+            
+            $nexOffset = $offset + 1;
+            $previousOffset = ($offset > 1) ? $offset - 1 : 1;
 
             
 
