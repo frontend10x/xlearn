@@ -8,10 +8,14 @@ use Mail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Models\companies\group\Group;
 use App\Models\User;
 use App\Models\Roles;
+use App\Models\companies\group\Group;
+
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\UserCoursesController;
+use App\Http\Controllers\ProgressController;
+
 
 class GroupController extends Controller
 {
@@ -467,7 +471,7 @@ class GroupController extends Controller
     */
 
     //listar los grupos de la empresa
-    public static function listCompanyGroups(Request $request, $subcompanie_id)
+    public function listCompanyGroups(Request $request, $subcompanie_id)
     {
 
         try {
@@ -481,20 +485,18 @@ class GroupController extends Controller
             //TODO debe sacarse del request, por defecto el valor es 10.
             $limit = $request->has('limit') ? intval($request->get('limit')) : 10;
 
-            if( !empty($request->has('offset')) &&  !empty($request->has('limit'))){
 
-                $consult = Group::with('users')->select('id', 'name', 'description', 'subcompanies_id')->where('subcompanies_id', $subcompanie_id)->limit($limit)->offset(($offset - 1) * $limit)->get()->toArray();
+            $consult = Group::with('users')->select('id', 'name', 'description', 'subcompanies_id', 'created_at')->where('subcompanies_id', $subcompanie_id)->limit($limit)->offset(($offset - 1) * $limit)->get()->toArray();
 
-            }else{
-
-                $consult = Group::select('id', 'name', 'description', 'subcompanies_id')->where('subcompanies_id', $subcompanie_id)->get()->toArray();
-
-            }
             
             $nexOffset = $offset + 1;
             $previousOffset = ($offset > 1) ? $offset - 1 : 1;
 
-            
+            if (empty($consult)) {
+                throw new Exception("No existen grupos pertenecientes a la compañia");
+            }
+
+            $groups = $this->formsGroups($consult);
 
             $groups = array(
                 "hc:length" => count($consult), //Es la longitud del array a devolver
@@ -505,10 +507,86 @@ class GroupController extends Controller
                 "hc:previous"   => server_path() . '?limit=' . $limit . '&offset=' . $previousOffset,
                 "_rel"		=> "groups",
                 "_embedded" => array(
-                    "groups" => $consult
+                    "groups" => $groups
                 )
             );
             return response()->json(["groups" => $groups], 200);
+        } catch (Exception $e) {
+            return return_exceptions($e);
+        }
+    }
+
+    public function formsGroups($consult)
+    {
+        try {
+
+            $groups = [];
+            
+            foreach ($consult as $group) {
+
+                $leader = '';
+
+                foreach ($group['users'] as $user) {
+
+                    $roles = Roles::find($user['rol_id']);
+
+                    if($roles->rol_name == 'Lider')
+                        $leader = $user['name'];
+                    
+                }
+
+                $progress = self::getGroupProgress($group);
+
+                $group = [
+                    'id' => $group['id'],
+                    'name' => $group['name'],
+                    'description' => $group['description'],
+                    'subcompanies_id' => $group['subcompanies_id'],
+                    'created_at' => $group['created_at'],
+                    'leader' => $leader,
+                    'progress:porcentage' => $progress,
+                    'users' => $group['users']
+                ];
+
+                $groups[] = $group;
+            }
+
+            return $groups;
+
+        } catch (Exception $e) {
+            return return_exceptions($e);
+        }
+    }
+
+    public static function getGroupProgress($group)
+    {
+        try {
+
+            $request = new Request;
+            $percentage = 0;
+            $percentage_completion = 0;
+            $advanced_current_time = 0;
+            $total_video_time = 0;
+
+            $users_ids = UserCoursesController::search_users($group['id']);
+            
+            $progress = ProgressController::check_user_progress($request, $users_ids);
+
+            if (isset($progress->original['progress'])){
+
+                $result = $progress->original['progress'];
+
+                foreach ($result as $pro) {
+                    $percentage_completion += $pro['percentage_completion'];
+                    $advanced_current_time += $pro['advanced_current_time'];
+                    $total_video_time += $pro['total_video_time'];
+                }
+
+                $percentage = round($advanced_current_time / $total_video_time * 100);
+            }
+
+            return $percentage;
+
         } catch (Exception $e) {
             return return_exceptions($e);
         }

@@ -1305,6 +1305,63 @@
                 ]
             }
         },
+        "/api/v1/progress/user": {
+            "get": {
+                "tags": [
+                    "User course progress"
+                ],
+                "summary": "Consultar progreso de usuario",
+                "operationId": "69dd2b275ba3c46c00f8b67e4f5c8026",
+                "parameters": [
+                    {
+                        "name": "course_id",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "progress": "[]"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
         "/api/v1/questions/list": {
             "get": {
                 "tags": [

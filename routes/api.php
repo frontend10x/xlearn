@@ -153,6 +153,7 @@ Route::group(['middleware'=>'auth:api' ],function(){
     // Progreso
     // ---------------------------------------------------------------------
     Route::post(API_VERSION . '/progress/store',[ProgressController::class, 'progress_store']);
+    Route::get(API_VERSION . '/progress/user',[ProgressController::class, 'check_user_progress']);
     
     // ---------------------------------------------------------------------
     // Grupos usuarios

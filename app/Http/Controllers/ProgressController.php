@@ -166,4 +166,71 @@ class ProgressController extends Controller
         }
 
     }
+
+    /**
+    * @OA\Get(
+    *     path="/api/v1/progress/user",
+    *     tags={"User course progress"},
+    *     summary="Consultar progreso de usuario",
+    *     security={{"bearer_token":{}}},
+    *     @OA\Parameter(name="course_id", in="query", @OA\Schema(type="number")),
+    *     @OA\Parameter(name="user_id", required=true, in="query", @OA\Schema(type="number")),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Success.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "progress":"[]"
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
+    public static function check_user_progress(Request $request, $users = false)
+    {
+        try {
+            
+            $consult = Progress::with('courses')->where('user_id', $request->input("user_id"))->get()->toArray();
+
+            if($request->input("course_id")){
+
+                $consult = Progress::with('courses')
+                                    ->where('user_id', $request->input("user_id"))
+                                    ->where('course_id', $request->input("course_id"))->get()->toArray();
+
+            }
+
+            if($users){
+                $consult = Progress::with('courses')->whereIn('user_id', $users)->get()->toArray();
+            }
+
+            if(empty($consult))
+                throw new Exception("No se encontró progreso");
+
+            return response()->json(["progress" => $consult], 200);
+ 
+
+        } catch (Exception $e) {
+            
+            return return_exceptions($e);
+
+        }
+    }
 }

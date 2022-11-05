@@ -359,3 +359,368 @@ line => 162
 message => The user id field is required.
 file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
 line => 323
+
+05/11/2022 17:50:43
+message => No existen grupos pertenecientes a la compañia
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/companies/group/GroupController.php
+line => 492
+
+05/11/2022 18:03:31
+message => Attempt to read property "users" on array
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/companies/group/GroupController.php
+line => 496
+
+05/11/2022 18:04:52
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/companies/group/GroupController.php
+line => 497
+
+05/11/2022 18:05:44
+message => Attempt to read property "users" on array
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/companies/group/GroupController.php
+line => 497
+
+05/11/2022 18:06:34
+message => Attempt to read property "rol_id" on array
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/companies/group/GroupController.php
+line => 497
+
+05/11/2022 18:09:46
+message => Undefined variable $leader
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/companies/group/GroupController.php
+line => 513
+
+05/11/2022 18:11:39
+message => Undefined variable $leader
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/companies/group/GroupController.php
+line => 513
+
+05/11/2022 18:12:06
+message => Attempt to read property "rol_name" on array
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/companies/group/GroupController.php
+line => 499
+
+05/11/2022 18:45:08
+message => Undefined variable $request
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 175
+
+05/11/2022 18:45:23
+message => Undefined variable $request
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 175
+
+05/11/2022 19:11:24
+message => No se encontraron registros
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 190
+
+05/11/2022 19:11:54
+message => The user id field is required.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+05/11/2022 19:12:29
+message => The user id field is required.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+05/11/2022 19:12:50
+message => The user id field is required.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+05/11/2022 19:12:57
+message => The user id field is required.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+05/11/2022 19:35:05
+message => Undefined variable $request
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/companies/group/GroupController.php
+line => 567
+
+05/11/2022 19:35:05
+message => Undefined variable $request
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/companies/group/GroupController.php
+line => 567
+
+05/11/2022 19:36:20
+message => The user id field is required.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+05/11/2022 19:36:20
+message => The user id field is required.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+05/11/2022 19:38:08
+message => The user id field is required.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+05/11/2022 19:38:08
+message => The user id field is required.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+05/11/2022 19:39:16
+message => No se encontraron registros
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 19:41:25
+message => Method Illuminate\Http\Request::add does not exist.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php
+line => 113
+
+05/11/2022 19:41:25
+message => Method Illuminate\Http\Request::add does not exist.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php
+line => 113
+
+05/11/2022 19:46:16
+message => Method Illuminate\Http\Request::add does not exist.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php
+line => 113
+
+05/11/2022 19:46:16
+message => Method Illuminate\Http\Request::add does not exist.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php
+line => 113
+
+05/11/2022 20:12:37
+message => No se encontraron registros
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 190
+
+05/11/2022 20:13:09
+message => No se encontraron registros
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 190
+
+05/11/2022 20:13:22
+message => No se encontraron registros
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:13:47
+message => No se encontraron registros
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:14:14
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:16:00
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:18:47
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:18:47
+message => Attempt to read property "progress" on array
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/companies/group/GroupController.php
+line => 572
+
+05/11/2022 20:18:47
+message => Attempt to read property "progress" on array
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/companies/group/GroupController.php
+line => 572
+
+05/11/2022 20:19:05
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:19:05
+message => Undefined array key "progress"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/companies/group/GroupController.php
+line => 572
+
+05/11/2022 20:20:02
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:20:35
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:21:06
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:21:17
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:21:54
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:21:54
+message => Attempt to read property "progress" on array
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/companies/group/GroupController.php
+line => 572
+
+05/11/2022 20:21:54
+message => Attempt to read property "progress" on array
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/companies/group/GroupController.php
+line => 572
+
+05/11/2022 20:22:29
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:22:29
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/companies/group/GroupController.php
+line => 572
+
+05/11/2022 20:22:29
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/companies/group/GroupController.php
+line => 572
+
+05/11/2022 20:24:11
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:24:29
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:25:51
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:26:15
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:26:15
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/companies/group/GroupController.php
+line => 577
+
+05/11/2022 20:26:15
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/companies/group/GroupController.php
+line => 577
+
+05/11/2022 20:26:29
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:26:29
+message => Method Illuminate\Http\JsonResponse::original does not exist.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php
+line => 113
+
+05/11/2022 20:26:29
+message => Method Illuminate\Http\JsonResponse::original does not exist.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php
+line => 113
+
+05/11/2022 20:26:47
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:27:14
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:28:30
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:28:30
+message => Undefined array key "progress"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/companies/group/GroupController.php
+line => 577
+
+05/11/2022 20:29:40
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:30:25
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:32:49
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:32:51
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:32:52
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:39:34
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:39:34
+message => Undefined variable $percentage
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/companies/group/GroupController.php
+line => 588
+
+05/11/2022 20:39:54
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:41:46
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:43:06
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:43:39
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:44:26
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189
+
+05/11/2022 20:45:35
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 189

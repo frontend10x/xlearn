@@ -9,4 +9,8 @@ class Progress extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    public function courses(){
+        return $this->belongsto('App\Models\Course', 'course_id');
+    }
 }
