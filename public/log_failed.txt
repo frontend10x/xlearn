@@ -54,3 +54,308 @@ line => 50
 message => No se encontraron registros
 file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
 line => 31
+
+29/10/2022 16:27:31
+message => Undefined variable $average_score
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 77
+
+29/10/2022 20:33:21
+message => Undefined variable $sel
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 57
+
+30/10/2022 05:45:11
+message => SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '2022-10-29T06:00:37.000000Z' for column 'finish_date' at row 1 (SQL: insert into `certificates` (`code`, `user_name`, `user_id`, `course_name`, `course_id`, `finish_date`, `updated_at`, `created_at`) values (4, jair, 54, Análisis estratégico del entorno, 24, 2022-10-29T06:00:37.000000Z, 2022-10-30 05:45:11, 2022-10-30 05:45:11))
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 742
+
+30/10/2022 19:52:08
+message => SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '2022-10-29 06:1010:3737' for column 'finish_date' at row 1 (SQL: insert into `certificates` (`code`, `user_name`, `user_id`, `course_name`, `course_id`, `finish_date`, `updated_at`, `created_at`) values (4, jair, 54, Análisis estratégico del entorno, 24, 2022-10-29 06:1010:3737, 2022-10-30 19:52:08, 2022-10-30 19:52:08))
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 742
+
+31/10/2022 18:50:18
+message => Undefined variable $results
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 72
+
+31/10/2022 18:55:40
+message => Undefined variable $results
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 74
+
+31/10/2022 19:01:14
+message => No se encontraron registros
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 42
+
+31/10/2022 19:18:30
+message => No se encontraron registros
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 79
+
+31/10/2022 19:24:45
+message => Attempt to read property "name" on null
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 118
+
+31/10/2022 19:25:40
+message => No se encontraron registros
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 82
+
+02/11/2022 03:33:06
+message => View [certificate.blade] not found.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php
+line => 137
+
+02/11/2022 03:34:48
+message => Undefined variable $data (View: /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/resources/views/certificate.blade.php)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/storage/framework/views/f82aca161f0f171741a80c1956df774207c27700.php
+line => 26
+
+02/11/2022 03:35:23
+message => Undefined variable $data (View: /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/resources/views/certificate.blade.php)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/storage/framework/views/f82aca161f0f171741a80c1956df774207c27700.php
+line => 27
+
+02/11/2022 17:05:31
+message => fopen(/Users/jairzeapaez/Documents/Proyectos/xlearn-backend/storage/fonts/poppins_normal_442dffd12abdf0df26c14405d3f49bfa.ufm): Failed to open stream: No such file or directory
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/phenx/php-font-lib/src/FontLib/AdobeFontMetrics.php
+line => 45
+
+02/11/2022 17:06:41
+message => fopen(/Users/jairzeapaez/Documents/Proyectos/xlearn-backend/storage/fonts/poppins_normal_442dffd12abdf0df26c14405d3f49bfa.ufm): Failed to open stream: No such file or directory
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/phenx/php-font-lib/src/FontLib/AdobeFontMetrics.php
+line => 45
+
+02/11/2022 17:07:32
+message => Undefined variable $urlConfimation (View: /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/resources/views/certificate.blade.php)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/storage/framework/views/f82aca161f0f171741a80c1956df774207c27700.php
+line => 159
+
+02/11/2022 17:07:44
+message => Undefined variable $urlConfimation (View: /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/resources/views/certificate.blade.php)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/storage/framework/views/f82aca161f0f171741a80c1956df774207c27700.php
+line => 159
+
+02/11/2022 17:08:01
+message => Undefined variable $urlConfimation (View: /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/resources/views/certificate.blade.php)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/storage/framework/views/f82aca161f0f171741a80c1956df774207c27700.php
+line => 159
+
+02/11/2022 17:08:04
+message => Undefined variable $urlConfimation (View: /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/resources/views/certificate.blade.php)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/storage/framework/views/f82aca161f0f171741a80c1956df774207c27700.php
+line => 159
+
+02/11/2022 17:08:18
+message => fopen(/Users/jairzeapaez/Documents/Proyectos/xlearn-backend/storage/fonts/poppins_normal_442dffd12abdf0df26c14405d3f49bfa.ufm): Failed to open stream: No such file or directory
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/phenx/php-font-lib/src/FontLib/AdobeFontMetrics.php
+line => 45
+
+02/11/2022 17:17:45
+message => fopen(/Users/jairzeapaez/Documents/Proyectos/xlearn-backend/storage/fonts/poppins_normal_442dffd12abdf0df26c14405d3f49bfa.ufm): Failed to open stream: No such file or directory
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/phenx/php-font-lib/src/FontLib/AdobeFontMetrics.php
+line => 45
+
+02/11/2022 18:28:25
+message => No se encontraron registros
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 84
+
+02/11/2022 18:38:39
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 114
+
+02/11/2022 18:39:08
+message => Undefined array key 54
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 114
+
+04/11/2022 20:22:52
+message => Ya existe un cursor con el nombre Análisis estratégico del entorno
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CourseController.php
+line => 17
+
+04/11/2022 20:22:52
+message => Ya existe un cursor con el nombre Análisis estratégico del entorno
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CourseController.php
+line => 17
+
+04/11/2022 20:22:53
+message => Ya existe un cursor con el nombre Diseño de propuesta de valor
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CourseController.php
+line => 17
+
+04/11/2022 20:22:53
+message => Ya existe un cursor con el nombre Diseño de propuesta de valor
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CourseController.php
+line => 17
+
+04/11/2022 20:22:55
+message => Ya existe una lección con el nombre Video 6
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/LessonController.php
+line => 19
+
+04/11/2022 20:22:55
+message => Ya existe una lección con el nombre Video 5
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/LessonController.php
+line => 19
+
+04/11/2022 20:22:55
+message => Ya existe una lección con el nombre Video 4
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/LessonController.php
+line => 19
+
+04/11/2022 20:22:55
+message => Ya existe una lección con el nombre Video 3
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/LessonController.php
+line => 19
+
+04/11/2022 20:22:55
+message => Ya existe una lección con el nombre Video 2
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/LessonController.php
+line => 19
+
+04/11/2022 20:22:55
+message => Ya existe una lección con el nombre Video 1
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/LessonController.php
+line => 19
+
+04/11/2022 20:22:57
+message => Ya existe una lección con el nombre Video 6
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/LessonController.php
+line => 19
+
+04/11/2022 20:22:57
+message => Ya existe una lección con el nombre Video 5
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/LessonController.php
+line => 19
+
+04/11/2022 20:22:57
+message => Ya existe una lección con el nombre Video 4
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/LessonController.php
+line => 19
+
+04/11/2022 20:22:57
+message => Ya existe una lección con el nombre Video 3
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/LessonController.php
+line => 19
+
+04/11/2022 20:22:57
+message => Ya existe una lección con el nombre Video 2
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/LessonController.php
+line => 19
+
+04/11/2022 20:22:57
+message => Ya existe una lección con el nombre Video 1
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/LessonController.php
+line => 19
+
+04/11/2022 20:22:58
+message => Ya existe un cursor con el nombre Modelación de negocios
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CourseController.php
+line => 17
+
+04/11/2022 20:22:58
+message => Ya existe un cursor con el nombre Modelación de negocios
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CourseController.php
+line => 17
+
+04/11/2022 20:22:58
+message => Ya existe un cursor con el nombre Presentaciones efectivas
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CourseController.php
+line => 17
+
+04/11/2022 20:22:58
+message => Ya existe un cursor con el nombre Presentaciones efectivas
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CourseController.php
+line => 17
+
+04/11/2022 20:22:58
+message => Ya existe un cursor con el nombre Prototipado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CourseController.php
+line => 17
+
+04/11/2022 20:22:58
+message => Ya existe un cursor con el nombre Prototipado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CourseController.php
+line => 17
+
+04/11/2022 20:22:58
+message => Ya existe un cursor con el nombre Trailers
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CourseController.php
+line => 17
+
+04/11/2022 20:22:59
+message => Ya existe una lección con el nombre Video 5
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/LessonController.php
+line => 19
+
+04/11/2022 20:22:59
+message => Ya existe una lección con el nombre Video 4
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/LessonController.php
+line => 19
+
+04/11/2022 20:22:59
+message => Ya existe una lección con el nombre Video 3
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/LessonController.php
+line => 19
+
+04/11/2022 20:22:59
+message => Ya existe una lección con el nombre Video 2
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/LessonController.php
+line => 19
+
+04/11/2022 20:22:59
+message => Ya existe una lección con el nombre Video 1
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/LessonController.php
+line => 19
+
+05/11/2022 17:00:38
+message => Array to string conversion
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/Str.php
+line => 698
+
+05/11/2022 17:01:05
+message => Undefined variable $path
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 151
+
+05/11/2022 17:06:09
+message => Attempt to read property "code" on null
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 151
+
+05/11/2022 17:07:33
+message => Attempt to read property "code" on null
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 151
+
+05/11/2022 17:07:54
+message => Attempt to read property "path" on null
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 151
+
+05/11/2022 17:28:56
+message => Undefined variable $finish_date
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 162
+
+05/11/2022 17:28:56
+message => Undefined property: Illuminate\Http\JsonResponse::$code
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 129
+
+05/11/2022 17:29:26
+message => Undefined variable $finish_date
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 162
+
+05/11/2022 17:35:53
+message => The user id field is required.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323

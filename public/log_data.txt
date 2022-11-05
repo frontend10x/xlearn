@@ -83,3 +83,21 @@ data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/740096026?h=f8e0
 
 14/10/2022 19:01:46
 data => []
+
+04/11/2022 20:22:52
+data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/765100767?h=c7ff8e7ff4","name":"Video 1","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1536223493-85e560295bf6aa08625222bb0c6ef3a8dd32348a7f39896ba74e084cb5116aa5-d","course_id":231,"vimeo_id":"765100767"}
+
+04/11/2022 20:22:53
+data => []
+
+04/11/2022 20:22:55
+data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/765121316?h=ce91ede02f","name":"Video 1","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1536264235-0c6f86ab6b62d144512dc55598a7233cf8ce209a9e4a5c061ce2bff8116aa379-d","course_id":233,"vimeo_id":"765121316"}
+
+04/11/2022 20:22:57
+data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/764713008?h=2468074b62","name":"Video 1","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1535501984-d65ab2bd7fa63b8b36daf9ffff4071dbaa316711bb42100f247226c859198249-d","course_id":234,"vimeo_id":"764713008"}
+
+04/11/2022 20:22:58
+data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/748815311?h=a9d4cae003","name":"Introducci\u00f3n al desarrollo de nuevos negocios","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1505927207-c5640d6397c23bdae65ea2de24976a79784d5225653bc2a1152e90ef9ebb4046-d","course_id":235,"vimeo_id":"748815311"}
+
+04/11/2022 20:22:59
+data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/765116418?h=1a49b92895","name":"Video 1","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1536254129-e3b50f60073a2049a2c91d9614ad3e81d28fe976feb4a57d810f18764f6bca9d-d","course_id":236,"vimeo_id":"765116418"}

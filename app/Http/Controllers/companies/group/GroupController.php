@@ -4,6 +4,7 @@ namespace App\Http\Controllers\companies\group;
 
 use Illuminate\Support\Facades\DB;
 use Exception;
+use Mail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -275,6 +276,8 @@ class GroupController extends Controller
                     throw new Exception("Usuario lider no existe");
 
                 $leader->update(['rol_id' => $rol->id]);
+
+                Mail::to($leader->email)->send(new EmailNotification('', 'assigned_leader'));
             }
 
             return json_encode(["message" => "Usuarios asignados a grupo con éxito"], 200);

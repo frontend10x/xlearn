@@ -51,6 +51,13 @@ class EmailNotification extends Mailable
                 return $this->view('mails.assigned_courses')->with('urlConfimation', $urlConfimation);
                 
                 break;
+            
+            case 'assigned_leader':
+        
+                $urlConfimation = URL_FRONT . '/login';
+                return $this->view('mails.assigned_courses')->with('urlConfimation', $urlConfimation);
+                
+                break;
                 
             
             default:

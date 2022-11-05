@@ -100,6 +100,13 @@ Route::get(API_VERSION . '/user/changestate/{id}',[UserController::class, 'chang
 
 Route::post(API_VERSION . '/transactions/store',[TransactionController::class, 'store']);
 
+// ---------------------------------------------------------------------
+// Certificados
+// --------------------------------------------------------------------- 
+      
+Route::get(API_VERSION . '/certificate/show/{code}',[CertificateController::class, 'show']);
+Route::get(API_VERSION . '/certificate/download/{code}',[CertificateController::class, 'dowmload']);
+
 
 Route::group(['middleware'=>'auth:api' ],function(){
 
@@ -264,7 +271,7 @@ Route::group(['middleware'=>'auth:api' ],function(){
     // Certificados
     // --------------------------------------------------------------------- 
       
-    Route::get(API_VERSION . '/certificate',[CertificateController::class, 'show']);
+    Route::post(API_VERSION . '/certificate/generate',[CertificateController::class, 'generate']);
 
     // ---------------------------------------------------------------------
     // Pagos
