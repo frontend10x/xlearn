@@ -8,6 +8,8 @@ use Mail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+use App\Mail\EmailNotification;
+
 use App\Models\User;
 use App\Models\Roles;
 use App\Models\companies\group\Group;

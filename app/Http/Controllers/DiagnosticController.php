@@ -56,8 +56,8 @@ class DiagnosticController extends Controller
             // Validamos los datos enviados
             $validated = $request->validate([
                 'target' => 'required',
-                'user_id' => 'required|integer',
-                'group_id' => 'required|integer',
+                'user_id' => 'required|integer|exists:users,id',
+                'group_id' => 'required|integer|exists:groups,id',
                 '_rel' => 'required',
                 'answers' => 'required'
             ]);

@@ -14,7 +14,7 @@ class EmailNotification extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $id;
+    public $data;
     public $typeMail;
 
     /**
@@ -22,9 +22,9 @@ class EmailNotification extends Mailable
      *
      * @return void
      */
-    public function __construct($id, $typeMail)
+    public function __construct($data, $typeMail)
     {
-        $this->id = $id;
+        $this->data = $data;
         $this->typeMail = $typeMail;
     }
 
@@ -40,7 +40,7 @@ class EmailNotification extends Mailable
 
             case 'confirmation_register':
                 
-                $urlConfimation = URL_BASE . '/api/' . API_VERSION . '/user/changestate/' . $this->id;
+                $urlConfimation = URL_BASE . '/api/' . API_VERSION . '/user/changestate/' . $this->data;
                 return $this->view('mails.confirmation_register')->with('urlConfimation', $urlConfimation);
                 
                 break;
@@ -58,8 +58,20 @@ class EmailNotification extends Mailable
                 return $this->view('mails.assigned_courses')->with('urlConfimation', $urlConfimation);
                 
                 break;
-                
             
+            case 'contact_us':
+
+                return $this->view('mails.contact_us')->with('information', $this->data);
+
+                break;
+            
+            case 'forgot_password':
+
+                $urlRecover = URL_BASE . '/api/' . API_VERSION . '/user/changestate?recover=' . $this->data;
+                return $this->view('mails.forgot_password')->with('urlRecover', $urlRecover);
+
+                break;
+
             default:
                 # code...
                 break;

@@ -11,13 +11,17 @@ use Illuminate\Support\Facades\DB;
 
 class LessonController extends Controller
 {
-    public static function store(Request $request)
+    public static function store(Request $request, $validate = true)
     {
         try {
-            $lesson = Lesson::where("name", $request->input("name"))->first();
-            if (!empty($lesson)) {
-                throw new Exception("Ya existe una lección con el nombre " . $request->input("name"));
+
+            if($validate){
+                $lesson = Lesson::where("name", $request->input("name"))->first();
+                if (!empty($lesson)) {
+                    throw new Exception("Ya existe una lección con el nombre " . $request->input("name"));
+                }
             }
+            
             $datosInsert = [
                 "name" => $request->input("name"), 
                 "description" => $request->input("description"), 
@@ -27,7 +31,8 @@ class LessonController extends Controller
                 "course_id" => $request->input("course_id"),
                 "vimeo_id" => $request->input("vimeo_id"),
                 "player_embed_url" => $request->input("player_embed_url"),
-                "picture" => $request->input("picture")
+                "picture" => $request->input("picture"),
+                "modified_time" => $request->input("modified_time")
             ];
 
             Lesson::create($datosInsert);
@@ -37,24 +42,55 @@ class LessonController extends Controller
             return return_exceptions($e);
         }
     }
-    public function edit(Request $request, $id)
+
+    public static function sync_with_vimeo(Request $request)
     {
         try {
-            $existencia = Lesson::find($id);
-            $dataUpdate = [
-                "name" => $request->input("name"), "description" => $request->input("description"), "state" => $request->input("state"), "free_video" => $request->input("free_video"), "video_path" => $request->input("video_path")
-            ];
-            if (!empty($request->input("file_path"))) {
-                $dataUpdate['file_path'] = $request->input("file_path");
-            }
-            if (empty($existencia)) {
-                throw new Exception("No existe el id: " . $id . " para ser actualizado");
-            } else {
-                $existencia->update($dataUpdate);
-                $message = "Lección actualizada con éxto";
+
+            $lesson = Lesson::where("vimeo_id", $request->input("vimeo_id"))->first();
+
+            if (empty($lesson)) {
+                $state = self::store($request, false);
+            }else{
+                $state = self::edit($request);
             }
 
-            return response()->json(["message" => $message], 200);
+            return json_encode($state->original);
+
+        } catch (Exception $e) {
+            return return_exceptions($e);
+        }
+    }
+
+    public static function edit(Request $request)
+    {
+        try {
+            
+            $lesson = Lesson::where("vimeo_id", $request->input("vimeo_id"))->first();
+
+            $dataUpdate = [
+                "name" => $request->input("name"), 
+                "description" => $request->input("description"), 
+                "state" => $request->input("state"), 
+                "free_video" => $request->input("free_video"), 
+                "video_path" => $request->input("video_path"),
+                "course_id" => $request->input("course_id"),
+                "vimeo_id" => $request->input("vimeo_id"),
+                "player_embed_url" => $request->input("player_embed_url"),
+                "picture" => $request->input("picture"),
+                "modified_time" => $request->input("modified_time")
+            ];
+
+    
+            if (empty($lesson)) {
+                throw new Exception("No existe para ser actualizado");
+            }
+
+            $lesson->update($dataUpdate);
+            $message = "Lección actualizada con éxto id: " . $request->input("vimeo_id");
+            
+
+            return response()->json(["message" => $message, "status" => true], 200);
         } catch (Exception $e) {
             return return_exceptions($e);
         }
@@ -196,7 +232,7 @@ class LessonController extends Controller
             //TODO debe sacarse del request, por defecto el valor es 10.
             $limit = $request->has('limit') ? intval($request->get('limit')) : 10;
 
-            $consult = Lesson::where('course_id', $courseId)->with('courses')->limit($limit)->offset(($offset - 1) * $limit)->get()->toArray();
+            $consult = Lesson::where('course_id', $courseId)->with('courses')->limit($limit)->offset(($offset - 1) * $limit)->orderBy('modified_time')->get()->toArray();
 
             $nexOffset = $offset + 1;
             $previousOffset = ($offset > 1) ? $offset - 1 : 1;

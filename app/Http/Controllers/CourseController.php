@@ -9,13 +9,17 @@ use Illuminate\Http\Request;
 
 class CourseController extends Controller
 {
-    public static function store(Request $request)
+    public static function store(Request $request, $validate = true)
     {
         try {
-            $courses = Course::where("name", $request->input("name"))->first();
-            if (!empty($courses)) {
-                throw new Exception("Ya existe un cursor con el nombre " . $request->input("name"));
+
+            if($validate){
+                $courses = Course::where("name", $request->input("name"))->first();
+                if (!empty($courses)) {
+                    throw new Exception("Ya existe un cursor con el nombre " . $request->input("name"));
+                }
             }
+            
             $dataInsert = [
                 "name" => $request->input("name"), 
                 "description" => $request->input("description"),
@@ -23,7 +27,9 @@ class CourseController extends Controller
                 "free_video" => $request->input("free_video"), 
                 "video_path" => $request->input("video_path"),
                 "video_uri" => $request->input("video_uri"),
-                "vimeo_id" => $request->input("vimeo_id")
+                "vimeo_id" => $request->input("vimeo_id"),
+                "programs_id" => $request->input("program_id"),
+                "area_id" => $request->input("area_id")
             ];
             if (!empty($request->input("file_path"))) {
                 $dataInsert['file_path'] = $request->input("file_path");
@@ -35,33 +41,62 @@ class CourseController extends Controller
             return return_exceptions($e);
         }
     }
-    public function edit(Request $request, $id)
+
+    public static function sync_with_vimeo(Request $request)
     {
         try {
-            $datosInsertar = Course::find($id);
+
+            $courses = Course::where("vimeo_id", $request->input("vimeo_id"))->first();
+
+            if (empty($courses)) {
+                $state = self::store($request, false);
+            }else{
+                $state = self::edit($request);
+            }
+
+            return json_encode($state->original);
+
+        } catch (Exception $e) {
+            return return_exceptions($e);
+        }
+    }
+
+    public static function edit(Request $request)
+    {
+        try {
+
+            $datosInsertar = Course::where("vimeo_id", $request->input("vimeo_id"))->first();
+
             $data = [
-                "name" => $request->input("name")
-                , "description" => $request->input("description")
-                , "state" => $request->input("state")
-                , "free_video" => $request->input("free_video")
-                , "video_path" => $request->input("video_path")
+                "name" => $request->input("name"), 
+                "description" => $request->input("description"),
+                "state" => $request->input("state"), 
+                "free_video" => $request->input("free_video"), 
+                "video_path" => $request->input("video_path"),
+                "video_uri" => $request->input("video_uri"),
+                "vimeo_id" => $request->input("vimeo_id")
             ];
+
             if (!empty($request->input("area_id"))) {
                 $data['area_id'] = $request->input("area_id");
             }
+
             if (!empty($request->input("file_path"))) {
                 $data['file_path'] = $request->input("file_path");
             }
+
             if (empty($datosInsertar)) {
                 throw new Exception("No existe el id: " . $id . " para ser actualizado");
-            } else {
-                $datosInsertar->update($data);
-                $message = "Curso actualizado con éxto";
             }
 
-            return response()->json(["message" => $message], 200);
+            $update_course = $datosInsertar->update($data);            
+
+            return response()->json(["message" => "Curso actualizado con éxto", "id" => $datosInsertar->id], 200);
+        
         } catch (Exception $e) {
+
             return return_exceptions($e);
+
         }
     }
 
@@ -418,6 +453,70 @@ class CourseController extends Controller
             }
             $buscaActualiza->update(["state" => $request->input("state")]);
             return response()->json(["message" => "Cambio de estado correctamente"], 200);
+        } catch (Exception $e) {
+            return return_exceptions($e);
+        }
+    }
+
+        /**
+    * @OA\Get(
+    *     path="/api/v1/course/show/{id}",
+    *     summary="Mostrar curso por id",
+    *     tags={"Courses"},
+    *     security={{"bearer_token":{}}},
+    *     @OA\Parameter(name="id", in="path", @OA\Schema(type="number")),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Mostrar todos los cursos del usuario.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                       "response": {
+    *                           "_rel": "course",
+    *                           "_embedded": {
+    *                               "course": {
+    *                               }
+    *                           }
+    *                       }
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
+    public function show(Request $request, $id)
+    {
+        try {
+
+            $course = Course::find($id);
+            if (empty($course)) {
+                throw new Exception("No existe el curso");
+            }
+
+            $course = array(
+                "_rel"		=> "course",
+                "_embedded" => array(
+                    "course" => $course
+                )
+            );
+
+            return response()->json(["response" => $course], 200);
+            
         } catch (Exception $e) {
             return return_exceptions($e);
         }

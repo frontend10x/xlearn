@@ -17,7 +17,7 @@ class VimeoController extends Controller
 
         try {
 
-            $courses = [];
+            $folders = [];
             $val = [];
             
             $client = new Vimeo(CLIENT_ID, CLIENT_SECRET, ACCESS_TOKEN);
@@ -28,22 +28,144 @@ class VimeoController extends Controller
 
             foreach ($arrayData as $key => $value) {
 
+                if(strstr( $value['name'], 'Área' )){
+
+                    $name = str_replace('Área - ', '', $value['name']);
+                    
+                    $dataArea = array(
+                        'name' => $name,
+                        'vimeo:id' => get_id_vimeo($value['uri']),
+                        'state' => 1,
+                        'vimeo:uri' => $value['uri']
+                    );
+    
+                    $request->request->add($dataArea);
+
+                    $areaCreated = AreaController::sync_with_vimeo($request);
+
+                    $area = json_decode($areaCreated, true);
+
+                    if(isset($area['id'])){
+
+                        $areas['area_name'] = $name;
+
+                        $uri_folder = $value['metadata']['connections']['folders']['uri'];
+
+                        $folders = $client->request($uri_folder, array(), 'GET');
+
+                        $arrayCourses = $folders['body']['data'];
+
+                        $programsCreated = $this->consult_project_programs($request, $uri_folder, $area['id']);
+
+                        $areas['programs'] = $programsCreated;
+
+                        array_push($val, $areas);
+                                                
+                    }
+
+                }
+                
+            };
+            
+            if (empty($val))
+                throw new Exception("No hubo inserción de información, verifique si ya existen en la base de datos");
+            
+
+            return response()->json(['message' => 'areas, cursos y lecciones creadas', 'data' => $val]);
+        
+        } catch (Exception $e) {
+            
+            return return_exceptions($e);
+
+        }
+    }
+
+    public function consult_project_programs($request, $uri_program, $area_id)
+    {
+        try {
+            
+            $client = new Vimeo(CLIENT_ID, CLIENT_SECRET, ACCESS_TOKEN);
+            $programs_created = [];
+
+            $response = $client->request($uri_program, array(), 'GET');
+
+            $arrayPrograms = $response['body']['data'];
+
+            foreach ($arrayPrograms as $key => $folder) {
+
                 $dataInsert = [];
 
-                $id = explode("/", $value['uri']);
+                $value = $folder['folder'];
 
                 $dataInsert = array(
                     'name' => $value['name'],
-                    'vimeo_id' => $id[4],
+                    'vimeo:id' => get_id_vimeo($value['uri']),
+                    'area_id' => $area_id,
+                    'vimeo:uri' => $value['uri']
+                );
+
+                $request->request->add($dataInsert);
+
+                $programCreated = ProgramController::sync_with_vimeo($request);
+
+                $program = json_decode($programCreated, true);
+
+                if(isset($program['id'])){
+
+                    $programs['program_name'] = $value['name'];
+
+                    $uri_courses = $value['metadata']['connections']['folders']['uri'];
+
+                    $courseCreated = $this->consult_project_courses($request, $uri_courses, $program['id']);
+
+                    $programs['courses'] = $courseCreated;
+
+                    array_push($programs_created, $programs);
+
+                }
+
+            }
+
+            return $programs_created;
+
+
+        } catch (Exception $e) {
+            
+            return return_exceptions($e);
+
+        }
+    }
+
+    public function consult_project_courses($request, $uri_courses, $program_id)
+    {
+        try {
+            
+            $client = new Vimeo(CLIENT_ID, CLIENT_SECRET, ACCESS_TOKEN);
+            $courses_created = [];
+
+            $response = $client->request($uri_courses, array(), 'GET');
+
+            $arrayCourses = $response['body']['data'];
+
+            foreach ($arrayCourses as $key => $folder) {
+
+                $dataInsert = [];
+
+                $value = $folder['folder'];
+
+                $dataInsert = array(
+                    'name' => $value['name'],
+                    'vimeo_id' => get_id_vimeo($value['uri']),
                     'state' => 1,
                     'free_video' => 0,
+                    'program_id' => $program_id,
                     'file_path' => $value['user']['pictures']['base_link'],
                     'video_uri' => $value['metadata']['connections']['videos']['uri']
                 );
 
                 $request->request->add($dataInsert);
 
-                $courseCreated = CourseController::store($request);
+                $courseCreated = CourseController::sync_with_vimeo($request);
 
                 $course = json_decode($courseCreated, true);
 
@@ -53,22 +175,19 @@ class VimeoController extends Controller
 
                     $uri_video = $value['metadata']['connections']['videos']['uri'];
 
-                    $lessonsCreated = $this->consult_project_videos($request, $uri_video, $course['id']);
+                    $lessonsCreated = $this->consult_project_videos($request, $uri_video, $course['id']); 
 
                     $courses['lessons'] = $lessonsCreated;
 
-                    array_push($val, $courses);
+                    array_push($courses_created, $courses);
 
                 }
 
             }
 
-            if (empty($val))
-                throw new Exception("No hubo inserción de cursos, verifique si ya existen en la base de datos");
-            
+            return $courses_created;
 
-            return response()->json(['message' => 'cursos y lecciones creadas', 'data' => $val]);
-        
+
         } catch (Exception $e) {
             
             return return_exceptions($e);
@@ -99,18 +218,21 @@ class VimeoController extends Controller
                 $video_information['picture'] = $item['pictures']['base_link'];
                 $video_information['course_id'] = $course_id;
                 $video_information['vimeo_id'] = $id[2];
+                $video_information['modified_time'] = $item['modified_time'];
 
                 $request->request->add($video_information);
 
-                $lessonsCreated = LessonController::store($request);
+                $lessonsCreated = LessonController::sync_with_vimeo($request);
 
-                if( isset( json_decode($lessonsCreated->getContent())->status ) ){
+                $lessons = json_decode($lessonsCreated, true);
+
+                if( isset( $lessons['status'] ) ){
                     array_push($lessons_created, $item['name']);
                 }
 
-            }
+                save_file($lessons_created);
 
-            save_file($video_information);
+            }
 
             return $lessons_created;
 

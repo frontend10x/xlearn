@@ -25,6 +25,16 @@ if (! function_exists('get_ids')) {
     }
 }
 
+if (! function_exists('get_id_vimeo')) {
+    function get_id_vimeo($uri)
+    {
+
+        $id = explode("/", $uri);
+        
+        return $id[4];
+    }
+}
+
 if (! function_exists('return_exceptions')) {
     function return_exceptions($e)
     { 

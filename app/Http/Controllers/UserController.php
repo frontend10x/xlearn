@@ -331,6 +331,7 @@ class UserController extends Controller
             }
             /*.json_encode($buscaActualiza)*/
             $buscaActualiza->update(["state" => 1]);
+            
             header("Location:" . env('URL_FRONT') . "/login ", TRUE, 301);
             exit();
             
@@ -339,32 +340,177 @@ class UserController extends Controller
         }
     }
 
-    public function forgotpassword(Request $request, $id)
+    /**
+    * @OA\Post(
+    *     path="/api/v1/user/forgot_password",
+    *     tags={"Users"},
+    *     summary="Olvido su contraseña",
+    *     @OA\Parameter(name="email", required=true, in="query", @OA\Schema(type="string")),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Success.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Contraseña modificada con éxito.",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
+    public function forgot_password(Request $request)
     {
         try {
-            $id = $id;
-            $user = User::find($id);
+
+            $user = User::where('email', $request->input("email"))->first();
 
             if (empty($user))
-                throw new Exception("No existe usuario para modificar contraseña");
+                throw new Exception("No existe email registrado");
 
-            $user->password = Hash::make($request->input("password"));
-            $user->save();
-            return response()->json(["message" => "Contraseña actualizada con éxito"], 200);
+            $encryptedId = Crypt::encryptString($user->id);
+            
+            Mail::to($request->input("email"))->send(new EmailNotification($encryptedId, 'forgot_password'));
+
+            return response()->json(["message" => "Se ha enviado un correo para la recuperación de la contraseña"], 200);
         } catch (Exception $e) {
             return return_exceptions($e);
         }
     }
 
-    public function changepassword(Request $request)
+    /**
+    * @OA\Put(
+    *     path="/api/v1/user/recover_password/{id}",
+    *     tags={"Users"},
+    *     summary="recuperar contraseña",
+    *     @OA\Parameter(name="id", required=true, in="path", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="password", required=true, in="query", @OA\Schema(type="string")),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Success.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Contraseña modificada con éxito.",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
+    public function recover_password(Request $request, $id)
     {
         try {
 
-            $user = User::find(Auth::user()->id);
+            $desencryptedId = Crypt::decryptString($id);
+
+            $user = User::find($desencryptedId);
+
+            if (empty($user))
+                throw new Exception("No existe usuario registrado");
+
             $user->password =  Hash::make($request->input("password"));
             $user->save();
 
-            return response()->json(["message" => "password modificado con éxito"], 200);
+            return response()->json(["message" => "Contraseña modificada con éxito"], 200);
+        } catch (Exception $e) {
+            return return_exceptions($e);
+        }
+    }
+
+    /**
+    * @OA\Put(
+    *     path="/api/v1/user/change_password",
+    *     tags={"Users"},
+    *     security={{"bearer_token":{}}},
+    *     summary="Cambiar contraseña",
+    *     @OA\Parameter(name="password", required=true, in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="old_password", required=true, in="query", @OA\Schema(type="string")),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Success.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Contraseña modificada con éxito.",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
+    public function change_password(Request $request)
+    {
+        try {
+
+            $credentials = [
+                'password' => $request->input('old_password'),
+                'id' =>  Auth::user()->id
+            ];
+
+            $token = Auth::guard('api')->attempt($credentials);
+
+            return $token;
+
+            if (Auth::attempt(['id' => Auth::user()->id, 'password' => $request->input('old_password')])) {
+
+                $user = User::find(Auth::user()->id);
+                $user->password =  Hash::make($request->input("password"));
+                $user->save();
+
+                return response()->json(["message" => "Contraseña modificada con éxito"], 200);
+
+            } else {
+
+                return response()->json(["message" => "Datos incorrectos"],500);
+
+            }
+
         } catch (Exception $e) {
             return return_exceptions($e);
         }

@@ -87,12 +87,20 @@ Route::get(env('API_VERSION') . '/content/list',[ContentController::class, 'inde
 // ---------------------------------------------------------------------    
 
 Route::get(env('API_VERSION') . '/course/list',[CourseController::class, 'index']);
+Route::get(API_VERSION . '/course/show/{id}',[CourseController::class, 'show']);
+
+// ---------------------------------------------------------------------
+// Lesson
+// ---------------------------------------------------------------------  
+Route::get(API_VERSION . '/lesson/show_course/{courseId}',[LessonController::class, 'show_course']);
 
 // ---------------------------------------------------------------------
 // Usuarios
 // --------------------------------------------------------------------- 
 
 Route::get(API_VERSION . '/user/changestate/{id}',[UserController::class, 'changestate']);
+Route::post(API_VERSION . '/user/forgot_password',[UserController::class, 'forgot_password']);
+Route::put(API_VERSION . '/user/recover_password/{id}',[UserController::class, 'recover_password']);
 
 // ---------------------------------------------------------------------
 // Transacciones
@@ -142,8 +150,7 @@ Route::group(['middleware'=>'auth:api' ],function(){
     Route::get(API_VERSION . '/user/list',[UserController::class, 'index']);
     Route::put(API_VERSION . '/user/edit/{id}',[UserController::class, 'edit']);
     Route::post(API_VERSION . '/user/store',[UserController::class, 'store']);
-    Route::put(API_VERSION . '/user/forgotpassword/{id}',[UserController::class, 'forgotpassword']);
-    Route::put(API_VERSION . '/user/changepassword',[UserController::class, 'changepassword']);
+    Route::put(API_VERSION . '/user/change_password',[UserController::class, 'change_password']);
     Route::post(API_VERSION . '/user/coursesfavorites',[UserController::class, 'coursesFavorites']);
     Route::post(API_VERSION . '/user/bulk_upload_users',[UserController::class, 'bulkUploadUsers']);
     Route::get(API_VERSION . '/user/sub_companies_withou_group',[UserController::class, 'showUserWithoutGroup']);
@@ -215,14 +222,12 @@ Route::group(['middleware'=>'auth:api' ],function(){
     // ---------------------------------------------------------------------
     // Lecciones
     // ---------------------------------------------------------------------    
-
     Route::get(API_VERSION . '/lesson/list',[LessonController::class, 'index']);
     Route::put(API_VERSION . '/lesson/edit/{id}',[LessonController::class, 'edit']);
     Route::post(API_VERSION . '/lesson/store',[LessonController::class, 'store']);
     Route::put(API_VERSION . '/lesson/changestate/{id}',[LessonController::class, 'changestate']);
     Route::post(API_VERSION . '/lesson/addcommentuser/{id}',[LessonController::class, 'addComment']);
     Route::get(API_VERSION . '/lesson/listComment/{id}',[LessonController::class, 'listComment']);
-    Route::get(API_VERSION . '/lesson/show_course/{courseId}',[LessonController::class, 'show_course']);
 
     // ---------------------------------------------------------------------
     // Register Request

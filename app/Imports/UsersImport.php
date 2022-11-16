@@ -40,7 +40,7 @@ class UsersImport implements ToModel, WithHeadingRow
         $encryptedId = Crypt::encryptString($createUser->id);
         Mail::to($row['email'])->send(new EmailNotification($encryptedId, 'confirmation_register'));
 
-        return $create;
+        return $createUser;
     }
 }
  

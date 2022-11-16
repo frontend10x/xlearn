@@ -1,103 +1,1306 @@
 
 
-14/10/2022 18:56:00
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/738014082?h=3fcbfcfcb8","name":"Nivelaci\u00f3n","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1485090493-cfb0ddcbce2e5e532bfd2b13f5d170c44454ba47c119505e48445d68a282518c-d","course_id":203,"vimeo_id":"738014082"}
+12/11/2022 18:04:58
+data => ["Lecci\u00f3n 6 La puesta en escena"]
 
-14/10/2022 18:56:01
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/742243154?h=90676fe775","name":"Nivelaci\u00f3n","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1493470773-af02a6a43f50ec7fadfae65a9382c0f239e0101d439d09e84f2d2ca855108637-d","course_id":204,"vimeo_id":"742243154"}
+12/11/2022 18:04:58
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal"]
 
-14/10/2022 18:56:02
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/748815311?h=a9d4cae003","name":"Introducci\u00f3n a todos los cursos","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1505927207-c5640d6397c23bdae65ea2de24976a79784d5225653bc2a1152e90ef9ebb4046-d","course_id":205,"vimeo_id":"748815311"}
+12/11/2022 18:04:58
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch"]
 
-14/10/2022 18:56:05
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/745525436?h=2f5b075372","name":"Nivelaci\u00f3n","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1499458822-81bd091a9eca70a1d428779c25f2537da9e22ff01e7758d4c6b3e6313b9bb516-d","course_id":206,"vimeo_id":"745525436"}
+12/11/2022 18:04:58
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch"]
 
-14/10/2022 18:56:07
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/742260451?h=6cb8337a6a","name":"Nivelaci\u00f3n","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1493498190-f1b4eb563b47e2e49e028c9ba7512722d2a69894e0c89d6ca4803e99ed808978-d","course_id":207,"vimeo_id":"742260451"}
+12/11/2022 18:04:58
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia"]
 
-14/10/2022 18:56:08
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/740096026?h=f8e0407bef","name":"Nivelaci\u00f3n","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1489309432-9a575b8d6d464f01d0ddf2ae7f916763ae5c83513eb63122395422151f3ceb04-d","course_id":208,"vimeo_id":"740096026"}
+12/11/2022 18:04:58
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?"]
 
-14/10/2022 18:56:09
-data => []
+12/11/2022 18:04:58
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n"]
 
-14/10/2022 18:58:04
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/738014082?h=3fcbfcfcb8","name":"Nivelaci\u00f3n","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1485090493-cfb0ddcbce2e5e532bfd2b13f5d170c44454ba47c119505e48445d68a282518c-d","course_id":210,"vimeo_id":"738014082"}
+12/11/2022 18:04:58
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n","Proyecto"]
 
-14/10/2022 18:58:05
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/742243154?h=90676fe775","name":"Nivelaci\u00f3n","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1493470773-af02a6a43f50ec7fadfae65a9382c0f239e0101d439d09e84f2d2ca855108637-d","course_id":211,"vimeo_id":"742243154"}
+12/11/2022 18:04:58
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
 
-14/10/2022 18:58:06
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/748815311?h=a9d4cae003","name":"Introducci\u00f3n a todos los cursos","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1505927207-c5640d6397c23bdae65ea2de24976a79784d5225653bc2a1152e90ef9ebb4046-d","course_id":212,"vimeo_id":"748815311"}
+12/11/2022 18:05:00
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?"]
 
-14/10/2022 18:58:08
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/745525436?h=2f5b075372","name":"Nivelaci\u00f3n","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1499458822-81bd091a9eca70a1d428779c25f2537da9e22ff01e7758d4c6b3e6313b9bb516-d","course_id":213,"vimeo_id":"745525436"}
+12/11/2022 18:05:00
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor"]
 
-14/10/2022 18:58:10
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/742260451?h=6cb8337a6a","name":"Nivelaci\u00f3n","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1493498190-f1b4eb563b47e2e49e028c9ba7512722d2a69894e0c89d6ca4803e99ed808978-d","course_id":214,"vimeo_id":"742260451"}
+12/11/2022 18:05:00
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado"]
 
-14/10/2022 18:58:11
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/740096026?h=f8e0407bef","name":"Nivelaci\u00f3n","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1489309432-9a575b8d6d464f01d0ddf2ae7f916763ae5c83513eb63122395422151f3ceb04-d","course_id":215,"vimeo_id":"740096026"}
+12/11/2022 18:05:00
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?"]
 
-14/10/2022 18:58:12
-data => []
+12/11/2022 18:05:00
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n"]
 
-14/10/2022 19:00:13
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/738014082?h=3fcbfcfcb8","name":"Nivelaci\u00f3n","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1485090493-cfb0ddcbce2e5e532bfd2b13f5d170c44454ba47c119505e48445d68a282518c-d","course_id":217,"vimeo_id":"738014082"}
+12/11/2022 18:05:00
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n","Proyecto"]
 
-14/10/2022 19:00:17
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/742243154?h=90676fe775","name":"Nivelaci\u00f3n","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1493470773-af02a6a43f50ec7fadfae65a9382c0f239e0101d439d09e84f2d2ca855108637-d","course_id":218,"vimeo_id":"742243154"}
+12/11/2022 18:05:00
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
 
-14/10/2022 19:00:17
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/748815311?h=a9d4cae003","name":"Introducci\u00f3n a todos los cursos","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1505927207-c5640d6397c23bdae65ea2de24976a79784d5225653bc2a1152e90ef9ebb4046-d","course_id":219,"vimeo_id":"748815311"}
+12/11/2022 18:05:01
+data => ["Video 6"]
 
-14/10/2022 19:00:19
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/745525436?h=2f5b075372","name":"Nivelaci\u00f3n","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1499458822-81bd091a9eca70a1d428779c25f2537da9e22ff01e7758d4c6b3e6313b9bb516-d","course_id":220,"vimeo_id":"745525436"}
+12/11/2022 18:05:01
+data => ["Video 6","Video 5"]
 
-14/10/2022 19:00:21
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/742260451?h=6cb8337a6a","name":"Nivelaci\u00f3n","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1493498190-f1b4eb563b47e2e49e028c9ba7512722d2a69894e0c89d6ca4803e99ed808978-d","course_id":221,"vimeo_id":"742260451"}
+12/11/2022 18:05:01
+data => ["Video 6","Video 5","Video 4"]
 
-14/10/2022 19:00:23
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/740096026?h=f8e0407bef","name":"Nivelaci\u00f3n","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1489309432-9a575b8d6d464f01d0ddf2ae7f916763ae5c83513eb63122395422151f3ceb04-d","course_id":222,"vimeo_id":"740096026"}
+12/11/2022 18:05:01
+data => ["Video 6","Video 5","Video 4","Video 3"]
 
-14/10/2022 19:00:23
-data => []
+12/11/2022 18:05:01
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2"]
 
-14/10/2022 19:01:40
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/738014082?h=3fcbfcfcb8","name":"Nivelaci\u00f3n","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1485090493-cfb0ddcbce2e5e532bfd2b13f5d170c44454ba47c119505e48445d68a282518c-d","course_id":224,"vimeo_id":"738014082"}
+12/11/2022 18:05:01
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2","Video 1"]
 
-14/10/2022 19:01:41
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/742243154?h=90676fe775","name":"Nivelaci\u00f3n","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1493470773-af02a6a43f50ec7fadfae65a9382c0f239e0101d439d09e84f2d2ca855108637-d","course_id":225,"vimeo_id":"742243154"}
+12/11/2022 18:05:03
+data => ["Video 6"]
 
-14/10/2022 19:01:42
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/748815311?h=a9d4cae003","name":"Introducci\u00f3n a todos los cursos","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1505927207-c5640d6397c23bdae65ea2de24976a79784d5225653bc2a1152e90ef9ebb4046-d","course_id":226,"vimeo_id":"748815311"}
+12/11/2022 18:05:03
+data => ["Video 6","Video 5"]
 
-14/10/2022 19:01:43
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/745525436?h=2f5b075372","name":"Nivelaci\u00f3n","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1499458822-81bd091a9eca70a1d428779c25f2537da9e22ff01e7758d4c6b3e6313b9bb516-d","course_id":227,"vimeo_id":"745525436"}
+12/11/2022 18:05:03
+data => ["Video 6","Video 5","Video 4"]
 
-14/10/2022 19:01:44
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/742260451?h=6cb8337a6a","name":"Nivelaci\u00f3n","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1493498190-f1b4eb563b47e2e49e028c9ba7512722d2a69894e0c89d6ca4803e99ed808978-d","course_id":228,"vimeo_id":"742260451"}
+12/11/2022 18:05:03
+data => ["Video 6","Video 5","Video 4","Video 3"]
 
-14/10/2022 19:01:45
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/740096026?h=f8e0407bef","name":"Nivelaci\u00f3n","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1489309432-9a575b8d6d464f01d0ddf2ae7f916763ae5c83513eb63122395422151f3ceb04-d","course_id":229,"vimeo_id":"740096026"}
+12/11/2022 18:05:03
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2"]
 
-14/10/2022 19:01:46
-data => []
+12/11/2022 18:05:03
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2","Video 1"]
 
-04/11/2022 20:22:52
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/765100767?h=c7ff8e7ff4","name":"Video 1","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1536223493-85e560295bf6aa08625222bb0c6ef3a8dd32348a7f39896ba74e084cb5116aa5-d","course_id":231,"vimeo_id":"765100767"}
+12/11/2022 18:05:05
+data => ["Video 5"]
 
-04/11/2022 20:22:53
-data => []
+12/11/2022 18:05:05
+data => ["Video 5","Video 4"]
 
-04/11/2022 20:22:55
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/765121316?h=ce91ede02f","name":"Video 1","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1536264235-0c6f86ab6b62d144512dc55598a7233cf8ce209a9e4a5c061ce2bff8116aa379-d","course_id":233,"vimeo_id":"765121316"}
+12/11/2022 18:05:05
+data => ["Video 5","Video 4","Video 3"]
 
-04/11/2022 20:22:57
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/764713008?h=2468074b62","name":"Video 1","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1535501984-d65ab2bd7fa63b8b36daf9ffff4071dbaa316711bb42100f247226c859198249-d","course_id":234,"vimeo_id":"764713008"}
+12/11/2022 18:05:05
+data => ["Video 5","Video 4","Video 3","Video 2"]
 
-04/11/2022 20:22:58
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/748815311?h=a9d4cae003","name":"Introducci\u00f3n al desarrollo de nuevos negocios","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1505927207-c5640d6397c23bdae65ea2de24976a79784d5225653bc2a1152e90ef9ebb4046-d","course_id":235,"vimeo_id":"748815311"}
+12/11/2022 18:05:05
+data => ["Video 5","Video 4","Video 3","Video 2","Video 1"]
 
-04/11/2022 20:22:59
-data => {"player_embed_url":"https:\/\/player.vimeo.com\/video\/765116418?h=1a49b92895","name":"Video 1","description":null,"picture":"https:\/\/i.vimeocdn.com\/video\/1536254129-e3b50f60073a2049a2c91d9614ad3e81d28fe976feb4a57d810f18764f6bca9d-d","course_id":236,"vimeo_id":"765116418"}
+12/11/2022 18:05:07
+data => ["Video 6"]
+
+12/11/2022 18:05:07
+data => ["Video 6","Video 5"]
+
+12/11/2022 18:05:07
+data => ["Video 6","Video 5","Video 4"]
+
+12/11/2022 18:05:07
+data => ["Video 6","Video 5","Video 4","Video 3"]
+
+12/11/2022 18:05:07
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2"]
+
+12/11/2022 18:05:07
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2","Video 1"]
+
+12/11/2022 18:05:10
+data => ["Lecci\u00f3n 6 La puesta en escena"]
+
+12/11/2022 18:05:10
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal"]
+
+12/11/2022 18:05:10
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X"]
+
+12/11/2022 18:05:10
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch"]
+
+12/11/2022 18:05:10
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia"]
+
+12/11/2022 18:05:10
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?"]
+
+12/11/2022 18:05:10
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n"]
+
+12/11/2022 18:05:10
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n","Proyecto"]
+
+12/11/2022 18:05:10
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+12/11/2022 18:05:12
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?"]
+
+12/11/2022 18:05:12
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor"]
+
+12/11/2022 18:05:12
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado"]
+
+12/11/2022 18:05:12
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?"]
+
+12/11/2022 18:05:12
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n"]
+
+12/11/2022 18:05:12
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n","Proyecto"]
+
+12/11/2022 18:05:12
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+12/11/2022 18:05:15
+data => ["Introducci\u00f3n"]
+
+12/11/2022 18:05:15
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor"]
+
+12/11/2022 18:05:15
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes"]
+
+12/11/2022 18:05:15
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves"]
+
+12/11/2022 18:05:15
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio"]
+
+12/11/2022 18:05:15
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n"]
+
+12/11/2022 18:05:15
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos"]
+
+12/11/2022 18:05:15
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados"]
+
+12/11/2022 18:05:15
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados","Lecci\u00f3n 5 Modelo de ingresos"]
+
+12/11/2022 18:05:15
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados","Lecci\u00f3n 5 Modelo de ingresos","Lecci\u00f3n 4 Relaci\u00f3n con los clientes"]
+
+12/11/2022 18:05:15
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados","Lecci\u00f3n 5 Modelo de ingresos","Lecci\u00f3n 4 Relaci\u00f3n con los clientes","Lecci\u00f3n 3 Canales"]
+
+12/11/2022 18:05:15
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados","Lecci\u00f3n 5 Modelo de ingresos","Lecci\u00f3n 4 Relaci\u00f3n con los clientes","Lecci\u00f3n 3 Canales","Proyecto"]
+
+12/11/2022 18:05:15
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados","Lecci\u00f3n 5 Modelo de ingresos","Lecci\u00f3n 4 Relaci\u00f3n con los clientes","Lecci\u00f3n 3 Canales","Proyecto","Nivelaci\u00f3n"]
+
+12/11/2022 18:05:18
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor"]
+
+12/11/2022 18:05:18
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo"]
+
+12/11/2022 18:05:18
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente"]
+
+12/11/2022 18:05:18
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente"]
+
+12/11/2022 18:05:18
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema"]
+
+12/11/2022 18:05:18
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema","Lecci\u00f3n 2 Segmentos de clientes potenciales"]
+
+12/11/2022 18:05:18
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema","Lecci\u00f3n 2 Segmentos de clientes potenciales","Lecci\u00f3n 1 El problema del cliente"]
+
+12/11/2022 18:05:18
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema","Lecci\u00f3n 2 Segmentos de clientes potenciales","Lecci\u00f3n 1 El problema del cliente","Introducci\u00f3n"]
+
+12/11/2022 18:05:18
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema","Lecci\u00f3n 2 Segmentos de clientes potenciales","Lecci\u00f3n 1 El problema del cliente","Introducci\u00f3n","Proyecto"]
+
+12/11/2022 18:05:18
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema","Lecci\u00f3n 2 Segmentos de clientes potenciales","Lecci\u00f3n 1 El problema del cliente","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+12/11/2022 18:05:20
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio"]
+
+12/11/2022 18:05:20
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio"]
+
+12/11/2022 18:05:20
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio"]
+
+12/11/2022 18:05:20
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 1.2 Crear ecosistema de oportunidad"]
+
+12/11/2022 18:05:20
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 1.2 Crear ecosistema de oportunidad","Lecci\u00f3n 1.1 Crear ecosistema de oportunidad"]
+
+12/11/2022 18:05:20
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 1.2 Crear ecosistema de oportunidad","Lecci\u00f3n 1.1 Crear ecosistema de oportunidad","Introducci\u00f3n"]
+
+12/11/2022 18:05:20
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 1.2 Crear ecosistema de oportunidad","Lecci\u00f3n 1.1 Crear ecosistema de oportunidad","Introducci\u00f3n","Proyecto"]
+
+12/11/2022 18:05:20
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 1.2 Crear ecosistema de oportunidad","Lecci\u00f3n 1.1 Crear ecosistema de oportunidad","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+12/11/2022 18:05:21
+data => ["Introducci\u00f3n al desarrollo de nuevos negocios"]
+
+15/11/2022 18:49:31
+data => ["Lecci\u00f3n 6 La puesta en escena"]
+
+15/11/2022 18:49:31
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal"]
+
+15/11/2022 18:49:31
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch"]
+
+15/11/2022 18:49:31
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch"]
+
+15/11/2022 18:49:31
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia"]
+
+15/11/2022 18:49:31
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?"]
+
+15/11/2022 18:49:31
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n"]
+
+15/11/2022 18:49:31
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n","Proyecto"]
+
+15/11/2022 18:49:31
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 18:49:33
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?"]
+
+15/11/2022 18:49:33
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor"]
+
+15/11/2022 18:49:33
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado"]
+
+15/11/2022 18:49:33
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?"]
+
+15/11/2022 18:49:33
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n"]
+
+15/11/2022 18:49:33
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n","Proyecto"]
+
+15/11/2022 18:49:33
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 18:49:35
+data => ["Video 6"]
+
+15/11/2022 18:49:35
+data => ["Video 6","Video 5"]
+
+15/11/2022 18:49:35
+data => ["Video 6","Video 5","Video 4"]
+
+15/11/2022 18:49:35
+data => ["Video 6","Video 5","Video 4","Video 3"]
+
+15/11/2022 18:49:35
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2"]
+
+15/11/2022 18:49:35
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2","Video 1"]
+
+15/11/2022 18:49:37
+data => ["Video 6"]
+
+15/11/2022 18:49:37
+data => ["Video 6","Video 5"]
+
+15/11/2022 18:49:37
+data => ["Video 6","Video 5","Video 4"]
+
+15/11/2022 18:49:37
+data => ["Video 6","Video 5","Video 4","Video 3"]
+
+15/11/2022 18:49:37
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2"]
+
+15/11/2022 18:49:37
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2","Video 1"]
+
+15/11/2022 18:49:38
+data => ["Video 5"]
+
+15/11/2022 18:49:38
+data => ["Video 5","Video 4"]
+
+15/11/2022 18:49:38
+data => ["Video 5","Video 4","Video 3"]
+
+15/11/2022 18:49:38
+data => ["Video 5","Video 4","Video 3","Video 2"]
+
+15/11/2022 18:49:38
+data => ["Video 5","Video 4","Video 3","Video 2","Video 1"]
+
+15/11/2022 18:49:40
+data => ["Video 6"]
+
+15/11/2022 18:49:40
+data => ["Video 6","Video 5"]
+
+15/11/2022 18:49:40
+data => ["Video 6","Video 5","Video 4"]
+
+15/11/2022 18:49:40
+data => ["Video 6","Video 5","Video 4","Video 3"]
+
+15/11/2022 18:49:40
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2"]
+
+15/11/2022 18:49:40
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2","Video 1"]
+
+15/11/2022 18:49:43
+data => ["Lecci\u00f3n 6 La puesta en escena"]
+
+15/11/2022 18:49:43
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal"]
+
+15/11/2022 18:49:43
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X"]
+
+15/11/2022 18:49:43
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch"]
+
+15/11/2022 18:49:43
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia"]
+
+15/11/2022 18:49:43
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?"]
+
+15/11/2022 18:49:43
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n"]
+
+15/11/2022 18:49:43
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n","Proyecto"]
+
+15/11/2022 18:49:43
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 18:49:45
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?"]
+
+15/11/2022 18:49:45
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor"]
+
+15/11/2022 18:49:45
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado"]
+
+15/11/2022 18:49:45
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?"]
+
+15/11/2022 18:49:45
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n"]
+
+15/11/2022 18:49:45
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n","Proyecto"]
+
+15/11/2022 18:49:45
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 18:49:49
+data => ["Introducci\u00f3n"]
+
+15/11/2022 18:49:49
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor"]
+
+15/11/2022 18:49:49
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes"]
+
+15/11/2022 18:49:49
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves"]
+
+15/11/2022 18:49:49
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio"]
+
+15/11/2022 18:49:49
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n"]
+
+15/11/2022 18:49:49
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos"]
+
+15/11/2022 18:49:49
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados"]
+
+15/11/2022 18:49:49
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados","Lecci\u00f3n 5 Modelo de ingresos"]
+
+15/11/2022 18:49:49
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados","Lecci\u00f3n 5 Modelo de ingresos","Lecci\u00f3n 4 Relaci\u00f3n con los clientes"]
+
+15/11/2022 18:49:49
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados","Lecci\u00f3n 5 Modelo de ingresos","Lecci\u00f3n 4 Relaci\u00f3n con los clientes","Lecci\u00f3n 3 Canales"]
+
+15/11/2022 18:49:49
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados","Lecci\u00f3n 5 Modelo de ingresos","Lecci\u00f3n 4 Relaci\u00f3n con los clientes","Lecci\u00f3n 3 Canales","Proyecto"]
+
+15/11/2022 18:49:49
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados","Lecci\u00f3n 5 Modelo de ingresos","Lecci\u00f3n 4 Relaci\u00f3n con los clientes","Lecci\u00f3n 3 Canales","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 18:49:52
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor"]
+
+15/11/2022 18:49:52
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo"]
+
+15/11/2022 18:49:52
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente"]
+
+15/11/2022 18:49:52
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente"]
+
+15/11/2022 18:49:52
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema"]
+
+15/11/2022 18:49:52
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema","Lecci\u00f3n 2 Segmentos de clientes potenciales"]
+
+15/11/2022 18:49:52
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema","Lecci\u00f3n 2 Segmentos de clientes potenciales","Lecci\u00f3n 1 El problema del cliente"]
+
+15/11/2022 18:49:52
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema","Lecci\u00f3n 2 Segmentos de clientes potenciales","Lecci\u00f3n 1 El problema del cliente","Introducci\u00f3n"]
+
+15/11/2022 18:49:52
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema","Lecci\u00f3n 2 Segmentos de clientes potenciales","Lecci\u00f3n 1 El problema del cliente","Introducci\u00f3n","Proyecto"]
+
+15/11/2022 18:49:52
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema","Lecci\u00f3n 2 Segmentos de clientes potenciales","Lecci\u00f3n 1 El problema del cliente","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 18:49:55
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio"]
+
+15/11/2022 18:49:55
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio"]
+
+15/11/2022 18:49:55
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio"]
+
+15/11/2022 18:49:55
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 1.2 Crear ecosistema de oportunidad"]
+
+15/11/2022 18:49:55
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 1.2 Crear ecosistema de oportunidad","Lecci\u00f3n 1.1 Crear ecosistema de oportunidad"]
+
+15/11/2022 18:49:55
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 1.2 Crear ecosistema de oportunidad","Lecci\u00f3n 1.1 Crear ecosistema de oportunidad","Introducci\u00f3n"]
+
+15/11/2022 18:49:55
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 1.2 Crear ecosistema de oportunidad","Lecci\u00f3n 1.1 Crear ecosistema de oportunidad","Introducci\u00f3n","Proyecto"]
+
+15/11/2022 18:49:55
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 1.2 Crear ecosistema de oportunidad","Lecci\u00f3n 1.1 Crear ecosistema de oportunidad","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 18:49:55
+data => ["Introducci\u00f3n al desarrollo de nuevos negocios"]
+
+15/11/2022 19:37:59
+data => ["Lecci\u00f3n 6 La puesta en escena"]
+
+15/11/2022 19:37:59
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal"]
+
+15/11/2022 19:37:59
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch"]
+
+15/11/2022 19:37:59
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch"]
+
+15/11/2022 19:37:59
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia"]
+
+15/11/2022 19:37:59
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?"]
+
+15/11/2022 19:37:59
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n"]
+
+15/11/2022 19:37:59
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n","Proyecto"]
+
+15/11/2022 19:37:59
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 19:38:01
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?"]
+
+15/11/2022 19:38:01
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor"]
+
+15/11/2022 19:38:01
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado"]
+
+15/11/2022 19:38:01
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?"]
+
+15/11/2022 19:38:01
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n"]
+
+15/11/2022 19:38:01
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n","Proyecto"]
+
+15/11/2022 19:38:01
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 19:38:03
+data => ["Video 6"]
+
+15/11/2022 19:38:03
+data => ["Video 6","Video 5"]
+
+15/11/2022 19:38:03
+data => ["Video 6","Video 5","Video 4"]
+
+15/11/2022 19:38:03
+data => ["Video 6","Video 5","Video 4","Video 3"]
+
+15/11/2022 19:38:03
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2"]
+
+15/11/2022 19:38:03
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2","Video 1"]
+
+15/11/2022 19:38:05
+data => ["Video 6"]
+
+15/11/2022 19:38:05
+data => ["Video 6","Video 5"]
+
+15/11/2022 19:38:05
+data => ["Video 6","Video 5","Video 4"]
+
+15/11/2022 19:38:05
+data => ["Video 6","Video 5","Video 4","Video 3"]
+
+15/11/2022 19:38:05
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2"]
+
+15/11/2022 19:38:05
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2","Video 1"]
+
+15/11/2022 19:38:07
+data => ["Video 5"]
+
+15/11/2022 19:38:07
+data => ["Video 5","Video 4"]
+
+15/11/2022 19:38:07
+data => ["Video 5","Video 4","Video 3"]
+
+15/11/2022 19:38:07
+data => ["Video 5","Video 4","Video 3","Video 2"]
+
+15/11/2022 19:38:07
+data => ["Video 5","Video 4","Video 3","Video 2","Video 1"]
+
+15/11/2022 19:38:08
+data => ["Video 6"]
+
+15/11/2022 19:38:08
+data => ["Video 6","Video 5"]
+
+15/11/2022 19:38:08
+data => ["Video 6","Video 5","Video 4"]
+
+15/11/2022 19:38:08
+data => ["Video 6","Video 5","Video 4","Video 3"]
+
+15/11/2022 19:38:08
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2"]
+
+15/11/2022 19:38:08
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2","Video 1"]
+
+15/11/2022 19:38:11
+data => ["Lecci\u00f3n 6 La puesta en escena"]
+
+15/11/2022 19:38:11
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal"]
+
+15/11/2022 19:38:11
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X"]
+
+15/11/2022 19:38:11
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch"]
+
+15/11/2022 19:38:11
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia"]
+
+15/11/2022 19:38:11
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?"]
+
+15/11/2022 19:38:11
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n"]
+
+15/11/2022 19:38:11
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n","Proyecto"]
+
+15/11/2022 19:38:11
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 19:38:13
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?"]
+
+15/11/2022 19:38:13
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor"]
+
+15/11/2022 19:38:13
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado"]
+
+15/11/2022 19:38:13
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?"]
+
+15/11/2022 19:38:13
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n"]
+
+15/11/2022 19:38:13
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n","Proyecto"]
+
+15/11/2022 19:38:13
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 19:38:16
+data => ["Introducci\u00f3n"]
+
+15/11/2022 19:38:16
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor"]
+
+15/11/2022 19:38:16
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes"]
+
+15/11/2022 19:38:16
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves"]
+
+15/11/2022 19:38:16
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio"]
+
+15/11/2022 19:38:16
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n"]
+
+15/11/2022 19:38:16
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos"]
+
+15/11/2022 19:38:16
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados"]
+
+15/11/2022 19:38:16
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados","Lecci\u00f3n 5 Modelo de ingresos"]
+
+15/11/2022 19:38:16
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados","Lecci\u00f3n 5 Modelo de ingresos","Lecci\u00f3n 4 Relaci\u00f3n con los clientes"]
+
+15/11/2022 19:38:16
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados","Lecci\u00f3n 5 Modelo de ingresos","Lecci\u00f3n 4 Relaci\u00f3n con los clientes","Lecci\u00f3n 3 Canales"]
+
+15/11/2022 19:38:16
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados","Lecci\u00f3n 5 Modelo de ingresos","Lecci\u00f3n 4 Relaci\u00f3n con los clientes","Lecci\u00f3n 3 Canales","Proyecto"]
+
+15/11/2022 19:38:16
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados","Lecci\u00f3n 5 Modelo de ingresos","Lecci\u00f3n 4 Relaci\u00f3n con los clientes","Lecci\u00f3n 3 Canales","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 19:38:18
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor"]
+
+15/11/2022 19:38:18
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo"]
+
+15/11/2022 19:38:18
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente"]
+
+15/11/2022 19:38:18
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente"]
+
+15/11/2022 19:38:18
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema"]
+
+15/11/2022 19:38:18
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema","Lecci\u00f3n 2 Segmentos de clientes potenciales"]
+
+15/11/2022 19:38:18
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema","Lecci\u00f3n 2 Segmentos de clientes potenciales","Lecci\u00f3n 1 El problema del cliente"]
+
+15/11/2022 19:38:18
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema","Lecci\u00f3n 2 Segmentos de clientes potenciales","Lecci\u00f3n 1 El problema del cliente","Introducci\u00f3n"]
+
+15/11/2022 19:38:18
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema","Lecci\u00f3n 2 Segmentos de clientes potenciales","Lecci\u00f3n 1 El problema del cliente","Introducci\u00f3n","Proyecto"]
+
+15/11/2022 19:38:18
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema","Lecci\u00f3n 2 Segmentos de clientes potenciales","Lecci\u00f3n 1 El problema del cliente","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 19:38:20
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio"]
+
+15/11/2022 19:38:20
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio"]
+
+15/11/2022 19:38:20
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio"]
+
+15/11/2022 19:38:20
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 1.2 Crear ecosistema de oportunidad"]
+
+15/11/2022 19:38:20
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 1.2 Crear ecosistema de oportunidad","Lecci\u00f3n 1.1 Crear ecosistema de oportunidad"]
+
+15/11/2022 19:38:20
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 1.2 Crear ecosistema de oportunidad","Lecci\u00f3n 1.1 Crear ecosistema de oportunidad","Introducci\u00f3n"]
+
+15/11/2022 19:38:20
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 1.2 Crear ecosistema de oportunidad","Lecci\u00f3n 1.1 Crear ecosistema de oportunidad","Introducci\u00f3n","Proyecto"]
+
+15/11/2022 19:38:20
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 1.2 Crear ecosistema de oportunidad","Lecci\u00f3n 1.1 Crear ecosistema de oportunidad","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 19:38:21
+data => ["Introducci\u00f3n al desarrollo de nuevos negocios"]
+
+15/11/2022 19:39:53
+data => ["Lecci\u00f3n 6 La puesta en escena"]
+
+15/11/2022 19:39:53
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal"]
+
+15/11/2022 19:39:53
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch"]
+
+15/11/2022 19:39:53
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch"]
+
+15/11/2022 19:39:53
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia"]
+
+15/11/2022 19:39:53
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?"]
+
+15/11/2022 19:39:53
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n"]
+
+15/11/2022 19:39:53
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n","Proyecto"]
+
+15/11/2022 19:39:53
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 19:39:54
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?"]
+
+15/11/2022 19:39:54
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor"]
+
+15/11/2022 19:39:54
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado"]
+
+15/11/2022 19:39:54
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?"]
+
+15/11/2022 19:39:54
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n"]
+
+15/11/2022 19:39:54
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n","Proyecto"]
+
+15/11/2022 19:39:55
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 19:39:55
+data => ["Video 6"]
+
+15/11/2022 19:39:55
+data => ["Video 6","Video 5"]
+
+15/11/2022 19:39:55
+data => ["Video 6","Video 5","Video 4"]
+
+15/11/2022 19:39:55
+data => ["Video 6","Video 5","Video 4","Video 3"]
+
+15/11/2022 19:39:55
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2"]
+
+15/11/2022 19:39:55
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2","Video 1"]
+
+15/11/2022 19:39:56
+data => ["Video 6"]
+
+15/11/2022 19:39:56
+data => ["Video 6","Video 5"]
+
+15/11/2022 19:39:56
+data => ["Video 6","Video 5","Video 4"]
+
+15/11/2022 19:39:56
+data => ["Video 6","Video 5","Video 4","Video 3"]
+
+15/11/2022 19:39:56
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2"]
+
+15/11/2022 19:39:56
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2","Video 1"]
+
+15/11/2022 19:39:57
+data => ["Video 5"]
+
+15/11/2022 19:39:57
+data => ["Video 5","Video 4"]
+
+15/11/2022 19:39:57
+data => ["Video 5","Video 4","Video 3"]
+
+15/11/2022 19:39:57
+data => ["Video 5","Video 4","Video 3","Video 2"]
+
+15/11/2022 19:39:57
+data => ["Video 5","Video 4","Video 3","Video 2","Video 1"]
+
+15/11/2022 19:39:58
+data => ["Video 6"]
+
+15/11/2022 19:39:58
+data => ["Video 6","Video 5"]
+
+15/11/2022 19:39:58
+data => ["Video 6","Video 5","Video 4"]
+
+15/11/2022 19:39:58
+data => ["Video 6","Video 5","Video 4","Video 3"]
+
+15/11/2022 19:39:58
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2"]
+
+15/11/2022 19:39:58
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2","Video 1"]
+
+15/11/2022 19:40:00
+data => ["Lecci\u00f3n 6 La puesta en escena"]
+
+15/11/2022 19:40:00
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal"]
+
+15/11/2022 19:40:00
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X"]
+
+15/11/2022 19:40:00
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch"]
+
+15/11/2022 19:40:00
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia"]
+
+15/11/2022 19:40:00
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?"]
+
+15/11/2022 19:40:00
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n"]
+
+15/11/2022 19:40:00
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n","Proyecto"]
+
+15/11/2022 19:40:00
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 19:40:01
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?"]
+
+15/11/2022 19:40:01
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor"]
+
+15/11/2022 19:40:01
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado"]
+
+15/11/2022 19:40:01
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?"]
+
+15/11/2022 19:40:01
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n"]
+
+15/11/2022 19:40:01
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n","Proyecto"]
+
+15/11/2022 19:40:01
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 19:40:03
+data => ["Introducci\u00f3n"]
+
+15/11/2022 19:40:03
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor"]
+
+15/11/2022 19:40:03
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes"]
+
+15/11/2022 19:40:03
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves"]
+
+15/11/2022 19:40:03
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio"]
+
+15/11/2022 19:40:03
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n"]
+
+15/11/2022 19:40:03
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos"]
+
+15/11/2022 19:40:03
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados"]
+
+15/11/2022 19:40:03
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados","Lecci\u00f3n 5 Modelo de ingresos"]
+
+15/11/2022 19:40:03
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados","Lecci\u00f3n 5 Modelo de ingresos","Lecci\u00f3n 4 Relaci\u00f3n con los clientes"]
+
+15/11/2022 19:40:03
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados","Lecci\u00f3n 5 Modelo de ingresos","Lecci\u00f3n 4 Relaci\u00f3n con los clientes","Lecci\u00f3n 3 Canales"]
+
+15/11/2022 19:40:03
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados","Lecci\u00f3n 5 Modelo de ingresos","Lecci\u00f3n 4 Relaci\u00f3n con los clientes","Lecci\u00f3n 3 Canales","Proyecto"]
+
+15/11/2022 19:40:03
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados","Lecci\u00f3n 5 Modelo de ingresos","Lecci\u00f3n 4 Relaci\u00f3n con los clientes","Lecci\u00f3n 3 Canales","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 19:40:04
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor"]
+
+15/11/2022 19:40:04
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo"]
+
+15/11/2022 19:40:04
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente"]
+
+15/11/2022 19:40:04
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente"]
+
+15/11/2022 19:40:04
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema"]
+
+15/11/2022 19:40:04
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema","Lecci\u00f3n 2 Segmentos de clientes potenciales"]
+
+15/11/2022 19:40:04
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema","Lecci\u00f3n 2 Segmentos de clientes potenciales","Lecci\u00f3n 1 El problema del cliente"]
+
+15/11/2022 19:40:04
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema","Lecci\u00f3n 2 Segmentos de clientes potenciales","Lecci\u00f3n 1 El problema del cliente","Introducci\u00f3n"]
+
+15/11/2022 19:40:04
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema","Lecci\u00f3n 2 Segmentos de clientes potenciales","Lecci\u00f3n 1 El problema del cliente","Introducci\u00f3n","Proyecto"]
+
+15/11/2022 19:40:04
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema","Lecci\u00f3n 2 Segmentos de clientes potenciales","Lecci\u00f3n 1 El problema del cliente","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 19:40:06
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio"]
+
+15/11/2022 19:40:06
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio"]
+
+15/11/2022 19:40:06
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio"]
+
+15/11/2022 19:40:06
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 1.2 Crear ecosistema de oportunidad"]
+
+15/11/2022 19:40:06
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 1.2 Crear ecosistema de oportunidad","Lecci\u00f3n 1.1 Crear ecosistema de oportunidad"]
+
+15/11/2022 19:40:06
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 1.2 Crear ecosistema de oportunidad","Lecci\u00f3n 1.1 Crear ecosistema de oportunidad","Introducci\u00f3n"]
+
+15/11/2022 19:40:06
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 1.2 Crear ecosistema de oportunidad","Lecci\u00f3n 1.1 Crear ecosistema de oportunidad","Introducci\u00f3n","Proyecto"]
+
+15/11/2022 19:40:06
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 1.2 Crear ecosistema de oportunidad","Lecci\u00f3n 1.1 Crear ecosistema de oportunidad","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 19:40:06
+data => ["Introducci\u00f3n al desarrollo de nuevos negocios"]
+
+15/11/2022 19:42:12
+data => ["Lecci\u00f3n 6 La puesta en escena"]
+
+15/11/2022 19:42:12
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal"]
+
+15/11/2022 19:42:12
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch"]
+
+15/11/2022 19:42:12
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch"]
+
+15/11/2022 19:42:12
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia"]
+
+15/11/2022 19:42:12
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?"]
+
+15/11/2022 19:42:12
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n"]
+
+15/11/2022 19:42:12
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n","Proyecto"]
+
+15/11/2022 19:42:12
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura del pitch","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 19:42:15
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?"]
+
+15/11/2022 19:42:15
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor"]
+
+15/11/2022 19:42:15
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado"]
+
+15/11/2022 19:42:15
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?"]
+
+15/11/2022 19:42:15
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n"]
+
+15/11/2022 19:42:15
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n","Proyecto"]
+
+15/11/2022 19:42:15
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 19:42:18
+data => ["Video 6"]
+
+15/11/2022 19:42:18
+data => ["Video 6","Video 5"]
+
+15/11/2022 19:42:18
+data => ["Video 6","Video 5","Video 4"]
+
+15/11/2022 19:42:18
+data => ["Video 6","Video 5","Video 4","Video 3"]
+
+15/11/2022 19:42:18
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2"]
+
+15/11/2022 19:42:18
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2","Video 1"]
+
+15/11/2022 19:42:20
+data => ["Video 6"]
+
+15/11/2022 19:42:20
+data => ["Video 6","Video 5"]
+
+15/11/2022 19:42:20
+data => ["Video 6","Video 5","Video 4"]
+
+15/11/2022 19:42:20
+data => ["Video 6","Video 5","Video 4","Video 3"]
+
+15/11/2022 19:42:20
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2"]
+
+15/11/2022 19:42:20
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2","Video 1"]
+
+15/11/2022 19:42:21
+data => ["Video 5"]
+
+15/11/2022 19:42:21
+data => ["Video 5","Video 4"]
+
+15/11/2022 19:42:21
+data => ["Video 5","Video 4","Video 3"]
+
+15/11/2022 19:42:21
+data => ["Video 5","Video 4","Video 3","Video 2"]
+
+15/11/2022 19:42:21
+data => ["Video 5","Video 4","Video 3","Video 2","Video 1"]
+
+15/11/2022 19:42:23
+data => ["Video 6"]
+
+15/11/2022 19:42:23
+data => ["Video 6","Video 5"]
+
+15/11/2022 19:42:23
+data => ["Video 6","Video 5","Video 4"]
+
+15/11/2022 19:42:23
+data => ["Video 6","Video 5","Video 4","Video 3"]
+
+15/11/2022 19:42:23
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2"]
+
+15/11/2022 19:42:23
+data => ["Video 6","Video 5","Video 4","Video 3","Video 2","Video 1"]
+
+15/11/2022 19:42:25
+data => ["Lecci\u00f3n 6 La puesta en escena"]
+
+15/11/2022 19:42:25
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal"]
+
+15/11/2022 19:42:25
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X"]
+
+15/11/2022 19:42:25
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch"]
+
+15/11/2022 19:42:25
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia"]
+
+15/11/2022 19:42:25
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?"]
+
+15/11/2022 19:42:25
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n"]
+
+15/11/2022 19:42:25
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n","Proyecto"]
+
+15/11/2022 19:42:25
+data => ["Lecci\u00f3n 6 La puesta en escena","Lecci\u00f3n 5 \u00bfC\u00f3mo se lo digo? y el lenguaje paraverbal","Lecci\u00f3n 4 Estructura pitch 10X","Lecci\u00f3n 3 Estructuraci\u00f3n del pitch","Lecci\u00f3n 2 Etapas de la audiencia","Lecci\u00f3n 1 \u00bfA qui\u00e9n le hablo?","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 19:42:27
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?"]
+
+15/11/2022 19:42:27
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor"]
+
+15/11/2022 19:42:27
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado"]
+
+15/11/2022 19:42:27
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?"]
+
+15/11/2022 19:42:27
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n"]
+
+15/11/2022 19:42:27
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n","Proyecto"]
+
+15/11/2022 19:42:27
+data => ["Lecci\u00f3n 4 \u00bfC\u00f3mo validar tu prototipo?","Lecci\u00f3n 3 Prototipo conceptual y propuesta de valor","Lecci\u00f3n 2 Niveles y t\u00e9cnicas de prototipado","Lecci\u00f3n 1 \u00bfCu\u00e1ndo y por qu\u00e9 prototipar?","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 19:42:29
+data => ["Introducci\u00f3n"]
+
+15/11/2022 19:42:29
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor"]
+
+15/11/2022 19:42:29
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes"]
+
+15/11/2022 19:42:29
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves"]
+
+15/11/2022 19:42:29
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio"]
+
+15/11/2022 19:42:29
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n"]
+
+15/11/2022 19:42:29
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos"]
+
+15/11/2022 19:42:29
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados"]
+
+15/11/2022 19:42:29
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados","Lecci\u00f3n 5 Modelo de ingresos"]
+
+15/11/2022 19:42:29
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados","Lecci\u00f3n 5 Modelo de ingresos","Lecci\u00f3n 4 Relaci\u00f3n con los clientes"]
+
+15/11/2022 19:42:29
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados","Lecci\u00f3n 5 Modelo de ingresos","Lecci\u00f3n 4 Relaci\u00f3n con los clientes","Lecci\u00f3n 3 Canales"]
+
+15/11/2022 19:42:29
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados","Lecci\u00f3n 5 Modelo de ingresos","Lecci\u00f3n 4 Relaci\u00f3n con los clientes","Lecci\u00f3n 3 Canales","Proyecto"]
+
+15/11/2022 19:42:29
+data => ["Introducci\u00f3n","Lecci\u00f3n 2 Propuesta de valor","Lecci\u00f3n 1 Segmentos de clientes","Lecci\u00f3n 6 Actividades y recursos claves","Lecci\u00f3n 10 Validaci\u00f3n del modelo de negocio","Lecci\u00f3n 9 Prototipado y patrones de innovaci\u00f3n","Lecci\u00f3n 8 Estructura de costos","Lecci\u00f3n 7 Aliados","Lecci\u00f3n 5 Modelo de ingresos","Lecci\u00f3n 4 Relaci\u00f3n con los clientes","Lecci\u00f3n 3 Canales","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 19:42:31
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor"]
+
+15/11/2022 19:42:31
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo"]
+
+15/11/2022 19:42:31
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente"]
+
+15/11/2022 19:42:31
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente"]
+
+15/11/2022 19:42:31
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema"]
+
+15/11/2022 19:42:31
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema","Lecci\u00f3n 2 Segmentos de clientes potenciales"]
+
+15/11/2022 19:42:31
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema","Lecci\u00f3n 2 Segmentos de clientes potenciales","Lecci\u00f3n 1 El problema del cliente"]
+
+15/11/2022 19:42:31
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema","Lecci\u00f3n 2 Segmentos de clientes potenciales","Lecci\u00f3n 1 El problema del cliente","Introducci\u00f3n"]
+
+15/11/2022 19:42:31
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema","Lecci\u00f3n 2 Segmentos de clientes potenciales","Lecci\u00f3n 1 El problema del cliente","Introducci\u00f3n","Proyecto"]
+
+15/11/2022 19:42:31
+data => ["Lecci\u00f3n 7 Validaci\u00f3n de la propuesta de valor","Lecci\u00f3n 6 Definici\u00f3n del espacio competitivo","Lecci\u00f3n 5 Perfilaci\u00f3n del cliente","Lecci\u00f3n 4 Perfilaci\u00f3n del cliente","Lecci\u00f3n 3 Validaci\u00f3n del problema","Lecci\u00f3n 2 Segmentos de clientes potenciales","Lecci\u00f3n 1 El problema del cliente","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 19:42:32
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio"]
+
+15/11/2022 19:42:32
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio"]
+
+15/11/2022 19:42:32
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio"]
+
+15/11/2022 19:42:32
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 1.2 Crear ecosistema de oportunidad"]
+
+15/11/2022 19:42:32
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 1.2 Crear ecosistema de oportunidad","Lecci\u00f3n 1.1 Crear ecosistema de oportunidad"]
+
+15/11/2022 19:42:32
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 1.2 Crear ecosistema de oportunidad","Lecci\u00f3n 1.1 Crear ecosistema de oportunidad","Introducci\u00f3n"]
+
+15/11/2022 19:42:32
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 1.2 Crear ecosistema de oportunidad","Lecci\u00f3n 1.1 Crear ecosistema de oportunidad","Introducci\u00f3n","Proyecto"]
+
+15/11/2022 19:42:32
+data => ["Lecci\u00f3n 4 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 3 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 2 Selecci\u00f3n de oportunidades de negocio","Lecci\u00f3n 1.2 Crear ecosistema de oportunidad","Lecci\u00f3n 1.1 Crear ecosistema de oportunidad","Introducci\u00f3n","Proyecto","Nivelaci\u00f3n"]
+
+15/11/2022 19:42:33
+data => ["Introducci\u00f3n al desarrollo de nuevos negocios"]

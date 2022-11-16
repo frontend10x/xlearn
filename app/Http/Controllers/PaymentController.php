@@ -217,7 +217,10 @@ class PaymentController extends Controller
             $key = $users->original['response']['_rel'];
             $amountUsers = count($users->original['response']['_embedded'][$key]);
 
-            $payments['quotas'] = $quotas - $amountUsers;
+            $calculateQuotas = $quotas - $amountUsers;
+            if($calculateQuotas <= 0 ) $calculateQuotas = 0;
+
+            $payments['quotas'] = $calculateQuotas;
 
             return response()->json(["quotas" => $payments['quotas']], 200);
 

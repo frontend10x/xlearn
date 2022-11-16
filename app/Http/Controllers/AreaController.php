@@ -9,44 +9,76 @@ use Illuminate\Support\Facades\Auth;
 
 class AreaController extends Controller
 {
-    public function store(Request $request)
+    public static function store(Request $request, $validate = true)
     {
         try {
-            $areas = Areas::where("name", $request->input("name"))->first();
-            if (!empty($areas)) {
-                throw new Exception("Ya existe un area con el nombre " . $request->input("name"));
-            }
-            $datosSubEmpresa = [
-                "name" => $request->input("name"), "description" => $request->input("description"), "state" => $request->input("state")
-            ];
-            if (!empty($request->input("file_path"))) {
-                $datosSubEmpresa['file_path'] = $request->input("file_path");
+
+            if($validate){
+                $areas = Areas::where("name", $request->input("name"))->first();
+                if (!empty($areas)) {
+                    throw new Exception("Ya existe un area con el nombre " . $request->input("name"));
+                }
             }
 
-            Areas::create($datosSubEmpresa);
-            return response()->json(["message" => "Area creada con éxito"], 200);
+            $create = [
+                "name" => $request->input("name"), 
+                "description" => $request->input("description"), 
+                "state" => $request->input("state"),
+                "vimeo:id" => $request->input("vimeo:id"), 
+                "vimeo:uri" => $request->input("vimeo:uri")
+            ];
+            if (!empty($request->input("file_path"))) {
+                $create['file_path'] = $request->input("file_path");
+            }
+
+            $create_area = Areas::create($create);
+            return response()->json(["message" => "Area creada con éxito", "id" => $create_area['id']], 200);
         } catch (Exception $e) {
             return return_exceptions($e);
         }
     }
-    public function edit(Request $request, $id)
+
+    public static function sync_with_vimeo(Request $request)
     {
         try {
-            $subEmpresa = Areas::find($id);
-            $datosSubEmpresa = [
-                "name" => $request->input("name"), "description" => $request->input("description"), "state" => $request->input("state")
+
+            $courses = Areas::where("vimeo:id", $request->input("vimeo:id"))->first();
+
+            if (empty($courses)) {
+                $state = self::store($request, false);
+            }else{
+                $state = self::edit($request);
+            }
+
+            return json_encode($state->original);
+
+        } catch (Exception $e) {
+            return return_exceptions($e);
+        }
+    }
+
+    public static function edit(Request $request)
+    {
+        try {
+            $area = Areas::where("vimeo:id", $request->input("vimeo:id"))->first();
+            $edit = [
+                "name" => $request->input("name"), 
+                "description" => $request->input("description"), 
+                "state" => $request->input("state"),
+                "vimeo:id" => $request->input("vimeo:id"), 
+                "vimeo:uri" => $request->input("vimeo:uri")
             ];
             if (!empty($request->input("file_path"))) {
-                $datosSubEmpresa['file_path'] = $request->input("file_path");
+                $edit['file_path'] = $request->input("file_path");
             }
-            if (empty($subEmpresa)) {
+            if (empty($area)) {
                 throw new Exception("No existe el id: " . $id . " para ser actualizado");
             } else {
-                $subEmpresa->update($datosSubEmpresa);
+                $area->update($edit);
                 $message = "Area actualizada con éxto";
             }
 
-            return response()->json(["message" => $message], 200);
+            return response()->json(["message" => $message, "id" => $area->id], 200);
         } catch (Exception $e) {
             return return_exceptions($e);
         }

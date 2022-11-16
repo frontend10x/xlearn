@@ -26,6 +26,9 @@ class UserCoursesController extends Controller
             
             $users_ids = UserCoursesController::search_users($consult->group_id);
 
+            if(empty($users_ids))
+                throw new Exception("No existe el grupo con id: " . $consult->group_id);
+
             $relations = UserCoursesController::relate_courses_users($courses_ids, $users_ids);
 
             //Envio de correos a usuarios en caso de crear por lo menos una relación
