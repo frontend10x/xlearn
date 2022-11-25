@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use Mail;
+use Exception;
+use DateTime;
+
 use Illuminate\Http\Request;
 use App\Models\Transaction;
 use App\Models\Payment;
+use App\Mail\EmailNotification;
 
-use Exception;
-use DateTime;
 
 class TransactionController extends Controller
 {
@@ -59,13 +62,15 @@ class TransactionController extends Controller
     
                 $created = Transaction::create($dataInsert);
 
+                Mail::to($data['transaction']['customer_email'])->send(new EmailNotification($dataInsert, 'payment_register'));
+
                 $update_payment = PaymentController::update_payment_status(
                     $search_payment_request['id'],
                     $data['transaction']['status'], 
                     $created['id']
                 );
             
-            return response()->json(["created" => $created, "updtae" => $update_payment], 200);
+            return response()->json(["created" => $created, "update" => $update_payment], 200);
 
         } catch (Exception $e) {
             

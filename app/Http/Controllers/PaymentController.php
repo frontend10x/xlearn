@@ -100,7 +100,7 @@ class PaymentController extends Controller
             $plan = PaymentController::consult_value_to_pay($amount_user, $amount_time);
 
             //Calculamos el valor a pagar en pesos
-            $amount_to_paid = $plan->price * $amount_time * $amount_user;
+            $amount_to_paid = ($plan->price * 5000) * $amount_time * $amount_user;
             $amount_centies = calculate_amount_in_cents($amount_to_paid, $coupon_status, $percentage);
             
             //Generamos la firma de integridad para el pago (WOMPY)
@@ -124,7 +124,8 @@ class PaymentController extends Controller
             $created = Payment::create($dataInsert);
 
             $payment_details = [
-                "amount" => $amount_centies ,
+                "amount_cents" => $amount_centies,
+                "amount_pesos" => $amount_centies / 100,
                 "reference" => $reference,
                 "currency" => CURRENCY,
                 "public_key" => PUBLIC_KEY,
@@ -218,7 +219,9 @@ class PaymentController extends Controller
             $amountUsers = count($users->original['response']['_embedded'][$key]);
 
             $calculateQuotas = $quotas - $amountUsers;
-            if($calculateQuotas <= 0 ) $calculateQuotas = 0;
+            
+            if($calculateQuotas <= 0 )
+                throw new Exception('La empresa no tiene cupos disponibles');
 
             $payments['quotas'] = $calculateQuotas;
 

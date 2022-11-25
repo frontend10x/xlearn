@@ -132,7 +132,7 @@
 <body>
     <div id="section__title">
         <h1>Bienvenido a <img src="https://dashboard.xlearn.com.co/iconos-xln/logo.png"/></h1>
-        <p>Este correo tiene como finalidad confirmar la ruta de aprendizaje creada</p>
+        <p>tu pago ha sido exitoso</p>
     </div>
 
     <div id="section__banner">
@@ -140,18 +140,22 @@
         <p>Lleva tu empresa a otro nivel a través del entrenamiento de tus equipos, genera valor y desarrolla tus proyectos de innovación</p>
     </div>
 
-    <!-- <div id="section__info">
+    <div id="section__info">
         <div class="columnas_mail_icon">
             <img src="https://dashboard.xlearn.com.co/iconos-xln/1.png"/>
-            <p>Contenido exclusivo según las necesidades de tus proyectos</p>
+            <p>Te informamos que nuestro sistema registro el siguiente pago:</p>
+            <p>REFERENCIA: {{ $paymentDetails['reference'] }}</p>
+            <p>VALOR: {{ $paymentDetails['amount'] }}</p>
+            <p>ESTADO: {{ $paymentDetails['status'] }}</p>
+            <p>CUPOS: {{ $paymentDetails['status'] }}</p>
         </div>
         
-    </div> -->
+    </div>
 
     <div class="content__button__activate">
-        <a class="xln__btn__email" href="{{ $urlConfimation }}" target="_blank" data-saferedirecturl="{{$urlConfimation}}">Ver ruta</a>
+        <a class="xln__btn__email" href="{{ $paymentDetails['url'] }}" target="_blank" data-saferedirecturl="{{ $paymentDetails['url'] }}">Ir a la plataforma</a>
         <p>Para continuar explorando Xlearn</p>
-        <p> Si no funciona el boton, copie y pegue el siguiente enlace en un navegador: <br>{{ $urlConfimation }}.</p>
+        <p> Si no funciona el boton, copie y pegue el siguiente enlace en un navegador: <br>{{ $paymentDetails['url'] }}.</p>
     </div>
 </body>
 </html>

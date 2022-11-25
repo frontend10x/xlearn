@@ -118,7 +118,7 @@ if (!function_exists('calculate_amount_in_cents')) {
     function calculate_amount_in_cents($amount_to_paid, $coupon_status, $percentage){
 
         //(convertimos el valor a pagar en centavos (x 100))
-        $amount_centies = $amount_to_paid * 1000;
+        $amount_centies = $amount_to_paid * 100;
 
         //Aplicacion de descuento si es efectivo el cupon
         if($coupon_status)

@@ -115,7 +115,7 @@ class UserController extends Controller
 
                 $quotas = PaymentController::approvedPaymentStatus($request);
 
-                if(!isset($quotas->original['quotas']))
+                if(!isset($quotas->original['quotas']) || !$quotas->original['quotas'])
                     throw new Exception('La empresa no tiene cupos para registrar usuarios');
             }
 

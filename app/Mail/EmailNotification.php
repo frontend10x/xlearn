@@ -71,6 +71,13 @@ class EmailNotification extends Mailable
                 return $this->view('mails.forgot_password')->with('urlRecover', $urlRecover);
 
                 break;
+            
+            case 'payment_register':
+
+                $this->data['url'] = URL_FRONT . '/login';
+                return $this->view('mails.payment_register')->with('paymentDetails', $this->data);
+
+                break;
 
             default:
                 # code...
