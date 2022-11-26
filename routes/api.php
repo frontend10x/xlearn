@@ -115,6 +115,12 @@ Route::post(API_VERSION . '/transactions/store',[TransactionController::class, '
 Route::get(API_VERSION . '/certificate/show/{code}',[CertificateController::class, 'show']);
 Route::get(API_VERSION . '/certificate/download/{code}',[CertificateController::class, 'dowmload']);
 
+// ---------------------------------------------------------------------
+// FAQS
+// ---------------------------------------------------------------------
+
+Route::get(API_VERSION . '/questions/list_faqs',[QuestionController::class, 'faqs']);
+
 
 Route::group(['middleware'=>'auth:api' ],function(){
 

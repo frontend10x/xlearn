@@ -12,6 +12,11 @@ define("ACCESS_TOKEN", env("ACCESS_TOKEN_VIMEO"));
 
 class VimeoController extends Controller
 {
+    public function __construct()
+    {
+        $this->trailers = [];
+    }
+
     public function syncCourseStructure(Request $request)
     {
 
@@ -28,51 +33,132 @@ class VimeoController extends Controller
 
             foreach ($arrayData as $key => $value) {
 
+                //Instanciamos los trailers
+                $this->process_trailers($value);
+
+                continue;
+
                 if(strstr( $value['name'], 'Área' )){
 
-                    $name = str_replace('Área - ', '', $value['name']);
-                    
-                    $dataArea = array(
-                        'name' => $name,
-                        'vimeo:id' => get_id_vimeo($value['uri']),
-                        'state' => 1,
-                        'vimeo:uri' => $value['uri']
-                    );
-    
-                    $request->request->add($dataArea);
+                    $processAreas = $this->process_areas($request, $value);
 
-                    $areaCreated = AreaController::sync_with_vimeo($request);
-
-                    $area = json_decode($areaCreated, true);
-
-                    if(isset($area['id'])){
-
-                        $areas['area_name'] = $name;
-
-                        $uri_folder = $value['metadata']['connections']['folders']['uri'];
-
-                        $folders = $client->request($uri_folder, array(), 'GET');
-
-                        $arrayCourses = $folders['body']['data'];
-
-                        $programsCreated = $this->consult_project_programs($request, $uri_folder, $area['id']);
-
-                        $areas['programs'] = $programsCreated;
-
-                        array_push($val, $areas);
-                                                
-                    }
+                    array_push($val, $processAreas);
 
                 }
                 
             };
+
+            return;
             
             if (empty($val))
                 throw new Exception("No hubo inserción de información, verifique si ya existen en la base de datos");
             
 
-            return response()->json(['message' => 'areas, cursos y lecciones creadas', 'data' => $val]);
+            return response()->json(['message' => 'areas, cursos, programas y lecciones creadas', 'data' => $val]);
         
+        } catch (Exception $e) {
+            
+            return return_exceptions($e);
+
+        }
+    }
+
+    public function process_trailers($value)
+    {
+        try {
+            
+            $client = new Vimeo(CLIENT_ID, CLIENT_SECRET, ACCESS_TOKEN);
+            $valTrailers = [];
+
+            if($value['name'] == 'Trailers' ){
+
+                $folders = $value['metadata']['connections']['folders']['uri'];
+
+                $folders = $client->request($folders, array(), 'GET');
+
+                $arrayData = $folders['body']['data'];
+
+                foreach ($arrayData as $key => $file) {
+
+                    $uri_video = $file['folder']['metadata']['connections']['videos']['uri'];
+
+                    $videos = $client->request($uri_video, array(), 'GET');
+
+                    $arrayVideos = $videos['body']['data'];
+
+                    foreach ($arrayVideos as $k => $vid) {
+                        
+                        $arrayTrailers = [
+                            'name' => $vid['name'],
+                            'video:uri' => $vid['player_embed_url']
+                        ];
+
+                        array_push($valTrailers, $arrayTrailers);
+
+                    }
+                }
+
+                $this->trailers = $valTrailers;
+                //echo json_encode($valTrailers);
+                // $this->trailers[]
+
+                $found_key = array_search('ADN Innovador', array_column($this->trailers, 'name'));
+
+
+                echo json_encode($found_key);
+
+            }
+
+        } catch (Exception $e) {
+            
+            return return_exceptions($e);
+
+        }
+    }
+
+    public function process_areas($request, $value)
+    {
+        try {
+
+            $client = new Vimeo(CLIENT_ID, CLIENT_SECRET, ACCESS_TOKEN);
+            $areas_created = [];
+            
+            $name = str_replace('Área - ', '', $value['name']);
+                    
+            $dataArea = array(
+                'name' => $name,
+                'vimeo:id' => get_id_vimeo($value['uri']),
+                'state' => 1,
+                'vimeo:uri' => $value['uri']
+            );
+
+            $request->request->add($dataArea);
+
+            $areaCreated = AreaController::sync_with_vimeo($request);
+
+            $area = json_decode($areaCreated, true);
+
+            if(isset($area['id'])){
+
+                $areas['area_name'] = $name;
+
+                $uri_folder = $value['metadata']['connections']['folders']['uri'];
+
+                $folders = $client->request($uri_folder, array(), 'GET');
+
+                $arrayCourses = $folders['body']['data'];
+
+                $programsCreated = $this->consult_project_programs($request, $uri_folder, $area['id']);
+
+                $areas['programs'] = $programsCreated;
+
+                array_push($areas_created, $areas);
+
+                return $areas_created;
+                                        
+            }
+
+
         } catch (Exception $e) {
             
             return return_exceptions($e);
@@ -159,7 +245,6 @@ class VimeoController extends Controller
                     'state' => 1,
                     'free_video' => 0,
                     'program_id' => $program_id,
-                    'file_path' => $value['user']['pictures']['base_link'],
                     'video_uri' => $value['metadata']['connections']['videos']['uri']
                 );
 

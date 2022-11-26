@@ -1569,6 +1569,46 @@
                 ]
             }
         },
+        "/api/v1/questions/list_faqs": {
+            "get": {
+                "tags": [
+                    "Questions"
+                ],
+                "summary": "Mostrar preguntas frecuentes",
+                "operationId": "08f2efddcc9acdccc7b8fdd6dcf55a8e",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos las preguntas frecuentes.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "response": {
+                                            "_rel": "faqs",
+                                            "_embedded": {
+                                                "faqs": []
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/api/v1/register_requests/list": {
             "get": {
                 "tags": [

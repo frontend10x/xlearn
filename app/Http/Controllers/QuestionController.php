@@ -74,7 +74,7 @@ class QuestionController extends Controller
             //TODO debe sacarse del request, por defecto el valor es 10.
             $limit = $request->has('limit') ? intval($request->get('limit')) : 10;
 
-            $consult = Question::select('id', 'question', 'required', 'type', 'response_types', 'answer')->with('options')->limit($limit)->offset(($offset - 1) * $limit)->get()->toArray();
+            $consult = Question::select('id', 'question', 'required', 'type', 'response_types', 'answer')->with('options')->where('type', 'diagnostico')->limit($limit)->offset(($offset - 1) * $limit)->get()->toArray();
 
             $nexOffset = $offset + 1;
             $previousOffset = ($offset > 1) ? $offset - 1 : 1;
@@ -94,11 +94,74 @@ class QuestionController extends Controller
             );
 
             if(empty($consult))
-                throw new Exception("No se encontraron usuarios");
+                throw new Exception("No se encontraron preguntas");
 
             return response()->json(["response" => $response], 200);
         } catch (Exception $e) {
             return return_exceptions($e);
+        }
+    }
+
+    /**
+    * @OA\Get(
+    *     path="/api/v1/questions/list_faqs",
+    *     summary="Mostrar preguntas frecuentes",
+    *     tags={"Questions"},
+    *     @OA\Response(
+    *         response=200,
+    *         description="Mostrar todos las preguntas frecuentes.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                       "response": {
+    *                           "_rel": "faqs",
+    *                           "_embedded": {
+    *                               "faqs": {}
+    *                           }
+    *                       }
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
+    public function faqs(Request $request)
+    {
+        try {
+
+            $consult = Question::where('type', 'faqs')->with('options')->get()->toArray();
+
+            $questions = array(
+                "_rel"		=> "faqs",
+                "_embedded" => array(
+                    "faqs" => $consult
+                )
+            );
+
+            if(empty($consult))
+                throw new Exception("No se encontraron registros");
+
+            return response()->json(["response" => $questions], 200);
+
+        } catch (Exception $e) {
+
+            return return_exceptions($e);
+
         }
     }
 

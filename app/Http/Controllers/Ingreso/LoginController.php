@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Ingreso;
 
 use Mail;
+use Exception;
 
 use App\Http\Controllers\Controller;
 
@@ -81,50 +82,62 @@ class LoginController extends Controller
     */
     public function ingreso(Request $request)
     {
-
-        if (Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password'), 'state' => 1])) {
-
-            $user = User::where('email', $request->input('email'))->with('roles', 'typeUser', 'diagnostic')->first();
+        try {
             
-            $token = $user->createToken('token_jobs' . Auth::user()->id)->accessToken;
+            if (Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password'), 'state' => 1])) {
 
-            if (!empty($request->input('token'))) {
-                $tokenCelular = $request->input('token');
-                //  $this->updateToken($tokenCelular, $user->id);
+                $user = User::where('email', $request->input('email'))->with('roles', 'typeUser', 'diagnostic')->first();
+                
+                $token = $user->createToken('token_jobs' . Auth::user()->id)->accessToken;
+    
+                if (!empty($request->input('token'))) {
+                    $tokenCelular = $request->input('token');
+                    //  $this->updateToken($tokenCelular, $user->id);
+                }
+
+                $diagnosticStatus = false;
+    
+                if($user->roles->rol_name === 'Lider')
+                    if(isset($user->diagnostic[0]->confirmed))
+                        if($user->diagnostic[0]->confirmed === 1)
+                            $diagnosticStatus = true;
+                    
+                
+                //Consultamos los grupos al que pertenece el usuario
+                $user_groups = GroupController::listUserGroups($user->id);
+                
+                return response()->json(
+                    [
+                        'message' => "Acceso correcto", 
+                        "token" => $token, 
+                        "datosUsuario" => [
+                            "id" => $user->id,
+                            "name" => $user->name, 
+                            "email" => $user->email, 
+                            "phone" => $user->phone,
+                            "groups" => $user_groups->original[0],
+                            "roles" => [
+                                "id" => $user->roles->id,
+                                "name" => $user->roles->rol_name
+                            ],
+                            "diagnostic" => [
+                                'status' => $diagnosticStatus
+                            ],
+                            "subcompanies_id" => $user->subcompanies_id
+                        ]
+                    ] 
+                ,200);
+            } else {
+                return response()->json(["message" => "Datos incorrectos o usuario inactivo"],500);
             }
 
-            if($user->roles->rol_name === 'Lider' && $user->diagnostic[0]->confirmed === 1)
-               $diagnosticStatus = true;
-            else
-                $diagnosticStatus = false;
+        } catch (Exception $e) {
             
-            //Consultamos los grupos al que pertenece el usuario
-            $user_groups = GroupController::listUserGroups($user->id);
-            
-            return response()->json(
-                [
-                    'message' => "Acceso correcto", 
-                    "token" => $token, 
-                    "datosUsuario" => [
-                        "id" => $user->id,
-                        "name" => $user->name, 
-                        "email" => $user->email, 
-                        "phone" => $user->phone,
-                        "groups" => $user_groups->original[0],
-                        "roles" => [
-                            "id" => $user->roles->id,
-                            "name" => $user->roles->rol_name
-                        ],
-                        "diagnostic" => [
-                            'status' => $diagnosticStatus
-                        ],
-                        "subcompanies_id" => $user
-                    ]
-                ] 
-            ,200);
-        } else {
-            return response()->json(["message" => "Datos incorrectos o usuario inactivo"],500);
+            return return_exceptions($e);
+
         }
+
+        
     }
 
     // public function updateToken($token, $use_id)
