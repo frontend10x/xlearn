@@ -36,8 +36,6 @@ class VimeoController extends Controller
                 //Instanciamos los trailers
                 $this->process_trailers($value);
 
-                continue;
-
                 if(strstr( $value['name'], 'Área' )){
 
                     $processAreas = $this->process_areas($request, $value);
@@ -47,8 +45,6 @@ class VimeoController extends Controller
                 }
                 
             };
-
-            return;
             
             if (empty($val))
                 throw new Exception("No hubo inserción de información, verifique si ya existen en la base de datos");
@@ -102,10 +98,10 @@ class VimeoController extends Controller
                 //echo json_encode($valTrailers);
                 // $this->trailers[]
 
-                $found_key = array_search('ADN Innovador', array_column($this->trailers, 'name'));
+                // $found_key = array_search('ADN Innovador', array_column($this->trailers, 'name'));
 
 
-                echo json_encode($found_key);
+                // echo json_encode($found_key);
 
             }
 
@@ -239,11 +235,14 @@ class VimeoController extends Controller
 
                 $value = $folder['folder'];
 
+                $found_key = array_search($value['name'], array_column($this->trailers, 'name'));
+
                 $dataInsert = array(
                     'name' => $value['name'],
                     'vimeo_id' => get_id_vimeo($value['uri']),
                     'state' => 1,
                     'free_video' => 0,
+                    'video_path' => $this->trailers[$found_key]['video:uri'],
                     'program_id' => $program_id,
                     'video_uri' => $value['metadata']['connections']['videos']['uri']
                 );
