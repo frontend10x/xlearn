@@ -15,6 +15,7 @@ use App\Mail\EmailNotification;
 use App\Imports\UsersImport;
 use Maatwebsite\Excel\Facades\Excel;
 
+define('ROLE_NAME', 'Integrante');
 
 class UserController extends Controller
 {
@@ -99,7 +100,6 @@ class UserController extends Controller
 
             // Validamos los datos enviados
             $validated = $request->validate([
-                'rol_id' => 'required|integer',
                 'password' => 'required',
                 'password_confirmation' => 'required',
                 'email' => 'required',
@@ -121,8 +121,18 @@ class UserController extends Controller
 
             $dataInsert = [
                 "subcompanies_id" => $request->input("subcompanies_id"),
-                "rol_id" => $request->input("rol_id"), "link_facebook" => $request->input("link_facebook"), "link_google" => $request->input("link_google"), "link_linkedin" => $request->input("link_linkedin"), "link_instagram" => $request->input("link_instagram"), "name" => $request->input("name"), "surname" => $request->input("surname"), "phone" => $request->input("phone"), "email" => $request->input("email"), "state" => 0, "password" => Hash::make($request->input("password"))
+                "link_facebook" => $request->input("link_facebook"), "link_google" => $request->input("link_google"), "link_linkedin" => $request->input("link_linkedin"), "link_instagram" => $request->input("link_instagram"), "name" => $request->input("name"), "surname" => $request->input("surname"), "phone" => $request->input("phone"), "email" => $request->input("email"), "state" => 0, "password" => Hash::make($request->input("password"))
             ];
+
+            if (empty($request->input("rol_id"))) {
+
+                $rolId = RolesController::showIdByName(ROLE_NAME);
+
+                if(empty($rolId))
+                    throw new Exception('No se encontro un rol para '.ROLE_NAME.', por favor comuniquese con el administrador del sistema.');
+
+                $dataInsert['rol_id'] = $rolId;
+            }
 
             $userCreated = User::create($dataInsert);
 
@@ -400,6 +410,7 @@ class UserController extends Controller
     *     summary="recuperar contraseña",
     *     @OA\Parameter(name="id", required=true, in="path", @OA\Schema(type="string")),
     *     @OA\Parameter(name="password", required=true, in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="password_confirmation", required=true, in="query", @OA\Schema(type="string")),
     *     @OA\Response(
     *         response=200,
     *         description="Success.",
@@ -438,6 +449,10 @@ class UserController extends Controller
 
             if (empty($user))
                 throw new Exception("No existe usuario registrado");
+
+            if ( $request->input("password") != $request->input("password_confirmation")) 
+                throw new Exception("Las contraseñas no coinciden");
+            
 
             $user->password =  Hash::make($request->input("password"));
             $user->save();

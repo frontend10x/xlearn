@@ -17,6 +17,7 @@ use App\Models\companies\group\Group;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\UserCoursesController;
 use App\Http\Controllers\ProgressController;
+use App\Http\Controllers\RolesController;
 
 
 class GroupController extends Controller
@@ -76,9 +77,7 @@ class GroupController extends Controller
             $datosSubEmpresa = [
                 "name" => $request->input("name"), "description" => $request->input("description"), "state" => $request->input("state")
             ];
-            if (!empty($request->input("file_path"))) {
-                $datosSubEmpresa['file_path'] = $request->input("file_path");
-            }
+            
 
             if (!empty(Auth::user()->subcompanies_id)) {
                 $datosSubEmpresa['subcompanies_id'] = Auth::user()->subcompanies_id;
@@ -530,9 +529,9 @@ class GroupController extends Controller
 
                 foreach ($group['users'] as $user) {
 
-                    $roles = Roles::find($user['rol_id']);
+                    $rol_name = RolesController::showNameById($user['rol_id']);
 
-                    if($roles->rol_name == 'Lider')
+                    if($rol_name == 'Lider')
                         $leader = $user['name'];
                     
                 }

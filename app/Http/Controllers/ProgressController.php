@@ -61,7 +61,7 @@ class ProgressController extends Controller
                 'course_id' => 'required|integer',
                 'user_id' => 'required|integer',
                 'lesson_id' => 'required|integer',
-                'percentage' => 'required|integer',
+                'percentage' => 'required',
                 'advanced_current_time' => 'required',
                 'total_video_time' => 'required'
             ]);
@@ -88,15 +88,19 @@ class ProgressController extends Controller
             if (empty($consult))
                 $query = self::store($data);
             else
-                $query = self::update($data, $consult);
+                if($consult->percentage_completion < 100 ) $query = self::update($data, $consult);
 
             //Actualizar estado del curso del usuario
             $status_course = self::update_user_course( $request->input("course_id"), $request->input("user_id") );
+
+            $message = "Video terminado con anterioridad";
+
+            if (isset($query)) {
+                $message = "Registro $query con éxito";
+            }
+
+            return response()->json(["message" =>  $message . $status_course], 200);
             
-            return response()->json(["message" => "Registro $query con éxito" . $status_course], 200);
-
-        
-
         } catch (Exception $e) {
             
             return return_exceptions($e);

@@ -2455,6 +2455,14 @@
                         "schema": {
                             "type": "string"
                         }
+                    },
+                    {
+                        "name": "password_confirmation",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
                     }
                 ],
                 "responses": {

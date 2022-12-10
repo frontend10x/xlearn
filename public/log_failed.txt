@@ -1,0 +1,6 @@
+
+
+10/12/2022 19:08:04
+message => No se encontró progreso
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/ProgressController.php
+line => 229

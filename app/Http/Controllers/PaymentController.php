@@ -219,11 +219,11 @@ class PaymentController extends Controller
             $amountUsers = count($users->original['response']['_embedded'][$key]);
 
             $calculateQuotas = $quotas - $amountUsers;
-            
-            if($calculateQuotas <= 0 )
-                throw new Exception('La empresa no tiene cupos disponibles');
 
             $payments['quotas'] = $calculateQuotas;
+
+            if($calculateQuotas <= 0 )
+                $payments['quotas'] = 0;
 
             return response()->json(["quotas" => $payments['quotas']], 200);
 

@@ -67,7 +67,7 @@ class EmailNotification extends Mailable
             
             case 'forgot_password':
 
-                $urlRecover = URL_BASE . '/api/' . API_VERSION . '/user/changestate?recover=' . $this->data;
+                $urlRecover = URL_FRONT . '/recuperacion/' . $this->data;
                 return $this->view('mails.forgot_password')->with('urlRecover', $urlRecover);
 
                 break;

@@ -43,4 +43,32 @@ class RolesController extends Controller
             return response()->json(["message" => $th->getMessage()], 500);
         }
     }
+
+    public static function showNameById($id)
+    {
+        try {
+
+            $rol = Roles::find($id);
+
+            if($rol)
+                return $rol->rol_name;
+
+        } catch (Exception $th) {
+            return response()->json(["message" => $th->getMessage()], 500);
+        }
+    }
+
+    public static function showIdByName($name)
+    {
+        try {
+
+            $rol = Roles::where('rol_name', $name)->first();
+
+            if($rol)
+                return $rol->id;
+
+        } catch (Exception $th) {
+            return response()->json(["message" => $th->getMessage()], 500);
+        }
+    }
 }

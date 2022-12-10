@@ -131,13 +131,7 @@
 </head>
 <body>
     <div id="section__title">
-        <h1>Bienvenido a <img src="https://dashboard.xlearn.com.co/iconos-xln/logo.png"/></h1>
-        <p>Tu registro ha sido exitoso</p>
-    </div>
-
-    <div id="section__banner">
-        <h2>¡Es el momento de crear, transformar y aprender con <span>Xlearn!</span></h2>
-        <p>Lleva tu empresa a otro nivel a través del entrenamiento de tus equipos, genera valor y desarrolla tus proyectos de innovación</p>
+        <p>Tu solicitu de reseteo de contraseña ha sido exitoso</p>
     </div>
 
     <div id="section__info">
