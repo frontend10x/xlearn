@@ -60,6 +60,8 @@ class ProgramController extends Controller
 
             $datosInsertar = Program::where("vimeo:id", $request->input("vimeo:id"))->first();
 
+            $id = $request->input("vimeo:id");
+            
             $data = [
                 "name" => $request->input("name"), 
                 "description" => $request->input("description"),

@@ -70,16 +70,14 @@ class ProgressController extends Controller
                             ->where('user_id', $request->input("user_id"))
                             ->where('lesson_id', $request->input("lesson_id"))->first();
             
-            $status = 0;
-
-            if( $request->input("percentage") >= 100 && ( $request->input("advanced_current_time") >= $request->input("total_video_time"))) 
-                $status = 1;
+            $status = $request->input("percentage") >= 100 ? 1 : 0;
             
             $data = [
                 "course_id" => $request->input("course_id"), 
                 "user_id" => $request->input("user_id"), 
                 "lesson_id" => $request->input("lesson_id"), 
-                "percentage_completion" => $request->input("percentage"), 
+                "percentage_completion" => $request->input("percentage"),
+                "current" => 1, 
                 "advanced_current_time" => $request->input("advanced_current_time"), 
                 "total_video_time" => $request->input("total_video_time"),
                 "status" => $status
@@ -88,12 +86,15 @@ class ProgressController extends Controller
             if (empty($consult))
                 $query = self::store($data);
             else
-                if($consult->percentage_completion < 100 ) $query = self::update($data, $consult);
+                if(!$consult->status){
+                    self::reset_user_lessons($data["course_id"], $data["user_id"], $data["lesson_id"]);
+                    $query = self::update($data, $consult);
+                }
 
             //Actualizar estado del curso del usuario
             $status_course = self::update_user_course( $request->input("course_id"), $request->input("user_id") );
 
-            $message = "Video terminado con anterioridad";
+            $message = "Lección terminada con anterioridad";
 
             if (isset($query)) {
                 $message = "Registro $query con éxito";
@@ -112,7 +113,7 @@ class ProgressController extends Controller
     public static function store($data)
     {
         try {
-
+            
             Progress::create($data);
 
             return 'Almacenado';
@@ -129,9 +130,29 @@ class ProgressController extends Controller
     {
         try {
 
+            save_file($data);
             $consult->update($data);
 
             return 'Actualizado';
+
+        } catch (Exception $e) {
+            
+            return return_exceptions($e);
+
+        }
+
+    }
+
+    public static function reset_user_lessons($course_id, $user_id, $lesson_id)
+    {
+        try {
+
+            $update_status = Progress::where('course_id', $course_id)
+                    ->where('user_id', $user_id)
+                    ->where('lesson_id', "<>", $lesson_id)
+                    ->update(['current' => 0]);
+
+            return $update_status;
 
         } catch (Exception $e) {
             
@@ -224,9 +245,6 @@ class ProgressController extends Controller
             if($users){
                 $consult = Progress::with('courses')->whereIn('user_id', $users)->get()->toArray();
             }
-
-            if(empty($consult))
-                throw new Exception("No se encontró progreso");
 
             return response()->json(["progress" => $consult], 200);
  

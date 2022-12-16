@@ -61,8 +61,8 @@ class CertificateController extends Controller
         try {
             
             $validate = $request->validate([
-                'user_id' => 'required|integer',
-                'course_id' => 'required|integer',
+                'user_id' => 'required|integer|exists:users,id',,
+                'course_id' => 'required|integer|exists:course,id',,
             ]);
 
             $user_id = $request->input("user_id");
