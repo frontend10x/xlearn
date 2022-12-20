@@ -2037,11 +2037,11 @@
                 "operationId": "3a8979d7a0af6bed1d61687f1788c6b5",
                 "parameters": [
                     {
-                        "name": "type_id",
+                        "name": "area",
                         "in": "query",
                         "required": true,
                         "schema": {
-                            "type": "number"
+                            "type": "string"
                         }
                     },
                     {
@@ -2176,11 +2176,11 @@
                 "operationId": "0e18312d48c4e96c2c65fdaaf4129666",
                 "parameters": [
                     {
-                        "name": "type_id",
+                        "name": "area",
                         "in": "query",
                         "required": true,
                         "schema": {
-                            "type": "number"
+                            "type": "string"
                         }
                     },
                     {

@@ -22,7 +22,6 @@ class CourseController extends Controller
             
             $dataInsert = [
                 "name" => $request->input("name"), 
-                "description" => $request->input("description"),
                 "state" => $request->input("state"), 
                 "free_video" => $request->input("free_video"), 
                 "video_path" => $request->input("video_path"),
@@ -33,6 +32,10 @@ class CourseController extends Controller
             ];
             if (!empty($request->input("file_path"))) {
                 $dataInsert['file_path'] = $request->input("file_path");
+            }
+
+            if (!empty($request->input("description"))) {
+                $dataInsert['description'] = $request->input("description");
             }
 
             $create_course = Course::create($dataInsert);
@@ -69,7 +72,6 @@ class CourseController extends Controller
 
             $data = [
                 "name" => $request->input("name"), 
-                "description" => $request->input("description"),
                 "state" => $request->input("state"), 
                 "free_video" => $request->input("free_video"), 
                 "video_path" => $request->input("video_path"),
@@ -81,12 +83,16 @@ class CourseController extends Controller
                 $data['area_id'] = $request->input("area_id");
             }
 
+            if (!empty($request->input("description"))) {
+                $data['description'] = $request->input("description");
+            }
+
             if (!empty($request->input("file_path"))) {
                 $data['file_path'] = $request->input("file_path");
             }
 
             if (empty($datosInsertar)) {
-                throw new Exception("No existe el id: " . $id . " para ser actualizado");
+                throw new Exception("No existe el id: " . $request->input("vimeo_id") . " para ser actualizado");
             }
 
             $update_course = $datosInsertar->update($data);            

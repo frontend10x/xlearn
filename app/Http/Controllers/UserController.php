@@ -40,7 +40,7 @@ class UserController extends Controller
     *     tags={"Users"},
     *     summary="Crear usuarios",
     *     security={{"bearer_token":{}}},
-    *     @OA\Parameter(name="type_id", required=true, in="query", @OA\Schema(type="number")),
+    *     @OA\Parameter(name="area", required=true, in="query", @OA\Schema(type="string")),
     *     @OA\Parameter(name="rol_id", required=true, in="query", @OA\Schema(type="number")),
     *     @OA\Parameter(name="link_facebook", in="query", @OA\Schema(type="string")),
     *     @OA\Parameter(name="link_google", in="query", @OA\Schema(type="string")),
@@ -104,7 +104,8 @@ class UserController extends Controller
                 'password_confirmation' => 'required',
                 'email' => 'required',
                 'subcompanies_id' => 'required|integer',
-                'name' => 'required',   
+                'name' => 'required', 
+                'area' => 'required',   
             ]);
 
             $request->request->add(['subcompanie_id' => $request->subcompanies_id]);
@@ -120,7 +121,7 @@ class UserController extends Controller
             }
 
             $dataInsert = [
-                "subcompanies_id" => $request->input("subcompanies_id"),
+                "subcompanies_id" => $request->input("subcompanies_id"), "area" => $request->input("area"),
                 "link_facebook" => $request->input("link_facebook"), "link_google" => $request->input("link_google"), "link_linkedin" => $request->input("link_linkedin"), "link_instagram" => $request->input("link_instagram"), "name" => $request->input("name"), "surname" => $request->input("surname"), "phone" => $request->input("phone"), "email" => $request->input("email"), "state" => 0, "password" => Hash::make($request->input("password"))
             ];
 
@@ -155,7 +156,7 @@ class UserController extends Controller
     *     tags={"Users"},
     *     summary="Editar usuarios",
     *     security={{"bearer_token":{}}},
-    *     @OA\Parameter(name="type_id", required=true, in="query", @OA\Schema(type="number")),
+    *     @OA\Parameter(name="area", required=true, in="query", @OA\Schema(type="string")),
     *     @OA\Parameter(name="rol_id", required=true, in="query", @OA\Schema(type="number")),
     *     @OA\Parameter(name="link_facebook", in="query", @OA\Schema(type="string")),
     *     @OA\Parameter(name="link_google", in="query", @OA\Schema(type="string")),
@@ -201,7 +202,7 @@ class UserController extends Controller
         try {
             $buscaActualiza = User::find($id);
             $dataUpdate = [
-                "type_id" => $request->input("type_id"), "rol_id" => $request->input("rol_id"), "link_facebook" => $request->input("link_facebook"), "link_google" => $request->input("link_google"), "link_linkedin" => $request->input("link_linkedin"), "link_instagram" => $request->input("link_instagram"), "name" => $request->input("name"), "surname" => $request->input("surname"), "phone" => $request->input("phone"), "email" => $request->input("email"), "state" => $request->input("state")
+                "area" => $request->input("area"), "rol_id" => $request->input("rol_id"), "link_facebook" => $request->input("link_facebook"), "link_google" => $request->input("link_google"), "link_linkedin" => $request->input("link_linkedin"), "link_instagram" => $request->input("link_instagram"), "name" => $request->input("name"), "surname" => $request->input("surname"), "phone" => $request->input("phone"), "email" => $request->input("email"), "state" => $request->input("state")
             ];
             // echo $request->input("subcompanies_id");die;
             $dataUpdate['subcompanies_id'] = !empty($request->input("subcompanies_id")) ? $request->input("subcompanies_id") : null;
