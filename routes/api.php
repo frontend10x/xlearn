@@ -161,6 +161,7 @@ Route::group(['middleware'=>'auth:api' ],function(){
     Route::post(API_VERSION . '/user/bulk_upload_users',[UserController::class, 'bulkUploadUsers']);
     Route::get(API_VERSION . '/user/sub_companies_withou_group',[UserController::class, 'showUserWithoutGroup']);
     Route::get(API_VERSION . '/sub_companies/users/{id}',[UserController::class, 'showUserSubCompanie']);
+    Route::delete(API_VERSION . '/user/delete/{id}',[UserController::class, 'delete']);
 
     // ---------------------------------------------------------------------
     // Progreso

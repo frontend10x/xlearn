@@ -20,6 +20,39 @@ define('ROLE_NAME', 'Integrante');
 class UserController extends Controller
 {
 
+    /**
+    * @OA\Get(
+    *     path="/api/v1/user/datauser/{id}",
+    *     tags={"Users"},
+    *     summary="Mostrar información de usuario",
+    *     security={{"bearer_token":{}}},
+    *     @OA\Parameter(name="id", required=true, in="path", @OA\Schema(type="number")),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Success.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={},
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
     public function datauser($id)
     {
         try {
@@ -156,6 +189,7 @@ class UserController extends Controller
     *     tags={"Users"},
     *     summary="Editar usuarios",
     *     security={{"bearer_token":{}}},
+    *     @OA\Parameter(name="id", required=true, in="path", @OA\Schema(type="number")),
     *     @OA\Parameter(name="area", required=true, in="query", @OA\Schema(type="string")),
     *     @OA\Parameter(name="rol_id", required=true, in="query", @OA\Schema(type="number")),
     *     @OA\Parameter(name="link_facebook", in="query", @OA\Schema(type="string")),
@@ -345,6 +379,57 @@ class UserController extends Controller
             
             header("Location:" . env('URL_FRONT') . "/login ", TRUE, 301);
             exit();
+            
+        } catch (Exception $e) {
+            return return_exceptions($e);
+        }
+    }
+
+    /**
+    * @OA\Delete(
+    *     path="/api/v1/user/delete/{id}",
+    *     tags={"Users"},
+    *     summary="Desactivar usuario",
+    *     security={{"bearer_token":{}}},
+    *     @OA\Parameter(name="id", required=true, in="path", @OA\Schema(type="number")),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Success.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={},
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
+    public function delete($id)
+    {
+        try {
+
+            $buscaActualiza = User::find($id);
+
+            if (empty($buscaActualiza)) 
+                throw new Exception("Ocurrio un error");
+            
+            $buscaActualiza->update(["state" => 0]);
+
+            return response()->json(["response" => $buscaActualiza], 200);
             
         } catch (Exception $e) {
             return return_exceptions($e);

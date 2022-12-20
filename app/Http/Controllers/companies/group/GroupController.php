@@ -263,8 +263,21 @@ class GroupController extends Controller
     public function assignment(Request $request, $group_id)
     {
         try {
+
+            $request->validate([
+                'user' => 'required|array|exists:users,id'
+            ]);
             
             $group = Group::find($group_id);
+
+            if(empty($group))
+                throw new Exception("No existe el grupo");
+
+            $leader = array_search($request->leader, $request->user);
+
+            if(empty($leader))
+                throw new Exception("El lider no existe en el grupo");
+
             $group->users()->sync($request->user);
             
             foreach ($request->user as $key) {
