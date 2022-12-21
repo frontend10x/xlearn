@@ -40,8 +40,13 @@ class EmailNotification extends Mailable
 
             case 'confirmation_register':
                 
-                $urlConfimation = URL_BASE . '/api/' . API_VERSION . '/user/changestate/' . $this->data;
-                return $this->view('mails.confirmation_register')->with('urlConfimation', $urlConfimation);
+                $urlConfimation = URL_BASE . '/api/' . API_VERSION . '/user/changestate/' . $this->data['id'];
+
+                return $this->view('mails.confirmation_register')->with('information', [
+                    'urlConfimation' => $urlConfimation,
+                    'email' => $this->data["email"],
+                    'password' => $this->data["password"]
+                ]);
                 
                 break;
             

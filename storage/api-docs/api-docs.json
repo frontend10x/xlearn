@@ -2515,7 +2515,7 @@
                             "application/json": {
                                 "schema": {
                                     "example": {
-                                        "message": "Contraseña modificada con éxito."
+                                        "message": "Se ha enviado un correo para la recuperación de la contraseña"
                                     }
                                 }
                             }

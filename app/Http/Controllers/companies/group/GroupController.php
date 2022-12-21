@@ -596,6 +596,8 @@ class GroupController extends Controller
                     $total_video_time += $pro['total_video_time'];
                 }
 
+                $total_video_time = $total_video_time ? $total_video_time : 1;
+
                 $percentage = round($advanced_current_time / $total_video_time * 100);
             }
 

@@ -63,7 +63,7 @@ class CertificateController extends Controller
             
             $validate = $request->validate([
                 'user_id' => 'required|integer|exists:users,id',
-                'course_id' => 'required|integer|exists:course,id',
+                'course_id' => 'required|integer|exists:courses,id',
             ]);
 
             $user_id = $request->input("user_id");
@@ -80,54 +80,80 @@ class CertificateController extends Controller
                                     ->where('course_id', $course_id)
                                     ->select('answer', 'question_id', 'updated_at')
                                     ->get()->toArray();
+            
 
             if(empty($userResponses))
                 throw new Exception("No se encontraron registros");
             
             $pointsInFavor = 0;
-            $finish_date = date('Y-m-d h:mm;ss');
-            $correctAnswers = [];
+            $finishDate = date('Y-m-d h:mm;ss');
+            $results = [];
 
             $correctAnswer = $this->getCorrectAnswers($course_id);
 
             foreach ($correctAnswer['questions'] as $key => $correct) {
-                
-                foreach ($userResponses as $userResponse) {
 
-                    if($correct['id'] === $userResponse['question_id']) {
+                $index = array_search($correct['id'], array_column($userResponses, 'question_id'));                
 
-                        if ($correct['answer'] === $userResponse['answer']) {
-                            
-                            $pointsInFavor++;
+                array_push($results, [
+                    "question_id" => $correct['id'],
+                    "answers" => [
+                        "user" => $userResponses[$index]['answer'],
+                        "correct" => $correct['answer']
+                    ]
+                ]);
 
-                            array_push($correctAnswers, [
-                                "question_id" => $userResponse['question_id'],
-                                "answer" => $userResponse['answer'],
-                            ]);
-                            
-
-                        }
-
-                    }
-
-                    $finish_date = $userResponse['updated_at'];
-
-                };
             };
+
+            $finishDate = $userResponses[count($userResponses) - 1]['updated_at'];
+
+            $pointsInFavor = self::calculate_percentage($results, $pointsInFavor);
 
             $percentage = round($pointsInFavor / $key * 100);
 
             if($percentage >= $correctAnswer['average_score']){
 
-                $consultCertificate = $this->store($user_id, $course_id, $percentage, $correctAnswers, $finish_date);
+                $consultCertificate = $this->store($user_id, $course_id, $percentage, $results, $finishDate);
 
             }else{
 
-                return response()->json(["status" => false, "message" => "Lo sentimos, su evaluación no fue aprobada."], 200);
+                return response()->json([
+                    "status" => false, 
+                    "message" => "Lo sentimos, su evaluación no fue aprobada.",
+                    "percentage" => $percentage
+                ], 200);
 
             }
 
-            return response()->json(["status" => true, "code" => $consultCertificate->code, "paths" => json_decode($consultCertificate->path), "results" => json_decode($consultCertificate->results)], 200);
+            return response()->json([
+                "status" => true, 
+                "code" => $consultCertificate->code, 
+                "paths" => json_decode($consultCertificate->path), 
+                "results" => json_decode($consultCertificate->results)
+            ], 200);
+
+        } catch (Exception $e) {
+            
+            return return_exceptions($e);
+
+        }
+    }
+
+    public static function calculate_percentage($results, $pointsInFavor)
+    {
+        try {
+            
+            foreach ($results as $result) {
+
+                if ($result['answers']['user'] === $result['answers']['correct']) {
+
+                    $pointsInFavor++;
+
+                }
+
+            }
+
+            return  $pointsInFavor;
 
         } catch (Exception $e) {
             

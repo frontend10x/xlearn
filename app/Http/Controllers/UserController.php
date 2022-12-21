@@ -138,7 +138,6 @@ class UserController extends Controller
                 'email' => 'required',
                 'subcompanies_id' => 'required|integer',
                 'name' => 'required', 
-                'area' => 'required',   
             ]);
 
             $request->request->add(['subcompanie_id' => $request->subcompanies_id]);
@@ -172,7 +171,13 @@ class UserController extends Controller
 
             $encryptedId = Crypt::encryptString($userCreated['id']);
 
-            Mail::to($request->input("email"))->send(new EmailNotification($encryptedId, 'confirmation_register'));
+            $dataMail = [
+                'id' => $encryptedId,
+                'email' => $request->input("email"),
+                'password' => $request->input("password")
+            ];
+
+            Mail::to($request->input("email"))->send(new EmailNotification($dataMail, 'confirmation_register'));
 
             return json_encode(["message" => "Registro almacenado con éxito", "id" => $userCreated['id']]);
 
@@ -449,7 +454,7 @@ class UserController extends Controller
     *             mediaType="application/json",
     *             @OA\Schema(
     *                  example={
-    *                      "message":"Contraseña modificada con éxito.",
+    *                      "message":"Se ha enviado un correo para la recuperación de la contraseña",
     *                 },
     *             ),
     * 
@@ -481,9 +486,9 @@ class UserController extends Controller
 
             $encryptedId = Crypt::encryptString($user->id);
             
-            Mail::to($request->input("email"))->send(new EmailNotification($encryptedId, 'forgot_password'));
+            $mail = Mail::to($request->input("email"))->send(new EmailNotification($encryptedId, 'forgot_password'));
 
-            return response()->json(["message" => "Se ha enviado un correo para la recuperación de la contraseña"], 200);
+            return response()->json(["message" => "Se ha enviado un correo para la recuperación de la contraseña " . $mail], 200);
         } catch (Exception $e) {
             return return_exceptions($e);
         }

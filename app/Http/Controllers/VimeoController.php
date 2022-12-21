@@ -10,6 +10,8 @@ define("CLIENT_ID", env("CLIENT_ID_VIMEO"));
 define("CLIENT_SECRET", env("CLIENT_SECRET_VIMEO"));
 define("ACCESS_TOKEN", env("ACCESS_TOKEN_VIMEO"));
 
+date_default_timezone_set('America/Bogota');
+
 class VimeoController extends Controller
 {
     public function __construct()
@@ -302,7 +304,7 @@ class VimeoController extends Controller
                 $video_information['picture'] = $item['pictures']['base_link'];
                 $video_information['course_id'] = $course_id;
                 $video_information['vimeo_id'] = $id[2];
-                $video_information['modified_time'] = $item['modified_time'];
+                $video_information['modified_time'] = date("Y-m-d h:i:s", strtotime($item['parent_folder']['modified_time']));
 
                 $request->request->add($video_information);
 
@@ -311,7 +313,7 @@ class VimeoController extends Controller
                 $lessons = json_decode($lessonsCreated, true);
 
                 if( isset( $lessons['status'] ) ){
-                    array_push($lessons_created, $item['name']);
+                    array_push($lessons_created, $item['name'] .' - '.$video_information['modified_time']);
                 }
 
                 save_file($lessons_created);

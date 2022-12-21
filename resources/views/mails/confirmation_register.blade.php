@@ -154,11 +154,19 @@
             <p>Contenido exclusivo según las necesidades de tus proyectos</p>
         </div>
     </div>
+    
+    <div>
+    <p>Puede iniciar sesión con los siguientes datos:</p>
+    <ol>
+        <li>Usuario: {{ $information['email'] }}</li>
+        <li>Contraseña: {{ $information['password'] }}</li>
+    </ol>
+    </div>
 
     <div class="content__button__activate">
-        <a class="xln__btn__email" href="{{ $urlConfimation }}" target="_blank" data-saferedirecturl="{{$urlConfimation}}">Activar ahora</a>
+        <a class="xln__btn__email" href="{{ $information['urlConfimation'] }}" target="_blank" data-saferedirecturl="{{$information['urlConfimation']}}">Activar ahora</a>
         <p>Para continuar explorando Xlearn</p>
-        <p> Si no funciona el boton, copie y pegue el siguiente enlace en un navegador: <br>{{ $urlConfimation }}.</p>
+        <p> Si no funciona el boton, copie y pegue el siguiente enlace en un navegador: <br>{{ $information['urlConfimation'] }}.</p>
     </div>
 </body>
 </html>
