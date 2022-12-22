@@ -153,14 +153,14 @@ class UserController extends Controller
             }
 
             $dataInsert = [
-                "subcompanies_id" => $request->input("subcompanies_id"), "area" => $request->input("area"),
+                "subcompanies_id" => $request->input("subcompanies_id"), "rol_id" =>  $request->input("rol_id"), "area" => $request->input("area"),
                 "link_facebook" => $request->input("link_facebook"), "link_google" => $request->input("link_google"), "link_linkedin" => $request->input("link_linkedin"), "link_instagram" => $request->input("link_instagram"), "name" => $request->input("name"), "surname" => $request->input("surname"), "phone" => $request->input("phone"), "email" => $request->input("email"), "state" => 0, "password" => Hash::make($request->input("password"))
             ];
 
             if (empty($request->input("rol_id"))) {
 
                 $rolId = RolesController::showIdByName(ROLE_NAME);
-
+                
                 if(empty($rolId))
                     throw new Exception('No se encontro un rol para '.ROLE_NAME.', por favor comuniquese con el administrador del sistema.');
 
