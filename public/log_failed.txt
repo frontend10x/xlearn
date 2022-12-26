@@ -14,3 +14,23 @@ line => 33
 message => Undefined array key "embed"
 file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
 line => 33
+
+26/12/2022 17:14:57
+message => The selected user is invalid.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+26/12/2022 17:15:52
+message => No existe el grupo
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/companies/group/GroupController.php
+line => 275
+
+26/12/2022 17:16:04
+message => El lider no existe en el grupo
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/companies/group/GroupController.php
+line => 280
+
+26/12/2022 17:18:17
+message => No es posible asignar a un administrador de empresa como lider
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/companies/group/GroupController.php
+line => 300

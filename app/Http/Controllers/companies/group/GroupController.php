@@ -19,6 +19,7 @@ use App\Http\Controllers\UserCoursesController;
 use App\Http\Controllers\ProgressController;
 use App\Http\Controllers\RolesController;
 
+define('ROLE_NAME', 'Empresa');
 
 class GroupController extends Controller
 {
@@ -275,7 +276,7 @@ class GroupController extends Controller
 
             $leader = array_search($request->leader, $request->user);
 
-            if(empty($leader))
+            if($leader == '')
                 throw new Exception("El lider no existe en el grupo");
 
             $group->users()->sync($request->user);
@@ -292,6 +293,12 @@ class GroupController extends Controller
 
                 if(empty($leader))
                     throw new Exception("Usuario lider no existe");
+                
+                $rolId = RolesController::showIdByName(ROLE_NAME);
+
+                //Validamos que el usuario no sea adminitrador de empreas
+                if($rolId == $leader->rol_id)
+                    throw new Exception("No es posible asignar a un administrador de empresa como lider");
 
                 $leader->update(['rol_id' => $rol->id]);
 
