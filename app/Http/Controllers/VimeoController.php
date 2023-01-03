@@ -304,7 +304,8 @@ class VimeoController extends Controller
                 $video_information['picture'] = $item['pictures']['base_link'];
                 $video_information['course_id'] = $course_id;
                 $video_information['vimeo_id'] = $id[2];
-                $video_information['modified_time'] = date("Y-m-d h:i:s", strtotime($item['parent_folder']['modified_time']));
+                $video_information['modified_time'] = $item['parent_folder']['modified_time'];
+                $video_information['vimeo_order'] = intval($item['name'][0]);
 
                 $request->request->add($video_information);
 

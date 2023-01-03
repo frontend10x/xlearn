@@ -30,6 +30,7 @@ class LessonController extends Controller
                 "video_path" => $request->input("video_path"),
                 "course_id" => $request->input("course_id"),
                 "vimeo_id" => $request->input("vimeo_id"),
+                "vimeo_order" => $request->input("vimeo_order"),
                 "player_embed_url" => $request->input("player_embed_url"),
                 "picture" => $request->input("picture"),
                 "modified_time" => $request->input("modified_time")
@@ -76,6 +77,7 @@ class LessonController extends Controller
                 "video_path" => $request->input("video_path"),
                 "course_id" => $request->input("course_id"),
                 "vimeo_id" => $request->input("vimeo_id"),
+                "vimeo_order" => $request->input("vimeo_order"),
                 "player_embed_url" => $request->input("player_embed_url"),
                 "picture" => $request->input("picture"),
                 "modified_time" => $request->input("modified_time")
@@ -232,7 +234,7 @@ class LessonController extends Controller
             //TODO debe sacarse del request, por defecto el valor es 10.
             $limit = $request->has('limit') ? intval($request->get('limit')) : 10;
 
-            $consult = Lesson::where('course_id', $courseId)->with('courses')->limit($limit)->offset(($offset - 1) * $limit)->orderBy('modified_time')->get()->toArray();
+            $consult = Lesson::where('course_id', $courseId)->with('courses')->limit($limit)->offset(($offset - 1) * $limit)->orderBy('vimeo_order')->get()->toArray();
 
             $nexOffset = $offset + 1;
             $previousOffset = ($offset > 1) ? $offset - 1 : 1;

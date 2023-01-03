@@ -157,7 +157,6 @@ class RegisterRequestController extends Controller
                 'name' => 'required',
                 'lastname' => 'required',
                 'email' => 'required',
-                'website' => 'required',
                 'size' => 'required',
                 'plan_id' => 'required|integer',
                 'quotas' => 'required|integer',

@@ -120,7 +120,8 @@ class CertificateController extends Controller
                 return response()->json([
                     "status" => false, 
                     "message" => "Lo sentimos, su evaluación no fue aprobada.",
-                    "percentage" => $percentage
+                    "percentage" => $percentage,
+                    "results" => $results
                 ], 200);
 
             }
