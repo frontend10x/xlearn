@@ -39,9 +39,9 @@ class CountryController extends Controller
     public function index(Request $request)
     {
         try {
-            $country = Country::all();
+            $country = Country::select('*')->orderBy("name")->get();
             return response()->json(["countries" => $country], 200);
-        } catch (Exception $th) {
+        } catch (Exception $e) {
             return return_exceptions($e);
         }
     }

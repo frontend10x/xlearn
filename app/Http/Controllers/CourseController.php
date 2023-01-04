@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Course;
 use App\Models\User;
+use App\Models\Lesson;
 use Exception;
 use Illuminate\Http\Request;
 
@@ -409,7 +410,24 @@ class CourseController extends Controller
             
             
             if(empty($consult))
-                throw new Exception("No se encontraron registros");
+                throw new Exception("No se encontraron registros ");
+
+
+            foreach ($consult->courses as $key => $value) {
+                
+                $courses[] = [
+                    'id' => $value['id'],
+                    'name' => $value['name'],
+                    'description' => $value['description'],
+                    'about_author' => $value['about_author'],
+                    'state' => $value['state'],
+                    'vimeo_id' => $value['vimeo_id'],
+                    'file_path' => $value['file_path'],
+                    'video_uri' => $value['video_uri'],
+                    'video_path' => $value['video_path'],
+                    'lessons:amount' => Lesson::where('course_id', $value['id'])->count()
+                ];
+            }
 
             $total = User::where('id', $userId)->with('courses')->first();
 
@@ -425,7 +443,7 @@ class CourseController extends Controller
                 "hc:previous"   => server_path() . '?limit=' . $limit . '&offset=' . $previousOffset,
                 "_rel"		=> "courses",
                 "_embedded" => array(
-                    "courses" => $consult->courses
+                    "courses" => $courses
                 )
             );
 

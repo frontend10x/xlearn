@@ -109,7 +109,7 @@ class CertificateController extends Controller
 
             $pointsInFavor = self::calculate_percentage($results, $pointsInFavor);
 
-            $percentage = round($pointsInFavor / $key * 100);
+            $percentage = round($pointsInFavor / count($correctAnswer['questions']) * 100);
 
             if($percentage >= $correctAnswer['average_score']){
 
@@ -118,7 +118,7 @@ class CertificateController extends Controller
             }else{
 
                 return response()->json([
-                    "status" => false, 
+                    "status" => true, 
                     "message" => "Lo sentimos, su evaluación no fue aprobada.",
                     "percentage" => $percentage,
                     "results" => $results

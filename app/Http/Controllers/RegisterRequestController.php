@@ -209,7 +209,7 @@ class RegisterRequestController extends Controller
 
             }
 
-            return response()->json(["message" => "Registro almacenado con éxito"], 200);
+            return response()->json(["message" => "Registro realizado con éxito. Revisa tu correo para confirma la cuenta. Ve a la casilla de correos no deseados en caso de no encontrarlo en tu bandeja de entrada"], 200);
 
         } catch (Exception $e) {
             return response()->json(["message" => $e->getMessage(), "line" => $e->getLine(), "file" => $e->getFile()], 500);
