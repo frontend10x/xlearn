@@ -13,23 +13,36 @@ class CountryController extends Controller
 
     /**
     * @OA\Get(
-    *     path="/api/v1/countries",
+    *     path="/api/v1/countries/list",
     *     summary="Mostrar Paises",
     *     tags={"Countries"},
     *     security={{"bearer_token":{}}},
     *     @OA\Response(
     *         response=200,
-    *         description="Mostrar todos los paises."
+    *         description="Mostrar todos los paises.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                       "countries": {
+    *                           {
+    *                               "id": 0,
+    *                               "name": ""
+    *                           },
+    *                         }
+    *                   }
+    *             )
+    *         )
     *     )
     * )
     */
     public function index(Request $request)
     {
         try {
-            $country = Country::all();
+            $country = Country::select('*')->orderBy("name")->get();
             return response()->json(["countries" => $country], 200);
-        } catch (Exception $th) {
-            return response()->json(["message" => $e->getMessage()], 500);
+        } catch (Exception $e) {
+            return return_exceptions($e);
         }
     }
 }

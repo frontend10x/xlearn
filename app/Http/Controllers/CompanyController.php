@@ -8,7 +8,7 @@ use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class companyController extends Controller
+class CompanyController extends Controller
 {
 
     public function index()
@@ -22,7 +22,7 @@ class companyController extends Controller
             }
             return response()->json(["company" => $dataCompany], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 
@@ -37,7 +37,12 @@ class companyController extends Controller
                 , "link_instagram" => $request->input("link_instagram")
                 , "website" => $request->input("website")
                 , "nit" => $request->input("nit")
-                ,"name" => $request->input("name"), "address" => $request->input("address"), "phone" => $request->input("phone"), "representative" => $request->input("representative"), "position" => $request->input("position"), "representative_cell" => $request->input("representative_cell"), "file_path" => $request->input("file_path")
+                ,"name" => $request->input("name"), 
+                "address" => $request->input("address"), 
+                "phone" => $request->input("phone"), 
+                "representative" => $request->input("representative"), 
+                "position" => $request->input("position"), 
+                "representative_cell" => $request->input("representative_cell"), "file_path" => $request->input("file_path")
             ];
             if (empty($empresa)) {
                 Companies::create($datosEmpresa);
@@ -48,7 +53,7 @@ class companyController extends Controller
             }
             return response()->json(["message" => $message], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 

@@ -19,7 +19,8 @@ class PlanController extends Controller
                 "name" => $request->input("name")
                 , "description" => $request->input("description")
                 , "price" => $request->input("price")
-                , "amount_people" => $request->input("amount_people")
+                , "amount_user" => $request->input("amount_user")
+                , "amount_time" => $request->input("amount_time")
                 , "state" => $request->input("state")
                 , "color_title" => $request->input("color_title")
                 , "color_border" => $request->input("color_border")
@@ -31,7 +32,7 @@ class PlanController extends Controller
             Plan::create($datosSubEmpresa);
             return response()->json(["message" => "Plan creado con éxito"], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
     public function edit(Request $request, $id)
@@ -42,7 +43,8 @@ class PlanController extends Controller
                 "name" => $request->input("name")
                 , "description" => $request->input("description")
                 , "price" => $request->input("price")
-                , "amount_people" => $request->input("amount_people")
+                , "amount_user" => $request->input("amount_user")
+                , "amount_time" => $request->input("amount_time")
                 , "state" => $request->input("state")
                 , "color_title" => $request->input("color_title")
                 , "color_border" => $request->input("color_border")
@@ -59,17 +61,52 @@ class PlanController extends Controller
 
             return response()->json(["message" => $message], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
+
+    /**
+    * @OA\Get(
+    *     path="/api/v1/plan/list",
+    *     summary="Mostrar Planes",
+    *     tags={"Plans"},
+    *     security={{"bearer_token":{}}},
+    *     @OA\Response(
+    *         response=200,
+    *         description="Mostrar todos los planes.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                       "plans": {
+    *                           {
+    *                               "id": 0,
+    *                               "name": "",
+    *                               "description": "",
+    *                               "price": "",
+    *                               "amount_user": "",
+    *                               "amount_time": "",
+    *                               "color_title": "",
+    *                               "color_border": ""
+    *                           },
+    *                         }
+    *                   }
+    *             )
+    *         )
+    *     )
+    * )
+    */
     public function index()
     {
         try {
-            return response()->json(["plan" => Plan::all()], 200);
+
+            $plans =  Plan::where('state', 1)->get();
+            return response()->json(["plans" =>$plans], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
+
     public function changestate(Request $request, $id)
     {
         try {
@@ -80,7 +117,7 @@ class PlanController extends Controller
             $buscaActualiza->update(["state" => $request->input("state")]);
             return response()->json(["message" => "Cambio de estado correctamente"], 200);
         } catch (Exception $e) {
-            return response()->json(["message" => $e->getMessage()], 500);
+            return return_exceptions($e);
         }
     }
 }

@@ -46,4 +46,19 @@ class User extends Authenticatable
         return $this->belongsto('App\Models\Roles', 'rol_id');
     }
 
+    public function typeUser(){
+        return $this->belongsto('App\Models\TypesUsers', 'type_id');
+    }
+    
+    public function diagnostic(){
+        return $this->hasMany('App\Models\Diagnostic', 'user_id');
+    }
+
+    public function courses(){
+        return $this->belongsToMany(Course::class,"user_course","user_id","course_id");
+    }
+
+    public function subCompanies(){
+        return $this->belongsto('App\Models\Sub_companies', "subcompanies_id");
+    }
 }

@@ -1,0 +1,17 @@
+{
+    "target": "{tipo de objetivo}",
+    "user_id": "{id usuario líder}",
+    "_rel": "identificador",
+    "answers": [
+        {
+            "{ identificador:_rel }" : "{nombre del área-programa-pregunta}",
+            "answer": "{En caso de que el _rel sea pregunta}",
+            "course": "{ id del curso relacionado }"
+        },
+        {	
+            "{ identificador:_rel }" : "{nombre del área-programa-pregunta}",
+            "answers": "{En caso de que el _rel sea pregunta}",
+            "course": "{ id del curso relacionado }"
+        }
+    ]
+}

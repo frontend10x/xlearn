@@ -6,20 +6,983 @@
     },
     "servers": [
         {
+            "url": "https://servicios.10xconsultores.org"
+        },
+        {
             "url": "http://127.0.0.1:8000"
+        },
+        {
+            "url": "https://servicios.asstiseguridadsocial.com"
         }
     ],
     "paths": {
-        "/api/v1/countries": {
+        "/api/v1/answer/store": {
+            "post": {
+                "tags": [
+                    "Answers"
+                ],
+                "summary": "Crear respuestas de usuario",
+                "operationId": "f0187c7633fe22b5fd552d74015abf47",
+                "parameters": [
+                    {
+                        "name": "evaluation_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "course_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "answers",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "[]"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Respuestas almacenadas con éxito."
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/area/list": {
+            "get": {
+                "tags": [
+                    "Areas"
+                ],
+                "summary": "Mostrar areas",
+                "operationId": "703dcd0fcbcfe64954149ec3ce0bb25b",
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todas las areas.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "response": {
+                                            "hc:length": 0,
+                                            "hc:total": 0,
+                                            "hc:offset": 0,
+                                            "hc:limit": 0,
+                                            "hc:next": "next page end-point ",
+                                            "hc:previous": "previous page end-point ",
+                                            "_rel": "areas",
+                                            "_embedded": {
+                                                "areas": [
+                                                    {
+                                                        "id": 0,
+                                                        "name": "",
+                                                        "description": "",
+                                                        "file_path": "",
+                                                        "state": 0,
+                                                        "created_at": "2022-06-11T23:21:42.000000Z",
+                                                        "updated_at": "2022-06-12T00:46:06.000000Z"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/certificate/generate": {
+            "post": {
+                "tags": [
+                    "Certificate"
+                ],
+                "summary": "Generar certificado",
+                "operationId": "25d2cdc545b3142b7c5327816043b021",
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "course_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "code": "UuuId",
+                                        "path": "path/code"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/certificate/download/{code}": {
+            "get": {
+                "tags": [
+                    "Certificate"
+                ],
+                "summary": "Descargar certificado",
+                "operationId": "d1f0720bfaa69fa1d1ffa38b73875cce",
+                "parameters": [
+                    {
+                        "name": "code",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/pdf": {}
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/certificate/show/{code}": {
+            "get": {
+                "tags": [
+                    "Certificate"
+                ],
+                "summary": "Visualizar certificado",
+                "operationId": "40c81275f46bd98371fc65b984ea8c0b",
+                "parameters": [
+                    {
+                        "name": "code",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/pdf": {}
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/contact_us/store": {
+            "post": {
+                "tags": [
+                    "Contact Us"
+                ],
+                "summary": "Contacto - Soporte",
+                "operationId": "32a3982892e1e4f380d25ef17de9e20c",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "phone",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "company",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "observation",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Registro almacenado con éxito."
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/content/list": {
+            "get": {
+                "tags": [
+                    "Content"
+                ],
+                "summary": "Mostrar Los tipos de contenidos",
+                "operationId": "5ddc247b95c8fd437171e96c7eefca74",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los tipos de contenidos.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "roles": [
+                                            {
+                                                "id": 0,
+                                                "name": ""
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/countries/list": {
             "get": {
                 "tags": [
                     "Countries"
                 ],
                 "summary": "Mostrar Paises",
-                "operationId": "6c92b3465f1bd90ec648c57e85c6ac53",
+                "operationId": "3c15a70369eb61421ed10bb25594ec6c",
                 "responses": {
                     "200": {
-                        "description": "Mostrar todos los paises."
+                        "description": "Mostrar todos los paises.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "countries": [
+                                            {
+                                                "id": 0,
+                                                "name": ""
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/course/list": {
+            "get": {
+                "tags": [
+                    "Courses"
+                ],
+                "summary": "Mostrar cursos",
+                "operationId": "02708c6cb845c5a82a34d5daf197c9a9",
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los cursos.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "response": {
+                                            "hc:length": 0,
+                                            "hc:total": 0,
+                                            "hc:offset": 0,
+                                            "hc:limit": 0,
+                                            "hc:next": "next page end-point ",
+                                            "hc:previous": "previous page end-point ",
+                                            "_rel": "course",
+                                            "_embedded": {
+                                                "course": [
+                                                    {
+                                                        "id": 0,
+                                                        "name": "",
+                                                        "description": "",
+                                                        "state": 0,
+                                                        "free_video": "",
+                                                        "file_path": "",
+                                                        "video_path": "",
+                                                        "area_id": 0,
+                                                        "programs_id": 0,
+                                                        "created_at": "2022-06-11T23:21:42.000000Z",
+                                                        "updated_at": "2022-06-12T00:46:06.000000Z",
+                                                        "areas": {
+                                                            "id": 0,
+                                                            "name": "",
+                                                            "description": "",
+                                                            "file_path": "",
+                                                            "state": 0,
+                                                            "created_at": "2022-06-11T23:21:42.000000Z",
+                                                            "updated_at": "2022-06-12T00:46:06.000000Z"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/course/show_area/{areaId}": {
+            "get": {
+                "tags": [
+                    "Courses"
+                ],
+                "summary": "Mostrar curso por areas",
+                "operationId": "bef255018c2e979d2db5045f9915def8",
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "areaId",
+                        "in": "path",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los cursos del area.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "response": {
+                                            "hc:length": 0,
+                                            "hc:total": 0,
+                                            "hc:offset": 0,
+                                            "hc:limit": 0,
+                                            "hc:next": "next page end-point ",
+                                            "hc:previous": "previous page end-point ",
+                                            "_rel": "course",
+                                            "_embedded": {
+                                                "course": [
+                                                    {
+                                                        "id": 0,
+                                                        "name": "",
+                                                        "description": "",
+                                                        "state": 0,
+                                                        "free_video": "",
+                                                        "file_path": "",
+                                                        "video_path": "",
+                                                        "area_id": 0,
+                                                        "programs_id": 0,
+                                                        "created_at": "2022-06-11T23:21:42.000000Z",
+                                                        "updated_at": "2022-06-12T00:46:06.000000Z",
+                                                        "areas": {
+                                                            "id": 0,
+                                                            "name": "",
+                                                            "description": "",
+                                                            "file_path": "",
+                                                            "state": 0,
+                                                            "created_at": "2022-06-11T23:21:42.000000Z",
+                                                            "updated_at": "2022-06-11T23:21:42.000000Z"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/course/show_user/{userId}": {
+            "get": {
+                "tags": [
+                    "Courses"
+                ],
+                "summary": "Mostrar curso por usuario",
+                "operationId": "fc67351613a36af84c2bbf2c54274ba6",
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "userId",
+                        "in": "path",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los cursos del usuario.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "response": {
+                                            "hc:length": 0,
+                                            "hc:total": 0,
+                                            "hc:offset": 0,
+                                            "hc:limit": 0,
+                                            "hc:next": "next page end-point ",
+                                            "hc:previous": "previous page end-point ",
+                                            "_rel": "courses",
+                                            "_embedded": {
+                                                "courses": [
+                                                    {
+                                                        "id": 0,
+                                                        "name": "",
+                                                        "description": "",
+                                                        "state": 0,
+                                                        "free_video": "",
+                                                        "file_path": "",
+                                                        "video_path": "",
+                                                        "area_id": 0,
+                                                        "programs_id": 0,
+                                                        "created_at": "2022-06-11T23:21:42.000000Z",
+                                                        "updated_at": "2022-06-12T00:46:06.000000Z"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/course/show/{id}": {
+            "get": {
+                "tags": [
+                    "Courses"
+                ],
+                "summary": "Mostrar curso por id",
+                "operationId": "7b1825bfee07e70fd49d2c8bec599a5b",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los cursos del usuario.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "response": {
+                                            "_rel": "course",
+                                            "_embedded": {
+                                                "course": []
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/diagnostic/store": {
+            "post": {
+                "tags": [
+                    "Diagnostic"
+                ],
+                "summary": "Almacenar diagnostico del lider",
+                "operationId": "c624d5dc0cdfedb7d92f4cc386caa5b5",
+                "parameters": [
+                    {
+                        "name": "target",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "_rel",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "answers",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "[]"
+                        }
+                    },
+                    {
+                        "name": "group_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Registro almacenado con éxito.",
+                                        "course_route": "[]"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/diagnostic/confirm_route/{diagnostic_id}": {
+            "patch": {
+                "tags": [
+                    "Diagnostic"
+                ],
+                "summary": "Confirmar diagnostico",
+                "operationId": "1a573a8890a77720c6eca49c03eabc0d",
+                "parameters": [
+                    {
+                        "name": "diagnostic_id",
+                        "in": "path",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Ruta confirmada correctamente"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/evaluation/course": {
+            "get": {
+                "tags": [
+                    "Evaluations"
+                ],
+                "summary": "Mostrar evaluación del curso",
+                "operationId": "01b927fed6da3c02f558202b852c5baf",
+                "parameters": [
+                    {
+                        "name": "course_id",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Mostrar evaluación del curso.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "response": {
+                                            "_rel": "evaluations",
+                                            "_embedded": {
+                                                "evaluations": []
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/export/sample_file": {
+            "get": {
+                "tags": [
+                    "Exports"
+                ],
+                "summary": "Exportar documento de muestra",
+                "operationId": "f87cc486ecb5652c74984dc651b25043",
+                "responses": {
+                    "200": {
+                        "description": "{Download Sample File}"
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
                     }
                 },
                 "security": [
@@ -62,10 +1025,1044 @@
                                         "message": "Acceso correcto",
                                         "token": "",
                                         "datosUsuario": {
+                                            "id": 0,
                                             "name": "",
                                             "email": "",
-                                            "phone": ""
+                                            "phone": "",
+                                            "diagnostic": {
+                                                "status": false
+                                            },
+                                            "roles": {
+                                                "id": 0,
+                                                "name": ""
+                                            },
+                                            "subcompanies_id": ""
                                         }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/lesson/show_course/{courseId}": {
+            "get": {
+                "tags": [
+                    "Lesson"
+                ],
+                "summary": "Mostrar lecciones por cursos",
+                "operationId": "1616449066a30c7221b0b9145d2325cb",
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "courseId",
+                        "in": "path",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos las lecciones del curso.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "response": {
+                                            "hc:length": 0,
+                                            "hc:total": 0,
+                                            "hc:offset": 0,
+                                            "hc:limit": 0,
+                                            "hc:next": "next page end-point ",
+                                            "hc:previous": "previous page end-point ",
+                                            "_rel": "course",
+                                            "_embedded": {
+                                                "course": [
+                                                    {
+                                                        "id": 0,
+                                                        "name": "",
+                                                        "description": "",
+                                                        "state": 0,
+                                                        "free_video": "",
+                                                        "file_path": "",
+                                                        "video_path": "",
+                                                        "area_id": 0,
+                                                        "programs_id": 0,
+                                                        "created_at": "2022-06-11T23:21:42.000000Z",
+                                                        "updated_at": "2022-06-12T00:46:06.000000Z",
+                                                        "areas": {
+                                                            "id": 0,
+                                                            "name": "",
+                                                            "description": "",
+                                                            "file_path": "",
+                                                            "state": 0,
+                                                            "created_at": "2022-06-11T23:21:42.000000Z",
+                                                            "updated_at": "2022-06-11T23:21:42.000000Z"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/payment/requests": {
+            "post": {
+                "tags": [
+                    "Payments"
+                ],
+                "summary": "Obtener detalles de pago",
+                "operationId": "c57fe89f203dcbfa1346855d6c34a985",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "amount_user",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "amount_time",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "subcompanie_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "coupon",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "payment_details": {
+                                            "amount": "",
+                                            "reference": "",
+                                            "currency": "",
+                                            "public_key": "",
+                                            "signature": "",
+                                            "coupon_status": "",
+                                            "plan": "{}"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/payment/approved_payment_status": {
+            "post": {
+                "tags": [
+                    "Payments"
+                ],
+                "summary": "Verificar cupos de empresa",
+                "operationId": "9cd8f6468b2eccf9c07ac46629f68b0d",
+                "parameters": [
+                    {
+                        "name": "subcompanie_id",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "quotas": 0
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/plan/list": {
+            "get": {
+                "tags": [
+                    "Plans"
+                ],
+                "summary": "Mostrar Planes",
+                "operationId": "ec79c94ffd1a354b936624da8849b002",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los planes.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "plans": [
+                                            {
+                                                "id": 0,
+                                                "name": "",
+                                                "description": "",
+                                                "price": "",
+                                                "amount_user": "",
+                                                "amount_time": "",
+                                                "color_title": "",
+                                                "color_border": ""
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/progress/store": {
+            "post": {
+                "tags": [
+                    "User course progress"
+                ],
+                "summary": "Almacenar progreso de usuario en sus cursos",
+                "operationId": "a103611e2a713bfefc32cf908c33dc4e",
+                "parameters": [
+                    {
+                        "name": "course_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "lesson_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "percentage",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "advanced_current_time",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "total_video_time",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Registro Almacenado/Actualizado con éxito"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/progress/user": {
+            "get": {
+                "tags": [
+                    "User course progress"
+                ],
+                "summary": "Consultar progreso de usuario",
+                "operationId": "69dd2b275ba3c46c00f8b67e4f5c8026",
+                "parameters": [
+                    {
+                        "name": "course_id",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "progress": "[]"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/questions/list": {
+            "get": {
+                "tags": [
+                    "Questions"
+                ],
+                "summary": "Mostrar preguntas para diagnostico",
+                "operationId": "2c72c25c32967bd45880053685fd1aac",
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos las preguntas.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "response": {
+                                            "hc:length": 0,
+                                            "hc:total": 0,
+                                            "hc:offset": 0,
+                                            "hc:limit": 0,
+                                            "hc:next": "next page end-point ",
+                                            "hc:previous": "previous page end-point ",
+                                            "_rel": "questions",
+                                            "_embedded": {
+                                                "questions": [
+                                                    {
+                                                        "id": 0,
+                                                        "question": "",
+                                                        "required": true,
+                                                        "options": {
+                                                            "id": 0,
+                                                            "response": ""
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/questions/list_faqs": {
+            "get": {
+                "tags": [
+                    "Questions"
+                ],
+                "summary": "Mostrar preguntas frecuentes",
+                "operationId": "08f2efddcc9acdccc7b8fdd6dcf55a8e",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos las preguntas frecuentes.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "response": {
+                                            "_rel": "faqs",
+                                            "_embedded": {
+                                                "faqs": []
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/register_requests/list": {
+            "get": {
+                "tags": [
+                    "Register request"
+                ],
+                "summary": "Mostrar solicitudes de registro",
+                "operationId": "936e415f074f7a3c5d8f27ef0641c65f",
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todas los solicitudes."
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/register_requests/store": {
+            "post": {
+                "tags": [
+                    "Register request"
+                ],
+                "summary": "Crear solicitudes de registro",
+                "operationId": "1ba777f1c5f4b36ad97e4f280d9843ab",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "lastname",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "company",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "website",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "country",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "content",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "plan_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "quotas",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "observation",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "schema": {
+                            "type": "password"
+                        }
+                    },
+                    {
+                        "name": "password_confirmation",
+                        "in": "query",
+                        "schema": {
+                            "type": "password"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Registro almacenado con éxito."
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/register_requests/edit/{{id}}": {
+            "put": {
+                "tags": [
+                    "Register request"
+                ],
+                "summary": "Actualizar solicitudes de registro",
+                "operationId": "d7cdb5f06400ee91131981daff3b4a85",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "lastname",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "company",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "website",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "country",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "content",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "plan_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "quotas",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "observation",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Registro actualizado con éxito."
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/roles/list": {
+            "get": {
+                "tags": [
+                    "Roles"
+                ],
+                "summary": "Mostrar Roles de Usuarios",
+                "operationId": "ea7fe64e1ebfa9569d8565cbdee34b9b",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los roles de usuarios.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "roles": [
+                                            {
+                                                "id": 0,
+                                                "name": ""
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/size/list": {
+            "get": {
+                "tags": [
+                    "Company Size"
+                ],
+                "summary": "Mostrar Los Tamaños de empresas",
+                "operationId": "0b62aecdd49e5837d74d02ac86a9a0df",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los tamaños de empresas.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "roles": [
+                                            {
+                                                "id": 0,
+                                                "range": "",
+                                                "tag": ""
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/types_users/list": {
+            "get": {
+                "tags": [
+                    "Type Users"
+                ],
+                "summary": "Mostrar Tipos de Usuarios",
+                "operationId": "fbe9eb12d5f6cf769ace80c65d4d571d",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los tipos de usuarios.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "types_users": [
+                                            {
+                                                "id": 0,
+                                                "name": ""
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/user/datauser/{id}": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Mostrar información de usuario",
+                "operationId": "cc860d7a017161828ffab13bc108f88a",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": []
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
                                     }
                                 }
                             }
@@ -88,8 +2085,100 @@
                 "operationId": "3a8979d7a0af6bed1d61687f1788c6b5",
                 "parameters": [
                     {
+                        "name": "area",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "rol_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "link_facebook",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "link_google",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "link_linkedin",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "link_instagram",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "surname",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "phone",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
                         "name": "email",
-                        "in": "query"
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "subcompanies_id",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "schema": {
+                            "type": "password"
+                        }
+                    },
+                    {
+                        "name": "password_confirmation",
+                        "in": "query",
+                        "schema": {
+                            "type": "password"
+                        }
                     }
                 ],
                 "responses": {
@@ -99,14 +2188,164 @@
                             "application/json": {
                                 "schema": {
                                     "example": {
-                                        "message": "Registro almacenado con éxito."
+                                        "message": "Registro almacenado con éxito.",
+                                        "id": 0
                                     }
                                 }
                             }
                         }
                     },
-                    "default": {
-                        "description": "Ha ocurrido un error."
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/user/edit/{id}": {
+            "put": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Editar usuarios",
+                "operationId": "0e18312d48c4e96c2c65fdaaf4129666",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "area",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "rol_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "link_facebook",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "link_google",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "link_linkedin",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "link_instagram",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "surname",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "phone",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "subcompanies_id",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "schema": {
+                            "type": "password"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Usuario actualizado con éxto.",
+                                        "id": 0
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
                     }
                 },
                 "security": [
@@ -123,12 +2362,859 @@
                 ],
                 "summary": "Mostrar usuarios",
                 "operationId": "564a4398f7da5993c9e7719e6cd39305",
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
                 "responses": {
                     "200": {
-                        "description": "Mostrar todos los usuarios."
+                        "description": "Mostrar todos los usuarios.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "response": {
+                                            "hc:length": 0,
+                                            "hc:total": 0,
+                                            "hc:offset": 0,
+                                            "hc:limit": 0,
+                                            "hc:next": "next page end-point ",
+                                            "hc:previous": "previous page end-point ",
+                                            "_rel": "users",
+                                            "_embedded": {
+                                                "users": [
+                                                    {
+                                                        "id": 0,
+                                                        "name": "",
+                                                        "lastname": "",
+                                                        "company": "",
+                                                        "email": "",
+                                                        "website": "",
+                                                        "size": 0,
+                                                        "country_id": 0,
+                                                        "content": "",
+                                                        "plan_id": 0,
+                                                        "quotas": 0,
+                                                        "observation": "",
+                                                        "created_at": "2022-06-11T23:21:42.000000Z",
+                                                        "updated_at": "2022-06-12T00:46:06.000000Z",
+                                                        "countries": {
+                                                            "id": 0,
+                                                            "name": ""
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     },
-                    "default": {
-                        "description": "Ha ocurrido un error."
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/user/delete/{id}": {
+            "delete": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Desactivar usuario",
+                "operationId": "87ca92f9a9248e8acd061ec4848a433a",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": []
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/user/forgot_password": {
+            "post": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Olvido su contraseña",
+                "operationId": "bf33784f1e77dbc2d3d7f518e26186ce",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Se ha enviado un correo para la recuperación de la contraseña"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/user/recover_password/{id}": {
+            "put": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "recuperar contraseña",
+                "operationId": "3099fdb87d1323d7ed4f476e843a9876",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "password_confirmation",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Contraseña modificada con éxito."
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/user/change_password": {
+            "put": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Cambiar contraseña",
+                "operationId": "bf5db1abf8020360449135b0699a76dc",
+                "parameters": [
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "old_password",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Contraseña modificada con éxito."
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/user/bulk_upload_users": {
+            "post": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Carga masiva de usuarios",
+                "operationId": "4ff210feb3beb1bca0910ddc290d0c33",
+                "parameters": [
+                    {
+                        "name": "file",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "file"
+                        }
+                    },
+                    {
+                        "name": "subcompanies_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Usuarios cargados correctamente"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/user/sub_companies_withou_group": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Mostrar usuarios de la empresa sin grupo",
+                "operationId": "c063012ce21483cf985e4c045df2c529",
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "subcompanies_id",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios de la empresa sin grupo.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "response": {
+                                            "hc:length": 0,
+                                            "hc:total": 0,
+                                            "hc:offset": 0,
+                                            "hc:limit": 0,
+                                            "hc:next": "next page end-point ",
+                                            "hc:previous": "previous page end-point ",
+                                            "_rel": "users",
+                                            "_embedded": {
+                                                "users": [
+                                                    {
+                                                        "id": 0,
+                                                        "name": "",
+                                                        "lastname": "",
+                                                        "company": "",
+                                                        "email": "",
+                                                        "website": "",
+                                                        "size": 0,
+                                                        "country_id": 0,
+                                                        "content": "",
+                                                        "plan_id": 0,
+                                                        "quotas": 0,
+                                                        "observation": "",
+                                                        "created_at": "2022-06-11T23:21:42.000000Z",
+                                                        "updated_at": "2022-06-12T00:46:06.000000Z",
+                                                        "sub_companies": []
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/sub_companies/users/{id}": {
+            "get": {
+                "tags": [
+                    "Sub Companies"
+                ],
+                "summary": "Mostrar usuarios de la empresa",
+                "operationId": "3a44bc1ced426bedcdb4e3c86cf97fae",
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios de la empresa.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "response": {
+                                            "hc:length": 0,
+                                            "hc:total": 0,
+                                            "hc:offset": 0,
+                                            "hc:limit": 0,
+                                            "hc:next": "next page end-point ",
+                                            "hc:previous": "previous page end-point ",
+                                            "_rel": "users",
+                                            "_embedded": {
+                                                "users": [
+                                                    {
+                                                        "id": 0,
+                                                        "name": "",
+                                                        "lastname": "",
+                                                        "company": "",
+                                                        "email": "",
+                                                        "website": "",
+                                                        "size": 0,
+                                                        "country_id": 0,
+                                                        "content": "",
+                                                        "plan_id": 0,
+                                                        "quotas": 0,
+                                                        "observation": "",
+                                                        "created_at": "2022-06-11T23:21:42.000000Z",
+                                                        "updated_at": "2022-06-12T00:46:06.000000Z",
+                                                        "sub_companies": []
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/group/store": {
+            "post": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "Crear grupo",
+                "operationId": "a48a3d0c9085c6f087c67631801078e3",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "description",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "file_path",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "subcompanies_id",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Registro almacenado con éxito."
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/group/list": {
+            "get": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "Mostrar grupos de usuarios",
+                "operationId": "cc898cf90320d46d7b543fd1c9e2da2b",
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los grupos de usuarios.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "response": {
+                                            "hc:length": 0,
+                                            "hc:total": 0,
+                                            "hc:offset": 0,
+                                            "hc:limit": 0,
+                                            "hc:next": "next page end-point ",
+                                            "hc:previous": "previous page end-point ",
+                                            "_rel": "users",
+                                            "_embedded": {
+                                                "groups": [
+                                                    {
+                                                        "id": 0,
+                                                        "name": "",
+                                                        "description": "",
+                                                        "subcompanies_id": ""
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/groupuser/assignment/{group_id}": {
+            "post": {
+                "tags": [
+                    "User groups"
+                ],
+                "summary": "Asignación de usuarios a grupo",
+                "operationId": "7f9cc603c3feae373c02ad1c0eb7840f",
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "[]"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Usuarios asignados a grupo con éxito."
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/groupuser/list_group_users/{group_id}": {
+            "get": {
+                "tags": [
+                    "User groups"
+                ],
+                "summary": "Listar los usuarios que pertenecen al grupo",
+                "operationId": "7ba11129f519a5d2da2dc11a0caba8f7",
+                "parameters": [
+                    {
+                        "name": "group_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "users": "[]"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/group/list_company_group/{subcompanie_id}": {
+            "get": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "Mostrar los grupos de la empresa",
+                "operationId": "cb4d0cd5a10883db0505011faad8a0ac",
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "subcompanie_id",
+                        "in": "path",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los grupos de la empresa.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "response": {
+                                            "hc:length": 0,
+                                            "hc:total": 0,
+                                            "hc:offset": 0,
+                                            "hc:limit": 0,
+                                            "hc:next": "next page end-point ",
+                                            "hc:previous": "previous page end-point ",
+                                            "_rel": "users",
+                                            "_embedded": {
+                                                "groups": [
+                                                    {
+                                                        "id": 0,
+                                                        "name": "",
+                                                        "description": "",
+                                                        "subcompanies_id": ""
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
                     }
                 },
                 "security": [
@@ -140,6 +3226,42 @@
         }
     },
     "components": {
+        "responses": {
+            "200": {
+                "description": "Success.",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "example": {
+                                "message": "Usuario removido de grupo con éxito."
+                            }
+                        }
+                    }
+                }
+            },
+            "500": {
+                "description": "Failed",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "example": {
+                                "message": "Mensaje de error"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "parameters": {
+            "user": {
+                "name": "user",
+                "in": "query",
+                "required": true,
+                "schema": {
+                    "type": "number"
+                }
+            }
+        },
         "securitySchemes": {
             "bearer_token": {
                 "type": "apiKey",
