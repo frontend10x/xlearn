@@ -15,7 +15,8 @@ use App\Mail\EmailNotification;
 use App\Imports\UsersImport;
 use Maatwebsite\Excel\Facades\Excel;
 
-define('ROLE_NAME', 'Integrante');
+define('MEMBERS_ROLE', 'Integrante');
+define('COMPANY_ROLE', 'Empresa');
 
 class UserController extends Controller
 {
@@ -159,10 +160,10 @@ class UserController extends Controller
 
             if (empty($request->input("rol_id"))) {
 
-                $rolId = RolesController::showIdByName(ROLE_NAME);
+                $rolId = RolesController::showIdByName(MEMBERS_ROLE);
                 
                 if(empty($rolId))
-                    throw new Exception('No se encontro un rol para '.ROLE_NAME.', por favor comuniquese con el administrador del sistema.');
+                    throw new Exception('No se encontro un rol para '.MEMBERS_ROLE.', por favor comuniquese con el administrador del sistema.');
 
                 $dataInsert['rol_id'] = $rolId;
             }
@@ -486,9 +487,9 @@ class UserController extends Controller
 
             $encryptedId = Crypt::encryptString($user->id);
             
-            $mail = Mail::to($request->input("email"))->send(new EmailNotification($encryptedId, 'forgot_password'));
+            Mail::to($request->input("email"))->send(new EmailNotification($encryptedId, 'forgot_password'));
 
-            return response()->json(["message" => "Se ha enviado un correo para la recuperación de la contraseña " . $mail], 200);
+            return response()->json(["message" => "Se ha enviado un correo para la recuperación de la contraseña"], 200);
         } catch (Exception $e) {
             return return_exceptions($e);
         }
@@ -784,15 +785,19 @@ class UserController extends Controller
             //TODO debe sacarse del request, por defecto el valor es 10.
             $limit = $request->has('limit') ? intval($request->get('limit')) : 'all';
 
+            $bussinessRolId = RolesController::showIdByName(COMPANY_ROLE);
+
             if($limit != 'all' && $limit > 0)
                 $consult = User::with('subCompanies')
                                 ->where('subcompanies_id', $request->get('subcompanies_id'))
                                 ->where('group_id', NULL)
+                                ->whereNotIn('rol_id', [$bussinessRolId])
                                 ->limit($limit)->offset(($offset - 1) * $limit)
                                 ->get()->toArray();
             else
                 $consult = User::with('subCompanies')
                                 ->where('subcompanies_id', $request->get('subcompanies_id'))
+                                ->whereNotIn('rol_id', [$bussinessRolId])
                                 ->where('group_id', NULL)
                                 ->get()->toArray();
             

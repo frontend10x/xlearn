@@ -1,12 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
 
 use App\Models\Course;
 use App\Models\User;
 use App\Models\Lesson;
 use Exception;
-use Illuminate\Http\Request;
 
 class CourseController extends Controller
 {
@@ -412,8 +412,11 @@ class CourseController extends Controller
             if(empty($consult))
                 throw new Exception("No se encontraron registros ");
 
-
             foreach ($consult->courses as $key => $value) {
+
+                $request->merge(['user_id' => $userId, 'course_id' => $value['id']]);
+
+                $progress = ProgressController::check_user_progress($request);
                 
                 $courses[] = [
                     'id' => $value['id'],
@@ -425,7 +428,8 @@ class CourseController extends Controller
                     'file_path' => $value['file_path'],
                     'video_uri' => $value['video_uri'],
                     'video_path' => $value['video_path'],
-                    'lessons:amount' => Lesson::where('course_id', $value['id'])->count()
+                    'lessons:amount' => Lesson::where('course_id', $value['id'])->count(),
+                    'progress:porcentage' => progress($progress)
                 ];
             }
 

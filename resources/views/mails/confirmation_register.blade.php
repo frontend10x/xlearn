@@ -156,7 +156,7 @@
     </div>
     
     <div>
-    <p>Puede iniciar sesión con los siguientes datos:</p>
+    <p>Puedes iniciar sesión con los siguientes datos:</p>
     <ol>
         <li>Usuario: {{ $information['email'] }}</li>
         <li>Contraseña: {{ $information['password'] }}</li>

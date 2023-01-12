@@ -128,6 +128,34 @@ if (!function_exists('calculate_amount_in_cents')) {
     }
 }
 
+if (!function_exists('progress')) {
+    function progress($progress){
+
+        $percentage = 0;
+        $percentage_completion = 0;
+        $advanced_current_time = 0;
+        $total_video_time = 0;
+
+        if (isset($progress->original['progress'])){
+
+            $result = $progress->original['progress'];
+
+            foreach ($result as $pro) {
+                $percentage_completion += $pro['percentage_completion'];
+                $advanced_current_time += $pro['advanced_current_time'];
+                $total_video_time += $pro['total_video_time'];
+            }
+
+            $total_video_time = $total_video_time ? $total_video_time : 1;
+
+            $percentage = round($advanced_current_time / $total_video_time * 100);
+
+        }
+        
+        return $percentage;
+    }
+}
+
 if(!function_exists('validate_environment')){
     function validate_environment(){
 

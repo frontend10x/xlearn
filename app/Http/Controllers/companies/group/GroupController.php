@@ -517,7 +517,7 @@ class GroupController extends Controller
                 throw new Exception("No existen grupos pertenecientes a la compañia");
             }
 
-            $groups = $this->formsGroups($consult);
+            $groups = $this->formsGroups($request, $consult);
 
             $groups = array(
                 "hc:length" => count($consult), //Es la longitud del array a devolver
@@ -537,7 +537,7 @@ class GroupController extends Controller
         }
     }
 
-    public function formsGroups($consult)
+    public function formsGroups($request, $consult)
     {
         try {
 
@@ -545,18 +545,9 @@ class GroupController extends Controller
             
             foreach ($consult as $group) {
 
-                $leader = '';
-
-                foreach ($group['users'] as $user) {
-
-                    $rol_name = RolesController::showNameById($user['rol_id']);
-
-                    if($rol_name == 'Lider')
-                        $leader = $user['name'];
-                    
-                }
-
                 $progress = self::getGroupProgress($group);
+
+                $users = $this->formsUsers($request, $group);
 
                 $group = [
                     'id' => $group['id'],
@@ -564,9 +555,9 @@ class GroupController extends Controller
                     'description' => $group['description'],
                     'subcompanies_id' => $group['subcompanies_id'],
                     'created_at' => $group['created_at'],
-                    'leader' => $leader,
+                    'leader' => $users['leader'],
                     'progress:porcentage' => $progress,
-                    'users' => $group['users']
+                    'users' => $users['users']
                 ];
 
                 $groups[] = $group;
@@ -579,36 +570,75 @@ class GroupController extends Controller
         }
     }
 
+    public function formsUsers($request, $group)
+    {
+        try {
+
+            $leader = '';
+            $users = [];
+            
+            foreach ($group['users'] as $user) {
+
+                $rol_name = RolesController::showNameById($user['rol_id']);
+
+                if($rol_name == 'Lider')
+                    $leader = $user['name'];
+
+                $request->merge(['user_id' => $user['id']]);
+
+                $user_progress = ProgressController::check_user_progress($request);
+
+                $users[] = [
+                    "id" => $user['id'],
+                    "name" => $user['name'],
+                    "email" => $user['email'],
+                    "phone" => $user['phone'],
+                    "state" => $user['state'],
+                    "rol_id" => $user['rol_id'],
+                    "area" => $user['area'],
+                    "subcompanies_id" => $user['subcompanies_id'],
+                    'progress:porcentage' => progress($user_progress)
+                ];
+                
+            }
+
+            return ['users' => $users, 'leader' => $leader];
+
+        } catch (Exception $e) {
+            return return_exceptions($e);
+        }
+    }
+
     public static function getGroupProgress($group)
     {
         try {
 
             $request = new Request;
-            $percentage = 0;
-            $percentage_completion = 0;
-            $advanced_current_time = 0;
-            $total_video_time = 0;
+            // $percentage = 0;
+            // $percentage_completion = 0;
+            // $advanced_current_time = 0;
+            // $total_video_time = 0;
 
             $users_ids = UserCoursesController::search_users($group['id']);
             
             $progress = ProgressController::check_user_progress($request, $users_ids);
 
-            if (isset($progress->original['progress'])){
+            // if (isset($progress->original['progress'])){
 
-                $result = $progress->original['progress'];
+            //     $result = $progress->original['progress'];
 
-                foreach ($result as $pro) {
-                    $percentage_completion += $pro['percentage_completion'];
-                    $advanced_current_time += $pro['advanced_current_time'];
-                    $total_video_time += $pro['total_video_time'];
-                }
+            //     foreach ($result as $pro) {
+            //         $percentage_completion += $pro['percentage_completion'];
+            //         $advanced_current_time += $pro['advanced_current_time'];
+            //         $total_video_time += $pro['total_video_time'];
+            //     }
 
-                $total_video_time = $total_video_time ? $total_video_time : 1;
+            //     $total_video_time = $total_video_time ? $total_video_time : 1;
 
-                $percentage = round($advanced_current_time / $total_video_time * 100);
-            }
+            //     $percentage = round($advanced_current_time / $total_video_time * 100);
+            // }
 
-            return $percentage;
+            return progress($progress);
 
         } catch (Exception $e) {
             return return_exceptions($e);
