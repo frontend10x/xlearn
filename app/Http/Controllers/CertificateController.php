@@ -60,7 +60,6 @@ class CertificateController extends Controller
         
         try {
             
-            
             $validate = $request->validate([
                 'user_id' => 'required|integer|exists:users,id',
                 'course_id' => 'required|integer|exists:courses,id',

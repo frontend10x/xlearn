@@ -31,7 +31,10 @@ class VimeoController extends Controller
 
             $response = $client->request('/me/projects', array(), 'GET');
 
+            //$response = $client->request('/users/177726805/projects/13634950/videos', array(), 'GET');
+
             $arrayData = $response['body']['data'];
+
 
             foreach ($arrayData as $key => $value) {
 
@@ -290,6 +293,8 @@ class VimeoController extends Controller
             $videos = $client->request($uri_video, array(), 'GET');
             $video_information = [];
 
+            save_file($uri_video);
+
             $data_videos = $videos['body']['data'];
 
             $lessons_created = [];
@@ -300,6 +305,7 @@ class VimeoController extends Controller
 
                 $video_information['player_embed_url'] = $item['player_embed_url'];
                 $video_information['name'] = $item['name'];
+                $video_information['duration'] = $item['duration'];
                 $video_information['description'] = $item['description'];
                 $video_information['picture'] = $item['pictures']['base_link'];
                 $video_information['course_id'] = $course_id;

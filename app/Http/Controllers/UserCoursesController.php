@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Diagnostic;
 use App\Models\User;
 use App\Models\Course;
+use App\Models\User_course;
+
 use Illuminate\Support\Facades\DB;
 use Exception;
 use App\Mail\EmailNotification;
@@ -120,6 +122,21 @@ class UserCoursesController extends Controller
             
             return return_exceptions($e);
 
+        }
+    }
+
+    public static function getUsersCourses($users)
+    {
+        try {
+                            
+            $usersCourse = DB::table('user_course')->whereIn('user_id', $users)->get();
+
+            return $usersCourse;
+
+        } catch (Exception $e) {
+
+            return return_exceptions($e);
+            
         }
     }
 }

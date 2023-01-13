@@ -18,6 +18,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\UserCoursesController;
 use App\Http\Controllers\ProgressController;
 use App\Http\Controllers\RolesController;
+use App\Http\Controllers\LessonController;
+
 
 define('ROLE_NAME', 'Empresa');
 
@@ -588,6 +590,9 @@ class GroupController extends Controller
 
                 $user_progress = ProgressController::check_user_progress($request);
 
+                $userCourse = User::where('id', $user['id'])->with('courses')->get()->first();
+                $total_video_time = LessonController::getTotalDuration(get_ids($userCourse->courses, 'id'));
+
                 $users[] = [
                     "id" => $user['id'],
                     "name" => $user['name'],
@@ -597,7 +602,7 @@ class GroupController extends Controller
                     "rol_id" => $user['rol_id'],
                     "area" => $user['area'],
                     "subcompanies_id" => $user['subcompanies_id'],
-                    'progress:porcentage' => progress($user_progress)
+                    'progress:porcentage' => progress($user_progress, $total_video_time),
                 ];
                 
             }
@@ -614,31 +619,18 @@ class GroupController extends Controller
         try {
 
             $request = new Request;
-            // $percentage = 0;
-            // $percentage_completion = 0;
-            // $advanced_current_time = 0;
-            // $total_video_time = 0;
 
             $users_ids = UserCoursesController::search_users($group['id']);
             
             $progress = ProgressController::check_user_progress($request, $users_ids);
 
-            // if (isset($progress->original['progress'])){
+            $usersCourse = UserCoursesController::getUsersCourses($users_ids);
 
-            //     $result = $progress->original['progress'];
+            $coursesIds = get_ids(json_decode($usersCourse, true), 'course_id');
 
-            //     foreach ($result as $pro) {
-            //         $percentage_completion += $pro['percentage_completion'];
-            //         $advanced_current_time += $pro['advanced_current_time'];
-            //         $total_video_time += $pro['total_video_time'];
-            //     }
+            $total_video_time = LessonController::getTotalDuration($coursesIds);
 
-            //     $total_video_time = $total_video_time ? $total_video_time : 1;
-
-            //     $percentage = round($advanced_current_time / $total_video_time * 100);
-            // }
-
-            return progress($progress);
+            return progress($progress, $total_video_time);
 
         } catch (Exception $e) {
             return return_exceptions($e);

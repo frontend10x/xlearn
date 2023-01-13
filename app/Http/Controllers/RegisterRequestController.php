@@ -140,11 +140,6 @@ class RegisterRequestController extends Controller
                 throw new Exception("Las contraseñas no coinciden");
             }
 
-            $subCompany = Sub_companies::where("name",$request->input("company"))->first();
-            if(!empty($subCompany)){
-                throw new Exception("La compañia ya se encuentra registrada");
-            }
-
             $user = User::where("email", $request->input("email"))->first();
             if (!empty($consult)) {
                 throw new Exception("El usuario ya se encuentra registrado");
@@ -160,7 +155,8 @@ class RegisterRequestController extends Controller
                 'size' => 'required',
                 'plan_id' => 'required|integer',
                 'quotas' => 'required|integer',
-                'company' => 'required'
+                'company' => 'required|unique:sub_companies,name',
+                'nit' => 'required|unique:sub_companies',
             ]);
 
             // Creamos el array para insertar

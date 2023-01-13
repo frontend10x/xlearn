@@ -33,7 +33,8 @@ class LessonController extends Controller
                 "vimeo_order" => $request->input("vimeo_order"),
                 "player_embed_url" => $request->input("player_embed_url"),
                 "picture" => $request->input("picture"),
-                "modified_time" => $request->input("modified_time")
+                "modified_time" => $request->input("modified_time"),
+                "duration" => $request->input("duration")
             ];
 
             Lesson::create($datosInsert);
@@ -80,7 +81,8 @@ class LessonController extends Controller
                 "vimeo_order" => $request->input("vimeo_order"),
                 "player_embed_url" => $request->input("player_embed_url"),
                 "picture" => $request->input("picture"),
-                "modified_time" => $request->input("modified_time")
+                "modified_time" => $request->input("modified_time"),
+                "duration" => $request->input("duration")
             ];
 
     
@@ -232,9 +234,17 @@ class LessonController extends Controller
             $offset = $request->has('offset') ? intval($request->get('offset')) : 1;
 
             //TODO debe sacarse del request, por defecto el valor es 10.
-            $limit = $request->has('limit') ? intval($request->get('limit')) : 10;
+            $limit = $request->has('limit') ? intval($request->get('limit')) : 'All';
 
-            $consult = Lesson::where('course_id', $courseId)->with('courses')->limit($limit)->offset(($offset - 1) * $limit)->orderBy('vimeo_order')->get()->toArray();
+            $consult = Lesson::where('course_id', $courseId)->with('courses')->offset(($offset - 1) * $limit)->orderBy('vimeo_order')->get()->toArray();
+
+            if ($limit != 'All') {
+                
+                $consult = Lesson::where('course_id', $courseId)->with('courses')->limit($limit)->offset(($offset - 1) * $limit)->orderBy('vimeo_order')->get()->toArray();
+
+            }
+
+            
 
             $nexOffset = $offset + 1;
             $previousOffset = ($offset > 1) ? $offset - 1 : 1;
@@ -261,6 +271,21 @@ class LessonController extends Controller
             
         } catch (Exception $e) {
             return return_exceptions($e);
+        }
+    }
+
+    public static function getTotalDuration($courses)
+    {
+        try {
+                            
+            $lessons = Lesson::whereIn('course_id', $courses)->get('duration');
+
+            return $lessons->sum('duration');
+
+        } catch (Exception $e) {
+
+            return return_exceptions($e);
+            
         }
     }
 }

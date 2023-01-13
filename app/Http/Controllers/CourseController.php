@@ -417,7 +417,12 @@ class CourseController extends Controller
                 $request->merge(['user_id' => $userId, 'course_id' => $value['id']]);
 
                 $progress = ProgressController::check_user_progress($request);
-                
+
+                $lessons = Lesson::where('course_id', $value['id'])->get('duration');
+                // $total_video_time = $lessons->sum('duration');
+
+                $total_video_time = LessonController::getTotalDuration([$value['id']]);
+
                 $courses[] = [
                     'id' => $value['id'],
                     'name' => $value['name'],
@@ -428,8 +433,8 @@ class CourseController extends Controller
                     'file_path' => $value['file_path'],
                     'video_uri' => $value['video_uri'],
                     'video_path' => $value['video_path'],
-                    'lessons:amount' => Lesson::where('course_id', $value['id'])->count(),
-                    'progress:porcentage' => progress($progress)
+                    'lessons:amount' => count($lessons),
+                    'progress:porcentage' => progress($progress, $total_video_time),
                 ];
             }
 
