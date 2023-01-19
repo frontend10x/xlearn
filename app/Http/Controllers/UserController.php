@@ -120,26 +120,24 @@ class UserController extends Controller
     {
 
         try {
-            
-
-            $consult = User::where("email", $request->input("email"))->first();
-
-            if (!empty($consult)) {
-                throw new Exception("El usuario ya se encuentra registrado");
-            }
-
-            if ( $request->input("password") != $request->input("password_confirmation")) {
-                throw new Exception("Las contraseñas no coinciden");
-            }
 
             // Validamos los datos enviados
             $validated = $request->validate([
                 'password' => 'required',
                 'password_confirmation' => 'required',
-                'email' => 'required',
+                'email' => 'required|unique:users',
+                'email_confirmation' => 'required',
                 'subcompanies_id' => 'required|integer',
                 'name' => 'required', 
             ]);
+
+            if ( $request->input("password") != $request->input("password_confirmation")) {
+                throw new Exception("Las contraseñas no coinciden");
+            }
+
+            if ( $request->input("email") != $request->input("email_confirmation")) {
+                throw new Exception("Los emails no coinciden");
+            }
 
             $request->request->add(['subcompanie_id' => $request->subcompanies_id]);
 

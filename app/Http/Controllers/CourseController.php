@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Course;
 use App\Models\User;
 use App\Models\Lesson;
+use App\Models\Resource;
+
 use Exception;
 
 class CourseController extends Controller
@@ -423,16 +425,20 @@ class CourseController extends Controller
 
                 $total_video_time = LessonController::getTotalDuration([$value['id']]);
 
+                $resources = $value['resources'] != null ? json_decode($value['resources'], true) : [];
+
                 $courses[] = [
                     'id' => $value['id'],
                     'name' => $value['name'],
                     'description' => $value['description'],
                     'about_author' => $value['about_author'],
+                    'img_author' => $value['img_author'],
                     'state' => $value['state'],
                     'vimeo_id' => $value['vimeo_id'],
                     'file_path' => $value['file_path'],
                     'video_uri' => $value['video_uri'],
                     'video_path' => $value['video_path'],
+                    'resources' => Resource::select('name', 'description', 'file_path')->whereIn('id', $resources)->get(),
                     'lessons:amount' => count($lessons),
                     'progress:porcentage' => progress($progress, $total_video_time),
                 ];
@@ -537,14 +543,30 @@ class CourseController extends Controller
         try {
 
             $course = Course::find($id);
-            if (empty($course)) {
+
+            if (empty($course)) 
                 throw new Exception("No existe el curso");
-            }
+
+            $resources = $course->resources != null ? json_decode($course->resources, true) : [];
+
+            $courses = [
+                'id' => $course->id,
+                'name' => $course->name,
+                'description' => $course->description,
+                'about_author' => $course->about_author,
+                'img_author' => $course->img_author,
+                'state' => $course->state,
+                'vimeo_id' => $course->vimeo_id,
+                'file_path' => $course->file_path,
+                'video_uri' => $course->video_uri,
+                'video_path' => $course->video_path,
+                'resources' => Resource::select('name', 'description', 'file_path')->whereIn('id', $resources)->get(),
+            ];
 
             $course = array(
                 "_rel"		=> "course",
                 "_embedded" => array(
-                    "course" => $course
+                    "course" => $courses
                 )
             );
 

@@ -311,7 +311,7 @@ class VimeoController extends Controller
                 $video_information['course_id'] = $course_id;
                 $video_information['vimeo_id'] = $id[2];
                 $video_information['modified_time'] = $item['parent_folder']['modified_time'];
-                $video_information['vimeo_order'] = intval($item['name'][0]);
+                $video_information['vimeo_order'] = intval($item['name'][0].$item['name'][1]);
 
                 $request->request->add($video_information);
 

@@ -11,6 +11,7 @@ use App\Models\Coupon;
 define('CURRENCY', validate_environment()['CURRENCY']);
 define('SECRET_INTEGRITY', validate_environment()['SECRET:INTEGRITY']);
 define('PUBLIC_KEY', validate_environment()['PUBLIC_KEY']);
+define('COMPANY_ROLE_NAME', 'Empresa');
 
 class PaymentController extends Controller
 {
@@ -200,7 +201,8 @@ class PaymentController extends Controller
             
             // Validamos los datos enviados
             $validated = $request->validate([
-                'subcompanie_id' => 'required|integer|exists:payments'
+                'subcompanie_id' => 'required|integer|exists:payments',
+                'subcompanie_id' => 'exists:users,subcompanies_id'
             ]);
 
             $payments = Payment::where('subcompanie_id', $request->subcompanie_id)->where('status', 'APPROVED')->get()->toArray();
@@ -209,6 +211,7 @@ class PaymentController extends Controller
                 throw new Exception('La empresa no tiene cupos disponibles');
 
             $quotas = 0;
+            $amountUsers = 0;
 
             foreach($payments AS $payment){
                 $quotas += $payment['amount_user'];
@@ -216,7 +219,15 @@ class PaymentController extends Controller
 
             $users = UserController::showUserSubCompanie($request, $request->subcompanie_id);
             $key = $users->original['response']['_rel'];
-            $amountUsers = count($users->original['response']['_embedded'][$key]);
+            $arrayUsers = $users->original['response']['_embedded'][$key];
+            
+            foreach($arrayUsers AS $value){
+
+                $rol_name = RolesController::showNameById($value['rol_id']);
+
+                if($rol_name != COMPANY_ROLE_NAME)
+                    $amountUsers++;
+            }
 
             $calculateQuotas = $quotas - $amountUsers;
 

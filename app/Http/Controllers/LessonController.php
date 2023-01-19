@@ -236,7 +236,7 @@ class LessonController extends Controller
             //TODO debe sacarse del request, por defecto el valor es 10.
             $limit = $request->has('limit') ? intval($request->get('limit')) : 'All';
 
-            $consult = Lesson::where('course_id', $courseId)->with('courses')->offset(($offset - 1) * $limit)->orderBy('vimeo_order')->get()->toArray();
+            $consult = Lesson::where('course_id', $courseId)->with('courses')->orderBy('vimeo_order')->get()->toArray();
 
             if ($limit != 'All') {
                 

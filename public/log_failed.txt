@@ -1,0 +1,26 @@
+
+
+19/01/2023 21:14:27
+message => No se encontraron usuarios
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/UserController.php
+line => 922
+
+19/01/2023 21:14:27
+message => Undefined array key "response"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/PaymentController.php
+line => 218
+
+19/01/2023 21:15:38
+message => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'subcompanie_id' in 'where clause' (SQL: select count(*) as aggregate from `users` where `subcompanie_id` = 7)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 742
+
+19/01/2023 21:16:24
+message => El campo subcompanie id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+19/01/2023 21:16:42
+message => La empresa no tiene cupos disponibles
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/PaymentController.php
+line => 210

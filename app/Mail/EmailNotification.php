@@ -42,7 +42,7 @@ class EmailNotification extends Mailable
                 
                 $urlConfimation = URL_BASE . '/api/' . API_VERSION . '/user/changestate/' . $this->data['id'];
 
-                return $this->view('mails.confirmation_register')->with('information', [
+                return $this->subject('Registro de usuarios')->view('mails.confirmation_register')->with('information', [
                     'urlConfimation' => $urlConfimation,
                     'email' => $this->data["email"],
                     'password' => $this->data["password"]
@@ -66,7 +66,7 @@ class EmailNotification extends Mailable
             
             case 'contact_us':
 
-                return $this->view('mails.contact_us')->with('information', $this->data);
+                return $this->subject('Soporte y Contacto')->view('mails.contact_us')->with('information', $this->data);
 
                 break;
             
