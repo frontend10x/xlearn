@@ -438,7 +438,7 @@ class CourseController extends Controller
                     'file_path' => $value['file_path'],
                     'video_uri' => $value['video_uri'],
                     'video_path' => $value['video_path'],
-                    'resources' => Resource::select('name', 'description', 'file_path')->whereIn('id', $resources)->get(),
+                    'resources' => Resource::select('name', 'type', 'description', 'file_path')->whereIn('id', $resources)->get(),
                     'lessons:amount' => count($lessons),
                     'progress:porcentage' => progress($progress, $total_video_time),
                 ];

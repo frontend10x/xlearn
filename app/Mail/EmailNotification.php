@@ -70,6 +70,13 @@ class EmailNotification extends Mailable
 
                 break;
             
+            case 'contact_us_user':
+
+                $urlConfimation = URL_FRONT . '/login';
+                return $this->subject('Soporte y Contacto')->view('mails.contact_us_user')->with('urlConfimation', $urlConfimation);
+
+                break;
+            
             case 'forgot_password':
 
                 $urlRecover = URL_FRONT . '/recuperacion/' . $this->data;

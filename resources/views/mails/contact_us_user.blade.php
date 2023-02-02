@@ -12,6 +12,7 @@
     <style>
         *{
             font-family: 'Poppins', sans-serif;
+
             padding: 0%;
             margin: 0%;
         }
@@ -19,6 +20,7 @@
             width: 600px;
             margin: auto;
             padding-bottom: 100px;
+            font-family: 'Poppins', sans-serif;
             background-color: #fff;
         }
         h1{
@@ -103,7 +105,7 @@
         .content__button__activate p {
             margin-top: 50px;
             font-size: 20px;
-            padding-bottom: 50px;
+            padding-bottom: 100px;
             font-family: 'Poppins', sans-serif;
             font-weight: bold;
         }
@@ -168,34 +170,20 @@
 <body>
     <div id="section__title">
         <h1>Bienvenido a <img src="https://dashboard.xlearn.com.co/iconos-xln/logo.png"/></h1>
-        <p>Tu pago ha sido {{ $paymentDetails['status'] }}</p>
-    </div>
-
-    <div id="section__banner">
-        <h2>¡Es el momento de crear, transformar y aprender con <span>Xlearn!</span></h2>
+        <p>Soporte y contacto</p>
     </div>
 
     <br/>
+    <p>Tu solicitud de contacto ha sido exitosa, en breve una persona de nuestro equipo se comunicará contigo.</p>
     <br/>
-    <p>Te informamos que nuestro sistema registro el siguiente pago:</p>
-    <p>REFERENCIA: {{ $paymentDetails['reference'] }} </p>
-    <p>VALOR: {{ $paymentDetails['amount'] }}</p>
-    <p>ESTADO: {{ $paymentDetails['status'] }}</p>
+    <p>Mientras tanto, te compartimos los siguientes videos y consejos en caso de que tu inquietud esté relacionada con alguno de los siguientes temas: </p>
     <br/>
+    <p>1. Registro y Pago: <a href="https://youtu.be/vi1gYCvYq7k" target="_blank">https://youtu.be/vi1gYCvYq7k</a></p>
     <br/>
+    <p>2. Asignación de usuarios, Creación de equipos y Asignación del rol de líder: <a href="https://youtu.be/J6D4EvgDV58" target="_blank">https://youtu.be/J6D4EvgDV58</a></p>
+    <br/>
+    <p>3. Ruta de aprendizaje, Ingreso a cursos, Evaluación y Descarga del certificado: <a href="https://youtu.be/CxGjAg9CR6E" target="_blank">https://youtu.be/CxGjAg9CR6E</a></p>
 
-    <div class="content__button__activate">
-        <a class="xln__btn__email" href="{{ $paymentDetails['url'] }}" target="_blank" data-saferedirecturl="{{ $paymentDetails['url'] }}">¡Ingresa aquí!</a>
-        <p>Para continuar explorando Xlearn</p>
-    </div>
-
-    <p><b>¿Necesitas ayuda con los siguientes pasos?</b></p>
-    <br/>
-    <p>Ver video para Asignación de usuarios, creación de equipos y asignación del rol de líder:  <span><a href="https://youtu.be/J6D4EvgDV58" target="_blank">https://youtu.be/J6D4EvgDV58</a></span></p>
-    <br/>
-    <br/>
-    <p>Ver video para ruta de aprendizaje, ingreso a cursos, evaluación y descarga del certificado:  <span><a href="https://youtu.be/CxGjAg9CR6E" target="_blank">https://youtu.be/CxGjAg9CR6E</a></span></p>
-    <br/>
     <br/>
     <b>Ten en cuenta que:</b>
     <p>El correo con el que te registras tendrá un rol de empresa con el que podrás: </p>
@@ -204,8 +192,17 @@
     <p>- Realizar y administrar pagos</p>
     <p>- Asignar el rol de líder y el rol de los otros 3 usuarios que verán los cursos.</p>
     <br/>
-    
-    <p style="text-align: left;"> Si no funciona el boton, copie y pegue el siguiente enlace en un navegador: <br>{{ $paymentDetails['url'] }}.</p>
+    <p>Este rol de empresa no permite visualizar los cursos, ya que cumple un rol administrativo y de seguimiento.
+    </p>
+
+    <div class="content__button__activate">
+        <a class="xln__btn__email" href="{{ $urlConfimation }}" target="_blank" data-saferedirecturl="{{$urlConfimation}}">¡Ingresa aquí!</a>
+        <p>Para continuar explorando Xlearn</p>
+
+    </div>
+
+
+    <p style="text-align: center;"> Si no funciona el boton, copie y pegue el siguiente enlace en un navegador: <br>{{ $urlConfimation }}.</p>
     <br>
     <br>
     <footer class="footer">

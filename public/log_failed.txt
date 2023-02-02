@@ -24,3 +24,143 @@ line => 323
 message => La empresa no tiene cupos disponibles
 file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/PaymentController.php
 line => 210
+
+20/01/2023 15:28:52
+message => El campo password debe contener al menos 8 caracteres. (and 4 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+20/01/2023 15:28:59
+message => El campo confirmación de password no coincide. (and 4 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+20/01/2023 15:29:04
+message => The password must contain at least one uppercase and one lowercase letter. (and 3 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+20/01/2023 15:58:08
+message => El formato del campo password es inválido. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+20/01/2023 16:00:05
+message => preg_match(): Delimiter must not be alphanumeric or backslash
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Validation/Concerns/ValidatesAttributes.php
+line => 1485
+
+20/01/2023 16:00:37
+message => Method Illuminate\Validation\Validator::validateRegexPss does not exist.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Validation/Validator.php
+line => 1532
+
+20/01/2023 17:15:39
+message => The password must contain at least one uppercase and one lowercase letter. (and 3 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+20/01/2023 17:16:51
+message => The password must contain at least one uppercase and one lowercase letter. (and 3 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+20/01/2023 17:17:13
+message => The password must contain at least one uppercase and one lowercase letter. (and 3 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+20/01/2023 17:17:22
+message => The password must contain at least one uppercase and one lowercase letter. (and 3 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+20/01/2023 17:19:59
+message => The password must contain at least one uppercase and one lowercase letter. (and 3 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+20/01/2023 17:20:15
+message => The password must contain at least one uppercase and one lowercase letter. (and 3 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+20/01/2023 17:21:08
+message => The password must contain at least one uppercase and one lowercase letter. (and 3 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+20/01/2023 17:23:41
+message => password debe contener al menos una letra mayúscula y una minúscula. (and 3 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+20/01/2023 17:23:55
+message => El campo confirmación de password no coincide. (and 3 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+20/01/2023 17:24:00
+message => password debe contener al menos una letra mayúscula y una minúscula. (and 2 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+20/01/2023 17:24:28
+message => The password must contain at least one symbol. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+20/01/2023 17:25:03
+message => password debe contener al menos un símbolo. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+20/01/2023 17:25:21
+message => El campo email confirmation es obligatorio.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+20/01/2023 17:26:00
+message => El campo confirmación de password no coincide. (and 2 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+20/01/2023 17:26:11
+message => password debe contener al menos un símbolo. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+20/01/2023 17:26:35
+message => password debe contener al menos un símbolo. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+20/01/2023 17:26:42
+message => El campo confirmación de password no coincide. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+20/01/2023 17:27:07
+message => El campo confirmación de password no coincide. (and 2 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+20/01/2023 17:27:15
+message => El campo confirmación de email no coincide. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+20/01/2023 17:27:56
+message => El campo confirmación de email no coincide.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+20/01/2023 17:36:04
+message => El campo confirmación de email no coincide.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+20/01/2023 17:36:15
+message => El valor del campo email ya está en uso.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323

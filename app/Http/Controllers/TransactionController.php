@@ -62,18 +62,17 @@ class TransactionController extends Controller
     
                 $created = Transaction::create($dataInsert);
 
-                if ($dataInsert['status'] == 'APPROVED') {
-                    
-                    Mail::to($data['transaction']['customer_email'])->send(new EmailNotification($dataInsert, 'payment_register'));
-
-                }
-
-
                 $update_payment = PaymentController::update_payment_status(
                     $search_payment_request['id'],
                     $data['transaction']['status'], 
                     $created['id']
                 );
+
+                if ($dataInsert['status'] == 'APPROVED') {
+                    
+                    Mail::to($data['transaction']['customer_email'])->send(new EmailNotification($dataInsert, 'payment_register'));
+
+                }
             
             return response()->json(["created" => $created, "update" => $update_payment], 200);
 

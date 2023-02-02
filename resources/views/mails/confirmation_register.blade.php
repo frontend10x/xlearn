@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
     <title>Document</title>
     <style>
         *{
@@ -18,6 +19,9 @@
         body {
             width: 600px;
             margin: auto;
+            padding-bottom: 100px;
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff;
         }
         h1{
             font-family: 'Poppins', sans-serif;
@@ -53,13 +57,15 @@
         }
         div#section__info {
             width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    position: relative;
-    height: 10vh;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            position: relative;
+            height: 10vh;
+            text-align: center;
+            margin-bottom: 135px;
         }
         .columnas_mail_icon {
-            width: 33%;
+            width: 50%;
             float: left;
         }
         .columnas_mail_icon img {
@@ -103,6 +109,30 @@
             font-family: 'Poppins', sans-serif;
             font-weight: bold;
         }
+        .parrafo__span__xln {
+            background: #31fb84;
+            color: #0a2332;
+            font-weight: bold;
+        }
+
+        .footer {
+            padding: 10px 0;
+        }
+        .redes{
+            width: 100%;
+            text-align: center;
+        }
+        .footer a {
+            color: #00FF84;
+            font-size: 17px;
+            background-color: #0a2332;
+            border-radius: 100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
 
         @media (max-width:600px) {
 
@@ -126,6 +156,14 @@
             div#section__info {
                 height: auto;
             }
+            p {
+                padding-left: 30px;
+                padding-right: 20px;
+            }
+           b {
+                padding-left: 30px;
+                padding-right: 20px;
+            }
         }
     </style>
 </head>
@@ -136,37 +174,78 @@
     </div>
 
     <div id="section__banner">
-        <h2>¡Es el momento de crear, transformar y aprender con <span>Xlearn!</span></h2>
-        <p>Lleva tu empresa a otro nivel a través del entrenamiento de tus equipos, genera valor y desarrolla tus proyectos de innovación</p>
+        <h2>¡Estás a un paso de entrenar a tus equipos en nuestra prueba piloto de la plataforma <span>Xlearn!</span></h2>
     </div>
 
-    <div id="section__info">
-        <div class="columnas_mail_icon">
-            <img src="https://dashboard.xlearn.com.co/iconos-xln/1.png"/>
-            <p>Contenido exclusivo según las necesidades de tus proyectos</p>
-        </div>
-        <div class="columnas_mail_icon">
-            <img src="https://dashboard.xlearn.com.co/iconos-xln/2.png"/>
-            <p>Contenido exclusivo según las necesidades de tus proyectos</p>
-        </div>
-        <div class="columnas_mail_icon">
-            <img src="https://dashboard.xlearn.com.co/iconos-xln/3.png"/>
-            <p>Contenido exclusivo según las necesidades de tus proyectos</p>
-        </div>
-    </div>
-    
-    <div>
+    <br/>
+    <br/>
     <p>Puedes iniciar sesión con los siguientes datos:</p>
-    <ol>
-        <li>Usuario: {{ $information['email'] }}</li>
-        <li>Contraseña: {{ $information['password'] }}</li>
-    </ol>
-    </div>
+    <p><b>Usuario:</b> {{ $information['email'] }}</p>
+    <p><b>Contraseña:</b> {{ $information['password'] }}</p>
+    <br/>
+    <br/>
 
     <div class="content__button__activate">
         <a class="xln__btn__email" href="{{ $information['urlConfimation'] }}" target="_blank" data-saferedirecturl="{{$information['urlConfimation']}}">Activar ahora</a>
-        <p>Para continuar explorando Xlearn</p>
-        <p> Si no funciona el boton, copie y pegue el siguiente enlace en un navegador: <br>{{ $information['urlConfimation'] }}.</p>
+        <br/>
+        <br/>
+        <br/>
     </div>
+
+    <br/>
+    <br/>
+    <p>Para obtener el <b>90% de descuento</b> ingresa el cupón <span class="parrafo__span__xln">PAYMENT</span></p>
+    <br/>
+    <p>Revisa el siguiente tutorial para realizar el pago de forma efectiva: <span><a href="https://youtu.be/vi1gYCvYq7k" target="_blank">https://youtu.be/vi1gYCvYq7k</a></span></p>
+    <br/>
+    <p>Una vez realices el pago podrás empezar a explorar la plataforma, te recomendamos ver los siguientes tutoriales:</p>
+    <br/>
+
+
+    <div id="section__info">
+        <div class="columnas_mail_icon">
+            <img src="https://dashboard.xlearn.com.co/iconos-xln/3.png"/>
+            <p>Asignación de usuarios, creación de equipos y asignación del rol de líder: </p>
+            <a href="https://youtu.be/J6D4EvgDV58" target="_blank">https://youtu.be/J6D4EvgDV58</a>
+        </div>
+        <div class="columnas_mail_icon">
+            <img src="https://dashboard.xlearn.com.co/iconos-xln/1.png"/>
+            <p>Ruta de aprendizaje, ingreso a cursos, evaluación y descarga del certificado: </p>
+            <a href="https://youtu.be/CxGjAg9CR6E" target="_blank">https://youtu.be/CxGjAg9CR6E</a>
+        </div>
+        
+    </div>
+    
+    <br/>
+    <br/>
+    <p>En esta fase piloto de Xlearn, todos tus aportes son muy valiosos, agradecemos que nos compartas tu experiencia, aspectos por mejorar o dudas que tengas a este correo.</p>
+    <br/>
+    <br/>
+    <b>Ten en cuenta que:</b>
+    <p>- Crear usuarios</p>
+    <p>- Ver reportes y progreso del equipo</p>
+    <p>- Realizar y administrar pagos</p>
+    <p>- Asignar el rol de líder y el rol de los otros 3 usuarios que verán los cursos.</p>
+    <br/>
+    <p>Este rol de empresa no permite visualizar los cursos, ya que cumple un rol administrativo y de seguimiento.</p>
+    <br/>
+    <br/>
+    <p><b>¡Estaremos muy atentos!</b></p>
+    <p>Gracias por ser parte de este proyecto</p>
+    <p>Saludos</p>
+    <br>
+    <br>
+    <p style="text-align: center;"> Si no funciona el boton, copie y pegue el siguiente enlace en un navegador: <br>{{ $information['urlConfimation'] }}.</p>
+    <br>
+    <br>
+    <footer class="footer">
+        <div class="container redes text-center">
+            <a href="https://www.facebook.com/XLearn10XThinking" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/XLearn2" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/xlearn-platform-409991240/" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/channel/UCyS1OiIhWpylctMcbSkYgFQ" target="_blank"><i class="fa fa-youtube"></i></a>
+        </div>
+    </footer>
+
 </body>
 </html>

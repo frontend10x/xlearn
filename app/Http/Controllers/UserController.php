@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Crypt;
 use App\Mail\EmailNotification;
 use App\Imports\UsersImport;
 use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Validation\Rules\Password;
 
 define('MEMBERS_ROLE', 'Integrante');
 define('COMPANY_ROLE', 'Empresa');
@@ -123,21 +124,14 @@ class UserController extends Controller
 
             // Validamos los datos enviados
             $validated = $request->validate([
-                'password' => 'required',
+                'password' => ['required', 'confirmed', Password::min(8)->letters()->mixedCase()->numbers()->symbols()],
                 'password_confirmation' => 'required',
-                'email' => 'required|unique:users',
-                'email_confirmation' => 'required',
+                'email' => 'required|email|confirmed|unique:users',
+                'email_confirmation' => 'required|email',
                 'subcompanies_id' => 'required|integer',
                 'name' => 'required', 
+                'phone' => 'required', 
             ]);
-
-            if ( $request->input("password") != $request->input("password_confirmation")) {
-                throw new Exception("Las contraseñas no coinciden");
-            }
-
-            if ( $request->input("email") != $request->input("email_confirmation")) {
-                throw new Exception("Los emails no coinciden");
-            }
 
             $request->request->add(['subcompanie_id' => $request->subcompanies_id]);
 

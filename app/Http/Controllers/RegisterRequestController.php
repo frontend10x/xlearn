@@ -11,6 +11,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Mail\EmailNotification;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Validation\Rules\Password;
 
 class RegisterRequestController extends Controller
 {
@@ -130,33 +131,23 @@ class RegisterRequestController extends Controller
     public function store(Request $request)
     {
         try {
-            $consult = RegistrationRequest::where("email", $request->input("email"))->first();
-            
-            if (!empty($consult)) {
-                throw new Exception("El usuario ya tiene una solicitud activa");
-            }
-
-            if ( $request->input("password") != $request->input("password_confirmation")) {
-                throw new Exception("Las contraseñas no coinciden");
-            }
-
-            $user = User::where("email", $request->input("email"))->first();
-            if (!empty($consult)) {
-                throw new Exception("El usuario ya se encuentra registrado");
-            }
 
             // Validamos los datos enviados
             $validated = $request->validate([
+                'password' => ['required', 'confirmed', Password::min(8)->letters()->mixedCase()->numbers()->symbols()],
+                'password_confirmation' => 'required',
                 'country' => 'required|integer',
                 'content' => 'required|integer',
                 'name' => 'required',
                 'lastname' => 'required',
-                'email' => 'required',
+                'email' => 'required|email|confirmed|unique:users|unique:registration_requests',
+                'email_confirmation' => 'required|email',
                 'size' => 'required',
                 'plan_id' => 'required|integer',
                 'quotas' => 'required|integer',
                 'company' => 'required|unique:sub_companies,name',
                 'nit' => 'required|unique:sub_companies',
+                'phone' => 'required',
             ]);
 
             // Creamos el array para insertar
@@ -186,7 +177,6 @@ class RegisterRequestController extends Controller
             $dataInsert["link_linkedin"] = '';
             $dataInsert["link_instagram"] = '';
             $dataInsert["surname"] = '';
-            $dataInsert["phone"] = '';
             $dataInsert["registerRequest"] = true;
 
             if(!empty($register)){
