@@ -1995,6 +1995,64 @@
                 ]
             }
         },
+        "/api/v1/subempresa/rut": {
+            "post": {
+                "tags": [
+                    "Sub Companies"
+                ],
+                "summary": "Cargar rut de empresa",
+                "operationId": "54ba1a59de08b872b9c432f274339fa9",
+                "parameters": [
+                    {
+                        "name": "sub_companieId",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "file",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "file"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Rut cargado con éxito."
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "example": {
+                                        "message": "Mensaje de error"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
         "/api/v1/types_users/list": {
             "get": {
                 "tags": [

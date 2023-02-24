@@ -110,4 +110,67 @@ class SubcompaniesController extends Controller
             return return_exceptions($e);
         }
     }
+
+    /**
+    * @OA\Post(
+    *     path="/api/v1/subempresa/rut",
+    *     tags={"Sub Companies"},
+    *     summary="Cargar rut de empresa",
+    *     security={{"bearer_token":{}}},
+    *     @OA\Parameter(name="sub_companieId", required=true, in="query", @OA\Schema(type="number")),
+    *     @OA\Parameter(name="file", required=true, in="query", @OA\Schema(type="file")),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Success.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Rut cargado con éxito.",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
+    public function uploadRut(Request $request)
+    {
+        try {
+
+            $validated = $request->validate([
+                'sub_companieId' => 'required|integer|exists:sub_companies,id',
+                'file' => 'required',
+            ]);
+
+            $subcompany = Sub_companies::find($request->input("sub_companieId"));
+
+            $fileName = $subcompany->name . '_' . $request->input("sub_companieId");
+
+            $path = $request->file('file')->storeAs('public', 'RUT-' . $fileName . '.pdf');
+
+            if (!$request->file('file')->isValid()) 
+                throw new Exception("Error Processing Request", 1);
+
+            $subcompany->update(["rut_file_path" => $path]);
+            
+            return response()->json(["message" => "Rut cargado con éxito"], 200);
+            
+        } catch (Exception $e) {
+            return return_exceptions($e);
+        }
+    }
 }

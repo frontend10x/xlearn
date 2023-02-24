@@ -164,3 +164,33 @@ line => 323
 message => El valor del campo email ya está en uso.
 file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
 line => 323
+
+24/02/2023 22:15:56
+message => El campo sub companie es obligatorio. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+24/02/2023 22:16:10
+message => El campo sub companie seleccionado no existe. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+24/02/2023 22:17:45
+message => El campo sub companie es obligatorio. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+24/02/2023 22:17:54
+message => El campo sub companie es obligatorio. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+24/02/2023 22:18:23
+message => El campo sub companie es obligatorio. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+24/02/2023 22:19:23
+message => El campo file es obligatorio.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323

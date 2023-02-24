@@ -147,6 +147,7 @@ Route::group(['middleware'=>'auth:api' ],function(){
     Route::put(API_VERSION . '/subempresa/edit/{id}',[SubcompaniesController::class, 'edit']);
     Route::post(API_VERSION . '/subempresa/store',[SubcompaniesController::class, 'store']);
     Route::put(API_VERSION . '/subempresa/changestate/{id}',[SubcompaniesController::class, 'changestate']);
+    Route::post(API_VERSION . '/subempresa/rut',[SubcompaniesController::class, 'uploadRut']);
 
     // ---------------------------------------------------------------------
     // Users
@@ -307,5 +308,3 @@ Route::group(['middleware'=>'auth:api' ],function(){
     
 
 });
-
-
