@@ -14,6 +14,10 @@ class Course extends Model
         return $this->belongsto('App\Models\Areas', 'area_id');
     }
 
+    public function skills(){
+        return $this->belongsto('App\Models\Skills', 'course_id');
+    }
+
     public function users(){
         return $this->belongsToMany(User::class,"user_course","course_id","user_id");
     }

@@ -7,6 +7,7 @@ use App\Models\Course;
 use App\Models\User;
 use App\Models\Lesson;
 use App\Models\Resource;
+use App\Models\Skill;
 
 use Exception;
 
@@ -548,19 +549,22 @@ class CourseController extends Controller
                 throw new Exception("No existe el curso");
 
             $resources = $course->resources != null ? json_decode($course->resources, true) : [];
+            $skills = $course->skills != null ? json_decode($course->skills, true) : [];
 
             $courses = [
                 'id' => $course->id,
                 'name' => $course->name,
                 'description' => $course->description,
                 'about_author' => $course->about_author,
-                'img_author' => $course->img_author,
+                'img_author' => json_decode($course->img_author, true),
                 'state' => $course->state,
                 'vimeo_id' => $course->vimeo_id,
                 'file_path' => $course->file_path,
                 'video_uri' => $course->video_uri,
                 'video_path' => $course->video_path,
-                'resources' => Resource::select('name', 'description', 'file_path')->whereIn('id', $resources)->get(),
+                'resources' => Resource::select('name', 'type', 'description', 'file_path')->whereIn('id', $resources)->get(),
+                'skills' => Skill::select('name')->whereIn('id', $skills)->get(),
+
             ];
 
             $course = array(
