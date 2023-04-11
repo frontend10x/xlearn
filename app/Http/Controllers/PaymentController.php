@@ -223,6 +223,10 @@ class PaymentController extends Controller
             
             foreach($arrayUsers AS $value){
 
+                /* Se comenta estas lineas de código con el objetivo de permitir al usuario
+                * empresa sea asignado a un 
+                *
+                */
                 $rol_name = RolesController::showNameById($value['rol_id']);
 
                 if($rol_name != COMPANY_ROLE_NAME)

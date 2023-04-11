@@ -97,10 +97,12 @@ class LoginController extends Controller
 
                 $diagnosticStatus = false;
     
-                if($user->roles->rol_name === 'Lider')
-                    if(isset($user->diagnostic[0]->confirmed))
-                        if($user->diagnostic[0]->confirmed === 1)
+                if($user->roles->rol_name === 'Lider'){
+                    foreach ($user->diagnostic as $key => $value) {
+                        if($value['confirmed'] === 1)
                             $diagnosticStatus = true;
+                    }
+                }
                     
                 
                 //Consultamos los grupos al que pertenece el usuario

@@ -194,3 +194,83 @@ line => 323
 message => El campo file es obligatorio.
 file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
 line => 323
+
+10/04/2023 16:10:57
+message => El campo user id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+10/04/2023 16:26:01
+message => El campo user id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+10/04/2023 17:57:13
+message => El campo user id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+10/04/2023 17:59:53
+message => El campo user id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+10/04/2023 18:14:06
+message => SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value (SQL: insert into `certificates` (`code`, `user_name`, `user_id`, `course_name`, `course_id`, `results`, `path`, `finish_date`, `updated_at`, `created_at`) values (5a0e3266-8697-4a1a-a563-d41060ac3080, Carlos Narvaez, 223, Prototipado, 55, {"percentage":100,"correct_answers":[{"question_id":49,"answers":{"user":136,"correct":136}},{"question_id":50,"answers":{"user":140,"correct":140}},{"question_id":51,"answers":{"user":142,"correct":142}},{"question_id":52,"answers":{"user":149,"correct":149}},{"question_id":53,"answers":{"user":153,"correct":153}},{"question_id":54,"answers":{"user":155,"correct":155}},{"question_id":55,"answers":{"user":160,"correct":160}},{"question_id":56,"answers":{"user":165,"correct":165}},{"question_id":57,"answers":{"user":169,"correct":169}},{"question_id":58,"answers":{"user":171,"correct":171}},{"question_id":59,"answers":{"user":174,"correct":174}},{"question_id":60,"answers":{"user":180,"correct":180}},{"question_id":61,"answers":{"user":185,"correct":185}},{"question_id":62,"answers":{"user":189,"correct":189}},{"question_id":63,"answers":{"user":192,"correct":192}}]}, {"show":"\/api\/v1\/certificate\/show\/5a0e3266-8697-4a1a-a563-d41060ac3080","download":"\/api\/v1\/certificate\/download\/5a0e3266-8697-4a1a-a563-d41060ac3080"}, 2023-01-19 04:01:21, 2023-04-10 18:14:06, 2023-04-10 18:14:06))
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 742
+
+10/04/2023 18:14:06
+message => Undefined property: Illuminate\Http\JsonResponse::$code
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 144
+
+10/04/2023 18:15:35
+message => SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value (SQL: insert into `certificates` (`code`, `user_name`, `user_id`, `course_name`, `course_id`, `results`, `path`, `finish_date`, `updated_at`, `created_at`) values (d67654c2-23ed-49a6-bab6-5d1d77d5e1a7, Carlos Narvaez, 223, Prototipado, 55, {"percentage":100,"correct_answers":[{"question_id":49,"answers":{"user":136,"correct":136}},{"question_id":50,"answers":{"user":140,"correct":140}},{"question_id":51,"answers":{"user":142,"correct":142}},{"question_id":52,"answers":{"user":149,"correct":149}},{"question_id":53,"answers":{"user":153,"correct":153}},{"question_id":54,"answers":{"user":155,"correct":155}},{"question_id":55,"answers":{"user":160,"correct":160}},{"question_id":56,"answers":{"user":165,"correct":165}},{"question_id":57,"answers":{"user":169,"correct":169}},{"question_id":58,"answers":{"user":171,"correct":171}},{"question_id":59,"answers":{"user":174,"correct":174}},{"question_id":60,"answers":{"user":180,"correct":180}},{"question_id":61,"answers":{"user":185,"correct":185}},{"question_id":62,"answers":{"user":189,"correct":189}},{"question_id":63,"answers":{"user":192,"correct":192}}]}, {"show":"\/api\/v1\/certificate\/show\/d67654c2-23ed-49a6-bab6-5d1d77d5e1a7","download":"\/api\/v1\/certificate\/download\/d67654c2-23ed-49a6-bab6-5d1d77d5e1a7"}, 2023-01-19 04:01:21, 2023-04-10 18:15:35, 2023-04-10 18:15:35))
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 742
+
+10/04/2023 18:15:35
+message => Undefined property: Illuminate\Http\JsonResponse::$code
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 146
+
+10/04/2023 18:15:49
+message => SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value (SQL: insert into `certificates` (`code`, `user_name`, `user_id`, `course_name`, `course_id`, `results`, `path`, `finish_date`, `updated_at`, `created_at`) values (7dbe8f68-259a-45cb-bf42-dc27f382113a, Carlos Narvaez, 223, Prototipado, 55, {"percentage":100,"correct_answers":[{"question_id":49,"answers":{"user":136,"correct":136}},{"question_id":50,"answers":{"user":140,"correct":140}},{"question_id":51,"answers":{"user":142,"correct":142}},{"question_id":52,"answers":{"user":149,"correct":149}},{"question_id":53,"answers":{"user":153,"correct":153}},{"question_id":54,"answers":{"user":155,"correct":155}},{"question_id":55,"answers":{"user":160,"correct":160}},{"question_id":56,"answers":{"user":165,"correct":165}},{"question_id":57,"answers":{"user":169,"correct":169}},{"question_id":58,"answers":{"user":171,"correct":171}},{"question_id":59,"answers":{"user":174,"correct":174}},{"question_id":60,"answers":{"user":180,"correct":180}},{"question_id":61,"answers":{"user":185,"correct":185}},{"question_id":62,"answers":{"user":189,"correct":189}},{"question_id":63,"answers":{"user":192,"correct":192}}]}, {"show":"\/api\/v1\/certificate\/show\/7dbe8f68-259a-45cb-bf42-dc27f382113a","download":"\/api\/v1\/certificate\/download\/7dbe8f68-259a-45cb-bf42-dc27f382113a"}, 2023-01-19 04:01:21, 2023-04-10 18:15:49, 2023-04-10 18:15:49))
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 742
+
+11/04/2023 15:02:09
+message => SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value (SQL: insert into `answers` (`evaluation_id`, `question_id`, `user_id`, `course_id`, `answer`, `updated_at`, `created_at`) values (4, 49, 219, 55, 134, 2023-04-11 15:02:09, 2023-04-11 15:02:09))
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 742
+
+11/04/2023 15:02:58
+message => SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value (SQL: insert into `answers` (`evaluation_id`, `question_id`, `user_id`, `course_id`, `answer`, `updated_at`, `created_at`) values (2, 19, 376, 57, 14, 2023-04-11 15:02:58, 2023-04-11 15:02:58))
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 742
+
+11/04/2023 15:12:56
+message => Undefined variable $courseId
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/AnswerController.php
+line => 60
+
+11/04/2023 15:13:37
+message => Call to undefined method Illuminate\Database\Eloquent\Builder::toArray()
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php
+line => 71
+
+11/04/2023 15:16:51
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+11/04/2023 15:16:59
+message => El campo user id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+11/04/2023 15:17:06
+message => El campo evaluation id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323

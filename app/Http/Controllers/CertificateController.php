@@ -68,12 +68,16 @@ class CertificateController extends Controller
             $user_id = $request->input("user_id");
             $course_id = $request->input("course_id");
 
+            /**
+             * Se debe validar el maximo de intentos de la evaluación,
+             * para ajustar y descomentar este código
+             */
             $consultCertificate = Certificate::where('user_id', $user_id)
                                               ->where('course_id', $course_id)->first();
 
-            if (!empty($consultCertificate)) {
-                return response()->json(["status" => true, "code" => $consultCertificate->code, "paths" => json_decode($consultCertificate->path), "results" => json_decode($consultCertificate->results)], 200);
-            }
+            // if (!empty($consultCertificate)) {
+            //     return response()->json(["status" => true, "code" => $consultCertificate->code, "paths" => json_decode($consultCertificate->path), "results" => json_decode($consultCertificate->results)], 200);
+            // }
 
             $userResponses = Answer::where('user_id', $user_id)
                                     ->where('course_id', $course_id)
@@ -112,7 +116,17 @@ class CertificateController extends Controller
 
             if($percentage >= $correctAnswer['average_score']){
 
-                $consultCertificate = $this->store($user_id, $course_id, $percentage, $results, $finishDate);
+                if (!empty($consultCertificate)) {
+
+                    $this->edit($percentage, $results, $finishDate, $consultCertificate);
+
+                    $consultCertificate->results = $results;
+    
+                }else{
+
+                    $consultCertificate = $this->store($user_id, $course_id, $percentage, $results, $finishDate);
+
+                }
 
             }else{
 
@@ -128,8 +142,9 @@ class CertificateController extends Controller
             return response()->json([
                 "status" => true, 
                 "code" => $consultCertificate->code, 
-                "paths" => json_decode($consultCertificate->path), 
-                "results" => json_decode($consultCertificate->results)
+                "paths" => json_decode($consultCertificate->path),
+                "percentage" => $percentage,
+                "results" => is_array($consultCertificate->results) ? $consultCertificate->results : json_decode($consultCertificate->results)
             ], 200);
 
         } catch (Exception $e) {
@@ -185,6 +200,27 @@ class CertificateController extends Controller
                 'path' => json_encode([
                     "show" => $showPath,
                     "download" => $showDownload
+                ]),
+                'finish_date' => date('Y-m-d h:m:s', strtotime($finish_date))
+            ]);
+
+            return $consultCertificate;
+
+        } catch (Exception $e) {
+            
+            return return_exceptions($e);
+
+        }
+    }
+
+    public function edit($percentage, $correctAnswers, $finish_date, $consultCertificate)
+    {
+        try {
+            
+            $consultCertificate->update([
+                'results' => json_encode([
+                    "percentage" => $percentage,
+                    "correct_answers" => $correctAnswers
                 ]),
                 'finish_date' => date('Y-m-d h:m:s', strtotime($finish_date))
             ]);

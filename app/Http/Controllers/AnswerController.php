@@ -51,11 +51,15 @@ class AnswerController extends Controller
         try {
             
             $validate = $request->validate([
-                'evaluation_id' => 'required|integer',
-                'user_id' => 'required|integer',
-                'course_id' => 'required|integer',
+                'evaluation_id' => 'required|integer|exists:evaluations,id',
+                'user_id' => 'required|integer|exists:users,id',
+                'course_id' => 'required|integer|exists:courses,id',
                 'answers' => 'required',
             ]);
+
+            Answer::where('user_id', $request->input("user_id"))
+                                ->where('evaluation_id', $request->input("evaluation_id"))
+                                ->where('course_id', $request->input("course_id"))->delete();
 
             foreach ($request->input("answers") as $key => $value) {
                 Answer::create([

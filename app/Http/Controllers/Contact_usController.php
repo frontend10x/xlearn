@@ -10,7 +10,7 @@ use App\Mail\EmailNotification;
 
 use App\Models\Contact_us;
 
-define('MAIL_FROM_ADDRESS', env('MAIL_FROM_ADDRESS'));
+define('MAIL_SUPPORT', env('MAIL_SUPPORT'));
 
 class Contact_usController extends Controller
 {   
@@ -75,7 +75,7 @@ class Contact_usController extends Controller
 
             Contact_us::create($data);
 
-            //Mail::to(MAIL_FROM_ADDRESS)->send(new EmailNotification($data, 'contact_us'));
+            Mail::to(MAIL_SUPPORT)->send(new EmailNotification($data, 'contact_us'));
             Mail::to($request->input("email"))->send(new EmailNotification($data, 'contact_us_user'));
             
             return response()->json(["message" => "Solicitud enviada con éxito"], 200);
