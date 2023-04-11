@@ -57,9 +57,9 @@ class AnswerController extends Controller
                 'answers' => 'required',
             ]);
 
-            Answer::where('user_id', $request->input("user_id"))
+            $consult = Answer::where('user_id', $request->input("user_id"))
                                 ->where('evaluation_id', $request->input("evaluation_id"))
-                                ->where('course_id', $request->input("course_id"))->delete();
+                                ->where('course_id', $request->input("course_id"))->update(['valid' => 0]);
 
             foreach ($request->input("answers") as $key => $value) {
                 Answer::create([
@@ -67,7 +67,8 @@ class AnswerController extends Controller
                     'question_id' => $value["question_id"],
                     'user_id' => $request->input("user_id"),
                     'course_id' => $request->input("course_id"),
-                    'answer' => $value["answer"]
+                    'answer' => $value["answer"],
+                    'valid' => 1
                 ]);
             }
 

@@ -81,6 +81,7 @@ class CertificateController extends Controller
 
             $userResponses = Answer::where('user_id', $user_id)
                                     ->where('course_id', $course_id)
+                                    ->where('valid', 1)
                                     ->select('answer', 'question_id', 'updated_at')
                                     ->get()->toArray();
             
