@@ -53,8 +53,8 @@ class RolesController extends Controller
             if($rol)
                 return $rol->rol_name;
 
-        } catch (Exception $th) {
-            return response()->json(["message" => $th->getMessage()], 500);
+        } catch (Exception $e) {
+            return return_exceptions($e);
         }
     }
 
@@ -67,8 +67,8 @@ class RolesController extends Controller
             if($rol)
                 return $rol->id;
 
-        } catch (Exception $th) {
-            return response()->json(["message" => $th->getMessage()], 500);
+        } catch (Exception $e) {
+            return return_exceptions($e);
         }
     }
 }

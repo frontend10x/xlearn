@@ -27,6 +27,7 @@ use App\Http\Controllers\ProgressController;
 use App\Http\Controllers\EvaluationController;
 use App\Http\Controllers\AnswerController;
 use App\Http\Controllers\CertificateController;
+use App\Http\Controllers\SessionController;
 
 
 use Illuminate\Http\Request;
@@ -306,5 +307,12 @@ Route::group(['middleware'=>'auth:api' ],function(){
       
     Route::patch(API_VERSION . '/vimeo/sync_course_structure',[VimeoController::class, 'syncCourseStructure']);
     
+    // ---------------------------------------------------------------------
+    // Sesion
+    // --------------------------------------------------------------------- 
+      
+    Route::put(API_VERSION . '/session/changeStateUser',[SessionController::class, 'changeStateUser']);
+    
+
 
 });

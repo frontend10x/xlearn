@@ -428,6 +428,8 @@ class CourseController extends Controller
 
                 $resources = $value['resources'] != null ? json_decode($value['resources'], true) : [];
 
+                $progressPorcentage = progress($progress, $total_video_time);
+                
                 $courses[] = [
                     'id' => $value['id'],
                     'name' => $value['name'],
@@ -441,7 +443,7 @@ class CourseController extends Controller
                     'video_path' => $value['video_path'],
                     'resources' => Resource::select('name', 'type', 'description', 'file_path')->whereIn('id', $resources)->get(),
                     'lessons:amount' => count($lessons),
-                    'progress:porcentage' => progress($progress, $total_video_time),
+                    'progress:porcentage' => $progressPorcentage > 100 ? 100 : $progressPorcentage,
                 ];
             }
 

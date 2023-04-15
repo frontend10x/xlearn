@@ -274,3 +274,78 @@ line => 323
 message => El campo evaluation id seleccionado no existe.
 file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
 line => 323
+
+11/04/2023 16:10:27
+message => SQLSTATE[HY000]: General error: 1364 Field 'about_author' doesn't have a default value (SQL: insert into `courses` (`name`, `state`, `free_video`, `video_path`, `video_uri`, `vimeo_id`, `programs_id`, `area_id`, `updated_at`, `created_at`) values (Introducción a la Vigilancia, 1, 0, https://player.vimeo.com/video/772190085?h=a7e643fba1, /users/177726805/projects/15650900/videos, 15650900, 5, 4, 2023-04-11 16:10:27, 2023-04-11 16:10:27))
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 742
+
+11/04/2023 21:15:40
+message => Undefined variable $total_video_time
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CourseController.php
+line => 419
+
+11/04/2023 21:16:58
+message => Property [id] does not exist on this collection instance.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php
+line => 982
+
+15/04/2023 19:05:07
+message => El campo id es obligatorio. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+15/04/2023 19:05:42
+message => El campo id seleccionado no existe. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+15/04/2023 19:06:19
+message => El campo id es obligatorio. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+15/04/2023 19:06:58
+message => El campo id seleccionado no existe. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+15/04/2023 19:07:05
+message => El campo id es obligatorio. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+15/04/2023 19:07:20
+message => El campo state es obligatorio.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+15/04/2023 19:07:33
+message => El campo state es obligatorio.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+15/04/2023 19:07:46
+message => El campo state debe ser verdadero o falso.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+15/04/2023 19:08:11
+message => El campo state debe ser verdadero o falso.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+15/04/2023 19:08:15
+message => El campo state debe ser verdadero o falso.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+15/04/2023 19:08:20
+message => El campo state debe ser verdadero o falso.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+15/04/2023 20:01:50
+message => Method App\Http\Controllers\Salida\LogoutController::a does not exist.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Routing/Controller.php
+line => 68
