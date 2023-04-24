@@ -1,5 +1,9 @@
 <?php
 
+
+/**
+ * Consultar url server del proyecto
+ */
 if (! function_exists('server_path')) {
     function server_path()
     {
@@ -11,6 +15,9 @@ if (! function_exists('server_path')) {
     }
 }
 
+/**
+ * Obtener un arra de "id"
+ */
 if (! function_exists('get_ids')) {
     function get_ids($array, $keyword)
     {
@@ -186,5 +193,147 @@ if(!function_exists('validate_environment')){
         ];
 
         return $variables;
+    }
+}
+
+/**
+ * Mapeador de data, se utiliza para mapear la información obtenida 
+ * desde otro controlador y bajo el estandar establecido:
+ * _rel; nombre de la llave que trae la data en el _embedded
+ */
+if (!function_exists('data_mapper')) {
+    function data_mapper($data, $keyword = "response"){
+
+        if(isset($data->original[$keyword])){
+            $response = $data->original[$keyword];
+
+            if(!isset($response["_rel"])){
+                return $response;
+            }
+            
+            $key = $response["_rel"];
+            $responseData = $response["_embedded"][$key];
+            return $responseData;
+        }
+
+        return [];
+        
+    }
+}
+
+/**
+ * Conteo de elementos en un array de objetos
+ * si cumplen la condición dada
+ */
+if (!function_exists('count_keys')) {
+    function count_keys($arrayData, $keyword, $valueToCompare){
+
+        $amount = 0;
+
+        foreach ($arrayData as $key => $value) {
+            if($value[$keyword] == $valueToCompare){
+                $amount++;
+            }
+        }
+    
+        return $amount;
+    }
+}
+
+/**
+ * Suma de valor de elementos en un array de objetos
+ */
+if (!function_exists('sum_keys')) {
+    function sum_keys($arrayData, $keyword){
+
+        $amountValue = 0;
+
+        foreach ($arrayData as $key => $value) {
+            $amountValue =  $amountValue + $value[$keyword];
+            
+        }
+    
+        return $amountValue;
+    }
+}
+
+/**
+ * Convertir segundos a hours, minutos y segundos
+ */
+if (!function_exists('handle_seconds')) {
+    function handle_seconds($timeSeconds) {
+        $hours = floor($timeSeconds / 3600);
+        $minuts = floor(($timeSeconds - ($hours * 3600)) / 60);
+        $seconds = $timeSeconds - ($hours * 3600) - ($minuts * 60);
+
+        $result = "";
+        if ($hours > 0 ) {
+            $result .= $hours . "h ";
+        }
+
+        if ($minuts > 0 ) {
+            $result .= $minuts . "m ";
+        }
+
+        if ($seconds > 0 ) {
+            $result .= $seconds . "s";
+        }
+
+        return $result;
+    }
+}
+
+/**
+ * Validamos si una hora dada, se encuentra
+ * dentro de la jornada lavorar
+ */
+if (!function_exists('is_working_time')) {
+    function is_working_time($hour) {
+        if($hour >= env('WORK_START_TIME') && $hour <= env('WORK_END_TIME')) return true;
+        return false;
+    }
+}
+
+/**
+ * Validamos si una hora dada, se encuentra
+ * dentro de la jornada lavorar
+ */
+if (!function_exists('is_working_time')) {
+    function is_working_time($hour) {
+        if($hour >= env('WORK_START_TIME') && $hour <= env('WORK_END_TIME')) return true;
+        return false;
+    }
+}
+
+/**
+ * sumar meses a una fecha dada
+ */
+if (!function_exists('add_months')) {
+    function add_months($date, $months) {
+
+        $d = date('d', strtotime($date));
+        $m = date('m', strtotime($date));
+        $y = date('Y', strtotime($date));
+
+        if(!checkdate($m, $d, $y)){
+            throw new Exception("Incorrect date");
+        };
+
+        $formatDate = date_create($date);
+        date_add($formatDate, date_interval_create_from_date_string($months . " months"));
+        return date_format($formatDate,"d-m-Y");
+    }
+}
+
+/**
+ * calcular diferencia de días entre dos fechas
+ */
+if (!function_exists('difference_days')) {
+    function difference_days($date1, $date2) {
+
+        $contador = date_diff(date_create($date1), date_create($date2));
+        $differenceFormat = '%a';
+
+        return $contador->format($differenceFormat); 
     }
 }

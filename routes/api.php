@@ -28,7 +28,7 @@ use App\Http\Controllers\EvaluationController;
 use App\Http\Controllers\AnswerController;
 use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\SessionController;
-
+use App\Http\Controllers\ReportController;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -149,6 +149,7 @@ Route::group(['middleware'=>'auth:api' ],function(){
     Route::post(API_VERSION . '/subempresa/store',[SubcompaniesController::class, 'store']);
     Route::put(API_VERSION . '/subempresa/changestate/{id}',[SubcompaniesController::class, 'changestate']);
     Route::post(API_VERSION . '/subempresa/rut',[SubcompaniesController::class, 'uploadRut']);
+    Route::get(API_VERSION . '/subempresa/validateSubscription/{id}',[SubcompaniesController::class, 'validateActiveSubscription']);
 
     // ---------------------------------------------------------------------
     // Users
@@ -312,6 +313,12 @@ Route::group(['middleware'=>'auth:api' ],function(){
     // --------------------------------------------------------------------- 
       
     Route::put(API_VERSION . '/session/changeStateUser',[SessionController::class, 'changeStateUser']);
+
+    // ---------------------------------------------------------------------
+    // Reports
+    // --------------------------------------------------------------------- 
+      
+    Route::get(API_VERSION . '/reports/states/{subcompanie_id}',[ReportController::class, 'getReportsForCompany']);
     
 
 

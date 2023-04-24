@@ -218,14 +218,12 @@ class PaymentController extends Controller
             }
 
             $users = UserController::showUserSubCompanie($request, $request->subcompanie_id);
-            $key = $users->original['response']['_rel'];
-            $arrayUsers = $users->original['response']['_embedded'][$key];
+            $arrayUsers = data_mapper($users);
             
             foreach($arrayUsers AS $value){
 
-                /* Se comenta estas lineas de código con el objetivo de permitir al usuario
-                * empresa sea asignado a un 
-                *
+                /* Se comentaria estas lineas de código con el objetivo de permitir al usuario
+                * empresa sea contabilizado en los cupos ocupados por la empresa 
                 */
                 $rol_name = RolesController::showNameById($value['rol_id']);
 
@@ -301,5 +299,20 @@ class PaymentController extends Controller
 
         }
     
+    }
+
+    public static function getApprovedPayments($subcompanie_id)
+    {
+        try {
+            
+            $payments = Payment::where('subcompanie_id', $subcompanie_id)->where('status', 'APPROVED')->get()->toArray();
+
+            return [ "payments" => $payments ];
+
+        } catch (Exception $e) {
+            
+            return return_exceptions($e);
+
+        }
     }
 }

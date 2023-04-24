@@ -374,4 +374,19 @@ class CertificateController extends Controller
 
         }
     }
+
+    public static function showUser($id)
+    {
+        try {
+            
+            $consult = Certificate::where('user_id', $id)->get()->toArray();
+        
+            return $consult;
+
+        } catch (Exception $e) {
+            
+            return return_exceptions($e);
+
+        }
+    }
 }

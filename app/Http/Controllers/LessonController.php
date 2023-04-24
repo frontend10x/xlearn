@@ -243,8 +243,8 @@ class LessonController extends Controller
                 $consult = Lesson::where('course_id', $courseId)->with('courses')->limit($limit)->offset(($offset - 1) * $limit)->orderBy('vimeo_order')->get()->toArray();
 
             }
-
             
+            $subscription = empty($request->user()) ? false : SubcompaniesController::validateActiveSubscription($request, $request->user()->subcompanies_id);
 
             $nexOffset = $offset + 1;
             $previousOffset = ($offset > 1) ? $offset - 1 : 1;
@@ -260,7 +260,8 @@ class LessonController extends Controller
                 "hc:previous"   => server_path() . '?limit=' . $limit . '&offset=' . $previousOffset,
                 "_rel"		=> "lesson",
                 "_embedded" => array(
-                    "lesson" => $consult
+                    "lesson" => $consult,
+                    "activeSubscription" => $subscription
                 )
             );
 

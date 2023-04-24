@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Companies;
 use App\Models\Sub_companies;
+use App\Models\Payment;
 use Exception;
 use Illuminate\Http\Request;
 
@@ -168,6 +169,81 @@ class SubcompaniesController extends Controller
             $subcompany->update(["rut_file_path" => $path]);
             
             return response()->json(["message" => "Rut cargado con éxito"], 200);
+            
+        } catch (Exception $e) {
+            return return_exceptions($e);
+        }
+    }
+
+    public static function getSubCompanieQuotas($id)
+    {
+        try {
+
+            $payments = Payment::where('subcompanie_id', $id)->where('status', 'APPROVED')->get()->toArray();
+
+            if(!$payments)
+                throw new Exception('La empresa no tiene cupos disponibles');
+
+            $quotas = 0;
+            
+            foreach($payments AS $payment){
+                $quotas += $payment['amount_user'];
+            }
+
+            return $quotas;
+            
+        } catch (Exception $e) {
+            return return_exceptions($e);
+        }
+    }
+
+    public static function showCerificates(Request $request, $id)
+    {
+        try {
+
+            $users = data_mapper(UserController::showUserSubCompanie($request, $id));
+            $certificates = [];
+
+            foreach ($users as $key => $value) {
+                $certificate = CertificateController::showUser($value["id"]);
+                if(count($certificate))
+                    array_push($certificates, $certificate);
+            }
+
+            return $certificates;
+            
+        } catch (Exception $e) {
+            return return_exceptions($e);
+        }
+    }
+
+    public static function validateActiveSubscription(Request $request, $id)
+    {
+        try {
+
+            $currentDate = date('d-m-Y');
+
+            $payments = PaymentController::getApprovedPayments($id);
+            $paymentsCollect = collect($payments['payments']);
+            $paymentSorted = $paymentsCollect->sortBy('transaction_id');
+            $paymentFirst = $paymentSorted->values()->first();
+
+            // Calculamos los dias trasncurridos
+            $elapsed = difference_days($currentDate, $paymentFirst['updated_at']);
+
+            $months = sum_keys($paymentsCollect, "amount_time");
+            $date = add_months($paymentFirst['updated_at'], $months);
+
+            // Calculamos los dias totales
+            $total = difference_days($currentDate, $date);
+
+            $state = ($total > $elapsed) ? true : false;
+
+            return [
+                "elapsed" => $elapsed, 
+                "total" => $total,
+                "activeSubscription" => $state
+            ]; 
             
         } catch (Exception $e) {
             return return_exceptions($e);
