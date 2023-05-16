@@ -228,6 +228,9 @@ class SubcompaniesController extends Controller
             $paymentSorted = $paymentsCollect->sortBy('transaction_id');
             $paymentFirst = $paymentSorted->values()->first();
 
+            if(!$paymentFirst)
+                return [];
+
             // Calculamos los dias trasncurridos
             $elapsed = difference_days($currentDate, $paymentFirst['updated_at']);
 

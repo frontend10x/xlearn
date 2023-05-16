@@ -31,7 +31,7 @@ class VimeoController extends Controller
 
             $response = $client->request('/me/projects', array(), 'GET');
 
-            //$response = $client->request('/users/177726805/projects/13634950/videos', array(), 'GET');
+            // return $client->request('/users/177726805/projects/15650900/videos', array(), 'GET');
 
             $arrayData = $response['body']['data'];
 
@@ -197,6 +197,10 @@ class VimeoController extends Controller
 
                 $program = json_decode($programCreated, true);
 
+                if($dataInsert['vimeo:id'] == "14375301"){
+                    save_file($program);
+                }
+
                 if(isset($program['id'])){
 
                     $programs['program_name'] = $value['name'];
@@ -240,6 +244,7 @@ class VimeoController extends Controller
 
                 $value = $folder['folder'];
 
+                // Consulta de trailer para el curso
                 $found_key = array_search($value['name'], array_column($this->trailers, 'name'));
 
                 $dataInsert = array(
@@ -293,8 +298,6 @@ class VimeoController extends Controller
             $videos = $client->request($uri_video, array(), 'GET');
             $video_information = [];
 
-            save_file($uri_video);
-
             $data_videos = $videos['body']['data'];
 
             $lessons_created = [];
@@ -322,8 +325,6 @@ class VimeoController extends Controller
                 if( isset( $lessons['status'] ) ){
                     array_push($lessons_created, $item['name'] .' - '.$video_information['modified_time']);
                 }
-
-                save_file($lessons_created);
 
             }
 

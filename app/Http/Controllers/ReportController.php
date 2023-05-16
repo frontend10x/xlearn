@@ -83,11 +83,13 @@ class ReportController extends Controller
     {
         try {
 
+            $total = SubcompaniesController::getSubCompanieQuotas($id);
+
             return [
                 // se resta un usuario, debido a que el usuario empresa no es contabilizado
                 // en los cupos
                 "used" => count($this->users) - 1,
-                "total" => SubcompaniesController::getSubCompanieQuotas($id),
+                "total" => is_numeric($total) ? $total : 0,
             ];
 
         } catch (Exception $e) {
@@ -227,6 +229,8 @@ class ReportController extends Controller
     public function getCompanyTimeElapsed($request, $id)
     {
         try {
+
+            
 
             return SubcompaniesController::validateActiveSubscription($request, $id);
 

@@ -27,7 +27,8 @@ class ProgramController extends Controller
             ];
 
             $create_program = Program::create($dataInsert);
-            return json_encode(["message" => "Programa creado con éxito", "id" => $create_program['id']]);
+
+            return response()->json(["message" => "Programa creado con éxito", "id" => $create_program['id']]);
         } catch (Exception $e) {
             return return_exceptions($e);
         }
@@ -41,13 +42,11 @@ class ProgramController extends Controller
 
             if (empty($program)) {
                 $state = self::store($request, false);
-                return json_encode($state);
             }else{
                 $state = self::edit($request);
-                return json_encode($state->original);
             }
 
-            save_file($state);
+            return json_encode($state->original);
 
         } catch (Exception $e) {
             return return_exceptions($e);

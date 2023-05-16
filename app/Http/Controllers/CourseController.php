@@ -43,7 +43,7 @@ class CourseController extends Controller
             }
 
             $create_course = Course::create($dataInsert);
-            return json_encode(["message" => "Curso creado con éxito", "id" => $create_course['id']]);
+            return response()->json(["message" => "Curso creado con éxito", "id" => $create_course['id']]);
         } catch (Exception $e) {
             return return_exceptions($e);
         }
@@ -60,7 +60,7 @@ class CourseController extends Controller
             }else{
                 $state = self::edit($request);
             }
-
+            
             return json_encode($state->original);
 
         } catch (Exception $e) {
