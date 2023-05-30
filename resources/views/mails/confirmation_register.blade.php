@@ -221,7 +221,6 @@
 
     <br />
     <br />
-    <p>Para obtener el <b>80% de descuento</b> ingresa el cupón <span class="parrafo__span__xln">STARTCO</span></p>
     <br />
     <p>Revisa el siguiente tutorial para realizar el pago de forma efectiva: <span><a
                 href="https://youtu.be/vi1gYCvYq7k" target="_blank">https://youtu.be/vi1gYCvYq7k</a></span></p>
@@ -266,7 +265,8 @@
     <br>
     <br>
     <p style="text-align: center;"> Si no funciona el boton, copie y pegue el siguiente enlace en un navegador:
-        <br>{{ $information['urlConfimation'] }}.</p>
+        <br>{{ $information['urlConfimation'] }}.
+    </p>
     <br>
     <br>
     <footer class="footer">

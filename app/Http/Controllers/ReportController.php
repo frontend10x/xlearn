@@ -176,11 +176,11 @@ class ReportController extends Controller
             return [ 
                 "completed" => [
                     'total' => $coursesCompleted,
-                    'percentage' => $percentageCompleted . '%'
+                    'percentage' => $percentageCompleted
                 ], 
                 "pending" => [
                     'total' => $pendingCourses,
-                    'percentage' => $percentagePending . '%'
+                    'percentage' => $percentagePending
                 ], 
                 "total" => count($usersCourses) 
             ];
@@ -229,8 +229,6 @@ class ReportController extends Controller
     public function getCompanyTimeElapsed($request, $id)
     {
         try {
-
-            
 
             return SubcompaniesController::validateActiveSubscription($request, $id);
 

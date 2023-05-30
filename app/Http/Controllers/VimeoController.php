@@ -24,32 +24,50 @@ class VimeoController extends Controller
 
         try {
 
-            $folders = [];
             $val = [];
+            $results = [];
+            $currentLevel = [];
             
             $client = new Vimeo(CLIENT_ID, CLIENT_SECRET, ACCESS_TOKEN);
 
             $response = $client->request('/me/projects', array(), 'GET');
 
-            // return $client->request('/users/177726805/projects/15650900/videos', array(), 'GET');
+            // return $client->request('/users/177726805/projects/16243850/items', array(), 'GET');
 
             $arrayData = $response['body']['data'];
 
+            array_walk_recursive($arrayData, function($element, $key) use (&$results, &$currentLevel) {
+                // Condición para verificar si el element cumple con tu criterio
+                if(strstr($element, 'Área' )){
+                    $results[] = [
+                        'element' => $element,
+                        'uri' => $currentLevel['uri'] // Accede a otros datos en el mismo nivel
+                    ];
+                }
 
+                if($element == 'Trailers' ){
+                    $trailer = $this->process_trailers($currentLevel);
+                }
+
+                $currentLevel[$key] = $element;
+                
+            });
+
+            // Procesamos los trailers
             foreach ($arrayData as $key => $value) {
 
                 //Instanciamos los trailers
                 $this->process_trailers($value);
-
-                if(strstr( $value['name'], 'Área' )){
-
-                    $processAreas = $this->process_areas($request, $value);
-
-                    array_push($val, $processAreas);
-
-                }
                 
             };
+
+            // Procesamos las areas, programas, cursos y lecciones
+            foreach ($results as $key => $value) {
+
+                $folder = $client->request($value["uri"], array(), 'GET');
+                $processAreas = $this->process_areas($request, $folder["body"]);
+                array_push($val, $processAreas);
+            }
             
             if (empty($val))
                 throw new Exception("No hubo inserción de información, verifique si ya existen en la base de datos");
@@ -100,6 +118,8 @@ class VimeoController extends Controller
                 }
 
                 $this->trailers = $valTrailers;
+                
+
                 //echo json_encode($valTrailers);
                 // $this->trailers[]
 

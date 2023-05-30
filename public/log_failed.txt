@@ -4,3 +4,1708 @@
 message => Attempt to read property "original" on string
 file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CourseController.php
 line => 66
+
+19/05/2023 10:12:30
+message => No hubo inserción de información, verifique si ya existen en la base de datos
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 55
+
+19/05/2023 10:39:37
+message => No hubo inserción de información, verifique si ya existen en la base de datos
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 54
+
+19/05/2023 10:42:28
+message => No hubo inserción de información, verifique si ya existen en la base de datos
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 56
+
+19/05/2023 10:46:51
+message => No hubo inserción de información, verifique si ya existen en la base de datos
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 56
+
+19/05/2023 11:00:17
+message => Undefined array key "nme"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 51
+
+29/05/2023 10:43:25
+message => Undefined variable $value
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 42
+
+29/05/2023 11:04:49
+message => Undefined variable $client
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 49
+
+29/05/2023 12:11:49
+message => Array to string conversion
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/vimeo/vimeo-api/src/Vimeo/Vimeo.php
+line => 123
+
+29/05/2023 12:49:57
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:49:57
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:49:58
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:49:59
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:01
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:02
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:02
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:04
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:05
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:05
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:07
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:07
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:08
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:09
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:11
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:12
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:12
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:14
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:15
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:15
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:17
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:17
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:17
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:19
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:20
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:21
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:22
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:23
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:23
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:25
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:25
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:26
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:28
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:28
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:29
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:31
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:31
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:32
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:33
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:34
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 12:50:34
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 280
+
+29/05/2023 13:48:57
+message => Trying to access array offset on value of type bool
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 113
+
+29/05/2023 13:49:23
+message => Trying to access array offset on value of type bool
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 113
+
+29/05/2023 13:50:43
+message => Trying to access array offset on value of type bool
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:50:43
+message => Trying to access array offset on value of type bool
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:50:43
+message => Trying to access array offset on value of type bool
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:50:43
+message => Trying to access array offset on value of type bool
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:50:43
+message => Trying to access array offset on value of type bool
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:50:43
+message => Trying to access array offset on value of type bool
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:50:43
+message => Trying to access array offset on value of type bool
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:50:43
+message => Trying to access array offset on value of type bool
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:21
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:21
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:21
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:21
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:21
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:21
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:21
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:21
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:21
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:21
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:21
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:21
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:21
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:21
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:21
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:21
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:21
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:21
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:21
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:21
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:21
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:21
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:21
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:21
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:21
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:21
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:21
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:53:22
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 112
+
+29/05/2023 13:58:09
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 108
+
+29/05/2023 13:58:09
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 108
+
+29/05/2023 13:58:09
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 108
+
+29/05/2023 13:58:09
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 108
+
+29/05/2023 13:58:09
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 108
+
+29/05/2023 13:58:09
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 108
+
+29/05/2023 13:58:09
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 108
+
+29/05/2023 13:58:09
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 108
+
+29/05/2023 13:58:09
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 108
+
+29/05/2023 13:58:09
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 108
+
+29/05/2023 13:58:09
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 108
+
+29/05/2023 13:58:09
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 108
+
+29/05/2023 13:58:09
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 108
+
+29/05/2023 13:58:09
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 108
+
+29/05/2023 13:58:09
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 108
+
+29/05/2023 13:58:09
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 108
+
+29/05/2023 13:58:09
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 108
+
+29/05/2023 13:58:09
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 108
+
+29/05/2023 13:58:45
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:45
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:45
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:45
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:45
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:45
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:45
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:45
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:45
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:45
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:45
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:45
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:45
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:45
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:45
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:45
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:45
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:45
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:51
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:51
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:51
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:51
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:51
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:51
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:51
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:51
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:51
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:51
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:51
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:51
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:51
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:51
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:51
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:51
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:51
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 13:58:51
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 109
+
+29/05/2023 14:02:38
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 102
+
+29/05/2023 14:02:38
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 102
+
+29/05/2023 14:02:38
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 102
+
+29/05/2023 14:02:38
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 102
+
+29/05/2023 14:02:38
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 102
+
+29/05/2023 14:02:38
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 102
+
+29/05/2023 14:02:38
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 102
+
+29/05/2023 14:02:38
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 102
+
+29/05/2023 14:02:38
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 102
+
+29/05/2023 14:02:38
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 102
+
+29/05/2023 14:02:38
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 102
+
+29/05/2023 14:02:38
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 102
+
+29/05/2023 14:02:38
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 102
+
+29/05/2023 14:02:38
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 102
+
+29/05/2023 14:02:38
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 102
+
+29/05/2023 14:02:38
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 102
+
+29/05/2023 14:02:38
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 102
+
+29/05/2023 14:02:38
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 102
+
+29/05/2023 14:04:49
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:04:49
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:04:49
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:04:49
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:04:49
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:04:49
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:04:49
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:04:49
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:04:49
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:04:49
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:04:49
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:04:49
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:04:49
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:04:49
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:04:49
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:04:49
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:04:49
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:04:49
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:04:56
+message => Undefined variable $resultados
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 65
+
+29/05/2023 14:05:27
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:05:27
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:05:27
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:05:27
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:05:27
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:05:27
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:05:27
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:05:27
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:05:27
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:05:27
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:05:27
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:05:27
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:05:27
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:05:27
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:05:27
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:05:27
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:05:27
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:05:27
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:05:59
+message => Undefined variable $processTrailers
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 69
+
+29/05/2023 14:07:02
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:07:02
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:07:02
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:07:02
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:07:02
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:07:02
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:07:02
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:07:02
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:07:02
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:07:02
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:07:02
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:07:02
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:07:02
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:07:02
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:07:02
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:07:02
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:07:02
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:07:02
+message => Undefined array key "metadata"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/VimeoController.php
+line => 94
+
+29/05/2023 14:17:15
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+29/05/2023 14:17:15
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+29/05/2023 14:17:15
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+29/05/2023 14:17:15
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+29/05/2023 14:17:15
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+29/05/2023 14:17:15
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+30/05/2023 10:31:47
+message => Undefined variable $courses
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CourseController.php
+line => 464
+
+30/05/2023 10:32:02
+message => Undefined variable $courses
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CourseController.php
+line => 464

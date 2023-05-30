@@ -238,12 +238,15 @@ class SubcompaniesController extends Controller
             $date = add_months($paymentFirst['updated_at'], $months);
 
             // Calculamos los dias totales
-            $total = difference_days($currentDate, $date);
+            $pendingDays = difference_days($currentDate, $date);
+
+            $total = $pendingDays + $elapsed;
 
             $state = ($total > $elapsed) ? true : false;
 
             return [
                 "elapsed" => $elapsed, 
+                "pendingDays" => $pendingDays,
                 "total" => $total,
                 "activeSubscription" => $state
             ]; 
