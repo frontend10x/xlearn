@@ -84,67 +84,82 @@ class CertificateController extends Controller
                                     ->where('valid', 1)
                                     ->select('answer', 'question_id', 'updated_at')
                                     ->get()->toArray();
-            
-
-            if(empty($userResponses))
-                throw new Exception("No se encontraron registros");
-            
+                        
             $pointsInFavor = 0;
             $finishDate = date('Y-m-d h:mm;ss');
             $results = [];
 
             $correctAnswer = $this->getCorrectAnswers($course_id);
 
-            foreach ($correctAnswer['questions'] as $key => $correct) {
+            if($correctAnswer && !empty($userResponses)){
+                
+                foreach ($correctAnswer['questions'] as $key => $correct) {
 
-                $index = array_search($correct['id'], array_column($userResponses, 'question_id'));                
-
-                array_push($results, [
-                    "question_id" => $correct['id'],
-                    "answers" => [
-                        "user" => $userResponses[$index]['answer'],
-                        "correct" => $correct['answer']
-                    ]
-                ]);
-
-            };
-
-            $finishDate = $userResponses[count($userResponses) - 1]['updated_at'];
-
-            $pointsInFavor = self::calculate_percentage($results, $pointsInFavor);
-
-            $percentage = round($pointsInFavor / count($correctAnswer['questions']) * 100);
-
-            if($percentage >= $correctAnswer['average_score']){
-
-                if (!empty($consultCertificate)) {
-
-                    $this->edit($percentage, $results, $finishDate, $consultCertificate);
-
-                    $consultCertificate->results = $results;
+                    $index = array_search($correct['id'], array_column($userResponses, 'question_id'));                
     
+                    array_push($results, [
+                        "question_id" => $correct['id'],
+                        "answers" => [
+                            "user" => $userResponses[$index]['answer'],
+                            "correct" => $correct['answer']
+                        ]
+                    ]);
+    
+                };
+
+                $finishDate = $userResponses[count($userResponses) - 1]['updated_at'];
+
+                $pointsInFavor = self::calculate_percentage($results, $pointsInFavor);
+
+                $percentage = round($pointsInFavor / count($correctAnswer['questions']) * 100);
+
+                if($percentage >= $correctAnswer['average_score']){
+
+                    if (!empty($consultCertificate)) {
+
+                        $this->edit($percentage, $results, $finishDate, $consultCertificate);
+
+                        $consultCertificate->results = $results;
+        
+                    }else{
+
+                        $consultCertificate = $this->store($user_id, $course_id, $percentage, $results, $finishDate);
+
+                    }
+
                 }else{
 
-                    $consultCertificate = $this->store($user_id, $course_id, $percentage, $results, $finishDate);
+                    return response()->json([
+                        "status" => false, 
+                        "message" => "Lo sentimos, su evaluación no fue aprobada.",
+                        "percentage" => $percentage,
+                        "results" => $results
+                    ], 200);
 
                 }
 
-            }else{
+            }
 
-                return response()->json([
-                    "status" => false, 
-                    "message" => "Lo sentimos, su evaluación no fue aprobada.",
-                    "percentage" => $percentage,
-                    "results" => $results
-                ], 200);
+            $progress = ProgressController::check_user_progress($request);
+
+            $total_video_time = LessonController::getTotalDuration([$course_id]);
+
+            $progressPorcentage = progress($progress, $total_video_time);
+
+            if($progressPorcentage >= 100 && !$correctAnswer){
+
+                $consultCertificate = $this->store($user_id, $course_id, 0, [], date('Y-m-d'));
 
             }
 
+            if(empty($consultCertificate))
+                throw new Exception("Usuario no aplicar para ser certificado");
+            
             return response()->json([
                 "status" => true, 
                 "code" => $consultCertificate->code, 
                 "paths" => json_decode($consultCertificate->path),
-                "percentage" => $percentage,
+                "percentage" => $percentage ?? 0,
                 "results" => is_array($consultCertificate->results) ? $consultCertificate->results : json_decode($consultCertificate->results)
             ], 200);
 
@@ -251,6 +266,9 @@ class CertificateController extends Controller
         $evaluation = Evaluation::where('course_id', $courseId)
                                 ->select('questions', 'average_score')
                                 ->first();
+
+        if(empty($evaluation))
+            return false;
         
         $id_quest = json_decode($evaluation->questions);
 

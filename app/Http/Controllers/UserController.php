@@ -2,19 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Course;
-use App\Models\User;
 use Exception;
 use Mail;
+use Illuminate\Validation\Rule;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Crypt;
-use App\Mail\EmailNotification;
-use App\Imports\UsersImport;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Validation\Rules\Password;
+use App\Models\Course;
+use App\Models\User;
+use App\Mail\EmailNotification;
+use App\Imports\UsersImport;
+
 
 define('MEMBERS_ROLE', 'Integrante');
 define('COMPANY_ROLE', 'Empresa');
@@ -128,7 +130,7 @@ class UserController extends Controller
                 'password_confirmation' => 'required',
                 'email' => 'required|email|confirmed|unique:users',
                 'email_confirmation' => 'required|email',
-                'subcompanies_id' => 'required|integer',
+                'subcompanies_id' => 'required|integer|exists:sub_companies,id',
                 'name' => 'required', 
                 'phone' => 'required', 
             ]);
@@ -232,6 +234,22 @@ class UserController extends Controller
     public function edit(Request $request, $id)
     {
         try {
+
+            // Validamos los datos enviados
+            $validated = $request->validate([
+                'password' => ['required', 'confirmed', Password::min(8)->letters()->mixedCase()->numbers()->symbols()],
+                'email' => [
+                    'required',
+                    'email',
+                    'confirmed',
+                    Rule::unique('users')->ignore($id)
+                ],
+                'email_confirmation' => 'required|email',
+                'subcompanies_id' => 'required|integer|exists:sub_companies,id',
+                'name' => 'required', 
+                'phone' => 'required', 
+            ]);
+            
             $buscaActualiza = User::find($id);
 
             $dataUpdate = [

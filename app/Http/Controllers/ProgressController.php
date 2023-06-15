@@ -86,7 +86,7 @@ class ProgressController extends Controller
             if (empty($consult))
                 $query = self::store($data);
             else
-                if(!$consult->status){
+                if(!$consult->status || $status){
                     self::reset_user_lessons($data["course_id"], $data["user_id"], $data["lesson_id"]);
                     $query = self::update($data, $consult);
                 }

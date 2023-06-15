@@ -1709,3 +1709,308 @@ line => 464
 message => Undefined variable $courses
 file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CourseController.php
 line => 464
+
+31/05/2023 13:29:41
+message => Undefined array key 0
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 103
+
+31/05/2023 13:30:33
+message => Undefined array key -1
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 110
+
+31/05/2023 13:34:32
+message => Attempt to read property "code" on null
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 146
+
+31/05/2023 13:42:05
+message => Attempt to read property "code" on null
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 157
+
+31/05/2023 13:45:21
+message => Attempt to read property "code" on null
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 157
+
+31/05/2023 13:47:48
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+31/05/2023 13:48:09
+message => Undefined variable $pro
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Helpers/helper.php
+line => 160
+
+31/05/2023 13:49:52
+message => Undefined variable $pro
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Helpers/helper.php
+line => 160
+
+31/05/2023 13:51:37
+message => Undefined property: Illuminate\Http\JsonResponse::$progress
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 145
+
+31/05/2023 13:53:25
+message => Undefined variable $pro
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Helpers/helper.php
+line => 160
+
+31/05/2023 13:55:11
+message => Undefined variable $pro
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Helpers/helper.php
+line => 160
+
+31/05/2023 13:55:34
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+31/05/2023 14:00:44
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+31/05/2023 14:00:45
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+31/05/2023 14:01:09
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+31/05/2023 14:02:37
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+31/05/2023 14:02:37
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+31/05/2023 14:02:37
+message => Undefined variable $percentage
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 162
+
+31/05/2023 14:02:37
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+31/05/2023 14:02:37
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+31/05/2023 14:02:37
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+31/05/2023 14:02:37
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+31/05/2023 14:02:37
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+31/05/2023 14:02:37
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+31/05/2023 14:02:57
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+31/05/2023 14:02:57
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+31/05/2023 14:02:57
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+31/05/2023 14:02:58
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+31/05/2023 14:03:28
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+31/05/2023 14:03:28
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+31/05/2023 14:03:28
+message => Undefined variable $percentage
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 162
+
+31/05/2023 14:03:29
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+31/05/2023 14:03:29
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+31/05/2023 14:03:29
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+31/05/2023 14:03:29
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+31/05/2023 14:03:29
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+31/05/2023 14:03:29
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+31/05/2023 14:04:04
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+31/05/2023 14:11:28
+message => Undefined variable $percentage
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 162
+
+31/05/2023 14:12:27
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+31/05/2023 14:26:12
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+31/05/2023 14:26:12
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+31/05/2023 14:26:34
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+31/05/2023 14:26:34
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+15/06/2023 09:49:49
+message => El valor del campo email ya está en uso. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+15/06/2023 09:50:02
+message => El campo phone es obligatorio.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+15/06/2023 09:54:02
+message => El valor del campo email ya está en uso. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+15/06/2023 09:54:22
+message => El campo subcompanies id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+15/06/2023 09:58:09
+message => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'yesica.hincapie@10xthinking.com.co' for key 'email' (SQL: update `users` set `email` = yesica.hincapie@10xthinking.com.co, `password` = $2y$10$qybw2QjIGUDWAtj6oPFbR.0DmYr58wQyQ2SKCzWpW7l0xkhHkmrJC, `users`.`updated_at` = 2023-06-15 09:58:09 where `id` = 517)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 742
+
+15/06/2023 11:58:54
+message => Undefined array key 1
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Validation/Concerns/ValidatesAttributes.php
+line => 979
+
+15/06/2023 11:59:07
+message => Undefined array key 1
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Validation/Concerns/ValidatesAttributes.php
+line => 979
+
+15/06/2023 11:59:20
+message => El valor del campo email ya está en uso.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+15/06/2023 11:59:57
+message => Undefined array key 1
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Validation/Concerns/ValidatesAttributes.php
+line => 979
+
+15/06/2023 12:00:08
+message => Undefined array key 1
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Validation/Concerns/ValidatesAttributes.php
+line => 979
+
+15/06/2023 12:00:19
+message => Undefined array key 1
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Validation/Concerns/ValidatesAttributes.php
+line => 979
+
+15/06/2023 12:06:55
+message => El campo confirmación de email no coincide.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+15/06/2023 12:07:34
+message => El campo confirmación de email no coincide.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+15/06/2023 12:07:37
+message => El campo confirmación de email no coincide.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+15/06/2023 12:07:41
+message => El valor del campo email ya está en uso.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+15/06/2023 12:08:11
+message => El campo confirmación de email no coincide. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+15/06/2023 12:08:28
+message => El valor del campo email ya está en uso.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323

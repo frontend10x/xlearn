@@ -1,184 +1,58 @@
 
 
-13/05/2023 15:34:01
-data => "AREAS ---->HTTP\/1.0 200 OK\r\nCache-Control: no-cache, private\r\nContent-Type:  application\/json\r\nDate:          Sat, 13 May 2023 20:34:01 GMT\r\n\r\n{\"message\":\"Area actualizada con \\u00e9xto\",\"id\":4}"
+31/05/2023 11:29:35
+data => {"advanced_current_time":498,"total_video_time":550}
 
-13/05/2023 15:34:02
-data => "PROGRAMAS ---->HTTP\/1.0 200 OK\r\nCache-Control: no-cache, private\r\nContent-Type:  application\/json\r\nDate:          Sat, 13 May 2023 20:34:02 GMT\r\n\r\n{\"message\":\"Programa creado con \\u00e9xito\",\"id\":13}"
+31/05/2023 12:49:01
+data => {"advanced_current_time":554,"total_video_time":550}
 
-13/05/2023 15:34:02
-data => {"message":"Programa creado con \u00e9xito","id":13}
+31/05/2023 13:38:42
+data => {"advanced_current_time":498,"total_video_time":550}
 
-13/05/2023 15:34:03
-data => "CURSOS ---->{\"message\":\"Curso creado con \\u00e9xito\",\"id\":64}"
+31/05/2023 14:01:09
+data => {"advanced_current_time":554,"total_video_time":550}
 
-13/05/2023 15:34:03
-data => "PROGRAMAS ---->HTTP\/1.0 200 OK\r\nCache-Control: no-cache, private\r\nContent-Type:  application\/json\r\nDate:          Sat, 13 May 2023 20:34:03 GMT\r\n\r\n{\"message\":\"Programa actualizado con \\u00e9xto\",\"id\":3}"
+31/05/2023 14:02:36
+data => {"advanced_current_time":554,"total_video_time":550}
 
-13/05/2023 15:34:03
-data => "CURSOS ---->HTTP\/1.0 200 OK\r\nCache-Control: no-cache, private\r\nContent-Type:  application\/json\r\nDate:          Sat, 13 May 2023 20:34:03 GMT\r\n\r\n{\"message\":\"Curso actualizado con \\u00e9xto\",\"id\":50}"
+31/05/2023 14:02:37
+data => {"advanced_current_time":554,"total_video_time":550}
 
-13/05/2023 15:34:05
-data => "CURSOS ---->HTTP\/1.0 200 OK\r\nCache-Control: no-cache, private\r\nContent-Type:  application\/json\r\nDate:          Sat, 13 May 2023 20:34:05 GMT\r\n\r\n{\"message\":\"Curso actualizado con \\u00e9xto\",\"id\":51}"
+31/05/2023 14:03:28
+data => {"advanced_current_time":554,"total_video_time":550}
 
-13/05/2023 15:34:07
-data => "CURSOS ---->HTTP\/1.0 200 OK\r\nCache-Control: no-cache, private\r\nContent-Type:  application\/json\r\nDate:          Sat, 13 May 2023 20:34:07 GMT\r\n\r\n{\"message\":\"Curso actualizado con \\u00e9xto\",\"id\":52}"
+31/05/2023 14:03:28
+data => {"advanced_current_time":554,"total_video_time":550}
 
-13/05/2023 15:34:09
-data => "CURSOS ---->HTTP\/1.0 200 OK\r\nCache-Control: no-cache, private\r\nContent-Type:  application\/json\r\nDate:          Sat, 13 May 2023 20:34:09 GMT\r\n\r\n{\"message\":\"Curso actualizado con \\u00e9xto\",\"id\":53}"
+31/05/2023 14:04:04
+data => {"advanced_current_time":554,"total_video_time":550}
 
-13/05/2023 15:34:10
-data => "PROGRAMAS ---->HTTP\/1.0 200 OK\r\nCache-Control: no-cache, private\r\nContent-Type:  application\/json\r\nDate:          Sat, 13 May 2023 20:34:10 GMT\r\n\r\n{\"message\":\"Programa actualizado con \\u00e9xto\",\"id\":4}"
+31/05/2023 14:11:13
+data => {"advanced_current_time":554,"total_video_time":550}
 
-13/05/2023 15:34:11
-data => "CURSOS ---->HTTP\/1.0 200 OK\r\nCache-Control: no-cache, private\r\nContent-Type:  application\/json\r\nDate:          Sat, 13 May 2023 20:34:11 GMT\r\n\r\n{\"message\":\"Curso actualizado con \\u00e9xto\",\"id\":54}"
+31/05/2023 14:11:28
+data => {"advanced_current_time":554,"total_video_time":550}
 
-13/05/2023 15:34:13
-data => "CURSOS ---->HTTP\/1.0 200 OK\r\nCache-Control: no-cache, private\r\nContent-Type:  application\/json\r\nDate:          Sat, 13 May 2023 20:34:13 GMT\r\n\r\n{\"message\":\"Curso actualizado con \\u00e9xto\",\"id\":55}"
+31/05/2023 14:11:49
+data => {"advanced_current_time":554,"total_video_time":550}
 
-13/05/2023 15:34:15
-data => "CURSOS ---->HTTP\/1.0 200 OK\r\nCache-Control: no-cache, private\r\nContent-Type:  application\/json\r\nDate:          Sat, 13 May 2023 20:34:15 GMT\r\n\r\n{\"message\":\"Curso actualizado con \\u00e9xto\",\"id\":56}"
+31/05/2023 14:13:15
+data => {"advanced_current_time":554,"total_video_time":550}
 
-13/05/2023 15:34:18
-data => "CURSOS ---->HTTP\/1.0 200 OK\r\nCache-Control: no-cache, private\r\nContent-Type:  application\/json\r\nDate:          Sat, 13 May 2023 20:34:18 GMT\r\n\r\n{\"message\":\"Curso actualizado con \\u00e9xto\",\"id\":57}"
+31/05/2023 14:14:15
+data => {"advanced_current_time":554,"total_video_time":550}
 
-13/05/2023 15:34:20
-data => "CURSOS ---->HTTP\/1.0 200 OK\r\nCache-Control: no-cache, private\r\nContent-Type:  application\/json\r\nDate:          Sat, 13 May 2023 20:34:20 GMT\r\n\r\n{\"message\":\"Curso actualizado con \\u00e9xto\",\"id\":58}"
+31/05/2023 14:19:39
+data => {"advanced_current_time":554,"total_video_time":550}
 
-13/05/2023 15:34:22
-data => "CURSOS ---->HTTP\/1.0 200 OK\r\nCache-Control: no-cache, private\r\nContent-Type:  application\/json\r\nDate:          Sat, 13 May 2023 20:34:22 GMT\r\n\r\n{\"message\":\"Curso actualizado con \\u00e9xto\",\"id\":59}"
+31/05/2023 14:26:10
+data => {"advanced_current_time":554,"total_video_time":550}
 
-13/05/2023 15:36:22
-data => "AREAS ---->HTTP\/1.0 200 OK\r\nCache-Control: no-cache, private\r\nContent-Type:  application\/json\r\nDate:          Sat, 13 May 2023 20:36:22 GMT\r\n\r\n{\"message\":\"Area actualizada con \\u00e9xto\",\"id\":4}"
+31/05/2023 14:26:11
+data => {"advanced_current_time":554,"total_video_time":550}
 
-13/05/2023 15:36:23
-data => "PROGRAMAS ---->HTTP\/1.0 200 OK\r\nCache-Control: no-cache, private\r\nContent-Type:  application\/json\r\nDate:          Sat, 13 May 2023 20:36:23 GMT\r\n\r\n{\"message\":\"Programa creado con \\u00e9xito\",\"id\":14}"
+31/05/2023 14:26:32
+data => {"advanced_current_time":554,"total_video_time":550}
 
-13/05/2023 15:36:23
-data => {"message":"Programa creado con \u00e9xito","id":14}
-
-13/05/2023 15:36:25
-data => "PROGRAMAS ---->HTTP\/1.0 200 OK\r\nCache-Control: no-cache, private\r\nContent-Type:  application\/json\r\nDate:          Sat, 13 May 2023 20:36:25 GMT\r\n\r\n{\"message\":\"Programa actualizado con \\u00e9xto\",\"id\":3}"
-
-13/05/2023 15:36:33
-data => "PROGRAMAS ---->HTTP\/1.0 200 OK\r\nCache-Control: no-cache, private\r\nContent-Type:  application\/json\r\nDate:          Sat, 13 May 2023 20:36:33 GMT\r\n\r\n{\"message\":\"Programa actualizado con \\u00e9xto\",\"id\":4}"
-
-29/05/2023 12:49:56
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 12:50:01
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 12:50:04
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 12:50:06
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 12:50:11
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 12:50:13
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 12:50:16
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 12:50:19
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 12:50:22
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 12:50:25
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 12:50:28
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 12:50:30
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 12:50:33
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 12:51:42
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 12:52:17
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 12:52:32
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 12:52:46
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 12:53:05
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 12:53:19
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 12:53:33
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 12:53:48
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 12:54:05
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 12:54:22
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 12:54:37
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 12:54:51
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 12:55:06
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 14:05:35
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 14:07:14
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 14:07:35
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 14:07:50
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 14:08:11
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 14:08:29
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 14:08:44
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 14:08:59
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 14:09:14
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 14:09:29
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 14:09:44
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 14:09:59
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 14:10:18
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
-
-29/05/2023 14:10:33
-data => {"message":"Programa actualizado con \u00e9xto","id":14}
+31/05/2023 14:26:33
+data => {"advanced_current_time":554,"total_video_time":550}

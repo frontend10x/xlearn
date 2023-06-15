@@ -143,7 +143,7 @@ if (!function_exists('progress')) {
         $advanced_current_time = 0;
         //$total_video_time = 0;
 
-        if (isset($progress->original['progress'])){
+        if (isset($progress->original['progress']) && !empty($progress->original['progress'])){
 
             $result = $progress->original['progress'];
 
@@ -156,6 +156,11 @@ if (!function_exists('progress')) {
             $total_video_time = $total_video_time ? $total_video_time : 1;
 
             $percentage = round($advanced_current_time / $total_video_time * 100);
+
+            if($pro['course_id'] == 50){
+                save_file(
+                    ["advanced_current_time" => $advanced_current_time, "total_video_time" => $total_video_time]);
+            }
 
         }
         
