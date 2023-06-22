@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * Consultar url server del proyecto
  */
@@ -340,5 +339,19 @@ if (!function_exists('difference_days')) {
         $differenceFormat = '%a';
 
         return $contador->format($differenceFormat); 
+    }
+}
+
+/**
+ * Armar arreglo información para compartir
+ */
+if (!function_exists('share_content')) {
+    function share_content() {
+        return [
+            "linkedIn" => [
+                    "companieId" => env('ORGANIZATION_ID_LINKEDIN'),
+                    "urlBase" => env('URL_BASE_LINKEDIN')
+                ]
+        ]; 
     }
 }

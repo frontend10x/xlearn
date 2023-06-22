@@ -56,3 +56,192 @@ data => {"advanced_current_time":554,"total_video_time":550}
 
 31/05/2023 14:26:33
 data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 09:54:56
+data => {"course_id":"50","user_id":339,"lesson_id":99,"percentage_completion":7.1,"current":1,"advanced_current_time":8.834,"total_video_time":124.756,"status":0}
+
+22/06/2023 10:13:38
+data => {"advanced_current_time":9,"total_video_time":550}
+
+22/06/2023 10:13:38
+data => {"advanced_current_time":9,"total_video_time":550}
+
+22/06/2023 10:14:31
+data => {"course_id":"50","user_id":339,"lesson_id":100,"percentage_completion":100,"current":1,"advanced_current_time":48.59,"total_video_time":48.597,"status":1}
+
+22/06/2023 10:14:42
+data => {"course_id":"50","user_id":339,"lesson_id":99,"percentage_completion":1,"current":1,"advanced_current_time":1,"total_video_time":124.756,"status":0}
+
+22/06/2023 10:16:47
+data => {"course_id":"50","user_id":339,"lesson_id":99,"percentage_completion":100,"current":1,"advanced_current_time":124.75,"total_video_time":124.756,"status":1}
+
+22/06/2023 10:16:57
+data => {"course_id":"50","user_id":339,"lesson_id":98,"percentage_completion":1,"current":1,"advanced_current_time":1,"total_video_time":71.995,"status":0}
+
+22/06/2023 10:18:09
+data => {"course_id":"50","user_id":339,"lesson_id":98,"percentage_completion":100,"current":1,"advanced_current_time":71.989,"total_video_time":71.995,"status":1}
+
+22/06/2023 10:20:04
+data => {"course_id":"50","user_id":339,"lesson_id":97,"percentage_completion":100,"current":1,"advanced_current_time":98.32,"total_video_time":98.327,"status":1}
+
+22/06/2023 10:22:43
+data => {"course_id":"50","user_id":339,"lesson_id":96,"percentage_completion":100,"current":1,"advanced_current_time":153.833,"total_video_time":153.833,"status":1}
+
+22/06/2023 10:23:42
+data => {"course_id":"50","user_id":339,"lesson_id":95,"percentage_completion":100,"current":1,"advanced_current_time":56.3,"total_video_time":56.307,"status":1}
+
+22/06/2023 10:23:52
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 10:23:53
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 10:24:53
+data => {"advanced_current_time":478,"total_video_time":550}
+
+22/06/2023 10:24:53
+data => {"advanced_current_time":478,"total_video_time":550}
+
+22/06/2023 10:28:53
+data => {"advanced_current_time":124.756,"total_video_time":124.756}
+
+22/06/2023 10:29:04
+data => {"advanced_current_time":124.756,"total_video_time":124.756}
+
+22/06/2023 10:29:09
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 10:29:10
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 10:30:21
+data => {"course_id":"51","user_id":339,"lesson_id":106,"percentage_completion":8.1,"current":1,"advanced_current_time":10.441,"total_video_time":129.64,"status":0}
+
+22/06/2023 10:30:34
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 10:30:34
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 10:30:41
+data => {"course_id":"51","user_id":339,"lesson_id":106,"percentage_completion":1,"current":1,"advanced_current_time":1,"total_video_time":129.64,"status":0}
+
+22/06/2023 10:32:26
+data => {"course_id":"51","user_id":339,"lesson_id":106,"percentage_completion":88.1,"current":1,"advanced_current_time":114.215,"total_video_time":129.64,"status":0}
+
+22/06/2023 10:32:39
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 10:32:39
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 10:32:45
+data => {"course_id":"51","user_id":339,"lesson_id":106,"percentage_completion":1,"current":1,"advanced_current_time":1,"total_video_time":129.64,"status":0}
+
+22/06/2023 10:33:01
+data => {"course_id":"51","user_id":339,"lesson_id":106,"percentage_completion":100,"current":1,"advanced_current_time":129.633,"total_video_time":129.64,"status":1}
+
+22/06/2023 10:33:16
+data => {"advanced_current_time":129.64,"total_video_time":129.64}
+
+22/06/2023 10:33:29
+data => {"advanced_current_time":129.64,"total_video_time":129.64}
+
+22/06/2023 12:35:42
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 12:35:42
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 12:39:17
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 12:39:18
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 12:54:46
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 12:54:53
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 12:55:20
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 12:55:27
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 12:55:28
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 12:58:14
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 12:58:15
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 12:58:20
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 12:58:21
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 12:59:20
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 12:59:21
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 12:59:24
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 12:59:25
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 12:59:28
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 12:59:29
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 13:49:14
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 13:49:14
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 13:50:32
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 13:50:39
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 13:50:40
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 13:55:37
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 13:55:37
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 13:56:15
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 13:56:19
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 13:56:20
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 14:21:04
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 14:21:04
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 14:23:30
+data => {"advanced_current_time":554,"total_video_time":550}
+
+22/06/2023 14:23:31
+data => {"advanced_current_time":554,"total_video_time":550}

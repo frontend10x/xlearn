@@ -86,7 +86,12 @@ class ProgressController extends Controller
             if (empty($consult))
                 $query = self::store($data);
             else
-                if(!$consult->status || $status){
+                if($consult->status){
+                    $query = self::update([
+                        "advanced_current_time" => $request->input("total_video_time"), 
+                        "total_video_time" => $request->input("total_video_time")
+                    ], $consult);
+                }else{
                     self::reset_user_lessons($data["course_id"], $data["user_id"], $data["lesson_id"]);
                     $query = self::update($data, $consult);
                 }

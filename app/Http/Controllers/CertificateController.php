@@ -157,10 +157,13 @@ class CertificateController extends Controller
             
             return response()->json([
                 "status" => true, 
-                "code" => $consultCertificate->code, 
+                "code" => $consultCertificate->code,
+                "date" => $consultCertificate->finish_date,
+                "course" => $consultCertificate->course_name,
                 "paths" => json_decode($consultCertificate->path),
                 "percentage" => $percentage ?? 0,
-                "results" => is_array($consultCertificate->results) ? $consultCertificate->results : json_decode($consultCertificate->results)
+                "results" => is_array($consultCertificate->results) ? $consultCertificate->results : json_decode($consultCertificate->results),
+                "share" => share_content()
             ], 200);
 
         } catch (Exception $e) {

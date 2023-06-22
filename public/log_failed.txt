@@ -2014,3 +2014,1758 @@ line => 323
 message => El valor del campo email ya está en uso.
 file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
 line => 323
+
+22/06/2023 09:53:34
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 09:53:34
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 09:53:34
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 09:53:34
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 09:53:34
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 09:53:34
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 09:53:34
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 09:53:34
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 09:53:34
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 09:53:35
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 09:54:38
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 09:54:39
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 09:54:39
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 09:54:39
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 09:54:39
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 09:54:42
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 09:54:42
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 09:54:47
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 09:54:47
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 09:54:56
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 09:54:56
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:01:54
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:01:54
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:01:54
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:01:54
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:01:54
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:13:11
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:13:11
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:13:11
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:13:11
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:13:16
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:13:16
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:13:38
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:13:38
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:13:38
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:13:38
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:13:38
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:13:38
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:13:38
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:13:38
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:13:38
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:13:39
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:13:39
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:13:40
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:13:40
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:13:40
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:13:40
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:13:43
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:13:43
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:14:32
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:14:32
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:14:32
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:14:37
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:14:37
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:14:37
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:14:41
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:14:41
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:14:43
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:16:48
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:16:48
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:16:48
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:16:55
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:16:55
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:16:57
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:18:09
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:18:09
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:18:09
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:18:26
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:18:26
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:20:05
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:20:05
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:20:05
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:20:09
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:22:43
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:22:43
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:22:43
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:22:46
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:22:46
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:23:42
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:23:42
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:23:43
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:23:53
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:23:53
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:23:53
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:23:53
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:23:53
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:23:53
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:23:53
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:23:53
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:23:53
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:24:53
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:24:53
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:24:53
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:24:54
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:24:54
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:24:54
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:24:54
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:24:54
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:24:54
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:25:04
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:25:04
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:25:04
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:25:04
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:25:04
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:25:07
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:25:07
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:25:11
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:25:11
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:25:12
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:25:12
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:28:53
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:28:53
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:29:04
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:29:10
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:29:10
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:29:10
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:29:10
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:29:10
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:29:10
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:29:10
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:29:10
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:29:10
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:30:04
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:30:04
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:30:04
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:30:04
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:30:05
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:30:10
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:30:11
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:30:21
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:30:21
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:30:29
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:30:29
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:30:29
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:30:29
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:30:29
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:30:34
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:30:35
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:30:35
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:30:35
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:30:35
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:30:35
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:30:35
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:30:35
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:30:35
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:30:37
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:30:38
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:30:38
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:30:38
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:30:38
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:30:41
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:30:41
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:32:26
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:32:26
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:32:34
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:32:35
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:32:35
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:32:35
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:32:35
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:32:39
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:32:40
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:32:40
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:32:40
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:32:40
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:32:40
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:32:40
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:32:40
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:32:40
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 10:32:42
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:32:43
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:32:43
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:32:43
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:32:43
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:32:46
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:33:01
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:33:01
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:33:01
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:33:12
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:33:12
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:33:16
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:33:16
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:33:29
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:33:29
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:33:32
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:33:32
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:33:33
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:33:33
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 10:33:33
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 12:35:42
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:35:42
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:35:43
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:35:43
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:35:43
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:35:43
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:35:43
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:35:43
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:35:43
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:39:18
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:39:18
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:39:18
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:39:18
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:39:18
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:39:18
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:39:18
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:39:18
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:39:18
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:54:46
+message => El campo course id debe ser un número entero.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 12:54:46
+message => El campo course id debe ser un número entero.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 12:54:46
+message => El campo course id debe ser un número entero.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 12:54:46
+message => El campo course id debe ser un número entero.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 12:54:46
+message => El campo course id debe ser un número entero.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 12:54:47
+message => El campo course id debe ser un número entero.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 12:54:47
+message => El campo course id debe ser un número entero.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 12:54:47
+message => El campo course id debe ser un número entero.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 12:54:47
+message => El campo course id debe ser un número entero.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 12:54:47
+message => El campo course id debe ser un número entero.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+22/06/2023 12:55:20
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:55:20
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:55:20
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:55:20
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:55:20
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:55:20
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:55:21
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:55:21
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:55:21
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:55:28
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:55:28
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:55:28
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:55:29
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:55:29
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:55:29
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:55:29
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:55:29
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:55:29
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:58:15
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:58:15
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:58:15
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:58:15
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:58:15
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:58:16
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:58:16
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:58:16
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:58:16
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:58:21
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:58:21
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:58:21
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:58:21
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:58:22
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:58:22
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:58:22
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:58:22
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:58:22
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:59:21
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:59:21
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:59:21
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:59:21
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:59:22
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:59:22
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:59:22
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:59:22
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:59:22
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:59:25
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:59:25
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:59:25
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:59:25
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:59:26
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:59:26
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:59:26
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:59:26
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:59:26
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:59:29
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:59:29
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:59:29
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:59:29
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:59:29
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:59:29
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:59:30
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:59:30
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 12:59:30
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:49:15
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:49:15
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:49:15
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:49:15
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:49:15
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:49:15
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:49:15
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:49:15
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:49:15
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:50:32
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:50:32
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:50:32
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:50:32
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:50:32
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:50:33
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:50:33
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:50:33
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:50:33
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:50:40
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:50:40
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:50:40
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:50:40
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:50:40
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:50:40
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:50:41
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:50:41
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:50:41
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:55:37
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:55:37
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:55:38
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:55:38
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:55:38
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:55:38
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:55:38
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:55:38
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:55:38
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:56:15
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:56:15
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:56:15
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:56:15
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:56:15
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:56:15
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:56:15
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:56:16
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:56:16
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:56:20
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:56:20
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:56:20
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:56:20
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:56:20
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:56:20
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:56:20
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:56:20
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 13:56:20
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 14:21:04
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 14:21:05
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 14:21:05
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 14:21:05
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 14:21:05
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 14:21:05
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 14:21:05
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 14:21:05
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 14:21:05
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 14:23:31
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 14:23:31
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 14:23:31
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 14:23:31
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 14:23:31
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 14:23:31
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 14:23:31
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 14:23:31
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156
+
+22/06/2023 14:23:31
+message => Usuario no aplicar para ser certificado
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
+line => 156

@@ -9,10 +9,7 @@
             "url": "https://servicios.10xconsultores.org"
         },
         {
-            "url": "http://127.0.0.1:8000"
-        },
-        {
-            "url": "https://servicios.asstiseguridadsocial.com"
+            "url": "https://127.0.0.1:8000"
         }
     ],
     "paths": {

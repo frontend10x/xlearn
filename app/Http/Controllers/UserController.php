@@ -237,7 +237,7 @@ class UserController extends Controller
 
             // Validamos los datos enviados
             $validated = $request->validate([
-                'password' => ['required', 'confirmed', Password::min(8)->letters()->mixedCase()->numbers()->symbols()],
+                'password' => ['confirmed', Password::min(8)->letters()->mixedCase()->numbers()->symbols()],
                 'email' => [
                     'required',
                     'email',
