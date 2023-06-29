@@ -915,16 +915,18 @@ class UserController extends Controller
             //TODO debe sacarse del request, por defecto el valor es uno
             $offset = $request->has('offset') ? intval($request->get('offset')) : 1;
 
-            //TODO debe sacarse del request, por defecto el valor es 10.
+            //TODO debe sacarse del request, por defecto el valor es all.
             $limit = $request->has('limit') ? intval($request->get('limit')) : 'all';
 
             if($limit != 'all' && $limit > 0)
                 $consult = User::with('subCompanies')
+                                ->with('group')
                                 ->where('subcompanies_id', $id)
                                 ->limit($limit)->offset(($offset - 1) * $limit)
                                 ->get()->toArray();
             else
                 $consult = User::with('subCompanies')
+                                ->with('group')
                                 ->where('subcompanies_id', $id)
                                 ->get()->toArray();
             

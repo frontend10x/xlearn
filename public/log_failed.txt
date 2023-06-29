@@ -3769,3 +3769,8 @@ line => 156
 message => Usuario no aplicar para ser certificado
 file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/CertificateController.php
 line => 156
+
+29/06/2023 10:50:05
+message => No se encontraron usuarios
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/UserController.php
+line => 937

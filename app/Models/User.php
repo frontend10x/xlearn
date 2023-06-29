@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
+use App\Models\companies\group\Group;
 
 class User extends Authenticatable
 {
@@ -60,5 +61,9 @@ class User extends Authenticatable
 
     public function subCompanies(){
         return $this->belongsto('App\Models\Sub_companies', "subcompanies_id");
+    }
+
+    public function group(){
+        return $this->belongsToMany(Group::class,"user_group","user_id","group_id");
     }
 }
