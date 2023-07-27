@@ -13,6 +13,7 @@ use App\Models\Question;
 use App\Models\Certificate;
 use App\Models\User;
 use App\Models\Course;
+use App\Models\Option;
 
 define('PATH_BASE', env('PATH_BASE'));
 
@@ -98,10 +99,19 @@ class CertificateController extends Controller
                     $index = array_search($correct['id'], array_column($userResponses, 'question_id'));                
     
                     array_push($results, [
-                        "question_id" => $correct['id'],
+                        "question" => [
+                            "id" => $correct['id'],
+                            "question" => Question::find($correct['id'])->question
+                        ],
                         "answers" => [
-                            "user" => $userResponses[$index]['answer'],
-                            "correct" => $correct['answer']
+                            "user" => [
+                                "id" => $userResponses[$index]['answer'],
+                                "answer" => Option::find($userResponses[$index]['answer'])->response,
+                            ],
+                            "correct" => [
+                                "id" => $correct['answer'],
+                                "answer" => Option::find($correct['answer'])->response,
+                            ]
                         ]
                     ]);
     

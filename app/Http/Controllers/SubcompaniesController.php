@@ -52,6 +52,7 @@ class SubcompaniesController extends Controller
                 , "link_instagram" => $request->input("link_instagram")
                 , "website" => $request->input("website")
                 , "nit" => $request->input("nit")
+                , "information" => $request->input("information")
             ];
             $created = Sub_companies::create($datosSubEmpresa);
             return json_encode(["message" => "Registro almacenado con éxito ", "id" => $created['id']]);
@@ -79,6 +80,7 @@ class SubcompaniesController extends Controller
                 , "website" => $request->input("website")
                 , "nit" => $request->input("nit")
                 , "file_path" => $request->input("file_path")
+                , "information" => $request->input("information")
             ];
             if (empty($subEmpresa)) {
                 throw new Exception("No existe el id: ".$id." para ser actualizado");

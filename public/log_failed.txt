@@ -3774,3 +3774,233 @@ line => 156
 message => No se encontraron usuarios
 file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/UserController.php
 line => 937
+
+13/07/2023 15:25:03
+message => No ReaderType or WriterType could be detected. Make sure you either pass a valid extension to the filename or pass an explicit type.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/maatwebsite/excel/src/Helpers/FileTypeDetector.php
+line => 31
+
+13/07/2023 15:25:14
+message => No ReaderType or WriterType could be detected. Make sure you either pass a valid extension to the filename or pass an explicit type.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/maatwebsite/excel/src/Helpers/FileTypeDetector.php
+line => 31
+
+13/07/2023 15:29:53
+message => Undefined variable $importer
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/EvaluationController.php
+line => 140
+
+16/07/2023 18:34:41
+message => Undefined array key "id"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Imports/QuestionSheetImport.php
+line => 40
+
+16/07/2023 18:35:38
+message => Undefined array key "id"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Imports/QuestionSheetImport.php
+line => 40
+
+16/07/2023 18:37:07
+message => Undefined array key "id"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Imports/QuestionSheetImport.php
+line => 40
+
+16/07/2023 18:37:17
+message => Undefined array key "id"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Imports/QuestionSheetImport.php
+line => 40
+
+16/07/2023 18:39:41
+message => Undefined array key "id"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Imports/QuestionSheetImport.php
+line => 40
+
+16/07/2023 18:44:01
+message => Undefined array key "id"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Imports/QuestionSheetImport.php
+line => 40
+
+16/07/2023 18:49:00
+message => Undefined array key "id"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Imports/QuestionSheetImport.php
+line => 40
+
+16/07/2023 18:49:29
+message => Undefined array key "id"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Imports/QuestionSheetImport.php
+line => 40
+
+16/07/2023 18:49:49
+message => Undefined array key "id"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Imports/QuestionSheetImport.php
+line => 40
+
+16/07/2023 18:49:50
+message => Undefined array key "id"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Imports/QuestionSheetImport.php
+line => 40
+
+16/07/2023 18:49:57
+message => Undefined array key "id"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Imports/QuestionSheetImport.php
+line => 40
+
+16/07/2023 18:53:03
+message => Undefined array key "id"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Imports/QuestionSheetImport.php
+line => 29
+
+16/07/2023 18:53:12
+message => Undefined array key "idss"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Imports/QuestionSheetImport.php
+line => 29
+
+16/07/2023 18:53:38
+message => Undefined array key "id"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Imports/QuestionSheetImport.php
+line => 29
+
+16/07/2023 18:53:55
+message => Undefined array key "id"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Imports/QuestionSheetImport.php
+line => 29
+
+16/07/2023 18:53:56
+message => Undefined array key "id"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Imports/QuestionSheetImport.php
+line => 29
+
+16/07/2023 18:54:09
+message => Undefined array key "id"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Imports/QuestionSheetImport.php
+line => 29
+
+16/07/2023 18:54:55
+message => Undefined array key "id"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Imports/QuestionSheetImport.php
+line => 30
+
+16/07/2023 18:54:58
+message => Undefined array key "id"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Imports/QuestionSheetImport.php
+line => 30
+
+16/07/2023 18:55:29
+message => Undefined array key "id"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Imports/QuestionSheetImport.php
+line => 29
+
+16/07/2023 19:00:21
+message => Undefined array key "id"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Imports/QuestionSheetImport.php
+line => 30
+
+16/07/2023 19:00:35
+message => Undefined array key "id"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Imports/QuestionSheetImport.php
+line => 30
+
+17/07/2023 11:07:14
+message => Undefined array key "id"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Imports/QuestionSheetImport.php
+line => 29
+
+17/07/2023 11:08:52
+message => Undefined array key "id"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Imports/QuestionSheetImport.php
+line => 31
+
+17/07/2023 11:17:12
+message => Add [id] to fillable property to allow mass assignment on [App\Models\Question].
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php
+line => 433
+
+17/07/2023 11:19:34
+message => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'response' in 'field list' (SQL: insert into `answers` (`id`, `response`, `numeration`, `question_id`, `updated_at`, `created_at`) values (4411, Cuestionar, observar, experimentar, colaborar y asociar, A, 100, 2023-07-17 11:19:34, 2023-07-17 11:19:34))
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 742
+
+17/07/2023 11:31:56
+message => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'numeration' in 'field list' (SQL: insert into `answers` (`id`, `answer`, `numeration`, `question_id`, `updated_at`, `created_at`) values (305, Cuestionar, observar, experimentar, colaborar y asociar, A, 100, 2023-07-17 11:31:56, 2023-07-17 11:31:56))
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 742
+
+17/07/2023 11:33:16
+message => Add [id] to fillable property to allow mass assignment on [App\Models\Option].
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php
+line => 433
+
+17/07/2023 11:33:37
+message => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'answer' in 'field list' (SQL: insert into `options` (`id`, `answer`, `numeration`, `question_id`, `updated_at`, `created_at`) values (305, Cuestionar, observar, experimentar, colaborar y asociar, A, 100, 2023-07-17 11:33:37, 2023-07-17 11:33:37))
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 742
+
+17/07/2023 13:36:01
+message => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '100' for key 'PRIMARY' (SQL: insert into `questions` (`id`, `type`, `question`, `response_types`, `required`, `answer`, `updated_at`, `created_at`) values (100, evaluación, ¿Cuáles son las 5 habilidades principales del ADN innovador?, options, 1, 4411, 2023-07-17 13:36:01, 2023-07-17 13:36:01))
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 742
+
+17/07/2023 13:44:44
+message => Attempt to read property "questions" on array
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/EvaluationController.php
+line => 144
+
+17/07/2023 13:46:55
+message => Undefined array key "questions"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/EvaluationController.php
+line => 144
+
+17/07/2023 14:17:13
+message => Your requested sheet name [Opciones] is out of bounds.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/maatwebsite/excel/src/Exceptions/SheetNotFoundException.php
+line => 13
+
+17/07/2023 14:18:01
+message => Your requested sheet name [Opciones] is out of bounds.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/maatwebsite/excel/src/Exceptions/SheetNotFoundException.php
+line => 13
+
+17/07/2023 14:18:25
+message => Attempt to read property "Preguntas" on array
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/EvaluationController.php
+line => 144
+
+17/07/2023 14:19:00
+message => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '100' for key 'PRIMARY' (SQL: insert into `questions` (`id`, `type`, `question`, `response_types`, `required`, `answer`, `updated_at`, `created_at`) values (100, evaluación, ¿Cuáles son las 5 habilidades principales del ADN innovador?, options, 1, 4411, 2023-07-17 14:19:00, 2023-07-17 14:19:00))
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 742
+
+17/07/2023 14:20:30
+message => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '100' for key 'PRIMARY' (SQL: insert into `questions` (`id`, `type`, `question`, `response_types`, `required`, `answer`, `updated_at`, `created_at`) values (100, evaluación, ¿Cuáles son las 5 habilidades principales del ADN innovador?, options, 1, 4411, 2023-07-17 14:20:30, 2023-07-17 14:20:30))
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 742
+
+17/07/2023 14:38:43
+message => Attempt to read property "id" on array
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/EvaluationController.php
+line => 170
+
+17/07/2023 14:39:21
+message => Undefined array key "id"
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/EvaluationController.php
+line => 170
+
+17/07/2023 14:40:41
+message => El campo course id seleccionado no existe.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+17/07/2023 14:41:29
+message => Undefined variable $value
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/app/Http/Controllers/EvaluationController.php
+line => 30
+
+17/07/2023 14:42:23
+message => Add [questions] to fillable property to allow mass assignment on [App\Models\Evaluation].
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php
+line => 433
+
+17/07/2023 14:44:23
+message => El campo questions debe ser un array.
+file => /Users/jairzeapaez/Documents/Proyectos/xlearn-backend/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323

@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Question extends Model
 {
     use HasFactory;
-
+    protected $guarded = [];
+    
     public function options(){
         return $this->hasMany('App\Models\Option', 'question_id');
     }

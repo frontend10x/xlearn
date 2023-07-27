@@ -276,6 +276,8 @@ Route::group(['middleware'=>'auth:api' ],function(){
     // ---------------------------------------------------------------------
     
     Route::get(API_VERSION . '/evaluation/course',[EvaluationController::class, 'showCourse']);
+    Route::post(API_VERSION . '/evaluation/bulk_upload_evaluation',[EvaluationController::class, 'bulkUploadEvaluation']);
+
 
     // ---------------------------------------------------------------------
     // Respuestas
