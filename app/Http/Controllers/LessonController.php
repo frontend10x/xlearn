@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Lesson;
 use App\Models\Lesson_user_comment;
+use App\Factories\CommentFactory;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -125,9 +126,20 @@ class LessonController extends Controller
     {
         try {
 
-            $insertado = Lesson_user_comment::create([
-                "lesson_id" => $id, "user_id" => Auth::user()->id, "comment" => $request->input("comment"), "state" => $request->input("") ?? 1
+            $validate = $request->validate([
+                'text' => 'required',
+                'comId' => 'required',
             ]);
+
+            $insertado = Lesson_user_comment::create([
+                "lesson_id" => $id, 
+                "comId" => $request->input("comId"), 
+                "userId" => Auth::user()->id, 
+                "comment" => $request->input("text"), 
+                "state" => $request->input("") ?? 1,
+                "parent_comment_id" => $request->input("repliedToCommentId")
+            ]);
+                
             if ($insertado)
                 return response()->json(["message" => "Comentario insertado correctamente"], 200);
             else
@@ -140,14 +152,19 @@ class LessonController extends Controller
     {
         try {
 
-            $comments = Lesson_user_comment::join("users","users.id","=","lesson_user_comments.user_id")
-            ->select(
-                DB::raw("users.name as username")
-                ,DB::raw("lesson_user_comments.comment")
-                ,DB::raw("lesson_user_comments.created_at")
-                )
-            ->where("lesson_id",$id)->get();
-            return response()->json(["comments" => $comments], 200);
+            $comments = Lesson_user_comment::with(['user', 'replies.user'])
+                                            ->where('lesson_id', $id)
+                                            ->whereNull('parent_comment_id')
+                                            ->get();
+
+            $commentsArray = [];
+
+            foreach ($comments as $comment) {
+                $commentData = CommentFactory::createComment($comment, $comment->user, $comment->replies);
+                $commentsArray[] = $commentData;
+            }
+
+            return response()->json(["comments" => $commentsArray], 200);
 
         } catch (Exception $e) {
             return return_exceptions($e);

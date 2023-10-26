@@ -395,6 +395,7 @@ class CertificateController extends Controller
             ];
             
             $pdf = app('dompdf.wrapper');
+            save_file($pdf);
             $pdf->loadView('certificate', $data)->setPaper('a4', 'landscape');
         
             return $pdf;
@@ -411,6 +412,21 @@ class CertificateController extends Controller
         try {
             
             $consult = Certificate::where('user_id', $id)->get()->toArray();
+        
+            return $consult;
+
+        } catch (Exception $e) {
+            
+            return return_exceptions($e);
+
+        }
+    }
+
+    public static function showUserCourse($course_id, $user_id)
+    {
+        try {
+            
+            $consult = Certificate::where('user_id', $user_id)->where('course_id', $course_id)->get()->toArray();
         
             return $consult;
 

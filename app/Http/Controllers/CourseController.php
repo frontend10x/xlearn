@@ -444,6 +444,7 @@ class CourseController extends Controller
                     'resources' => Resource::select('name', 'type', 'description', 'file_path')->whereIn('id', $resources)->get(),
                     'lessons:amount' => count($lessons),
                     'progress:porcentage' => $progressPorcentage > 100 ? 100 : $progressPorcentage,
+                    'certificate' => CertificateController::showUserCourse($value["id"], $userId),
                 ];
             }
 

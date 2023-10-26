@@ -236,7 +236,7 @@ Route::group(['middleware'=>'auth:api' ],function(){
     Route::put(API_VERSION . '/lesson/edit/{id}',[LessonController::class, 'edit']);
     Route::post(API_VERSION . '/lesson/store',[LessonController::class, 'store']);
     Route::put(API_VERSION . '/lesson/changestate/{id}',[LessonController::class, 'changestate']);
-    Route::post(API_VERSION . '/lesson/addcommentuser/{id}',[LessonController::class, 'addComment']);
+    Route::post(API_VERSION . '/lesson/addcomment_user/{id}',[LessonController::class, 'addComment']);
     Route::get(API_VERSION . '/lesson/listComment/{id}',[LessonController::class, 'listComment']);
 
     // ---------------------------------------------------------------------
