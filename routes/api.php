@@ -29,6 +29,7 @@ use App\Http\Controllers\AnswerController;
 use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\ReportController;
+use App\Http\Controllers\NotesController;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -238,6 +239,8 @@ Route::group(['middleware'=>'auth:api' ],function(){
     Route::put(API_VERSION . '/lesson/changestate/{id}',[LessonController::class, 'changestate']);
     Route::post(API_VERSION . '/lesson/addcomment_user/{id}',[LessonController::class, 'addComment']);
     Route::get(API_VERSION . '/lesson/listComment/{id}',[LessonController::class, 'listComment']);
+    Route::post(API_VERSION . '/lesson/addNoteUser/{id}',[NotesController::class, 'addNote']);
+    Route::get(API_VERSION . '/lesson/listNoteUser/{id}',[NotesController::class, 'listNote']);
 
     // ---------------------------------------------------------------------
     // Register Request
