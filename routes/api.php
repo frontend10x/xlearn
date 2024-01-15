@@ -242,6 +242,7 @@ Route::group(['middleware'=>'auth:api' ],function(){
     Route::get(API_VERSION . '/lesson/listComment/{id}',[LessonController::class, 'listComment']);
     Route::post(API_VERSION . '/lesson/addNoteUser/{id}',[NotesController::class, 'addNote']);
     Route::get(API_VERSION . '/lesson/listNoteUser/{id}',[NotesController::class, 'listNote']);
+    Route::put(API_VERSION . '/lesson/changeStateNote/{id}',[NotesController::class, 'changeState']);
 
     // ---------------------------------------------------------------------
     // Register Request

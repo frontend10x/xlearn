@@ -35,12 +35,45 @@ class NotesController extends Controller
             return return_exceptions($e);
         }
     }
+
+    public function changeState(Request $request, $id)
+    {
+        try {
+
+            $validate = $request->validate([
+                'state' => 'required'
+            ]);
+
+            $update = Lesson_user_note::find($id);
+
+            if (empty($update)) {
+                throw new Exception("Ocurrio un error");
+            }
+
+            $change = $update->update([
+                "state" => $request->input("state")
+            ]);
+                
+            if ($change)
+                return response()->json([
+                                "status" => "success",
+                                "message" => "Cambio de estado realizado correctamente",
+                                "data" => Lesson_user_note::find($id)
+                            ], 200);
+            else
+                throw new Exception("Error en el cambio de estado de la nota");
+        } catch (Exception $e) {
+            return return_exceptions($e);
+        }
+    }
+    
     public function listNote($id)
     {
         try {
 
             $notes = Lesson_user_note::with(['user'])
                                             ->where('lessonId', $id)
+                                             ->where('state', 1)
                                             ->where('userId', Auth::user()->id)
                                             ->get();
 
