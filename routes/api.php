@@ -71,6 +71,7 @@ Route::post(env('API_VERSION') . '/register_requests/store',[RegisterRequestCont
 // ---------------------------------------------------------------------    
 
 Route::get(env('API_VERSION') . '/plan/list',[PlanController::class, 'index']);
+Route::get(env('API_VERSION') . '/plan/generality',[PlanController::class, 'generality']);
 
 // ---------------------------------------------------------------------
 // Tamaños de empresas

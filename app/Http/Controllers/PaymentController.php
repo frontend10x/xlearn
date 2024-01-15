@@ -101,7 +101,7 @@ class PaymentController extends Controller
             $plan = PaymentController::consult_value_to_pay($amount_user, $amount_time);
 
             //Calculamos el valor a pagar en pesos
-            $amount_to_paid = ($plan->price * 5000) * $amount_time * $amount_user;
+            $amount_to_paid = $plan->price * $amount_time * $amount_user;
             $amount_centies = calculate_amount_in_cents($amount_to_paid, $coupon_status, $percentage);
             
             //Generamos la firma de integridad para el pago (WOMPY)

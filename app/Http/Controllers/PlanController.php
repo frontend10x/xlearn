@@ -107,6 +107,33 @@ class PlanController extends Controller
         }
     }
 
+    public function generality()
+    {
+        try {
+            $plans = [
+                [
+                    "id" => 1, "name" => "Basic", "price" => 100000,
+                    "feature" => ["Acceso a todos los cursos", "Soporte 8/5 (de 9 a 5 de la tarde)"]
+                ],
+                [
+                    "id" => 2, "name" => "Business", "price" => 100000,
+                    "feature" => [
+                        "Acceso a todos los cursos", 
+                        "Acceso comercial",
+                        "Consultor temático 4 horas",
+                        "video reto interno",
+                        "Exploración cursos a medida",
+                        "Soporte 24/7",
+                        "Diagnostico requerimientos de formación"
+                        ]
+                ]
+            ];
+            return response()->json(["plans" =>$plans], 200);
+        } catch (Exception $e) {
+            return return_exceptions($e);
+        }
+    }
+
     public function changestate(Request $request, $id)
     {
         try {
